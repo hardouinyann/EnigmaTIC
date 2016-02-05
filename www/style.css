@@ -133,7 +133,8 @@ Author URI: http://www.axellesimon.fr
 		font-weight: 600;
 		text-align: center;
 		margin-bottom: 30px;
-		letter-spacing: 0.020em;
+		letter-spacing: 0.012em;
+		font-family: 'Roboto', sans-serif;
 	}
 
 	#more p {
@@ -183,19 +184,16 @@ Author URI: http://www.axellesimon.fr
 	}
 
 	.button {
-	  height: 45px;
+	  padding: 15px 0px;
 	  border: none;
-	  text-transform: uppercase;
 	}
 
 	#email {
-	  width: 74%;
+	  width: 75%;
 	  background-color: rgba(40, 31, 41, 0.5);
 	  font-family: inherit;
 	  color: #737373;
-	  letter-spacing: 1px;
 	  text-indent: 5%;
-	  padding: 1px;
 	  border-radius: 5px 0 0 5px;
 	  
 	}
@@ -218,8 +216,23 @@ Author URI: http://www.axellesimon.fr
 	}	  
 
 	input:focus {
-	  outline: none;
-	  padding: 0px 0px;
+		outline-style: none;
+	}
+
+	.valid {
+		text-align: center;
+		color: #6fce13;
+		font-size: 14px;
+		font-weight: 500;
+		margin: 0px auto 20px;
+	}
+
+	.error {
+		text-align: center;
+		color: #d81631;
+		font-size: 14px;
+		font-weight: 500;
+		margin: 0px auto 20px;
 	}
 
 	#mentions-legales {
@@ -236,8 +249,9 @@ Author URI: http://www.axellesimon.fr
 
 	#mentions-legales h2 {
 		text-transform: uppercase;
-		font-size: 25px;
+		font-size: 30px;
 		font-weight: 600;
+		line-height: 30px;
 		text-align: center;
 		margin-bottom: 30px;
 		letter-spacing: 0.020em;
@@ -251,6 +265,7 @@ Author URI: http://www.axellesimon.fr
 		letter-spacing: 0.020em;
 		padding: 15px 0px;
 		border-bottom: 1px dashed #5a5359;
+		line-height: 22px;
 	}
 
 	footer {
@@ -266,7 +281,7 @@ Author URI: http://www.axellesimon.fr
 	}
 
 	#footer-resp {
-		margin: 10% auto 2%;
+		margin: 8% auto 2%;
 		text-align: center;
 		width: 100%;
 		color: #6b6b6b;
@@ -314,6 +329,10 @@ Author URI: http://www.axellesimon.fr
 	footer a { display: block; margin: 10px 0px;}
 }
 
+@media only screen and (min-width: 1500px)  {
+	#more h1 { font-size: 20px; }
+}
+
 @media only screen and (min-width: 1230px) and (max-width: 1300px)  {
 	#more { width: 50%; }
 }
@@ -336,12 +355,14 @@ Author URI: http://www.axellesimon.fr
 
 @media only screen and (min-width: 645px) and (max-width: 740px)  {
 	#more { width: 85%; }
-	#more h1 { font-size: 16px; text-align: left; }
+	#more h1 { font-size: 22px; text-align: left; }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 645px)  {
-	#more { width: 85%; height: 85%; }
-	#more h1 { font-size: 16px; text-align: left; }
+	#more { width: 85%; height: 90%; }
+	#more h1 { font-size: 20px; text-align: left; }
+	#more .close, #mentions-legales .close { margin-bottom: 30px; }
+	#mentions-legales { width: 85%; }
 	#footer-resp { margin: 10% auto 10%; }
 	#footer-resp a { display: block; margin: 10px 0px;}
 	#email { width: 60%; }
