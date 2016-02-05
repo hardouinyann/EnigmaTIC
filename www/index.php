@@ -49,7 +49,7 @@
               if(count($requete->fetchAll()) == 0){
                   if($requete = $connexion->prepare("INSERT INTO newsletter VALUES('','$email','$ip')")){
                     $requete->execute();
-                    echo "Nous avons bien enregistré votre email ! ";
+                    echo "Nous avons bien enregistré votre email !";
                   }else
                     echo "Nous n'avons pas pu enregistrer votre email !"
               }
