@@ -49,9 +49,12 @@
               if(count($requete->fetchAll()) == 0){
                   if($requete = $connexion->prepare("INSERT INTO newsletter VALUES('','$email','$ip')")){
                     $requete->execute();
-                    echo "Nous avons bien enregistré votre email ! ";
-                  }else
-                    echo "Nous n'avons pas pu enregistrer votre email !"
+                    echo "<br>Nous avons bien enregistré votre email ! ";
+                  }else{
+                    echo "<br>Nous n'avons pas pu enregistrer votre email !";
+                  }
+              }else{
+                echo "<br>Votre email à déjà été enregistrée !";
               }
                
             }
@@ -59,8 +62,9 @@
                 die('FAILED TO CONNECT TO DATABASE : '.$error->getMessage());
             }
         
-        }else
-          echo "Veuillez saisir une adresse email valide !";
+        }else{
+          echo "<br>Veuillez saisir une adresse email valide !";
+        }
       ?>
   </p>
   <div id="footer-resp" >Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a></div>
