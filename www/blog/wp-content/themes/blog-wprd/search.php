@@ -9,23 +9,13 @@
 				$total_results = $wp_query->found_posts;
 			?>
 			<?php if (have_posts()) : ?>
-			<div class="theNavigation"><b>Vous êtes ici</b> : <a href="<?php echo home_url( ); ?>">Accueil</a> / <?php printf( __( 'Résultats de la recherche pour les termes : "<strong>%s</strong>"' ), '<span>' . get_search_query() . '</span>'); ?> (<?php echo $total_results; ?> objets trouvés)</div>
+			<div class="theNavigation"><b>Vous êtes ici</b>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;<a href="<?php echo home_url( ); ?>">Accueil</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;<?php printf( __( '<strong>Résultats de la recherche pour les termes</strong> : "<strong>%s</strong>"' ), '<span>' . get_search_query() . '</span>'); ?> (<i><?php echo $total_results; ?> objets trouvés</i>)</div>
 			<?php while (have_posts()) : the_post(); ?>
 		<article>
-			<h1><?php the_title(); ?></h1>
+			<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			<date><?php the_time('d'); ?>/<?php the_time('m'); ?></date>
-			<metadata><i class="fa fa-tags"></i><span><?php the_tags(''); ?></span><i class="fa fa-comments"></i><span><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires'); ?></span></metadata>
-			<?php
-				if ( '' != get_the_post_thumbnail() ) {
-					echo '<div class="feature-img">';
-			?>
-				<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail('normal-post');
-						echo '</div>';
-					}
-			?>
-			<p><?php the_content(''); ?></p>
-			<div class="more"><a href="<?php the_permalink(); ?>" class="read-more">Lire l'article en entier <i class="fa fa-angle-right"></i></a>
+			<p><?php the_excerpt(); ?></p>
+			<div class="more"><a href="<?php the_permalink(); ?>" class="read-more">Lire cet article ou cette page <i class="fa fa-angle-right"></i></a>
 				<div class="share">
 					<span class='st_facebook_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
 					<span class='st_twitter_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>

@@ -10,13 +10,13 @@
 		?>
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		<?php /* If this is a category archive */ if (is_category()) { ?>
-			<div class="theNavigation"><b>Vous êtes ici</b> : <a href="<?php echo home_url( ); ?>">Accueil</a> / Archives pour la catégorie : &#8216;<strong><?php single_cat_title(); ?></strong>&#8217; (<?php echo $total_results; ?> objets trouvés)</div>
+			<div class="theNavigation"><b>Vous êtes ici</b>&nbsp;>&nbsp;<a href="<?php echo home_url( ); ?>">Accueil</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;;Archives pour la catégorie : &#8216;<strong><?php single_cat_title(); ?></strong>&#8217; (<i><?php echo $total_results; ?> objets trouvés</i>)</div>
 		<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-			<div class="theNavigation"><b>Vous êtes ici</b> : <a href="<?php echo home_url( ); ?>">Accueil</a> / Posts tagués : &#8216;<strong><?php single_tag_title(); ?></strong>&#8217; (<?php echo $total_results; ?> objets trouvés)</div>
+			<div class="theNavigation"><b>Vous êtes ici</b>&nbsp;>&nbsp;<a href="<?php echo home_url( ); ?>">Accueil</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;Posts tagués : &#8216;<strong><?php single_tag_title(); ?></strong>&#8217; (<i><?php echo $total_results; ?> objets trouvés</i>)</div>
 		<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-			<div class="theNavigation"><b>Vous êtes ici</b> : <a href="<?php echo home_url( ); ?>">Accueil</a> / Auteur Archive (<?php echo $total_results; ?> objets trouvés)</div>
+			<div class="theNavigation"><b>Vous êtes ici</b>&nbsp;>&nbsp;<a href="<?php echo home_url( ); ?>">Accueil</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;Auteur Archive (<i><?php echo $total_results; ?> objets trouvés</i>)</div>
 		<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-			<div class="theNavigation"><b>Vous êtes ici</b> : <a href="<?php echo home_url( ); ?>">Accueil</a> / Blog Archives (<?php echo $total_results; ?> objets trouvés)</div>
+			<div class="theNavigation"><b>Vous êtes ici</b>&nbsp;>&nbsp;<a href="<?php echo home_url( ); ?>">Accueil</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;Blog Archives (<i><?php echo $total_results; ?> objets trouvés</i>)</div>
 		<?php } ?>
 		<?php while (have_posts()) : the_post(); ?>
 		<article>

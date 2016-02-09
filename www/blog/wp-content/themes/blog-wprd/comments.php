@@ -6,7 +6,7 @@
 		if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
 			?>
 
-			<p>This post is password protected. Enter the password to view comments.</p>
+			<p>Ce post est protégé par un mot de passe. Entrez le mot de passe pour voir les commentaires.</p>
 
 			<?php
 			return;
@@ -15,25 +15,24 @@
 ?>
 
 <!-- You can start editing here. -->
-<div id="comment">
-<div style="text-align: center;"><h1><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<strong><?php the_title(); ?></strong>&#8221;</h1></div>
+<div id="comments">
+<h1><?php comments_number('Aucunes réponses', 'Une réponse', '% réponses' );?> sur l'article &#8220;<strong><?php the_title(); ?></strong>&#8221;</h1>
 <?php if ($comments) : ?>
-
-
 	<?php foreach ($comments as $comment) : ?>
 
 		<div id="comment-<?php comment_ID() ?>">
-<?php if(function_exists('get_avatar')) { echo get_avatar($comment, '50'); } ?>
-			<div id="content-comment">
-			<div class="comment-author"><b><?php comment_author_link() ?></b> Says:</div>
-			<?php if ($comment->comment_approved == '0') : ?>
-			<em>Your comment is awaiting moderation.</em>
-			<?php endif; ?>
-			
+			<div class="content-comment">
+				<div class="comment-author"><strong><?php comment_author_link() ?></strong> 
+					<date> a posté le <?php comment_date('j F Y') ?> <?php edit_comment_link('editer','&nbsp;&nbsp;',''); ?></date>
+				</div>
 
-			<div class="commentmetadata"><small>Posted on <a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></small></div>
+				<p>
+					<?php if ($comment->comment_approved == '0') : ?>
+					<em>Votre commentaire est en cours de modération.</em>
+					<?php endif; ?>
 
-			<p><?php comment_text() ?></p>
+					<?php comment_text() ?>
+			    </p>
 			</div>
 		</div>
 
@@ -54,36 +53,31 @@
 
 
 <?php if ('open' == $post->comment_status) : ?>
-</div>
-<div id="comment">
-<h1>Leave a Reply</h1>
-<div>
+
+<h2>Ajouter un commentaire <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-down"></i></h2>
+
+<div class="add-comment">
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-
 <?php if ( $user_ID ) : ?>
-
-<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Logout &raquo;</a></p>
+<p>Connecté en tant que <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Se déconnecter &raquo;</a></p>
 
 <?php else : ?>
 
-<p><label for="author"><small>Name <?php if ($req) echo "(required)"; ?></small></label><br><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" /></p>
-<p><label for="email"><small>Mail (<i>will not be published</i>)  <?php if ($req) echo "(required)"; ?></small></label><br><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" /></p>
-<p><label for="url"><small>Website </small></label><br><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" /></p>
-
+<textarea name="comment" id="comment" cols="80%" rows="5" tabindex="4" placeholder="Tapez votre commentaire ici..."></textarea>
+<div class="input-comment">
+	<input type="text" name="email" id="email" placeholder="Email <?php if ($req) echo "(requis)"; ?>"value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+	<input type="text" name="author" id="author" placeholder="Nom <?php if ($req) echo "(requis)"; ?>" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+	<input type="text" name="url" id="url" placeholder="Site web" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+	<input name="submit" type="submit" id="submit" tabindex="5" value="Envoyer le commentaire" />
+<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+</div>
 <?php endif; ?>
 
-<!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
-
-<p><textarea name="comment" id="comment" cols="80%" rows="10" tabindex="4"></textarea></p>
-
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
-<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-</p>
 <?php do_action('comment_form', $post->ID); ?>
 
 </form>
