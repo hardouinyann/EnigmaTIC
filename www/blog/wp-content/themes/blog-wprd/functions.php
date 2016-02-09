@@ -90,6 +90,48 @@ function new_excerpt_more( $excerpt ) {
 }
 add_filter( 'wp_trim_excerpt', 'new_excerpt_more' );
 
+
+function clea_base_custom_wp_trim_excerpt( $text ) {
+ 
+	$raw_excerpt = $text;
+ 
+	if ( '' == $text ) {
+		//Retrieve the post content. 
+		$text = get_the_content( '' );
+	 
+		//Delete all shortcode tags from the content. 
+		$text = strip_shortcodes( $text );
+	 
+		$text = apply_filters( 'the_content', $text );
+		 
+		$allowed_tags = '<p>,<a>,<em>,<strong>'; /*** MODIFY THIS. Add the allowed HTML tags separated by a comma.***/
+		$text = strip_tags( $text, $allowed_tags );
+		 
+		$excerpt_word_count = 90; /*** MODIFY THIS. change the excerpt word count to any integer you like.***/
+		$excerpt_length = apply_filters( 'excerpt_length', $excerpt_word_count ); 
+		 
+		$excerpt_end = '&#91;...&#93;'; /*** MODIFY THIS. change the excerpt endind to '[...]'.***/
+		$excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
+		 
+		$words = preg_split( "/[\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY );
+		if ( count($words) > $excerpt_length ) {
+			array_pop( $words );
+			$text = implode( ' ', $words );
+			$text = $text . $excerpt_more;
+		} else {
+			$text = implode( ' ', $words );
+		}
+	}
+	return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
+ 
+}
+
+// remove the original WP filter, which trims all excerpts to 55 words and 0 html tags
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+ 
+// trim excerpt but don't trim html tags
+add_filter('get_the_excerpt', 'clea_base_custom_wp_trim_excerpt');
+
 add_theme_support( 'post-thumbnails' ); 
  
 ?>

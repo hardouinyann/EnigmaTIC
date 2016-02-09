@@ -77,9 +77,9 @@
     <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site <a href="http://http://www.enigma-tic.fr" title="L'équipe d'Enigma'TIC - http://www.enigma-tic.fr">http://www.enigma-tic.fr</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p><br />
     <p><strong>Propriétaire</strong> : L'équipe d'Enigma'TIC – 4 Place Tharradin, 25200 Montbéliard<br />
     <strong>Créateur</strong>  : <a href="http://www.enigma-tic.fr/">L'équipe d'Enigma'TIC</a><br />
-    <strong>Responsable publication</strong> : L'équipe d'Enigma'TIC<br />
+    <strong>Responsable publication</strong> : L'équipe d'Enigma'TIC  –  <a href="mailto:contact@enigma-tic.fr">contact@enigma-tic.fr</a><br />
     Le responsable publication est une personne physique ou une personne morale.<br />
-    <strong>Webmaster</strong> : L'équipe d'Enigma'TIC<br />
+    <strong>Webmaster</strong> : L'équipe d'Enigma'TIC  –  <a href="mailto:contact@enigma-tic.fr">contact@enigma-tic.fr</a><br />
     <strong>Hébergeur</strong> : OVH – 2 rue Kellermann - 59100 Roubaix - France<br />
     Crédits : les mentions légales ont été générées et offertes par Subdelirium <a target="_blank" href="http://www.subdelirium.com/competences/creation-de-sites-web/creation-de-site-internet-en-charente/creation-de-site-internet-cognac/" alt="creation site web cognac">création de site web Cognac</a></p>
 

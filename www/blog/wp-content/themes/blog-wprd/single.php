@@ -10,7 +10,8 @@
 		<article>
 			<h1><?php the_title(); ?></h1>
 			<date><?php the_time('d'); ?>/<?php the_time('m'); ?></date>
-			<metadata><i class="fa fa-tags"></i><span><?php the_tags(''); ?></span><i class="fa fa-comments"></i><span><a href="#comments"><?php comments_number('Aucun commentaire', '1 commentaire', '% commentaires'); ?></a></span></metadata>
+			<metadata class="standard"><i class="fa fa-tags"></i><span><?php the_tags(''); ?></span><i class="fa fa-comments"></i><span><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires'); ?></span></metadata>
+			<metadata class="resp"><i class="fa fa-tags"></i><span><?php the_tags(''); ?></span><i class="fa fa-comments"></i><span><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires'); ?></span><i class="fa fa-calendar-o"></i><span><?php the_time('d F Y'); ?></span></metadata>
 			<?php
 				if ( '' != get_the_post_thumbnail() ) {
 					echo '<div class="feature-img">';
