@@ -176,7 +176,6 @@ function replaceAll(str, find, replace) {
 
 
 //deplacer curseur
-
+//virer système de mdp
 //dir donne nombre de fichiers / repertoires
-//cd.. fait totu bueuguer
 //cd ..  quand one st sur le bureau
