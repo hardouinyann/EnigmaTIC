@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Netscape</title>
+	<link rel="stylesheet" type="text/css" href="netscape.css">
+	<link rel="stylesheet" type="text/css" href="dialogue.css">
+</head>
+<body>
+	<div class="blocMenu">
+		<div class="menu">
+			<ul>
+				<li>File
+					<ul>
+						<li onClick="afficherTexte(['Il n\'y a pas de fichier sur cet ordinateur','Je pense que ce que je cherche ce trouve sur internet.'],'petitFils')">Open Location...</li>
+						<li onClick="afficherTexte(['Il n\'y a pas de fichier sur cet ordinateur','Je pense que ce que je cherche ce trouve sur internet.'],'petitFils')">Open File...</li>
+						<li onClick="afficherTexte(['Je ne peux pas enregistrer n\'importe quoi sur l\'ordinateur de mon grand-père'],'petitFils')">Save as...</li>
+						<hr>
+						<li>Document info</li>
+						<li onClick="afficherTexte(['Aucune imprimante n\'est connectée à cet ordinateur'],'petitFils')">Print</li>
+						<li onClick="afficherTexte(['Aucune imprimante n\'est connectée à cet ordinateur'],'petitFils')">Print Preview</li>
+						<hr>
+						<li onClick="afficherTexte(['Retourner au QG?'],'petitFils')">Exit</li>
+					</ul>
+				</li>
+				<li>Edit
+					<ul>
+						<li>Cut</li>
+						<li>Copy</li>
+						<li>Paste</li>
+					</ul>
+				</li>
+				<li>View
+					<ul>
+						<li>Reload</li>
+						<li>Load Image</li>
+						<li>Refresh</li>
+					</ul>
+				</li>
+				<li>Go
+					<ul>
+						<li onClick="back()">Back</li>
+						<li onClick="home()">Home</li>
+					</ul>
+				</li>
+				<li>Bookmarks
+					<ul>
+						<li>Add Bookmarks</li>
+						<li>View Bookmarks</li>
+						<hr>
+						<li onclick="afficherAdresse('google')">google</li>
+						<li onclick="afficherAdresse('invente')">Invente</li>
+						<li></li>
+						<li></li>
+					</ul>
+				</li>
+				<li>Options
+					<ul>
+						<li>Preferences...</li>
+						<hr>
+						<li>Show Toolbar</li>
+						<li>Show location</li>
+						<li>Auto Load Images</li>
+						<li>Show FTP File Information</li>
+					</ul>
+				</li>
+				<li>Directory
+					<ul>
+						<li>Welcome !</li>
+						<li>About the internet</li>
+						<li>Netscape Communications Corporate</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<hr>
+		<div class="tools">
+			<ul>
+				<li><img src="img/back.jpg" onClick="back()"></li>
+				<li><img src="img/forward.jpg" onClick="forward()"></li>
+				<li><img src="img/home.jpg" onClick="home()"></li>
+				<li><img src="img/reload.jpg" onClick="reload()"></li>
+				<li><img src="img/images.jpg" onClick="afficherTexte(['Les images sont déjà chargées'],'petitFils')"></li>
+				<li><img src="img/open.jpg" onClick="afficherTexte(['Il n\'y a pas de fichier sur cet ordinateur','Je pense que ce que je cherche ce trouve sur internet.'],'petitFils')"></li>
+				<li><img src="img/print.jpg" onClick="afficherTexte(['Aucune imprmante n\'est connectée à cet ordinateur'],'petitFils')"></li>
+				<li><img src="img/find.jpg"></li>
+				<li><img src="img/stop.jpg"></li>
+			</ul>
+		</div>
+		<hr>
+		<div class="location">
+			<p>Location:</p>
+			<input type="text" id="url" onkeydown="keyPressed(event)"/>
+		</div>
+	</div>
+
+	<div class="page">
+		<button onclick="direBonjour()">Afficher texte</button>
+		<p id="pAdresse"></p>
+		<div id="index" class="siteAfficher">
+			<h2>Netscape Navigator</h2>
+			<h3>Version 1.0</h3>
+			<p>Copyright 1994 Netscape Communications Corporation, all right reserved</p>
+			<p>This software is subject to the license agreement set forth in the Licence file.</p>
+		</div>
+		<div id="google">
+			<p>Google est un site </p>
+		</div>
+		<div id="invente">
+			<h2>un site web inventé</h2>
+			<p>Du contenu que je vais crée (recopié :p)</p>
+		</div>
+
+		
+	</div>
+
+	<footer>
+		
+		<div id="pense">
+			<img src="img/petit-fils.png">
+			<div id="bulle">
+				<h3></h3>
+				<p></p>
+			</div>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="netscape.js"></script>
+	<script type="text/javascript" src="dialogue.js"></script>
+
+	
+</body>
+
+
+
+</html>
