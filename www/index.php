@@ -27,40 +27,45 @@
       <li><b>Enigma’TIC</b> est un projet réalisé et conçu par sept étudiants en Master Multimédia.</li>
     </ul>
    <p class="recevoir-mail">
-      <form method='POST' action=''>
-        Si vous souhaitez être <b>prévenu par e-mail dès que le projet sera officiellement lancé</b>, remplissez le champ ci-dessous et cliquez sur le bouton "envoyer". Dès que le projet sera lancé, vous serez prévenu par mail, et vous pourrez participer vous aussi au projet <b>Enigma'TIC</b>.</br></br>
-        <input type="text" class="button" id="email" name="email" placeholder="email@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER">
-      </form>
+    Si vous souhaitez être <b>prévenu par e-mail dès que le projet sera officiellement lancé</b>, remplissez le champ ci-dessous et cliquez sur le bouton "envoyer". Dès que le projet sera lancé, vous serez prévenu par mail, et vous pourrez participer vous aussi au projet <b>Enigma'TIC</b>.</br></br>
       <?php
-        $email = (!empty($_POST['email'])) ? $_POST['email'] : '';
-        if(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)){
-     
-            $ip = $_SERVER['HTTP_REMOTE_IP'];
-            try{
-              $connexion = new PDO("mysql:host=enigmatiqmbdd.mysql.db;port=3306;dbname=enigmatiqmbdd","enigmatiqmbdd","eNigmatic1",
-                                    array(
-                                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                                        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
-                                        PDO::ATTR_DEFAULT_FETCH_MODE =>PDO::FETCH_OBJ
-                                    )
-                                   );
-              $requete = $connexion->prepare("SELECT * FROM newsletter WHERE adresse_ip LIKE '$ip' OR email LIKE '$email'");
-              $requete->execute();
-              if(count($requete->fetchAll()) == 0){
-                  if($requete = $connexion->prepare("INSERT INTO newsletter VALUES('','$email','$ip')")){
-                    $requete->execute();
-                    echo "Nous avons bien enregistré votre email !";
-                  }else
-                    echo "Nous n'avons pas pu enregistrer votre email !"
+        if(!($_POST["email"])) {
+          echo('<form method="POST" action=""><input type="text" class="button" id="email" name="email" placeholder="votreemail@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER"></form>');
+        }else {
+          $email = (!empty($_POST['email'])) ? $_POST['email'] : '';
+          if(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)){
+              $ip = $_SERVER['HTTP_REMOTE_IP'];
+              try{
+                $connexion = new PDO("mysql:host=enigmatiqmbdd.mysql.db;port=3306;dbname=enigmatiqmbdd","enigmatiqmbdd","eNigmatic1",
+                                      array(
+                                          PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                                          PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+                                          PDO::ATTR_DEFAULT_FETCH_MODE =>PDO::FETCH_OBJ
+                                      )
+                                     );
+                $requete = $connexion->prepare("SELECT * FROM newsletter WHERE adresse_ip LIKE '$ip' OR email LIKE '$email'");
+                $requete->execute();
+                if(count($requete->fetchAll()) == 0){
+                    if($requete = $connexion->prepare("INSERT INTO newsletter VALUES('','$email','$ip')")){
+                      $requete->execute();
+                      echo "<div class='valid'>Nous avons bien enregistré votre email !<br/>Vous serez prévenu par e-mail le jour du lancement officiel du projet.</div>";
+                    }else{
+                      echo "<div class='error'>Une erreur est survenue, nous n'avons pas pu enregistrer votre email ! Réessayez !</div>";
+                      echo('<form method="POST" action=""><input type="text" class="button" id="email" name="email" placeholder="votreemail@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER"></form>');
+                    }
+                }else{
+                  echo "<div class='valid'>Votre e-mail a déjà été enregistré, et vous serez prévenu le jour du lancement officiel du projet.</div>";
+                }
+                 
               }
-               
-            }
-            catch(Exception $error){
-                die('FAILED TO CONNECT TO DATABASE : '.$error->getMessage());
-            }
-        
-        }else{
-          echo "<br>Veuillez saisir une adresse email valide !";
+              catch(Exception $error){
+                  die('FAILED TO CONNECT TO DATABASE : '.$error->getMessage());
+              }
+          
+          }else{
+            echo "<div class='error'>Veuillez saisir une adresse email valide ! (exemple : votrenom@email.com).</div>";
+            echo('<form method="POST" action=""><input type="text" class="button" id="email" name="email" placeholder="votreemail@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER"></form>');
+          }
         }
       ?>
   </p>
@@ -120,9 +125,9 @@
     <h3>11. Lexique.</h3>
     <p>Utilisateur : Internaute se connectant, utilisant le site susnommé.</p>
     <p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
-    <div id="footer-resp">Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a><a style="margin-left: 25px;" href="#">Haut de Page</a></div>
+    <div id="footer-resp">Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a><a class="top" style="margin-left: 25px;" href="#">Haut de Page</a></div>
 </div>
-<footer><div  <?php if(!empty($_POST)) echo "style='display:none;'"?>>Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a><div></footer>
+<footer <?php if(!empty($_POST)) echo "style='display:none;'"?>>Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a><div></footer>
 <div id="background" class="mouse-bg"></div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/mouse.parallax.js"></script>

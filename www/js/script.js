@@ -7,6 +7,7 @@
       		$('#background').mouseParallax({ moveFactor: 4 });
     	}
 
+    	$('.top').click(backToTop);
     	$('#savoir-plus').click(afficherInfosProjet);
     	$('.close').click(fermerInfosProjet);
     	$('.mentions').click(afficherMentionsLegales);
@@ -30,6 +31,11 @@
 		$('#more').fadeOut(200);
 		$('#mentions-legales').fadeIn(1500);
 		$('footer').fadeOut(200);
+	}
+
+	function backToTop () {
+		$("html, body").animate({ scrollTop: 0 }, 600);
+		return false;
 	}
 
 
