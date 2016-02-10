@@ -20,7 +20,7 @@
 						echo '</a></div>';
 					}
 			?>
-			<p><?php the_content(''); ?></p>
+			<p><?php the_excerpt(); ?></p>
 			<div class="more"><a href="<?php the_permalink(); ?>" class="read-more">Lire l'article en entier <i class="fa fa-angle-right"></i></a>
 				<div class="share">
 					<span class='st_facebook_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>

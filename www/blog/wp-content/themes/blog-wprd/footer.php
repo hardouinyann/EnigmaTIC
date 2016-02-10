@@ -1,7 +1,11 @@
 <!-- FOOTER -->
 	<footer>
 		<div>
+<<<<<<< HEAD
 			<p>Enigma’TIC  ©  2016<a href="">Mentions Légales</a><a href="http://www.enigma-tic.fr/blog/a-propos/">A Propos</a><a href="#" class="top">Haut de Page</a></p>
+=======
+			<p>Enigma’TIC  ©  2016<a href="http://www.enigma-tic.fr/blog/mentions-legales/">Mentions Légales</a><a href="http://www.enigma-tic.fr/blog/a-propos/">A Propos</a><a href="#" class="top">Haut de Page</a></p>
+>>>>>>> 644655c9c2a0cae71070f0a05ea2edec4c6bc7f4
 		</div>
 	</footer>
 <?php do_action('wp_footer', ''); ?>
