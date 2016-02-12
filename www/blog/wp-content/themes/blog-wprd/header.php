@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php echo home_url( '/wp-content/themes/blog-wprd/fonts/stylesheet.css' ); ?>" type="text/css" media="screen" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700|Open+Sans:400,300,600,700|Roboto:400,300,500,700,300italic,400italic,100italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700|Open+Sans:400,300,600,700|Roboto:400,300,500,700,300italic,400italic,100italic|Roboto+Condensed:400,700,300italic,300' rel='stylesheet' type='text/css'>
 		<link rel="Shortcut Icon" href="<?php echo home_url( '/wp-content/themes/blog-wprd/images/vign.png' ); ?>" />
 		<?php wp_head(); ?>
 	</head>

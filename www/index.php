@@ -128,7 +128,7 @@
     <p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
     <div id="footer-resp">Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a><a class="top" style="margin-left: 25px;" href="#">Haut de Page</a></div>
 </div>
-<footer <?php if(!empty($_POST)) echo "style='display:none;'"?>>Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a><div></footer>
+<footer <?php if(!empty($_POST)) echo "style='display:none;'"?>>Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="http://www.enigma-tic.fr/blog/a-propos/">A Propos</a><div></footer>
 <div id="background" class="mouse-bg"></div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/mouse.parallax.js"></script>
