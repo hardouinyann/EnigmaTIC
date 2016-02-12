@@ -27,11 +27,8 @@
       <li><b>Enigma’TIC</b> est un projet réalisé et conçu par sept étudiants en Master Multimédia.</li>
     </ul>
    <p class="recevoir-mail">
-<<<<<<< HEAD
-    Si vous souhaitez être <b>prévenu par e-mail dès que le projet sera officiellement lancé</b>, remplissez le champ ci-dessous et cliquez sur le bouton "envoyer". Dès que le projet sera lancé, vous serez prévenu par mail, et vous pourrez participer vous aussi au projet <b>Enigma'TIC</b>.</br></br>
-=======
     Si vous souhaitez être <b>prévenu par e-mail dès que le projet sera officiellement lancé</b>, remplissez le champ ci-dessous et cliquez sur le bouton "envoyer". Dès que le projet sera lancé, vous serez prévenu par email, et vous pourrez participer vous aussi au projet <b>Enigma'TIC</b>.</br></br>
->>>>>>> 644655c9c2a0cae71070f0a05ea2edec4c6bc7f4
+
       <?php
         if(!($_POST["email"])) {
           echo('<form method="POST" action=""><input type="text" class="button" id="email" name="email" placeholder="votreemail@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER"></form>');
@@ -65,18 +62,11 @@
               catch(Exception $error){
                   die('FAILED TO CONNECT TO DATABASE : '.$error->getMessage());
               }
-<<<<<<< HEAD
-          
-          }else{
-            echo "<div class='error'>Veuillez saisir une adresse email valide ! (exemple : votrenom@email.com).</div>";
-            echo('<form method="POST" action=""><input type="text" class="button" id="email" name="email" placeholder="votreemail@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER"></form>');
-          }
-=======
           }else{
             echo "<div class='error'>Veuillez saisir une adresse email valide ! (exemple : votrenom@email.com).</div>";
             echo('<form method="POST" action=""><input type="text" class="button" id="email" name="email" placeholder="votreemail@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER"></form>');
           }    
->>>>>>> 644655c9c2a0cae71070f0a05ea2edec4c6bc7f4
+
         }
       ?>
   </p>
