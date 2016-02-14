@@ -765,7 +765,7 @@ Author URI: http://www.axellesimon.fr
 		width: auto;
 		margin: 10px auto;
 	    text-align: center;
-	    border: 4px solid #725c76;
+	    border: 3px solid #725c76;
 	    color: white;
 	    background: white;
 	    color: #725c76;
@@ -776,7 +776,7 @@ Author URI: http://www.axellesimon.fr
 
 	#page input[type=submit]:hover {
 		background: #725c76;
-		border: 4px solid #725c76;
+		border: 3px solid #725c76;
 		color: white;
 		-webkit-transition: all 200ms ease-in-out;
 		-moz-transition: all 200ms ease-in-out;
