@@ -28,7 +28,6 @@
     </ul>
    <p class="recevoir-mail">
     Si vous souhaitez être <b>prévenu par e-mail dès que le projet sera officiellement lancé</b>, remplissez le champ ci-dessous et cliquez sur le bouton "envoyer". Dès que le projet sera lancé, vous serez prévenu par email, et vous pourrez participer vous aussi au projet <b>Enigma'TIC</b>.</br></br>
-
       <?php
         if(!($_POST["email"])) {
           echo('<form method="POST" action=""><input type="text" class="button" id="email" name="email" placeholder="votreemail@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER"></form>');
@@ -66,7 +65,6 @@
             echo "<div class='error'>Veuillez saisir une adresse email valide ! (exemple : votrenom@email.com).</div>";
             echo('<form method="POST" action=""><input type="text" class="button" id="email" name="email" placeholder="votreemail@domaine.com"><input type="submit" class="button" id="submit" value="ENVOYER"></form>');
           }    
-
         }
       ?>
   </p>
@@ -128,7 +126,7 @@
     <p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
     <div id="footer-resp">Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a><a class="top" style="margin-left: 25px;" href="#">Haut de Page</a></div>
 </div>
-<footer <?php if(!empty($_POST)) echo "style='display:none;'"?>>Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="">A Propos</a><div></footer>
+<footer <?php if(!empty($_POST)) echo "style='display:none;'"?>>Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="http://www.enigma-tic.fr/blog/a-propos/">A Propos</a><div></footer>
 <div id="background" class="mouse-bg"></div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/mouse.parallax.js"></script>
