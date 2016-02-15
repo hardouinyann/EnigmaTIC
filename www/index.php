@@ -23,7 +23,7 @@
   <p>Voici quelques indices sur ce projet exceptionnel que vous pourrez bientôt découvrir et vivre.<br/><br/></p>
     <ul>
       <li><b>Enigma’TIC</b> est un projet multimédia immersif et interactif.</li>
-      <li><b>Enigma’TIC</b> est une aventure inédite sous forme d'enquête, à travers laquelle vous pourrez découvrir les évolutions majeures des interfaces graphiques les plus célèbres.</li> 
+      <li><b>Enigma’TIC</b> est une aventure inédite sous forme d'enquête, à travers laquelle vous pourrez découvrir les évolutions majeures des interfaces graphiques.</li> 
       <li><b>Enigma’TIC</b> est un projet réalisé et conçu par sept étudiants en Master Multimédia.</li>
     </ul>
    <p class="recevoir-mail">

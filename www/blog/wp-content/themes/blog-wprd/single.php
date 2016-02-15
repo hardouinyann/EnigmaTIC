@@ -10,19 +10,15 @@
 		<article>
 			<h1><?php the_title(); ?></h1>
 			<date><?php the_time('d'); ?>/<?php the_time('m'); ?></date>
-<<<<<<< HEAD
-			<metadata><i class="fa fa-tags"></i><span><?php the_tags(''); ?></span><i class="fa fa-comments"></i><span><a href="#comments"><?php comments_number('Aucun commentaire', '1 commentaire', '% commentaires'); ?></a></span></metadata>
-=======
 			<metadata class="standard"><i class="fa fa-tags"></i><span><?php the_tags(''); ?></span><i class="fa fa-comments"></i><span><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires'); ?></span></metadata>
 			<metadata class="resp"><i class="fa fa-tags"></i><span><?php the_tags(''); ?></span><i class="fa fa-comments"></i><span><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires'); ?></span><i class="fa fa-calendar-o"></i><span><?php the_time('d F Y'); ?></span></metadata>
->>>>>>> 644655c9c2a0cae71070f0a05ea2edec4c6bc7f4
 			<?php
 				if ( '' != get_the_post_thumbnail() ) {
 					echo '<div class="feature-img">';
 			?>
 				<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail('normal-post');
-						echo '</div>';
+						echo '</a></div>';
 					}
 			?>
 			<p><?php the_content(''); ?></p>
