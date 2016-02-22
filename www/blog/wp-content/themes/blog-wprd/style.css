@@ -367,20 +367,20 @@ Author URI: http://www.axellesimon.fr
 
 	.prev {
 		display: inline-block;
-		width: 45%;
+		width: 40%;
 		text-align: left;
 		vertical-align: top;
 		position: relative;
-		left: 50px;
+		left: 15px;
 	}
 
 	.next {
 		display: inline-block;
-		width: 45%;
+		width: 40%;
 		text-align: right;
 		vertical-align: top;
 		position: relative;
-		left: 20px;
+		left: 50px;
 	}
 
 /*-- COMMENTAIRES --*/	
