@@ -77,6 +77,10 @@ Author URI: http://www.axellesimon.fr
 	    margin: 25px 0px 0px;
 	}
 
+	iframe {
+		 width: 100%;
+   		 margin: 15px 0px;
+	}
 
 
 /*-- HEADER --*/	
@@ -166,6 +170,7 @@ Author URI: http://www.axellesimon.fr
 		line-height: 18px;
 		margin-top: 8px;
 	}
+
 
 /*-- ARTICLES --*/	
 
