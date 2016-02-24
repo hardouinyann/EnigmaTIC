@@ -82,6 +82,13 @@ Author URI: http://www.axellesimon.fr
    		 margin: 15px 0px;
 	}
 
+	.fb_iframe_widget {
+		display: inline-block;
+    	position: absolute;
+    	bottom: 15px;
+    	left: 0px;
+	}
+
 
 /*-- HEADER --*/	
 

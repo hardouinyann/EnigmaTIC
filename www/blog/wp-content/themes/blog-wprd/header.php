@@ -18,6 +18,8 @@
 		<?php wp_head(); ?>
 	</head>
 <body>
+<div id="fb-root"></div>
+<?php include_once("analyticstracking.php") ?>
 	<div id="top-bar"></div>
 	<header>
 		<div id="title"><span>Carnet de Bord</span><a href="<?php echo home_url() ?>"><img class="logo-normal" src="<?php echo home_url( '/wp-content/themes/blog-wprd/images/logo-blog.svg' ); ?>" alt="Logo Enigma'TIC" /></a><a href="<?php echo home_url() ?>"><img class="logo-resp" src="<?php echo home_url( '/wp-content/themes/blog-wprd/images/logo-resp-blog.svg' ); ?>" alt="Logo Enigma'TIC" /></a></div><div id="search"><form method="get" action="<?php echo home_url( ); ?>"><input name="s" type="text" placeholder="Rechercher sur le blog..." size="30" /></form></div>

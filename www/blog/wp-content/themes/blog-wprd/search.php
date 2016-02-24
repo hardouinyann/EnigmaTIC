@@ -17,8 +17,8 @@
 			<p><?php the_excerpt(); ?></p>
 			<div class="more"><a href="<?php the_permalink(); ?>" class="read-more">Lire cet article ou cette page <i class="fa fa-angle-right"></i></a>
 				<div class="share">
-					<span class='st_facebook_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
-					<span class='st_twitter_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+					<span class='st_fblike_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+					<span st_via="" class='st_twitter_hcount' st_title='<?php the_title(); ?> - Le blog du projet #EnigmaTIC - 'st_url='<?php the_permalink(); ?>'></span>
 				</div>
 			</div>
 		</article>

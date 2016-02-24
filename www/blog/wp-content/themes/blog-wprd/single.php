@@ -24,8 +24,9 @@
 			<p><?php the_content(''); ?></p>
 			<div class="more"><a class="read-more">&nbsp;</a>
 				<div class="share" style="float: left;">
-					<span class='st_facebook_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
-					<span class='st_twitter_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+					<span class='st_fblike_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+					<span st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>' class='st_facebook_hcount'></span>
+					<span st_via="" class='st_twitter_hcount' st_title='<?php the_title(); ?> - Le blog du projet #EnigmaTIC - 'st_url='<?php the_permalink(); ?>'></span>
 				</div>
 			</div>
 		</article>

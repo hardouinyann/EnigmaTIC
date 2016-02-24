@@ -15,6 +15,7 @@
 ?>
 
 <!-- You can start editing here. -->
+<div id="respond"></div>
 <div id="comments">
 <h1><?php comments_number('Aucunes réponses', 'Une réponse', '% réponses' );?> sur l'article &#8220;<strong><?php the_title(); ?></strong>&#8221;</h1>
 <?php if ($comments) : ?>
