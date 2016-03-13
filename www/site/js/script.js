@@ -1,12 +1,13 @@
-	
+	/* VARIABLES GLOBALES */
 	var audio = document.querySelector("audio");
 	var video = document.querySelector("video");
 	var volumeOn = true;
+	/* VARIABLE POUR GERER L'AFFICHAGE DU TEXTE DES CINEMATIQUES */
 	var texte, actual_texte, nb_msg;
-	var tabRepliquesScene1 = ["Tiens... Cela fait longtemps que je n’ai pas eu de nouvelles de grand-père...","Il doit encore avoir la tête plongée dans l’une de ses nouvelles inventions farfelues... Il n’arrêtera jamais décidément.", "Je vais essayer de l’appeler pour voir s’il va bien quand même. (Thomas compose le numéro et l’appelle).", "Bon il ne répond pas... Je vais essayer de l’appeler plus tard..."];
-	var tabRepliquesScene2 = ["(Thomas appelle à nouveau son grand-père)","Toujours aucune réponse, je tombe à nouveau sur son répondeur ! ", "Bon, j’espère qu’il va vite me rappeler, je n’aime pas quand il ne me donne pas de nouvelles aussi longtemps... ", "Il devrait vraiment prendre des vacances et laisser un peu tomber ses expériences scientifiques !"];
-	var tabRepliquesScene3 = ["Bon, voilà, j’ai réservé mon billet de train. Je vais aller voir grand-père!","Je préfère aller vérifier s’il va bien, vu qu’il ne me donne plus de nouvelles depuis plusieurs jours ! Et puis, ça lui fera plaisir ! "];
-	var tabRepliquesScene4 = ["Tiens j’ai sonné… mais il ne répond-pas. Mais qu’est ce qu’il fabrique !","La porte est dévérouillée…. Je lui ai pourtant dis mainte fois de faire attention ! Quel tête de mule! ", "Bon aller, je rentre!  De toute façon il doit sûrement être encore occupé dans son bureau, il n’a pas du entendre la sonnette."];
+	var tabRepliquesScene1 = ["Tiens... Cela fait longtemps que je n’ai pas eu de nouvelles de grand-père...","Il doit encore avoir la tête plongée dans l’une de ses nouvelles inventions farfelues... Il n’arrêtera jamais décidément !", "Je vais essayer de l’appeler pour voir s’il va bien quand même. <br/><i>(Thomas compose le numéro et l’appelle...)</i>.", "Bon il ne répond pas... Je vais essayer de l’appeler plus tard...", "Aller, je vais rentrer à la maison en attendant. Brrr, il fait vraiment froid aujourd'hui !"];
+	var tabRepliquesScene2 = ["<i>(Thomas essaye d'appeller à nouveau son grand-père après être rentré chez lui).</i>","Toujours aucune réponse, je tombe à nouveau sur son répondeur ! ", "Bon, j’espère qu’il va vite me rappeler, je n’aime pas quand il ne me donne pas de nouvelles aussi longtemps... ", "Il devrait vraiment prendre des vacances et laisser un peu tomber ses expériences scientifiques !"];
+	var tabRepliquesScene3 = ["<i>(Un jour plus tard...</i>). Bon, voilà, j’ai réservé mon billet de train. Je vais aller voir grand-père!","Je préfère aller vérifier s’il va bien, vu qu’il ne me donne plus de nouvelles depuis plusieurs jours ! Et puis, ça lui fera plaisir de me voir !"];
+	var tabRepliquesScene4 = ["Me voilà enfin chez grand-père ! Allons voir s'il est là !", "Tiens j’ai sonné... mais il ne répond-pas. Mais qu’est ce qu’il fabrique !","La porte est dévérouillée... Je lui ai pourtant dis plusieurs fois de faire attention et de verouiller sa porte d'entrée ! Quel tête de mule! ", "Bon aller, je rentre ! De toute façon il doit sûrement être encore occupé dans son bureau, il n’a pas du entendre la sonnette."];
 	var nom = "Thomas";
 	var j=0;
 	var etatDuJeu;
@@ -23,10 +24,10 @@
 
 	function setup () {
 		video.play();
-		$('#load .chargement').fadeOut(200);
 		$('#load').fadeOut(800);
 		$('#home').fadeIn(400);
 		audio.play();
+		audio.volume = 0.3;
 		$(window).blur(function() { audio.pause(); });
 		$(window).focus(function() { 
 			if(volumeOn == true) { audio.play(); }
@@ -38,6 +39,7 @@
 		$('.menu').click(afficherMenu);
 	}
 
+	/* FONCTION QUI PERMET D'AFFICHER OU CACHER LE MENU COULISSANT */ 
 	function afficherMenu () {
 		if($('#menu-coulissant').hasClass('ferme')) {
 			$('.menu').css({ 'top' : '20px', 'left' : '2%'});
@@ -46,22 +48,23 @@
 			$('#menu-coulissant').removeClass('ferme');
 			$('#menu-coulissant').animate({
 				'left' : '0px'
-			}, 1000);
+			}, 500);
 		}else {
 			if(etatDuJeu == "chapitre1scene1") {
-				$('.menu').animate({ 'top' : '100px', 'left' : '5%'},1000);
+				$('.menu').animate({ 'top' : '100px', 'left' : '5%'}, 600);
 			}else {
-				$('.menu').animate({ 'top' : '50px', 'left' : '5%'},1000);
+				$('.menu').animate({ 'top' : '50px', 'left' : '5%'}, 600);
 			}
-			$('.fa-facebook, .fa-twitter').fadeIn(3000);
+			$('.fa-facebook, .fa-twitter').fadeIn(2000);
 			$('#menu-coulissant').addClass('ferme');
 			$('#menu-coulissant').removeClass('ouvert');
 			$('#menu-coulissant').animate({
 				'left' : '-30%'
-			}, 1000);
+			}, 500);
 		}
 	}
 
+	/* FONCTION QUI PERMET DE LANCER LE JEU */
 	function lancerLeJeu () {
 		$('.menu').animate({ 'top' : '100px', 'left' : '5%'},1000);
 		$('#home').fadeOut(1200);
@@ -71,8 +74,9 @@
 		afficherTexte(textesAAfficher, nom);
 	}
 
+	/* FONCTION QUI PERMET DE CHANGER LES DIALOGUES EN FONCTION DE LA SCENE */
 	function changerMessageDialogue () {
-		if(etatDuJeu == "chapitre1scene1" && j=="3") {
+		if(etatDuJeu == "chapitre1scene1" && j=="4") {
 			j=0;
 			etatDuJeu = "chapitre1scene2";
 			textesAAfficher = tabRepliquesScene2;
@@ -96,12 +100,14 @@
 			$('.dialogue').hide();
 			$('#chap1scene4').fadeIn(3000);
 			$('.dialogue').fadeIn(3500);
-		}else if(etatDuJeu == "chapitre1scene4" && j=="2") {
+		}else if(etatDuJeu == "chapitre1scene4" && j=="3") {
 			j=0;
 			etatDuJeu = "chapitre2scene1";
-			$('#chapitre-1').fadeOut(600);
+			$('#chapitre-1').fadeOut(200);
 			$('.dialogue').hide();
-			$('#jeu').fadeIn(3000);
+			chargerLaPage();
+			$('#load').fadeOut(1000);
+			$('#jeu').fadeIn(1200);
 			$('.menu').animate({ 'top' : '50px', 'left' : '5%'},1000);
 		}else {
 			j++;
@@ -157,6 +163,7 @@
 		}
 	}
 
+	/* FONCTION QUI PERMET DE COUPER OU REMETTRE LE SON */
 	function sonOnOff () {
 		if($(this).hasClass('fa-volume-up')){
 			$('.fa-volume-up').hide();
