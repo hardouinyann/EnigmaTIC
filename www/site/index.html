@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Enigma'TIC &bull; Plongez-vous dans l’aventure !</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="description" content="Découvrez le projet Enigma'TIC, un projet immersif qui vous permettra de découvrir l'évolution des interfaces graphiques grâce à du contenu multimédia riche et interactif." />
+      <meta name="keywords" content="interfaces grapiques, enigmatic, enigma'tic, enigma'TIC, evolution interface, evolution des interfaces graphiques, evolution interfaces numériques, projet multimedia, projet rhizome, master psm, produits et services multimedia, psm ufr stgi, rhizome" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/stylesheet.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" />
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700|Roboto:400,300,500,700,300italic,400italic,100italic' rel='stylesheet' type='text/css'>
+      <link rel="Shortcut Icon" href="images/vign.png" />
+  </head>
+<body>
+	<div id="load">
+		<div class="chargement"><img src="images/logo-sablier.svg" alt="logo chargement" />
+			<p>Chargement</p>
+		</div>
+		<img src="images/bg-home.jpg" class="background" alt="background" />
+	</div>
+	<div id="menu-coulissant" class="ferme">
+		<img src="images/logo-enigmatic.svg" alt="logo Enigma'TIC" />
+		<ul>
+			<li></li>
+		</ul>
+	</div>
+	<div id="home">
+		<div class="menu">
+			<a><i class="fa fa-bars"></i></a>
+			<a href="https://www.facebook.com/projetenigmatic/" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a><i class="fa fa-twitter"></i></a>
+		</div>
+		<div id="options">
+			<i class="fa fa-question-circle"></i>
+			<i class="fa fa-volume-up"></i>
+			<i class="fa fa-volume-off"></i>
+		</div>
+		<!-- Son d'ambiance--><audio loop>
+		  <source src="medias/audio/bensound-relaxing.mp3" type="audio/mpeg">
+		</audio>
+		<!-- Vidéo d'ambiance--><video id="bgvid" loop>
+			<source src="medias/videos/cosmos.mp4" type="video/mp4">
+		</video>
+		<section>
+			<div id="infos">
+				<img src="images/logo-enigmatic-blanc.svg" alt="logo Enigma'TIC blanc" />
+				<h2>Plongez-vous dans l’aventure et aidez thomas à retrouver son grand-père léopold !</h2>
+				<p>Grâce au projet Enigma’TIC découvrez de façon originale et interactive les <b>évolutions majeures que les interfaces graphiques</b> ont pu connaître au cours de ces dernières années. </p>
+				<p>Aidez Thomas à retrouver son grand-père, Léopold, qui a disparu, dans ce jeu en ligne exceptionnel qui vous plongera dans une fabuleuse aventure ! </p>
+				<a class="startGame">Lancer le jeu</a>
+			</div>
+			<div id="connexion">
+				<p>Si vous avez déjà un compte utilisateur, connectez-vous pour retrouver le jeu là où vous l’aviez arreté !</p>
+				<form>
+					<input type="text" name="login" id="login" placeholder="votre email" />
+					<input type="password" name="mdp" id="mdp" placeholder="mot de passe" />
+				</form>
+				<p style="float: left;"><a href="">Mot de passe oublié ?</a></p>
+				<p style="float: right;"><a href="">Créer un compte utilisateur</a></p>
+				<a href="" class="bouton">Se connecter</a>
+			</div>
+		</section>
+		<footer>
+			Enigma’TIC  ©  2016<a class="mentions">Mentions Légales</a><a href="http://www.enigma-tic.fr/blog/a-propos/">A Propos</a><div></div>
+		</footer>
+	</div>
+	<div id="chapitre-1">
+		<div class="menu">
+				<a><i class="fa fa-bars"></i></a>
+				<a href="https://www.facebook.com/projetenigmatic/" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a><i class="fa fa-twitter"></i></a>
+			</div>
+			<div id="options">
+				<i class="fa fa-question-circle"></i>
+				<i class="fa fa-volume-up"></i>
+				<i class="fa fa-volume-off"></i>
+			</div>
+		<div id="chap1scene1">
+			<div id="top-bar"></div>
+			<div id="bottom-bar"></div>
+			<img class="personnage" src="images/thomas-manteau.svg" alt="Thomas avec manteau" />
+			<div class="dialogue">
+				<img src="images/thomas-dialogue.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+			</div>
+		</div>
+		<div id="chap1scene2">
+			<div id="top-bar"></div>
+			<div id="bottom-bar"></div>
+			<img class="personnage" src="images/thomas.svg" alt="Thomas" />
+			<div class="dialogue">
+				<img src="images/thomas-dialogue-2.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+			</div>
+		</div>
+		<div id="chap1scene3">
+			<div id="top-bar"></div>
+			<div id="bottom-bar"></div>
+			<img class="personnage" src="images/thomas.svg" alt="Thomas" />
+			<div class="dialogue">
+				<img src="images/thomas-dialogue-2.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+			</div>
+		</div>
+		<div id="chap1scene4">
+			<div id="top-bar"></div>
+			<div id="bottom-bar"></div>
+			<img class="personnage" src="images/thomas-manteau.svg" alt="Thomas" />
+			<div class="dialogue">
+				<img src="images/thomas-dialogue.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+			</div>
+		</div>
+	</div>
+	<div id="jeu">
+		<div class="menu">
+			<a><i class="fa fa-bars"></i></a>
+			<a href="https://www.facebook.com/projetenigmatic/" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a><i class="fa fa-twitter"></i></a>
+		</div>
+		<div id="options">
+			<i class="fa fa-question-circle"></i>
+			<i class="fa fa-volume-up"></i>
+			<i class="fa fa-volume-off"></i>
+		</div>
+		<div id="scene-1">
+			ddsqdqssd
+		</div>
+	</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/pageloader.js"></script>
+</body>
+</html>

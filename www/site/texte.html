@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Daniel Hagnoul">
+		<title>Plugin jQuery dvjhEcrit</title>
+		<link href='http://fonts.googleapis.com/css?family=Sofia|Ubuntu:400|Kreon'>
+		<link rel="stylesheet" href="http://danielhagnoul.developpez.com/styles/dvjhRemBase.css">
+		<style>
+			.hyphens { -moz-hyphens:auto; -webkit-hyphens:auto; -ms-hyphens:auto; hyphens:auto; }
+			article { display:table-cell; text-align:justify; /*border:0.1rem dotted grey;*/ }
+			.table1 { border-collapse:separate; border-spacing:3rem; }
+			.ligne { display:table-row; }
+ 
+			.table1 .ligne { min-height:25rem; }
+			.table1 article { width:40rem; vertical-align:top; }
+		</style>
+	</head>
+	<body>
+		<h1>Plugin jQuery dvjhEcrit</h1>
+		<h2>Code v1.0.0 2012-12-01</h2>
+		<section class="conteneur">
+			<section class="table1">
+				<section class="ligne">
+					<article class="hyphens">
+ 
+					</article>
+					<article class="hyphens">
+ 
+					</article>
+				</section>
+			</section>
+		</section>
+		<footer itemscope itemtype="http://danielhagnoul.developpez.com/">
+			<time datetime="2012-12-01T22:55:22.955+01:00" pubdate>2012-12-01T22:55:22.955+01:00</time>
+			<span itemprop="name">Daniel Hagnoul</span>
+			<a href="http://www.developpez.net/forums/u285162/danielhagnoul/" itemprop="url">@danielhagnoul</a>
+			<a href="http://danielhagnoul.developpez.com/" itemprop="url">Mon cahier d’exercices</a>
+			<a href="http://javascript.developpez.com/faq/jquery/" itemprop="url">FAQ</a>
+			<a href="http://javascript.developpez.com/cours/?page=frameworks#jquery" itemprop="url">Tutoriels</a>
+		</footer>
+		<script src="http://danielhagnoul.developpez.com/lib/raphael-min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="http://code.jquery.com/color/jquery.color-2.1.1.min.js"></script>
+		<script src="http://danielhagnoul.developpez.com/lib/dvjh/base.js"></script>
+		<script>
+			"use strict";
+ 
+			/*
+			 * Plugin jQuery dvjhEcrit
+			 * 
+			 * Daniel Hagnoul
+			 * 
+			 * Code v1.0.0 2012-12-01
+			 * ------------------------------------------
+			 * Usage :
+			 * 
+			 * $( selector ).dvjhEcrit({
+			 *     "text" : "le texte à écrire"
+			 * });
+			 *
+			 * Options disponibles, réglages par défaut :
+			 *     "backgroundColor" : "#ffffff",
+			 *     "color" :"#000000",
+			 *     "fontFamily" : "cursive",
+			 *     "fontSize" : "1.2em",
+			 *     "fontWeight" : "normal",
+			 *     "lineHeight" : "1.5em",
+			 *     "letterSpacing" : "0.15em",
+			 *     "interval" : 100,
+			 *     "text" : ""
+			 */
+			( function( $ ){
+				$.fn.dvjhEcrit = function( options ){
+					var opts = $.extend( true, {}, $.fn.dvjhEcrit.defaults, options );
+ 
+					return this.each( function( i, item ){
+						var interval = parseInt( opts.interval , 10) || 100,
+							tabChaine = opts.text.split(''),
+							longueur = tabChaine.length,
+							lettre = [];
+ 
+						for( var k = 0; k < longueur; k++ ){
+							lettre.push(
+								$( "<span/>", { 
+									"css" : {
+										"display" : "none",
+										"backgroundColor" : opts.backgroundColor,
+										"color" : opts.color,
+										"fontFamily" : opts.fontFamily,
+										"fontSize" : opts.fontSize,
+										"fontWeight" : opts.fontWeight,
+										"lineHeight" : opts.lineHeight,
+										"letterSpacing" : opts.letterSpacing
+									}, 
+									"text" : tabChaine[ k ] 
+								})
+							);
+						}
+ 
+						$( item ).queue( function(){
+							for( var i = 0; i < longueur; i++ ){
+								lettre.shift().appendTo( item ).delay( interval * i ).fadeIn( 50 );
+							}
+ 
+							$( this ).dequeue();
+						 });
+					});
+				}
+ 
+				$.fn.dvjhEcrit.defaults = {
+					"backgroundColor" : "#ffffff",
+					"color" :"#000000",
+					"fontFamily" : "cursive",
+					"fontSize" : "1.2em",
+					"fontWeight" : "normal",
+					"lineHeight" : "1.5em",
+					"letterSpacing" : "0.15em",
+					"interval" : 100,
+					"text" : ""
+				};
+			})(jQuery);
+ 
+			$( function(){
+				var str1 = "Croce est celui qui a exprimé la plus forte hostilité au genre, et son influence a été grande." +
+					" Il opposait intuition et logique. À ses yeux, les catégories génériques pervertissent les réactions " +
+					"du lecteur qui tente de les appliquer à une oeuvre particulière ; elles le font passer " +
+					"d'une réaction intuitive à une réaction logique. De ce point de vue anti-théorique, une " +
+					"classification générique de la littérature est un déni de la nature même de la littérature " +
+					"et fait violence à la sensibilité du critique et à l'individualité de l'objet. Toute oeuvre " +
+					"véritable brise les lois génériques ; la recherche de classifications formelles est donc non " +
+					"pertinente et dangereuse. « Tout véritable chef-d'oeuvre a violé la loi d'un genre établi, semant " +
+					"ainsi le désarroi dans l'esprit des critiques, qui se virent dans l'obligation d'élargir " +
+					"ce genre » (1902, cité dans Théorie des genres, p. 41).",
+					str2 = "Les formalistes étudient les fonctions des éléments et leurs relations au système. C'est " +
+					"dans ce cadre qu'ils s'intéressent aux genres et types. Suivant eux, la différence entre langue " +
+					"littéraire et langue ordinaire (la « littérarité ») tient à la défamiliarisation comme procédé " +
+					"(voir Chklovski, « L'art comme procédé », 1917). L'art renouvelle la perception automatisée de " +
+					"la langue par des procédés qui défamiliarisent. Les genres sont ainsi conçus comme " +
+					"des « groupements constants de procédés » (p. 302) ; ils varient suivant l'organisation et la " +
+					"hiérarchie des procédés qu'ils mettent en jeu. Jakobson appellera dominante le ou les procédés " +
+					"auquel les autres sont soumis. Le concept de dominante décrit l'élément d'un type, par exemple " +
+					"la prosodie, qui caractérise la forme et détermine les autres éléments.";
+ 
+				$( "article" ).eq( 0 ).dvjhEcrit({
+					"text" : str1
+				});
+ 
+				$( "article" ).eq( 1 ).dvjhEcrit({
+					"text" : str2
+				});
+			});
+		</script>
+	</body>
+</html>

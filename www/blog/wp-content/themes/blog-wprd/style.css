@@ -89,6 +89,54 @@ Author URI: http://www.axellesimon.fr
     	left: 0px;
 	}
 
+	.imgLegende-right {
+		position: relative;
+	    overflow: hidden;
+	    width: auto;
+	    float: right;
+	    padding: 35px 0px 5px 20px;
+	}
+
+	.imgLegende-left {
+		position: relative;
+	    overflow: hidden;
+	    width: auto;
+	    float: left;
+	    padding: 35px 20px 5px 0px;
+	}
+
+	.imgLegende-center {
+		padding: 15px 0px;
+		position: relative;
+	    overflow: hidden;
+	    width: auto;
+	}
+
+	.legende {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		background: #e1e1e1;
+		font-style: italic;
+		font-family: arial;
+		font-size: 10px;
+		margin: 0px 0px 0px 20px;
+		padding: 8px 15px;
+	}
+
+	.legende-center {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		background: #e1e1e1;
+		font-style: italic;
+		font-family: arial;
+		font-size: 10px;
+		padding: 8px 15px;
+	}
+
 
 /*-- HEADER --*/	
 

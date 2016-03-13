@@ -1,0 +1,702 @@
+
+	/*-- RESET ALL --*/
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, font, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		margin:0;
+		padding:0;
+		border:0;
+		outline:0;
+		font-weight:inherit;
+		font-style:inherit;
+		font-size:100%;
+		font-family:inherit;
+		vertical-align:baseline;
+	}
+
+	html {
+		height: 100%;
+	}
+
+	body { 
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+	    background-size: cover;
+	    background-image: url('images/bg-home.jpg');
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    overflow: hidden;
+		}
+
+	video { 
+	    position: fixed;
+	    top: 20%;
+	    left: 50%;
+	    min-width: 100%;
+	    min-height: 100%;
+	    width: auto;
+	    height: auto;
+	    z-index: -100;
+	    transform: translateX(-50%) translateY(-50%);
+	  	background-size: cover;
+	  	transition: 1s opacity;
+	  	opacity: 0.3;
+	  	filter: grayscale(100%);
+	    -webkit-filter: grayscale(100%);
+	    -moz-filter: grayscale(100%);
+	    -ms-filter: grayscale(100%);
+	    -o-filter: grayscale(100%);
+	}
+
+	strong {
+		color: #4c3164;
+		font-weight: bold;
+		}
+
+	b {
+		font-weight: 400;
+	}
+		
+	em {
+		font-style: italic;
+		color: #867595;
+		}
+
+	a {
+		text-decoration: none;
+		color: #959595;
+	}
+
+	a:hover {
+		color: #b84de4;
+	}
+
+	#menu-coulissant {
+		position: absolute;
+		top: 0px;
+		left: -30%;
+		width: 30%;
+		background: white;
+		height: 100%;
+		z-index: 4;
+	}
+
+	#menu-coulissant img {
+		width: 65%;
+		position: relative;
+		margin-top: 20%;
+	}
+
+	/* PAGE DE CHARGEMENT */
+
+	#load {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		height: 100%;
+		margin: auto;
+		text-align: center;
+		position: relative;
+		z-index: 8;
+	}
+
+	#load img.background {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		-webkit-filter: blur(25px);
+        -moz-filter: blur(25px);
+        -ms-filter: blur(25px);
+        -o-filter: blur(25px);
+        filter: blur(25px);
+        z-index: 0;
+	}
+
+	#load .chargement {
+		position: absolute;
+		z-index: 1;
+	    margin: auto;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: 200px;
+	    height: 160px;
+	}
+
+	#load .chargement p {
+		font-family: 'Roboto', sans-serif;
+		font-size: 15px;
+		letter-spacing: 0.5em;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+		display: block;
+		margin: auto;
+		margin-top: 35px;
+		position: relative;
+		left: 5px;
+	}
+
+	#load .chargement img {
+		animation: rotation 4s infinite ease-in-out;
+		display: block;
+		margin: auto;
+		width: 100px;
+    	height: 100px;
+	}
+
+	@keyframes rotation{ 0% {transform:rotate(0deg);} 50% {transform:rotate(180deg);} 100% {transform:rotate(360deg);} } 
+	@-webkit-keyframes rotation{ 0% {transform:rotate(0deg);} 50% {transform:rotate(180deg);} 100% {transform:rotate(360deg);} }
+	@-moz-keyframes rotation{ 0% {transform:rotate(0deg);} 50% {transform:rotate(180deg);} 100% {transform:rotate(360deg);} } 
+	@-o-keyframes rotation{ 0% {transform:rotate(0deg);} 50% {transform:rotate(180deg);} 100% {transform:rotate(360deg);} } 
+
+	/* PAGE D'ACCUEIL */
+
+
+	#home {
+		display: none;
+		overflow: hidden;
+	}
+
+	.menu {
+		font: normal normal normal 22px/1 'FontAwesome';
+		color: #ffffff;
+		opacity: 0.5;
+		text-rendering: auto;
+    	-webkit-font-smoothing: antialiased;
+    	position: absolute;
+    	top: 50px;
+    	left: 5%;
+    	word-spacing: 15px;
+    	z-index: 4;
+	}
+
+	.menu a:hover, #home a:hover, #options i:hover {
+		opacity: 1.0;
+		color: white;
+		cursor: pointer;
+		-webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+	}
+
+	.fa-bars {
+		background: url('images/menu.png') top left no-repeat;
+		text-indent: -9999px;
+		z-index: 11;
+		position: relative;
+		padding: 3px 15px;
+	}
+
+	.fa-facebook {
+		font-size: 15px;
+	}
+
+	#options {
+		position: absolute;
+    	top: 50px;
+    	right: 5%;
+    	font: normal normal normal 22px/1 'FontAwesome';
+		color: #ffffff;
+		opacity: 0.5;
+		cursor: pointer;
+		z-index: 4;
+		word-spacing: 10px;
+	}
+
+	#options .fa-volume-off {
+		display: none;
+	}
+
+	#home section {
+		position: absolute;
+		z-index: 2;
+	    margin: auto;
+	    top: 5%;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: 835px;
+	    height: 380px;
+	}
+
+	#infos {
+		text-align: left;
+		width: 47%;
+		display: inline-block;
+	}
+
+	#infos h2 {
+		font-family: 'rawengulkregular';
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #dadada;
+		margin: 25px 0px 25px 5px;
+		line-height: 22px;
+	}
+
+	section p {
+		font-size: 12px;
+		font-weight: 300;
+		font-family: 'Roboto', sans-serif;
+		color: #dadada;
+		line-height: 18px;
+		margin: 0px 5px 20px 5px;
+		text-align: left;
+	}
+
+	#infos a {
+		text-transform: uppercase;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 500;
+		font-size: 15px;
+		color: #807380;
+		padding: 15px 50px;
+		border: 2px solid #675866;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		margin-top: 25px;
+		display: block;
+		width: 30%;
+		text-align: center;
+		opacity: 0.9;
+		cursor: pointer;
+	}
+
+	#infos a:hover {
+		border: 2px solid #675866;
+		background-color: rgba(88, 75, 87, 0.3);
+	}
+
+	#infos img {
+		width: 390px;
+	}
+
+	#connexion {
+		border-left: 1px solid #787178;
+		height: 260px;
+		display: inline-block;
+		width: 40%;
+		padding-left: 40px;
+		margin-left: 40px;
+		vertical-align: top;
+		position: relative;
+    	top: 50px;
+	}
+
+	#connexion input {
+		border-radius: 5px;
+	    width: 77%;
+	    border: 1px solid #271926;
+	    padding: 10px 15px 10px 45px;
+	    margin-bottom: 15px;
+	}
+
+	#connexion #login {
+		background: url('images/input-user.jpg') center left no-repeat #ffffff;
+	}
+
+	#connexion #mdp {
+		background: url('images/input-mdp.jpg') center left no-repeat #ffffff;
+	}
+
+	#connexion input:focus {
+		border: 1px solid #ad1a9d;
+		outline-style: none;
+	}
+
+	#connexion .bouton {
+		text-transform: uppercase;
+	    font-family: 'Roboto', sans-serif;
+	    font-weight: 500;
+	    font-size: 12px;
+	    color: #807380;
+	    padding: 12px 30px;
+	    border: 2px solid #675866;
+	    border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    margin-top: 55px;
+	    display: block;
+	    width: 35%;
+	    text-align: center;
+	    opacity: 0.9;
+	}
+
+	#connexion .bouton:hover {
+		border: 2px solid #675866;
+		background-color: rgba(88, 75, 87, 0.3);
+	}
+
+	/* JEU */
+
+	#chapitre-1 {
+		background: black;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+	}
+
+	#jeu {
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+	}
+
+	#jeu .menu {
+		font: normal normal normal 22px/1 'FontAwesome';
+		color: #ffffff;
+		opacity: 0.9;
+		text-rendering: auto;
+    	-webkit-font-smoothing: antialiased;
+    	position: absolute;
+    	top: 50px;
+    	left: 5%;
+    	word-spacing: 15px;
+    	z-index: 4;
+	}
+
+	#jeu .menu a{
+		opacity: 0.9;
+	}
+
+	#jeu #options {
+		position: absolute;
+    	top: 50px;
+    	right: 5%;
+    	font: normal normal normal 22px/1 'FontAwesome';
+		color: #ffffff;
+		opacity: 0.9;
+		cursor: pointer;
+		z-index: 4;
+		word-spacing: 10px;
+	}
+
+	#chapitre-1 .menu {
+		font: normal normal normal 22px/1 'FontAwesome';
+		color: #ffffff;
+		opacity: 0.9;
+		text-rendering: auto;
+    	-webkit-font-smoothing: antialiased;
+    	position: absolute;
+    	top: 100px;
+    	left: 5%;
+    	word-spacing: 15px;
+    	z-index: 4;
+	}
+
+	#chapitre-1 .menu a {
+		color: white;
+	}
+
+	#chapitre-1 #options {
+		top: 100px;
+	}
+
+	#top-bar {
+		width: 100%;
+		position: absolute;
+		top: -10%;
+		left: 0px;
+		background: black;
+		height: 10%;
+		animation: afficherBarreHaut 2s forwards;
+	}
+	
+	#bottom-bar {
+		width: 100%;
+		position: absolute;
+		bottom: -10%;
+		left: 0px;
+		background: black;
+		height: 10%;
+		z-index: 5;
+		animation: afficherBarreBas 2s forwards;
+	}
+
+	@keyframes afficherBarreHaut{ 0% {top: -10%;} 100% {top: 0px;} } 
+	@-webkit-keyframes afficherBarreHaut{ 0% {top: -10%;} 100% {top: 0px;} } 
+	@-moz-keyframes afficherBarreHaut{ 0% {top: -10%;} 100% {top: 0px;} } 
+	@-o-keyframes afficherBarreHaut{ 0% {top: -10%;} 100% {top: 0px;} } 
+
+	@keyframes afficherBarreBas{ 0% {bottom: -10%;} 100% {bottom: 0px;} } 
+	@-webkit-keyframes afficherBarreBas{ 0% {bottom: -10%;} 100% {bottom: 0px;} } 
+	@-moz-keyframes afficherBarreBas{ 0% {bottom: -10%;} 100% {bottom: 0px;} } 
+	@-o-keyframes afficherBarreBas{ 0% {bottom: -10%;} 100% {bottom: 0px;} } 
+
+	.menu a:hover {
+		opacity: 0.8;
+		color: white;
+		cursor: pointer;
+		-webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+	}
+
+	/* SCENE 1 PREAMBULE */
+
+	#chap1scene1 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('images/bg-rue-jeu.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    display: none;
+	    z-index: 3;
+	    position: relative;
+	}
+
+	#chap1scene1 .personnage {
+		height: 65%;
+		position: absolute;
+		margin: auto;
+	    top: 25%;
+	    right: 0;
+	    bottom: 0;
+	    left: 5%;
+	    width: auto;
+	}
+
+	/* SCENE 2 PREAMBULE */
+
+	#chap1scene2 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('images/bg-maison-jeu.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    display: none;
+	    z-index: 3;
+	    position: relative;
+	}
+
+	#chap1scene2 .personnage {
+		height: 65%;
+		position: absolute;
+		margin: auto;
+		left: -18%;
+    	top: 20%;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
+	}
+
+	/* SCENE 3 PREAMBULE */
+
+	#chap1scene3 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('images/bg-chambre-jeu.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    display: none;
+	    z-index: 3;
+	    position: relative;
+	}
+
+	#chap1scene3 .personnage {
+		height: 75%;
+		position: absolute;
+		margin: auto;
+		left: 20%;
+    	top: 25%;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
+	}
+
+	/* SCENE 4 PREAMBULE */
+
+	#chap1scene4 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('images/bg-maisonLeopold-jeu.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    display: none;
+	    z-index: 3;
+	    position: relative;
+	}
+
+	#chap1scene4 .personnage {
+		height: 44%;
+	    position: absolute;
+	    margin: auto;
+	    left: -20%;
+	    top: 50%;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
+	}
+
+	/* SCENE 1 JEU */
+
+	#scene-1 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('images/3d-bureau-leopold-3.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    z-index: 3;
+	    position: relative;
+	}
+
+
+	.dialogue {
+		height: 100px;
+		position: absolute;
+		margin: auto;
+	    top: 55%;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: auto;
+	}
+
+	.dialogue img {
+		width: auto;
+		height: auto;
+		display: inline-block;
+	}
+
+	.dialogue strong {
+		font-weight: 600;
+		color: #41214c;
+		text-transform: uppercase;
+		font-size: 15px;
+	}
+
+	.dialogue div {
+		display: inline-block;
+		background: white;
+		text-align: left;
+		padding: 20px 35px 20px 25px;
+		font-family: 'Open Sans', sans-serif;
+	    font-weight: 400;
+	    font-size: 13px;
+	    color: #222222;
+	    border-radius: 10px;
+	    border-bottom: 1px solid #a9a9a9;
+	    border-right: 1px solid #a9a9a9;
+	    vertical-align: top;
+	    position: relative;
+	    margin-left: 20px;
+	    max-width: 450px;
+	    line-height: 16px;
+	}
+
+	.dialogue div:after {
+		content: url('images/bulle.png');
+		position: absolute;
+		    top: -10px;
+    left: -15px;
+	}
+
+	.dialogue p {
+		display: block;
+		margin-top: 5px;
+	}
+
+	.dialogue .next {
+		background: #1e1e1e;
+		border: 1px solid #636363;
+		text-align: center;
+		color: #f7f7f7;
+		padding: 8px 10px;
+   	 	font-size: 10px;
+   	  	position: absolute;
+    	top: 30px;
+    	right: -15px;
+    	cursor: pointer;
+	}
+
+	.dialogue .next .fa {
+		position: relative;
+		animation: bougerFleche 1s infinite;
+	}
+
+	@keyframes bougerFleche{ 0% {left: 0px; } 50% {left: 2px;} 100% {left: 0px;} } 
+	@-webkit-keyframes bougerFleche{ 0% {left: 0px; } 50% {left: 2px;} 100% {left: 0px;} }  
+	@-moz-keyframes bougerFleche{ 0% {left: 0px; } 50% {left: 2px;} 100% {left: 0px;} } 
+	@-o-keyframes bougerFleche{ 0% {left: 0px; } 50% {left: 2px;} 100% {left: 0px;} } 
+
+	/* FOOTER */ 
+
+	footer {
+		position: absolute;
+		bottom: 30px;
+		margin: auto;
+		text-align: center;
+		width: 100%;
+		color: #6b6b6b;
+		font-family: 'Roboto', sans-serif;
+		font-size: 13px;
+		font-weight: 300;
+	}
+
+	footer a, #footer-resp a {
+		font-weight: 400;
+		opacity: 0.8;
+		color: #b0b0b0;
+		text-decoration: none;
+	}
+
+	footer a:first-child, #footer-resp a:first-child {
+		padding: 0px 35px;
+	}
+
+	footer a:hover, #footer-resp a:hover {
+		color: #ffffff;
+		opacity: 0.9;
+		-webkit-transition: all 0.8s ease-out;
+		-moz-transition: all 0.8s ease-out;
+		-ms-transition: all 0.8s ease-out;
+		-o-transition: all 0.8s ease-out;
+		transition: all 0.8s ease-out;
+	}
