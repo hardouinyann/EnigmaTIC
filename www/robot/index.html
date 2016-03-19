@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Robot</title>
+	<link rel="stylesheet" type="text/css" href="css/robot.css">
+
+	<link rel="stylesheet" type="text/css" href="css/laby.css">
+
+</head>
+<body>
+	<div class="robot">
+		<div class="ecran">
+			<header>
+				<p>Revenir au menu</p>
+			</header>
+			<div id="jeu_accueil">
+				<p>Chaque jeux vous fera gagner une lettre du mot de passe</p>
+				<ul>
+					<li id="laby">1 : Labyrinthe<span>Réponse : 3</span></li>
+					<li id="q1">2 : Enigme des corbeaux<span>Réponse : h</span></li>
+					<li id="lcc">3 : Loup chèvre choux<span>Réponse : 4</span></li>
+					<li id="memory">4 : Boîte magique<span>Réponse : B</span></li>
+					<li id="q2">5 : Enigme de l'escargot<span>Réponse : m</span></li>
+					<li id="ordi">6 : Arriera tu as me battre?<span>Réponse : R</span></li>
+				</ul>
+				<p id="allerMdp">Je pense connaître le mot de passe</p>
+			</div>
+			<div id="div_laby" class="masquer">
+
+				<div class="stat">Mouvements: <span id="step">0</span> </div>
+				<canvas id="canvasLaby" style="background:#eeeeee"></canvas><span>Sortie</span>
+
+			</div>
+			<div id="div_q1" class="masquer">
+				<p>Sur un arbre à 2 branches des oiseaux se parlent, l'un d'en haut dit à ceux d'en bas "si un de vous nous rejoint, nous serons alors 2 fois plus que vous, par contre si un de nous descend, nous serons alors à égalité". Combien y a-t-il d'oiseaux sur les branches ?</p>
+				<p>Branche du haut : <input type="text" id="nbOiseauTop"/> </p>
+				<p>Branche du bas : <input type="text" id="nbOiseauBottom"/> </p>
+				<input type="submit" value="valider" onClick="verifNbOiseau()">
+			</div>
+			<div id="div_lcc" class="masquer">
+				<p>lcc</p>
+				<canvas id="canvasLcc"></canvas>
+			</div>
+			<div id="div_memory" class="masquer">
+				<!--<input type="submit" onclick="melanger()" value="commencer">
+
+				<div></div>
+				<div></div>
+				<div></div>
+				<div id="boule"></div>-->
+				<canvas id='c'></canvas>
+				<style type="text/css">
+				div#div_memory{ position: relative;}
+				.info {
+				  font-family: helvetica;
+				  font-weight: 300;
+				  font-size: 14px;
+				  position: absolute;
+				  top: 0px;
+				  left: 0px;
+				  background-color: rgba(0,0,0,0.8);
+				  color: #fff;
+				  padding: 5px
+				}
+				</style>
+				<div class='info'>
+				  <b>Jeux du memorie :</b>
+				  <span>Cliquer sur les ronds en suivant l'ordre du numéro</span>
+				  <p id="timerMemory"></p>
+				</div>
+
+			</div>
+			<div id="div_q2" class="masquer">
+				<p>Un escargot est dans un puits de 10 mètres. Il monte 3 mètres chaque jour et descend 2 mètres chaque nuit. En combien de jours sera-t-il rendu en haut ?</p>
+				<p>Nombre de jours: <input type="number" id="nbJours"/> </p>
+				<input type="submit" value="valider" onClick="verifNbJours()">
+			</div>
+			<div id="div_ordi" class="masquer">
+				<style type="text/css">
+					div#div_ordi form td input{
+						background-color: #29abe2; 
+						border: #29abe2 5px solid; 
+						color: black;
+					}
+
+				</style>
+				<h3>Réussiras-tu à me battre?</h3>
+				<div id="choix">
+					<CENTER>Voici 9 cartes. Tour à tour nous allons en prendre une. Le gagnant est 
+					le premier qui, par addition de plusieurs de ses cartes obtiendras 15. Celui qui 
+					prendra la dernière carte aura perdu quoi qu'il en soit. Les cartes qui seront 
+					marquées CP seront les miennes et celles marquées JR les tiennes. A toi 
+					l'honneur... Que le meilleur gagne!!! </CENTER></FONT></div>
+					<div align=center>
+					<form name=f>
+					<table border=0 cellSpacing=20>
+					 <tbody>
+					 <tr>
+					 	<td width=20><INPUT name=one onclick=selectionne(this) type=button value=1></td>
+					    <td width=20><INPUT name=two onclick=selectionne(this) type=button value=2></td>
+					    <td width=20><INPUT name=three onclick=selectionne(this) type=button value=3></td>
+					    <td width=20><INPUT name=four onclick=selectionne(this) type=button value=4></td>
+					    <td width=20><INPUT name=five onclick=selectionne(this) type=button value=5></td>
+					    <td width=20><INPUT name=six onclick=selectionne(this) type=button value=6></td>
+					    <td width=20><INPUT name=seven onclick=selectionne(this) type=button value=7></td>
+					    <td width=20><INPUT name=eight onclick=selectionne(this) type=button value=8></td>
+					    <td width=20><INPUT name=nine onclick=selectionne(this) type=button value=9></td>
+					    <td width=20></td>
+					</tr>
+					<!--<tr>
+					    <td width=20>1</td>
+					    <td width=20>2</td>
+					    <td width=20>3</td>
+					    <td width=20>4</td>
+					    <td width=20>5</td>
+					    <td width=20>6</td>
+					    <td width=20>7</td>
+					    <td width=20>8</td>
+					    <td width=20>9</td>
+					</tr>-->
+					</tbody></table>
+				</form></DIV><BR><BR>
+				<DIV align=right><FONT size=1>copyright © Cyberpommer.</FONT></DIV>
+			</div>
+			<div id="mdp"  class="masquer">
+				<p>Saisir le mot de passe</p>
+				<input type="text" name="mdp"/>
+				<input type="submit" value="Vérifier">
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="js/robot.js"></script>
+		<script type="text/javascript" src="../dialogue/dialogue.js"></script>
+		<script type="text/javascript" src="js/paper-full.js"></script>
+		<script type="text/javascript" src="js/lcc.js"></script>
+		<script type="text/javascript" src="js/laby.js"></script>
+		<script type="text/javascript" src="js/memory.js"></script>
+		<script type="text/javascript" src="js/ordi.js"></script>
+
+
+	</footer>
+</body>
+</html>

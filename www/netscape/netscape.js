@@ -11,6 +11,7 @@ jQuery(function($){
 			//on récupère le ul qui doit être affiché. $(this) == li cliqué 
 			var ul= $(this).children('ul');
 
+
 			//si ce ul est déjà affiché
 			if(ul.attr('class') == 'afficher' ){
 				//le caché
@@ -25,6 +26,8 @@ jQuery(function($){
 			}
 			
 		});
+
+		
 
 
 
@@ -143,4 +146,21 @@ function forward(){
 
 function home(){
 	afficherAdresse('index');
+}
+
+
+function reload(){
+	chercherAdresse();
+}
+
+function addBookmarks(){
+	var url= document.getElementById('url');
+
+	var listeBookmarks= document.getElementById("listeBookmarks");
+	var li=  document.createElement("li");
+	var t=document.createTextNode(url.value);
+	
+	li.appendChild(t);
+	listeBookmarks.appendChild(li);
+
 }
