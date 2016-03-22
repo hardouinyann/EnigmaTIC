@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Enigma'TIC &bull; Plongez-vous dans l’aventure !</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="description" content="Découvrez le projet Enigma'TIC, un projet immersif qui vous permettra de découvrir l'évolution des interfaces graphiques grâce à du contenu multimédia riche et interactif." />
+      <meta name="keywords" content="interfaces grapiques, enigmatic, enigma'tic, enigma'TIC, evolution interface, evolution des interfaces graphiques, evolution interfaces numériques, projet multimedia, projet rhizome, master psm, produits et services multimedia, psm ufr stgi, rhizome" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" href="css/global.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/jeu.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/stylesheet.css" type="text/css" media="screen" />
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700|Roboto:400,300,500,700,300italic,400italic,100italic' rel='stylesheet' type='text/css'>
+      <link rel="Shortcut Icon" href="images/vign.png" />
+  </head>
+<body class="scene-jeu">
+  <div id="darker"></div>
+  <div id="load">
+    <div class="chargement"><img src="images/logo-sablier.svg" alt="logo chargement" />
+      <p id="chargement-infos">Chargement</p>
+    </div>
+    <img src="images/bg-home.jpg" class="background" alt="background" />
+  </div>
+  <div id="menu-coulissant" class="ferme">
+    <p>Menu</p>
+    <img src="images/logo-enigmatic.svg" alt="logo Enigma'TIC" />
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="a-propos.html">A propos</a></li>
+      <li><a href="http://www.enigma-tic.fr/blog/" target="_blank">Le Blog</a></li>
+      <li><a>Partenaires</a></li>
+      <li><a href="mentions-legales.html">Mentions Légales</a></li>
+      <li><a><i class="fa fa-twitter"></i></a><a href="https://www.facebook.com/projetenigmatic/" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+    </ul>
+    <div id="copyright">Enigma'Tic &copy; 2016</div>
+  </div>
+  <div class="menu">
+      <a><i class="fa fa-bars open-menu"></i></a>
+      <a href="https://www.facebook.com/projetenigmatic/" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a><i class="fa fa-twitter"></i></a>
+    </div>
+  <div id="options">
+    <i class="fa fa-user"></i>
+    <i class="fa fa-question-circle"></i>
+    <i class="fa fa-volume-up"></i>
+    <i class="fa fa-volume-off"></i>
+  </div>
+    <!-- Son d'ambiance-->
+    <audio loop>
+      <source src="medias/audio/bensound-relaxing.mp3" type="audio/mpeg">
+    </audio>
+    <div id="message-aide">
+      <div class="container">
+        <div class="close"></div>
+        <h2>Vous avez besoin d'aide ? </h2>
+        <p id="help-txt"></p>
+      </div>
+  </div>
+  <div id="jeu">
+    <div id="scene-1973-jeu">
+      <div id='console'>
+        <div class="close-console"></div>
+        <div id='entete'>
+        </div>
+        <div id='contenu'>  
+          <div id='contenu-1'>Login: <span class='cursor-console'></span></div>       
+        </div>
+      </div> 
+      <div class="objets">
+      <a><img class="montre" src="images/montre.png" alt="Montre" /></a>
+      <a><img class="blocNote" src="images/bloc-note.png" alt="Bloc Note Jeu" /></a>
+    </div>
+    <div class="bloc-note">
+      <div class="close-note"></div>
+      <form id="notes">
+        <textarea autocomplete="off" rows="22">Voilà votre bloc note ! Tapez ici tout ce dont vous avez besoin...
+Pour modifier le texte de ce bloc note, cliquez sur ce texte. Vous pouvez ensuite le modifier à l'infini.
+
+Pour fermer le bloc note, cliquez sur la croix en haut sur le côté gauche du bloc note.
+
+La sauvegarde du nouveau texte que vous avez tapé sur ce bloc note s'enregistre automatiquement quand vous le fermez (en cliquant sur la croix). Il sera le même pendant tout le jeu, et vous pouvez l'utiliser à tout moment quand vous en avez besoin.</textarea>
+      </form>
+    </div>  
+    </div> 
+    <div id="scene-1973-zoom">
+      <div id="top-bar"></div>
+      <div id="bottom-bar"></div>
+      <p id="shell-txt">Login : <span class="cursor"></span></p>
+      <div class="dialogue">
+        <img src="images/thomas-dialogue-2.png" alt="image dialogue" />
+        <div><strong class="nom">Thomas</strong><p class="dialogue-txt"></p>
+          <a class="next"><i class="fa fa-chevron-right"></i></a></div>
+      </div>
+    </div>
+    <div id="scene-1973">
+      <div id="top-bar"></div>
+      <div id="bottom-bar"></div>
+      <div class="dialogue">
+        <img src="images/thomas-dialogue-2.png" alt="image dialogue" />
+        <div><strong class="nom">Thomas</strong><p class="dialogue-txt"></p>
+          <a class="next"><i class="fa fa-chevron-right"></i></a></div>
+      </div>
+    </div>
+  </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/script-global.js"></script>
+<script src="js/script-jeu.js"></script>
+<script type="text/javascript" src="js/scriptTerminal.js"></script> 
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+</body>
+</html>
