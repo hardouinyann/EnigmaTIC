@@ -202,6 +202,14 @@
 		content: '';
 	}
 
+	.clignote {
+		animation: boutonAideClignote 1.5s infinite linear;
+	}
+
+	@keyframes boutonAideClignote{ 0% { color: #ffffff; } 50% { color: #b140c4;} 100% { color: #ffffff; }} 
+	@-webkit-keyframes boutonAideClignote{ 0% { color: #ffffff; } 50% { color: #b140c4;} 100% { color: #ffffff; }} 
+	@-moz-keyframes boutonAideClignote{ 0% { color: #ffffff; } 50% { color: #b140c4;} 100% { color: #ffffff; }} 
+	@-o-keyframes boutonAideClignote{ 0% { color: #ffffff; } 50% { color: #b140c4;} 100% { color: #ffffff; }}  
 	/* MENU FIXE DU SITE */
 
 	#darker {

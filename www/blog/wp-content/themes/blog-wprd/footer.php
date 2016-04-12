@@ -9,7 +9,7 @@
 <script charset="utf-8" type="text/javascript" src="<?php echo home_url( '/wp-content/themes/blog-wprd/js/script.js' ); ?>"></script>
 <script charset="utf-8" type="text/javascript">var switchTo5x=true;</script>
 <script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script charset="utf-8" type="text/javascript">stLight.options({"publisher":"wp.29199772-5942-4f23-8220-6985bddc6b1a","doNotCopy":false,"hashAddressBar":true,"doNotHash":false});var st_type="wordpress4.4.2";</script>
+<script charset="utf-8" type="text/javascript">stLight.options({"publisher":"wp.29199772-5942-4f23-8220-6985bddc6b1a","doNotCopy":false,"hashAddressBar":false,"doNotHash":false});var st_type="wordpress4.4.2";</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

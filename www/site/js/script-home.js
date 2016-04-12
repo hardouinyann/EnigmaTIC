@@ -8,21 +8,23 @@
 	var tabRepliquesScene2 = ["Me voilà à la maison ! Il fait meilleur ici ! Je vais essayer de rappeler grand-père. (<i>Thomas essaye de l'appeler à nouveau).</i>","Toujours aucune réponse, je tombe à nouveau sur son répondeur ! ", "Bon, j’espère qu’il va vite me rappeler, je n’aime pas quand il ne me donne pas de nouvelles aussi longtemps... ", "Il devrait vraiment prendre des vacances et laisser un peu tomber ses expériences scientifiques !"];
 	var tabRepliquesScene3 = ["<i>(Un jour plus tard...</i>). Bon, voilà, j’ai réservé mon billet de train. Je vais aller voir grand-père !","Je préfère aller vérifier s’il va bien, vu qu’il ne me donne plus de nouvelles depuis plusieurs jours ! Et puis, ça lui fera plaisir de me voir !"];
 	var tabRepliquesScene4 = ["Me voilà enfin chez grand-père ! Allons voir s'il est là !", "Tiens j’ai sonné... mais il ne répond-pas. Mais qu’est ce qu’il fabrique !","La porte est dévérouillée... Je lui ai pourtant dis plusieurs fois de faire attention et de verouiller sa porte d'entrée ! Quel tête de mule! ", "Bon aller, je rentre ! De toute façon il doit sûrement être encore occupé dans son bureau, il n’a pas du entendre la sonnette."];
+	var messageAide = "Bienvenue dans l'univers d'<b>Enigma'TIC</b> ! Pour faire défiler les dialogues des personnages, cliquez sur la flèche à droite de la bulle de dialogue, quand vous avez fini de lire la réplique actuelle. Vous pouvez cliquer à tout moment sur cette flèche si vous ne souhaitez pas lire les dialogues, et que vous voulez juste faire défiler le texte rapidement ! A vous de jouer!";
 	var nom = "Thomas";
 	var j=0;
 	var etatDuJeu, afficherLeMessage ;
 	var textesAAfficher = tabRepliquesScene1;
-
 	$('.startGame').click(lancerLeJeu);
 	$('.next').click(changerMessageDialogue);
 
 	/* FONCTION QUI PERMET DE LANCER LE JEU */
 	function lancerLeJeu () {
+		$('#options .fa-question-circle').addClass('clignote');
 		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
 		$('#home').fadeOut(1200);
 		$('#chapitre-1').fadeIn(300);
 		$('#chap1scene1').fadeIn(2000);
+		$('#help-txt').html(messageAide);
 		etatDuJeu = "chapitre1scene1";
 		afficherTexte(textesAAfficher, nom);
 	}

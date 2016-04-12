@@ -46,6 +46,7 @@
 
 	/* FONCTION QUI AFFICHE LE MESSAGE D'AIDE */
 	function afficherMessageAide () {
+		$(this).removeClass('clignote');
 		if($('#message-aide').hasClass('affiche')){
 			$('#message-aide').css({ 'top' : '-200%' });
 			$('#message-aide').removeClass('affiche');

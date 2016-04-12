@@ -2,12 +2,14 @@
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
 	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! On dirait que j'ai été... téléporté ! ","Ce bureau a l'air très ancien ! Oh, mais je reconnais cet ordinateur sur le bureau ! C'est un Xerox Alto !", "Grand-père m'en avait parlé, et il m'avait montré une photo de cet ordinateur ! Je crois même qu'il avait écrit un article sur son blog à propos de celui-ci.", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a été révélé au grand public en 1973. Bon, voyons voir si cet ordinateur fonctionne !"];
 	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'écran ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.","Je vais essayer de fouiller dans cet ordinateur pour voir s'il y a des fichiers intéressants dedans !", "Peut-être que je trouverais plus d'informations sur la localisation de grand-père. Je le connais, il ne laisse rien au hasard !", "Je suis sûr que je suis là parcequ'il le voulait ! Voyons voir ce que je peux trouver !"];
+	var messageAide = 'Vous voilà dans le bureau de Léopold, le grand-père de Thomas. Fouillez dans son bureau pour trouver des indices sur sa localisation. Cliquez sur les "+" que vous pouvez voir dans le décor pour avoir plus d&apos;informations sur les différents objets qui le composent.<br/><br/>En bas de la page, vous pouvez cliquer sur votre bloc note personnel pour y écrire tout ce dont vous avez besoin, tout au long du jeu.';
 	var nom = "Thomas";
 	var j=0;
 	var etatDuJeu, afficherLeMessage ;
 	var textesAAfficher = tabRepliquesScene1973;
 
-
+	$('#options .fa-question-circle').addClass('clignote');
+	$('#help-txt').html(messageAide);
 	$('.blocNote').click(afficherBlocNote);
 	$('.close-note').click(cacherBlocNote);
 	$('.next').click(changerMessageDialogue);
