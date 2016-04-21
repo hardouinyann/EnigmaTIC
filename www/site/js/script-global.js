@@ -1,14 +1,17 @@
-	/* VARIABLES GLOBALES */
+/* VARIABLES GLOBALES */
 	var audio = document.querySelector("audio");
 	var video = document.querySelector("video");
 	var volumeOn = true;
+	var fullscreen = false;
+	var activite_detectee = true;
+	var testerActiviteUtilisateur;
+	var clicAide = 0;
 	
 	$(document).ready(chargerLaPage);
 	$(window).load(setup);
 
 	/* FONCTION QUI PERMET DE CHARGER LA PAGE */
 	function chargerLaPage () {
-		$('#load').show();
 		if(video != null){ 
 			video.load(function(){
 				console.log("video charger");
@@ -42,10 +45,47 @@
 		$('#options .fa-question-circle').click(afficherMessageAide);
 		$('.close').click(afficherMessageAide);
 		$('.scrollTop').click(topPage);
+		$('#options .fa-arrows-alt').click(afficherGrandEcran);
+		testerActiviteUtilisateur = setInterval(utilisateurInactif, 15000);
+		$('body').keydown(activiteDetectee);
+		$('body').hover(activiteDetectee);
+		$('body').click(activiteDetectee);
+	}
+
+	/* SAVOIR SI L'UTILISATEUR EST ACTIF SUR LE SITE OU PAS */
+	function utilisateurInactif () {
+		activite_detectee = false;
+		setTimeout(testerActivite, 1000);
+	}
+
+	function testerActivite (){
+		if(activite_detectee == false) {
+			$('#options .fa-question-circle').addClass('clignote');
+		}
+	}
+
+	function activiteDetectee() {
+	  activite_detectee = true;
+	  console.log("clickouprout");
+	}
+
+	/* FONCTION POUR AFFICHER LE JEU EN GRAND ECRAN */
+	function afficherGrandEcran () {
+		if(fullscreen == false){
+			screenfull.request();
+			fullscreen = true;
+		}else {
+			screenfull.exit();
+			fullscreen = false;
+		}
 	}
 
 	/* FONCTION QUI AFFICHE LE MESSAGE D'AIDE */
 	function afficherMessageAide () {
+		if(clicAide > 1){
+			clearInterval(testerActiviteUtilisateur);
+		}
+		clicAide++;
 		$(this).removeClass('clignote');
 		if($('#message-aide').hasClass('affiche')){
 			$('#message-aide').css({ 'top' : '-200%' });
@@ -86,8 +126,6 @@
 			$('#darker').fadeOut(200);
 		}
 	}
-
-
 
 	function changerEtatMenu () {
 		console.log($(this).hasClass('menu-active'));

@@ -148,6 +148,14 @@
 		transition: all 300ms ease-out;
 	}
 
+	.fa-arrows-alt {
+		background: url('../images/fullscreen.png') top left no-repeat;
+		text-indent: -9999px;
+		z-index: 11;
+		position: relative;
+		padding: 2px 15px;
+	}
+
 	.fa-bars {
 		background: url('../images/menu.png') top left no-repeat;
 		text-indent: -9999px;
@@ -162,10 +170,7 @@
 		z-index: 11;
 		position: relative;
 		padding: 0px 11px;
-	}
-
-	.fa-facebook {
-		font-size: 15px;
+		display: none;
 	}
 
 	#options {
@@ -178,7 +183,7 @@
 		cursor: pointer;
 		z-index: 4;
 		word-spacing: 12px;
-		width: 100px;
+		width: 150px;
 	}
 
 	#options .fa-volume-off {

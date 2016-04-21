@@ -2,11 +2,14 @@
 	*************** CSS JEU PAGE INTERACTIVE *************
 	*****************************************************/
 
+	html {
+		min-width: 800px;
+	}
+
 	.scene-jeu .menu, .scene-jeu #options {
 		opacity: 0.9;
 		top: 10%;
 	}
-
 
 	#jeu {
 			height: 100%;
@@ -15,7 +18,11 @@
 			position: absolute;
 			top: 0px;
 			left: 0px;
-		}
+	}
+
+	.dialogue {
+		top: 65%;
+	}
 
 	.objets {
 	    position: absolute;
@@ -78,6 +85,60 @@
 		outline-style: none;
 	}
 
+	#scene-1 .more {
+		background: url('../images/plus.png');
+		width: 54px;
+		height: 51px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0;
+		cursor: pointer;
+		display: block;
+		opacity: 0.7;
+	}
+
+	#scene-1 .more:hover {
+		opacity: 1;
+		-webkit-transition: all 300ms linear;
+		-moz-transition: all 300ms linear;
+		-ms-transition: all 300ms linear;
+		-o-transition: all 300ms linear;
+		transition: all 300ms linear;
+	}
+
+	#scene-1 .bureau { 
+		top: 40%;
+    	left: 20%;
+	}
+
+	#scene-1 .rideau { 
+		top: 0%;
+    	right: 88%;
+	}
+
+	#scene-1 .tableau { 
+		bottom: 10%;
+    	left: 25%;
+	}
+
+	#scene-1 .cadre { 
+		bottom: 15%;
+   		right: 30%;
+	}
+
+	#scene-1 .bibliotheque { 
+		top: 5%;
+    	right: 53%;
+	}
+
+	#scene-1 .travaux { 
+		top: 40%;
+    	left: 80%;
+	}
+
 	/* SCENE 1 JEU */
 
 	#scene-1 {
@@ -87,12 +148,24 @@
 		height: 100%;
 		min-height: 100%;
 		width: 100%;
-	    background-image: url('../images/3d-bureau-leopold-3.jpg');
+	    background-image: url('../images/3d-bureau-leopold.jpg');
 	    background-size: cover;
 	    background-repeat: no-repeat;
 	    background-position: top center;
 	    z-index: 3;
 	    position: relative;
+	    margin: auto;
+	}
+
+	#scene-1 div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100px;
+		height: 100px;
+		margin: auto;
 	}
 
 	/* SCENE 1973 */
@@ -209,3 +282,11 @@
 		right: 15px;
 	}
 
+
+	/* RESPONSIVE */
+	@media only screen and (min-width: 100px) and (max-width: 800px)  {
+	 	body{ overflow: auto; }
+	 	#jeu, #scene-1 { min-width: 800px; }
+	 	.scene-jeu .menu, .scene-jeu #options { position: fixed; top: 6%; }
+	 	.objets { position: fixed; }
+	}

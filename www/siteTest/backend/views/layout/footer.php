@@ -1,0 +1,1 @@
+Enigma’TIC  ©  2016<a href="<?php echo WEBROOT ?>informations/mentionslegales" class="mentions">Mentions Légales</a><a class="apropos" href="<?php echo WEBROOT ?>informations/apropos">A Propos</a><div></div>

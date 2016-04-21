@@ -18,6 +18,7 @@
 	    left: 0;
 	    width: 835px;
 	    height: 380px;
+	    display: none;
 	}
 
 	section p {
@@ -45,6 +46,7 @@
 		color: #dadada;
 		margin: 25px 0px 25px 5px;
 		line-height: 22px;
+		letter-spacing: 0.01em;
 	}
 
 	#infos a {
@@ -63,6 +65,7 @@
 		text-align: center;
 		opacity: 0.9;
 		cursor: pointer;
+		letter-spacing: 0.03em;
 	}
 
 	#infos a:hover {
@@ -96,15 +99,19 @@
 	    margin-bottom: 15px;
 	}
 
-	#connexion #login {
+	#connexion #login, #inscription #login {
+		background: url('../images/input-mail.jpg') center left no-repeat #ffffff;
+	}
+
+	#connexion #pseudo, #inscription #pseudo {
 		background: url('../images/input-user.jpg') center left no-repeat #ffffff;
 	}
 
-	#connexion #mdp {
+	#connexion .mdp, #inscription .mdp {
 		background: url('../images/input-mdp.jpg') center left no-repeat #ffffff;
 	}
 
-	#connexion input:focus {
+	#connexion input:focus, #inscription input:focus {
 		border: 1px solid #ad1a9d;
 		outline-style: none;
 	}
@@ -126,9 +133,89 @@
 	    opacity: 0.9;
 	}
 
-	#connexion .bouton:hover {
+	#connexion .bouton:hover, #connexion .bouton:hover  {
 		border: 2px solid #675866;
 		background-color: rgba(88, 75, 87, 0.3);
+	}
+
+	/* FORMULAIRE D'INSCRIPTION */
+
+	.entete-form img {
+		text-align: left;
+		width: 40%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.entete-form h2 {
+		font-family: 'rawengulkregular';
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #dadada;
+		display: inline-block;
+		line-height: 22px;
+		letter-spacing: 0.03em;
+		vertical-align: middle;
+		border-left: 1px solid #787178;
+		padding-left: 35px;
+		margin-left: 25px;
+	}
+
+	#inscription {
+		display: block;
+		width: 90%;
+		margin: 30px auto;
+		padding-left: 10px;
+		text-align: center;
+	}
+
+	#inscription p {
+		margin: auto;
+		text-align: justify;
+	}
+
+	#inscription input {
+		border-radius: 5px;
+	    width: 100%;
+	    display: block;
+	    min-width: 280px;
+	    border: 1px solid #271926;
+	    padding: 10px 0 10px 0;
+	    margin-bottom: 15px;
+	    text-indent: 50px;
+	}
+
+	#form-inscription {
+		margin: auto;
+		text-align: center;
+	}
+
+	#form-inscription div {
+		display: inline-block;
+		width: auto;
+		margin: 35px 5px;
+	}
+
+	#form-inscription div:first-child {
+		margin: 35px 15px 35px 0px;
+	}
+
+	#form-inscription .bouton {
+		text-transform: uppercase;
+	    font-family: 'Roboto', sans-serif;
+	    font-weight: 500;
+	    font-size: 15px;
+	    color: #807380;
+	    padding: 12px 30px;
+	    border: 2px solid #675866;
+	    border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    display: block;
+	    width: 35%;
+	    margin:0px auto;
+	    text-align: center;
+	    opacity: 0.9;
+	    background: transparent;
 	}
 
 	/* JEU - PREAMBULE CINEMATIQUE */
@@ -144,6 +231,33 @@
 		display: none;
 	}
 
+	#passer-cinematique {
+		position: absolute;
+	    bottom: 15%;
+	    right: 5%;
+	    background-color: rgba(0, 0, 0, 0.5);
+	    border: 1px solid #303030;
+	    color: white;
+	    text-align: center;
+	    text-transform: uppercase;
+	    font-family: 'Roboto', sans-serif;
+	    font-size: 11px;
+	    font-weight: 400;
+	    padding: 15px 20px;
+	    letter-spacing: 0.05em;
+	    display: none;
+	    z-index: 10;
+	    cursor: pointer;
+	}
+
+	#passer-cinematique:hover {
+		background-color: rgba(0, 0, 0, 0.8);
+		-webkit-transition: all 250ms linear;
+		-moz-transition: all 250ms linear;
+		-ms-transition: all 250ms linear;
+		-o-transition: all 250ms linear;
+		transition: all 250ms linear;
+	}
 
 	/* SCENE 1 PREAMBULE */
 
@@ -163,14 +277,18 @@
 	    position: relative;
 	}
 
-	#chap1scene1 .personnage {
+	#chap1scene1 .diagleopold {
+		display: none;
+	}
+
+	#chap1scene1 .personnage svg {
 		height: 65%;
 		position: absolute;
 		margin: auto;
 	    top: 25%;
 	    right: 0;
 	    bottom: 0;
-	    left: 5%;
+	    left: 0%;
 	    width: auto;
 	    animation: bougerThomas1 5s forwards;
 	}
@@ -198,7 +316,7 @@
 	    position: relative;
 	}
 
-	#chap1scene2 .personnage {
+	#chap1scene2 .personnage svg {
 		height: 65%;
 		position: absolute;
 		margin: auto;
@@ -268,7 +386,7 @@
 	    position: relative;
 	}
 
-	#chap1scene4 .personnage {
+	#chap1scene4 .personnage svg {
 		height: 44%;
 	    position: absolute;
 	    margin: auto;
@@ -280,13 +398,25 @@
 	    animation: bougerThomas4 3s forwards;
 	}
 
+	.animerThomasChap4 {
+		animation: bougerThomas4v2 3s forwards;
+	}
+
 	@keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} } 
 	@-webkit-keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} }
 	@-moz-keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} } 
 	@-o-keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} }
 
+	@keyframes bougerThomas4v2 { 0% { top: 50%; height: 44%; } 100% {top: 60%; height: 30%;} } 
+	@-webkit-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 60%; height: 30%;} } 
+	@-moz-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 60%; height: 30%;} } 
+	@-o-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 60%; height: 30%;} } 
+
 
 	/* RESPONSIVE */
+	@media only screen and (min-width: 100px) and (max-width: 1100px)  {
+	 	#passer-cinematique {   bottom: 45%; }
+	}
 
 	@media only screen and (min-width: 785px) and (max-width: 900px)  {
 	 	#home section { width: 90%; }

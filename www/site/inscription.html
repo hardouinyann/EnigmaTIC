@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Enigma'TIC &bull; Plongez-vous dans l’histoire des interfaces graphiques !</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="description" content="Découvrez Enigma'TIC, un jeu en ligne immersif qui vous permettra de découvrir l'évolution des interfaces graphiques grâce à du contenu multimédia riche et interactif." />
+      <meta name="keywords" content="interfaces grapiques, enigmatic, enigma'tic, enigma'TIC, evolution interface, evolution des interfaces graphiques, evolution interfaces numériques, projet multimedia, projet rhizome, master psm, produits et services multimedia, psm ufr stgi, rhizome, projet rhizome" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/global.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/home.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/stylesheet.css" type="text/css" media="screen" />
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700|Roboto:400,300,500,700,300italic,400italic,100italic' rel='stylesheet' type='text/css'>
+      <link rel="Shortcut Icon" href="images/vign.png" />
+  </head>
+<body>
+	<!-- Fond noir en opacité pour l'affichage du menu--><div id="darker"></div>
+	<!-- Div de chargement -->
+	<div id="load">
+		<div class="chargement"><img src="images/logo-sablier.svg" alt="logo chargement" />
+			<p id="chargement-infos">Chargement</p>
+		</div>
+		<img src="images/bg-home.jpg" class="background" alt="background" />
+	</div>
+	<!-- Menu coulissant du site -->
+	<div id="menu-coulissant" class="ferme">
+		<p>Menu</p>
+		<img src="images/logo-enigmatic.svg" alt="logo Enigma'TIC" />
+		<ul>
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="a-propos.html">A propos</a></li>
+			<li><a href="http://www.enigma-tic.fr/blog/" target="_blank">Le Blog</a></li>
+			<li><a>Partenaires</a></li>
+			<li><a href="mentions-legales.html">Mentions Légales</a></li>
+			<li><a><i class="fa fa-twitter"></i></a><a href="https://www.facebook.com/projetenigmatic/" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+		</ul>
+		<div id="copyright">Enigma'Tic &copy; 2016</div>
+	</div>
+	<!-- Elements de navigation fixe (menu, réseaux sociaux, son, plein écran, etc...) -->
+	<div class="menu">
+			<a><i class="fa fa-bars open-menu"></i></a>
+			<a href="https://www.facebook.com/projetenigmatic/" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a><i class="fa fa-twitter"></i></a>
+		</div>
+	<div id="options">
+		<i class="fa fa-arrows-alt" aria-hidden="true"></i>
+		<i class="fa fa-user"></i>
+		<i class="fa fa-question-circle"></i>
+		<i class="fa fa-volume-up"></i>
+		<i class="fa fa-volume-off"></i>
+	</div>
+	<!-- Bouton pour passer la cinématique -->
+	<a id="passer-cinematique">Passer la cinématique&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	<!-- Page d'accueil du site -->
+	<div id="home">
+		<!-- Son d'ambiance-->
+		<audio loop>
+		  <source src="medias/audio/bensound-relaxing.mp3" type="audio/mpeg">
+		</audio>
+		<!-- Vidéo d'ambiance-->
+		<video id="bgvid" poster="images/bg-cosmos.jpg" loop>
+			<source src="medias/videos/cosmos.mp4" type="video/mp4">
+			<source src="medias/videos/cosmos.webm" type="video/webm">
+				<source src="medias/videos/cosmos.ogv" type="video/ogv">
+		</video>
+		<!-- Formulaire d'inscription -->
+		<section>
+			<div class="entete-form">
+				<img src="images/logo-enigmatic-blanc.svg" alt="logo Enigma'TIC blanc" />
+				<h2>Créer votre compte utilisateur</h2>
+			</div>
+			<div id="inscription">
+				<p>Il est nécessaire de créer un <b>compte utilisateur</b> pour que vous puissiez sauvegarder votre progression dans le jeu. Vous pourrez ainsi y jouer quand vous le voudrez, et où vous voulez, sans perdre votre progression, même si vous quittez le site à un certain moment.<br/><br/>L'inscription est rapide, et vous n'avez pas besoin d'entrez vos informations personnelles, sauf votre adresse email. Elle vous servira pour vous connecter au jeu, ou si vous avez perdu votre mot de passe. Vous ne recevrez en aucun d'email de notre part, sauf si vous demandez à réinitialiser votre mot de passe. </p>
+				<form id="form-inscription" action="" method="POST">
+					<div>
+						<input type="text" name="pseudo" id="pseudo" placeholder="Choississez votre pseudo" />
+						<input type="text" name="login" id="login" placeholder="Tapez votre adresse email" />
+					</div>
+					<div>
+						<input type="password" name="password" class="mdp" placeholder="Tapez votre mot de passe" />
+						<input type="password" name="password_verif" class="mdp" placeholder="Retapez votre mot de passe" />
+					</div>
+					<button class="bouton">Créer votre compte</button>
+				</form>
+			</div>
+		</section>
+		<footer>
+			Enigma’TIC  ©  2016<a href="mentions-legales.html" class="mentions">Mentions Légales</a><a href="a-propos.html">A Propos</a><div></div>
+		</footer>
+	</div>
+	<!-- Message d'aide -->
+	<div id="message-aide">
+		<div class="container">
+			<div class="close"></div>
+			<h2>Vous avez besoin d'aide ? </h2>
+			<p id="help-txt">Si vous n'avez jamais joué à <b>Enigma'TIC</b>, cliquez sur le bouton '<i>Lancer le jeu</i>' pour découvrir l'univers du projet et vous lancer dans l'aventure. Si vous avez déjà un compte utilisateur sur le site, connectez-vous avec le formulaire à votre disposition sur la page d'accueil. Vous serez redirigé vers le <b>bureau de Léopold</b> et vous pourrez continuer l'aventure !<br><br>Si vous avez <strong>besoin d'aide</strong> à tout moment dans le jeu, cliquez sur le bouton d'aide (<i>ce bouton</i> : <i class="fa fa-question-circle"></i>), présent en haut à droite de la fenêtre de votre navigateur. Vous aurez ainsi plus d'informations sur les actions qui sont attendues que vous réalisiez. Pour fermer cette fenêtre cliquez sur la croix en haut à gauche de ce bloc.</p>
+		</div>
+	</div>
+	<!-- Cinématique : Préambule du jeu -->
+	<div id="chapitre-1">
+		<div id="chap1scene1">
+			<div id="top-bar"></div>
+			<div id="bottom-bar"></div>
+			<div id="svgloadchap1scene1" class="personnage"></div>
+			<div class="dialogue diagThomas">
+				<img src="images/thomas-dialogue.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+			</div>
+			<div class="dialogue diagleopold">
+				<img src="images/leopold-dialogue.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+			</div>
+		</div>
+		<div id="chap1scene2">
+			<div id="top-bar"></div>
+			<div id="bottom-bar"></div>
+			<div id="svgloadchap1scene2" class="personnage"></div>
+			<div class="dialogue">
+				<img src="images/thomas-dialogue-2.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+		</div>
+		</div>
+		<div id="chap1scene3">
+			<div id="top-bar"></div>
+			<div id="bottom-bar"></div>
+			<img class="personnage" src="images/thomas-2.svg" alt="Thomas" />
+			<div class="dialogue">
+				<img src="images/thomas-dialogue-2.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+			</div>
+		</div>
+		<div id="chap1scene4">
+			<div id="top-bar"></div>
+			<div id="bottom-bar"></div>
+			<div id="svgloadchap1scene4" class="personnage"></div>
+			<div class="dialogue">
+				<img src="images/thomas-dialogue.png" alt="image dialogue" />
+				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
+					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.svg.min.js"></script>
+<script src="js/screenfull.min.js"></script>
+<script src="js/script-home.js"></script>
+<script src="js/script-global.js"></script>
+</body>
+</html>

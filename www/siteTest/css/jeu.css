@@ -1,0 +1,406 @@
+	/****************************************************
+	*************** CSS JEU PAGE INTERACTIVE *************
+	*****************************************************/
+
+	html {
+		min-width: 800px;
+	}
+
+	.scene-jeu .menu, .scene-jeu #options {
+		opacity: 0.9;
+		top: 10%;
+	}
+
+	#jeu {
+			height: 100%;
+			min-height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+
+	#jeu .dialogue {
+		top: 70%;
+		z-index: 3;
+	}
+
+/* OBJETS EN BAS DE PAGE */
+
+	.objets {
+	    position: absolute;
+	    bottom: 5%;
+	    right: 5%;
+	    z-index: 5;
+	    width: 120px;
+	    height: 100px;
+	    text-align: left;
+	}
+
+	.objets .blocNote {
+		position: absolute;
+		left: 35px;
+	}
+
+	.objets a {
+		cursor: pointer;
+	}
+
+/* BLOC NOTE */
+
+	.bloc-note {
+		background: url('../images/bloc-note-xxl.png') top center no-repeat;
+		height: 90%;
+		width: 100%;
+		max-width: 350px;
+		max-height: 485px;
+		position: absolute;
+		top: -200%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 7;
+		margin: auto;
+		text-align: left;
+	}
+
+	.bloc-note .close-note {
+		background: url("../images/close-white.png") 0% 0% no-repeat;
+		padding: 15px;
+		position: relative;
+		cursor: pointer;
+		right: 15px;
+	}
+
+	#notes textarea {
+		position: relative;
+	    left: 55px;
+	    top: 50px;
+	    width: 70%;
+	    height: 90%;
+	    max-width: 1000px;
+	    font-weight: 400;
+	    line-height: 20px;
+	    background: transparent;
+	    border: 0px;
+	    line-height: 16px;
+	}
+
+	#notes textarea:focus {
+		outline-style: none;
+	}
+
+/* BUREAU DE LEOPOLD */
+
+	#bureau-leopold {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/3d-bureau-leopold.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    z-index: 3;
+	    position: relative;
+	    margin: auto;
+	}
+
+	#bureau-leopold div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width:  100%;
+		height: 100%;
+		margin: auto;
+	}
+
+	#bureau-leopold .more {
+		background: url('../images/plus.png');
+		width: 54px;
+		height: 51px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0;
+		cursor: pointer;
+		display: block;
+		opacity: 0.7;
+	}
+
+	#bureau-leopold .more:hover {
+		opacity: 1;
+		-webkit-transition: all 300ms linear;
+		-moz-transition: all 300ms linear;
+		-ms-transition: all 300ms linear;
+		-o-transition: all 300ms linear;
+		transition: all 300ms linear;
+	}
+
+	#interactive { 
+		display: none;
+		z-index: 5;
+	}
+
+	#interactive .bureau { 
+		top: 40%;
+    	left: 20%;
+	}
+
+	#interactive .rideau { 
+		top: 0%;
+    	right: 88%;
+	}
+
+	#interactive .tableau { 
+		bottom: 10%;
+    	left: 25%;
+	}
+
+	#interactive .cadre { 
+		bottom: 15%;
+   		right: 30%;
+	}
+
+	#interactive .bibliotheque { 
+		top: 5%;
+    	right: 53%;
+	}
+
+	#interactive .travaux { 
+		top: 40%;
+    	left: 80%;
+	}
+
+/* BUREAU DE LEOPOLD - FOUILLE DU BUREAU */
+
+	#zoom-objets-bureau{
+		z-index: 8;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width:  100%;
+		height: 100%;
+		margin: auto;
+		display: none;
+	}
+
+	#zoom-objets-bureau div { 
+		display: none;
+		z-index: 15;
+	}
+
+	#photo-cadre img {
+		width: 35%;
+	    margin: auto;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 23%;
+	}
+
+	#tableau {
+		z-index: 8;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 85%;
+	    margin: auto;
+	    max-height: 794px;
+	    max-width: 1386px;
+	    text-align: center;
+	    margin: auto;
+	}
+
+	#tableau-liege {
+		position: relative;
+	    width:  80%;
+		height: 100%;
+		margin: auto;
+	}
+
+	#tableau-liege div {
+		display: block;
+	}
+
+	#tableau-liege .close-tableau {
+		position: absolute;
+	    top: 8%;
+	    left: 10%;
+	    background: url("../images/close-white.png") 0% 0% no-repeat;
+		padding: 15px;
+		text-indent: -99999999px;
+		cursor: pointer;
+	}
+
+	#tableau-liege img {
+		margin: auto;
+		height: 100%;
+	}
+
+	#zoom-objets-bureau #zoom-bureau {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 90%;
+		min-height: 90%;
+		width: 80%;
+	    background-image: url('../images/zoom-bureau.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    z-index: 3;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: auto;
+	}
+
+	#zoom-bureau .close-zoom {
+		display: block;
+		position: absolute;
+	    top: 0%;
+   		left: -5%;
+	    background: url("../images/close-white.png") 0% 0% no-repeat;
+		padding: 15px;
+		text-indent: -99999999px;
+		cursor: pointer;
+	}
+
+
+	/* SCENE 1973 */
+
+	#scene-1973 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bureau-1970.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    z-index: 2;
+	    position: relative;
+	}
+
+	#scene-1973-zoom {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/zoom-alto-1973.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    z-index: 3;
+	    position: relative;
+	    display: none;
+	}
+
+	#scene-1973-jeu {
+		display: none;
+	}
+
+	.scene-flou {
+		-webkit-filter: blur(10px) grayscale(100%);
+        -moz-filter: blur(10px) grayscale(100%);
+        -ms-filter: blur(10px) grayscale(100%);
+        -o-filter: blur(10px) grayscale(100%);
+        filter: blur(10px) grayscale(100%);
+        -webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+	}
+
+	/* CONSOLE DE COMMANDE */
+
+	#shell-txt {
+		position: relative;
+	    top: 25%;
+	    right: 5%;
+	    color: white;
+	    font-family: monospace;
+	}
+
+	#shell-txt .cursor {
+		clear: both;
+		display: inline-block;
+		width: 10px;
+	    height: 15px;
+	    background: #aaa;
+	    position: relative;
+	    top: 4px;
+	} 
+
+	#console{
+		margin: auto;
+		width: 40%;
+		height: 50%;
+		padding:30px;
+		background-color: black;
+		font-family: monospace;
+		font-size: 14px;
+		font-weight: bold;
+		color:#aaa;
+		overflow-y: scroll;
+		position: absolute;
+		top: 10%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: left;
+		z-index: 5;
+	}
+
+	#console>div{
+		font-size: 14;
+		display:inline-block;
+	}
+
+	.cursor-console {
+		clear: both;
+		display: inline-block;
+		width: 10px;
+	    height: 15px;
+	    background: #aaa;
+	    position: relative;
+	    top: 4px;
+	} 
+
+	.close-console {
+		background: url("../images/close-white.png") 0% 0% no-repeat;
+		padding: 15px;
+		position: relative;
+		cursor: pointer;
+		bottom: 10px;
+		right: 15px;
+	}
+
+
+	/* RESPONSIVE */
+	@media only screen and (min-width: 100px) and (max-width: 800px)  {
+	 	body{ overflow: auto; }
+	 	#jeu, #bureau-leopold { min-width: 800px; }
+	 	.scene-jeu .menu, .scene-jeu #options { position: fixed; top: 6%; }
+	 	.objets { position: fixed; }
+	}

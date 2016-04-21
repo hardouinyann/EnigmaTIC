@@ -8,7 +8,6 @@
 	var etatDuJeu, afficherLeMessage ;
 	var textesAAfficher = tabRepliquesScene1973;
 
-	$('#options .fa-question-circle').addClass('clignote');
 	$('#help-txt').html(messageAide);
 	$('.blocNote').click(afficherBlocNote);
 	$('.close-note').click(cacherBlocNote);

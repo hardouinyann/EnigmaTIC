@@ -126,7 +126,8 @@ Author URI: http://www.axellesimon.fr
 		font-style: italic;
 		font-family: arial;
 		font-size: 10px;
-		padding: 8px 15px;
+		padding: 8px 20px;
+		line-height: 15px;
 	}
 
 	.legende-center {
