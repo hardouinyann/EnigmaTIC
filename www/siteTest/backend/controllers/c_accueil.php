@@ -31,20 +31,30 @@ class c_accueil extends Controller{
 
             array_splice($this->datasFromPost, -1, 1);//on retire le password verif
             $this->datasFromPost['ip'] = $_SERVER['REMOTE_ADDR'];//ip du visiteur, a vérifier si on a des spam d'inscription
-            if(count($this->getModel('user')->checkForMatch($this->datasFromPost['mail'],$this->datasFromPost['login']))==0){//si ce login/mail n'est pas déja pris
 
-                require('c_connexion.php');//module permettant l'encodage du mdp
-                $c = new c_connexion();
-                $this->datasFromPost['password'] = $c->getCrypt($this->datasFromPost['password']);//on encode le  mdp
-                $this->datasFromPost['date_inscription'] = 'now';
-                if($this->getModel('user')->createUser($this->datasFromPost)!=null){
-                    $this->dataForView->created = true;
+            if(count($this->getModel('user')->checkForMatch("mail",$this->datasFromPost['mail']))==0){//si ce mail n'est pas déja pris
+
+                if(count($this->getModel('user')->checkForMatch("login",$this->datasFromPost['login']))==0){//si ce login n'est pas pris
+
+                    require('c_connexion.php');//module permettant l'encodage du mdp
+                    $c = new c_connexion();
+                    $this->datasFromPost['password'] = $c->getCrypt($this->datasFromPost['password']);//on encode le  mdp
+                    $this->datasFromPost['date_inscription'] = 'now';
+                    if($this->getModel('user')->createUser($this->datasFromPost)!=null){
+                        $this->dataForView->created = true;
+                    }
                 }
+                else{
+                    $this->dataForView->created = false;
+                    $this->dataForView->alreadyExist = "pseudo";
+                }
+                
             }else{
                 $this->dataForView->created = false;
-                $this->dataForView->alreadyExist = true;
+                $this->dataForView->alreadyExist = "mail";
             }
         }
+        $this->debug($this->dataForView);
         $this->render('v_inscription');
     }
 }

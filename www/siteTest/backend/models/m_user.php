@@ -10,9 +10,9 @@
             ));
         }
 
-        public function checkForMatch($mail, $login){
+        public function checkForMatch($nomChamp, $valeur){
             return $this->find(array(
-                'condition' => "login='$login' OR mail='$mail'"
+                'condition' => "$nomChamp='$valeur'"
             ));
         }
 
