@@ -1,11 +1,12 @@
 	/* VARIABLE POUR GERER L'AFFICHAGE DU TEXTE DES CINEMATIQUES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
-	var tabRepliquesBureau = ["Tiens c'est bizarre... J'ai fouillé toute la maison, mais grand-père n'est pas là ! Pourtant la porte d'entrée était dévérouillée... ", "Il oublie souvent de la fermer à clé quand il est ici, mais jamais quand il sort faire des courses !", "Je commence vraiment à m'inquiéter pour lui ! En plus de ça, il ne répond pas à mes appels. D'habitude il me rapelle au plus tard deux jours après que je l'ai appelé...", "Je vais fouiller dans son bureau pour voir si je ne peux pas trouver des informations sur sa localisation.", "Après-tout, il avait peut-être une course rapide à faire pour une de ses inventions ou je ne sais quoi...", "Je suis sûr que je trouverais des indices dans son bureau. Il passe tout son temps ici, à travailler sur ses sujets de recherches."," Aller, au boulot ! Voyons voir ce qu'on peut trouver ici !"];
+	var tabRepliquesBureau = ["Tiens c'est bizarre... J'ai fouillé toute la maison, mais grand-père n'est pas là ! Pourtant la porte d'entrée était dévérouillée... ", "Je commence vraiment à m'inquiéter pour lui ! En plus de ça, il ne répond pas à mes appels. D'habitude il me rapelle rapidement quand je lui laisse un message...", "Je vais fouiller dans son bureau pour voir si je ne peux pas trouver des informations sur sa localisation.", "Je suis sûr que je trouverais des indices dans son bureau. Il passe tout son temps ici, à travailler sur ses sujets de recherches."," Aller, au boulot ! Voyons voir ce qu'on peut trouver ici !"];
 	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! On dirait que j'ai été... téléporté ! ","Ce bureau a l'air très ancien ! Oh, mais je reconnais cet ordinateur sur le bureau ! C'est un Xerox Alto !", "Grand-père m'en avait parlé, et il m'avait montré une photo de cet ordinateur ! Je crois même qu'il avait écrit un article sur son blog à propos de celui-ci.", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a été révélé au grand public en 1973. Bon, voyons voir si cet ordinateur fonctionne !"];
 	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'écran de l'ordinateur ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.","Je vais essayer de fouiller dans cet ordinateur pour voir s'il y a des fichiers intéressants dedans !", "Peut-être que je trouverais plus d'informations sur la localisation de grand-père. Je le connais, il ne laisse rien au hasard !", "Je suis sûr que je suis là parcequ'il le voulait ! Voyons voir ce que je peux trouver !"];
 	var tabRepliqueCadrePhoto = ["C'est un cadre avec une photo de grand-père et moi ! Je me souviens, nous l'avons prise quand nous sommes allés en vacances dans le sud de la France !", "On avait loué un gîte très atypique, et on avait fait de la randonnée ! C'était vraiment sympa !"];
 	var tabRepliqueBibliotheque = ["C'est la bibliothèque de livres de grand-père. Elle est bien remplie dis donc ! Il y a des livres en tout genre !","Il y a de nombreux livres sur l'informatique, et en particulier sur les interfaces graphiques. C'est un domaine qui nous passione tous les deux !"];
 	var tabRepliqueTravaux = ["Ce sont des livres et documents qui servent à grand-père pour ses travaux de recherche.", "C'est le bazar dis donc ! Il y a aussi des plans de construction on dirait, et des livres sur la physique quantique ! "];
+	var tabRepliqueTableau = ["C'est un tableau en liège, avec des post-it vierges dessus. Je pourrais m'en servir si j'en ai besoin."];
 	var messageAideBureau = '';
 	var messageAide1973 = "";
 	var nom = "Thomas";
@@ -79,12 +80,13 @@
 			$('#darker').fadeOut(500);
 			$('#zoom-objets-bureau').fadeOut(500);
 			$('#tableau, #tableau-liege').fadeOut(500);
+			$('.dialogue').fadeOut(250);
 			$('.dialogue').css('z-index', '3');
 		});
-		/* clearInterval(afficherLeMessage);
-		textesAAfficher = tabRepliqueCadrePhoto;
+		clearInterval(afficherLeMessage);
+		textesAAfficher = tabRepliqueTableau;
 		afficherTexte(textesAAfficher, nom);
-		$('.dialogue').fadeIn(500); */
+		$('.dialogue').fadeIn(500);
 	}
 
 	function actionBibliotheque () {
@@ -138,9 +140,16 @@
 			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
 			afficherTexte(textesAAfficher, nom);
 			clearInterval(cursor);
-		}else if(etatDuJeu == "bureau-leopold" && j=="6"){
+		}else if(etatDuJeu == "bureau-leopold" && j=="4"){
 			$('.dialogue').fadeOut(250);
 			$('#interactive').fadeIn(1000);
+			setTimeout(function () { j=0; }, 500);
+		}else if(etatDuJeu == "bureau-leopold-tableau" && j=="0") {
+			$('#darker').fadeOut(500);
+			$('.dialogue').fadeOut(250);
+			$('.dialogue').css('z-index', '3');
+			$('#zoom-objets-bureau').fadeOut(250);
+			$('#tableau, #tableau-liege').fadeOut(500);
 			setTimeout(function () { j=0; }, 500);
 		}else if(etatDuJeu == "bureau-leopold-cadre" && j=="1"){
 			$('#darker').fadeOut(500);

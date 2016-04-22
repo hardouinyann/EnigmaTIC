@@ -23,7 +23,10 @@
 		<div id="chap1scene1">
 			<div id="top-bar"></div>
 			<div id="bottom-bar"></div>
-			<div id="svgloadchap1scene1" class="personnage"></div>
+			<div class="personnage">
+				<img class="personnage" id="thomaschap1scene1" src="<?php echo PICTURES_PATH?>thomas-manteau.svg" alt="Thomas" />
+				<img class="personnage" id="thomaschap1scene1phone" src="<?php echo PICTURES_PATH?>thomas-manteau-telephone.svg" alt="Thomas" />
+			</div>
 			<div class="dialogue diagThomas">
 				<img src="<?php echo PICTURES_PATH?>thomas-dialogue.png" alt="image dialogue" />
 				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
@@ -38,7 +41,10 @@
 		<div id="chap1scene2">
 			<div id="top-bar"></div>
 			<div id="bottom-bar"></div>
-			<div id="svgloadchap1scene2" class="personnage"></div>
+			<div class="personnage">
+				<img class="personnage" id="thomaschap1scene2" src="<?php echo PICTURES_PATH?>thomas.svg" alt="Thomas" />
+				<img class="personnage" id="thomaschap1scene2phone" src="<?php echo PICTURES_PATH?>thomas-telephone.svg" alt="Thomas" />
+			</div>
 			<div class="dialogue">
 				<img src="<?php echo PICTURES_PATH?>thomas-dialogue-2.png" alt="image dialogue" />
 				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
@@ -58,7 +64,10 @@
 		<div id="chap1scene4">
 			<div id="top-bar"></div>
 			<div id="bottom-bar"></div>
-			<div id="svgloadchap1scene4" class="personnage"></div>
+			<div class="personnage">
+				<img class="personnage" id="thomaschap1scene4" src="<?php echo PICTURES_PATH?>thomas-manteau-2.svg" alt="Thomas" />
+				<img class="personnage" id="thomaschap1scene4dos" src="<?php echo PICTURES_PATH?>thomas-manteau-dos.svg" alt="Thomas" />
+			</div>
 			<div class="dialogue">
 				<img src="<?php echo PICTURES_PATH?>thomas-dialogue.png" alt="image dialogue" />
 				<div><strong class="nom"></strong><p class="dialogue-txt"></p>

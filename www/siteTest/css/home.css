@@ -279,16 +279,28 @@
 		display: none;
 	}
 
-	#chap1scene1 .personnage svg {
+	#chap1scene1 .personnage #thomaschap1scene1 {
 		height: 65%;
 		position: absolute;
 		margin: auto;
-	    top: 25%;
+	    top: 35%;
 	    right: 0;
 	    bottom: 0;
-	    left: 0%;
+	    left: 5%;
 	    width: auto;
 	    animation: bougerThomas1 5s forwards;
+	}
+
+	#thomaschap1scene1phone {
+		display: none;
+		height: 65%;
+		position: absolute;
+		margin: auto;
+	    top: 35%;
+	    right: 0;
+	    bottom: 0;
+	    left: 5%;
+	    width: auto;
 	}
 
 	@keyframes bougerThomas1{ 0% { height: 40%; top: 25%; left: -10%;} 100% {top: 35%; height: 65%; left: 5%; } } 
@@ -314,22 +326,34 @@
 	    position: relative;
 	}
 
-	#chap1scene2 .personnage svg {
-		height: 65%;
+	#chap1scene2 .personnage #thomaschap1scene2 {
+		height: 70%;
 		position: absolute;
 		margin: auto;
 		left: -18%;
-    	top: 20%;
+    	top: 32%;
 	    right: 0;
 	    bottom: 0;
 	    width: auto;
 	    animation: bougerThomas2 5s forwards;
 	}
 
-	@keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 65%; left: -18%; } } 
-	@-webkit-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 65%; left: -18%; } } 
-	@-moz-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 65%; left: -18%; } } 
-	@-o-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 65%; left: -18%; } }   
+	#thomaschap1scene2phone {
+		display: none;
+		height: 70%;
+		position: absolute;
+		margin: auto;
+	    top: 32%;
+	    right: 0;
+	    bottom: 0;
+	    left: -18%;
+	    width: auto;
+	}
+
+	@keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } } 
+	@-webkit-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } } 
+	@-moz-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } } 
+	@-o-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } }   
 
 	/* SCENE 3 PREAMBULE */
 
@@ -384,7 +408,7 @@
 	    position: relative;
 	}
 
-	#chap1scene4 .personnage svg {
+	#chap1scene4 .personnage #thomaschap1scene4 {
 		height: 44%;
 	    position: absolute;
 	    margin: auto;
@@ -396,7 +420,16 @@
 	    animation: bougerThomas4 3s forwards;
 	}
 
-	.animerThomasChap4 {
+	#thomaschap1scene4dos {
+		height: 44%;
+		top: 50%;
+		left: -20%;
+		display: none;
+		position: absolute;
+	    margin: auto;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
 		animation: bougerThomas4v2 3s forwards;
 	}
 
@@ -405,10 +438,10 @@
 	@-moz-keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} } 
 	@-o-keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} }
 
-	@keyframes bougerThomas4v2 { 0% { top: 50%; height: 44%; } 100% {top: 50%; height: 20%;} } 
-	@-webkit-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 50%; height: 20%;} } 
-	@-moz-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 50%; height: 20%;} } 
-	@-o-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 50%; height: 20%;} } 
+	@keyframes bougerThomas4v2 { 0% { top: 50%; height: 44%; } 100% {top: 55%; height: 38%;} } 
+	@-webkit-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 55%; height: 38%;} } 
+	@-moz-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 55%; height: 38%;} } 
+	@-o-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 55%; height: 38%;} } 
 
 
 	/* RESPONSIVE */

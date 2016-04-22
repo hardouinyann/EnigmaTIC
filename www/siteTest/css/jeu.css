@@ -65,7 +65,10 @@
 	}
 
 	.bloc-note .close-note {
-		background: url("../images/close-white.png") 0% 0% no-repeat;
+		background-image: url("../images/close-white.png");
+		background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: 0% 0%;
 		padding: 15px;
 		position: relative;
 		cursor: pointer;
