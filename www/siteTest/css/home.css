@@ -31,6 +31,26 @@
 		text-align: left;
 	}
 
+	p.error, #inscription p.error {
+		width: 90%;
+	    margin: 20px auto 5px;
+	    font-size: 14px;
+	    font-weight: 500;
+	    color: #F31C1C;
+	    text-align: center;
+	    font-style: italic;
+	}
+
+	p.valid, #inscription p.valid {
+		width: 90%;
+	    margin: 20px auto 5px;
+	    font-size: 14px;
+	    font-weight: 500;
+	    color: #02AD11;
+	    text-align: center;
+	    font-style: italic;
+	}
+
 /* BLOC D'INFOS SUR LE PROJET */
 
 	#infos {
@@ -99,11 +119,11 @@
 	    margin-bottom: 15px;
 	}
 
-	#connexion #login, #inscription #login {
+	#connexion #login, #form-inscription .mail {
 		background: url('../images/input-mail.jpg') center left no-repeat #ffffff;
 	}
 
-	#connexion #pseudo, #inscription #pseudo {
+	#connexion #pseudo, #form-inscription .pseudo {
 		background: url('../images/input-user.jpg') center left no-repeat #ffffff;
 	}
 
@@ -111,9 +131,10 @@
 		background: url('../images/input-mdp.jpg') center left no-repeat #ffffff;
 	}
 
-	#connexion input:focus, #inscription input:focus  {
+	#connexion input:focus, #form-inscription input:focus  {
 		border: 1px solid #ad1a9d;
 		outline-style: none;
+		outline: none;
 	}
 
 	#connexion .bouton {
@@ -147,13 +168,18 @@
 		transition: all 300ms ease-out;
 	}
 
+	#form-inscription .bouton:focus  {
+		outline-style: none;
+		outline: none;
+	}
+
 /* FORMULAIRE D'INSCRIPTION */
 
 	#home section.inscription-temp {
 		position: absolute;
 		z-index: 2;
 	    margin: auto;
-	    top: 20%;
+	    top: 15%;
 	    right: 0;
 	    bottom: 0;
 	    left: 0;
@@ -215,11 +241,11 @@
 	#form-inscription div {
 		display: inline-block;
 		width: auto;
-		margin: 35px 5px;
+		margin: 25px 5px 20px;
 	}
 
 	#form-inscription div:first-child {
-		margin: 35px 15px 35px 0px;
+		margin: 25px 15px 20px 0px;
 	}
 
 	#form-inscription .bouton {
@@ -242,6 +268,26 @@
 	    right: 15px;
 	    cursor: pointer;
 	    letter-spacing: 0.03em;
+	}
+
+	.error {
+		width: 90%;
+	    margin-top: 20px;
+	    font-size: 13px;
+	    font-weight: 500;
+	    color: #F31C1C;
+	    text-align: center;
+	    font-style: italic;
+	}
+
+	.valid {
+		width: 90%;
+	    margin-top: 20px;
+	    font-size: 13px;
+	    font-weight: 500;
+	    color: #02AD11;
+	    text-align: center;
+	    font-style: italic;
 	}
 
 /* JEU - PREAMBULE CINEMATIQUE */
