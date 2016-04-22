@@ -21,10 +21,11 @@
 		<div id="connexion">
 			<p>Si vous avez déjà un <b>compte utilisateur</b> sur le site, connectez-vous pour retrouver le jeu là où vous l’aviez arreté !</p>
 			<form action="" method="POST">
-				<input type="text" name="pseudo" id="pseudo" placeholder="votre email" />
+				<input type="text" name="mail" id="pseudo" placeholder="votre email" />
 				<input type="password" name="password" class="password" placeholder="mot de passe" />
 				<p class="left" ><a href="">Mot de passe oublié ?</a></p>
 				<p class="right"><a href="<?php echo WEBROOT ?>/accueil/inscription">Créer un compte utilisateur</a></p>
+				<?php if(!empty($this->dataForView->connected)) echo "<h2 style='green'>Connecté avec succès !</h2>" ?>
 				<button class="bouton">Se connecter</button>
 			</form>
 		</div>

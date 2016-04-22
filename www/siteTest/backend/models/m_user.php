@@ -4,9 +4,9 @@
 
         protected $table = 'utilisateur';
 
-        public function getUsers($login, $password){
+        public function getUsers($mail, $password){
             return $this->find(array(
-                'condition' => "login='$login' AND password='$password'"
+                'condition' => "mail='$mail' AND password='$password'"
             ));
         }
 

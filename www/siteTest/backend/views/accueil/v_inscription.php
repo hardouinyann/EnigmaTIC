@@ -35,7 +35,7 @@
 					</div>
 					<?php
 
-						if(!empty( $this->dataForView->created ) && $this->dataForView->created){
+						if(!empty($this->dataForView->created) && $this->dataForView->created){
 							echo "<h2 style='color:green'>Votre compte à été créé avec succès !</h2>";
 						}elseif(!empty( $this->dataForView->alreadyExist ) && $this->dataForView->alreadyExist){
 							echo "<h2 style='color:red'>Ce login / mail existe déjà !</h2>";

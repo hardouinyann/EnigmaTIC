@@ -14,10 +14,10 @@ class c_connexion extends Controller {
 
     public function connexion($datas){
 
-        $login = $datas['login'];
+        $mail = $datas['mail'];
         $mdp = $this->crypt($datas['password']);
 
-        return $this->getModel('user')->getUsers($login, $mdp);
+        return $this->getModel('user')->getUsers($mail, $mdp);
         
     }
 
