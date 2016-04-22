@@ -16,10 +16,8 @@
             ));
         }
 
-        public function createUser($login, $mail, $mdp){
-            return $this->insert(array(
-                'condition' => "login='$login' OR mail='$mail'"
-            ));
+        public function createUser($post){
+            return $this->insert($post);
         }
 
     }

@@ -9,3 +9,4 @@
 <link rel="stylesheet" href="<?php echo STYLE_PATH?>stylesheet.css" type="text/css" media="screen" />
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700|Roboto:400,300,500,700,300italic,400italic,100italic' rel='stylesheet' type='text/css'>
 <link rel="Shortcut Icon" href="<?php echo PICTURES_PATH?>vign.png" />
+<script src="<?php echo JAVASCRIPT_PATH?>jquery-1.7.2.min.js"></script>

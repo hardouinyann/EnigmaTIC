@@ -21,19 +21,8 @@ class c_connexion extends Controller {
         
     }
 
-    public function inscription($datas){
-
-        $mail = $datas['mail'];
-        $login = $datas['login'];
-        $mdp = $this->crypt($datas['password']);
-
-        $existeDeja = $this->getModel('user')->checkForMatch($mail,$login);
-        if(count($existeDejas) == 1) { 
-
-            $this->getModel('user')->createUser($login, $mail, $mdp);
-
-        }
-
+    public function getCrypt($datas){   
+        return $this->crypt($datas);
         
     }
 
