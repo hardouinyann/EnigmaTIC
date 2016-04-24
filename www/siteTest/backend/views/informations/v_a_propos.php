@@ -42,6 +42,12 @@
     }
 
   </style>
+  <!-- Vidéo d'ambiance-->
+    <video id="bgvid" poster="<?php echo PICTURES_PATH?>bg-cosmos.jpg" loop>
+        <source src="<?php echo VIDEOS_PATH?>cosmos.mp4" type="video/mp4">
+        <source src="<?php echo VIDEOS_PATH?>cosmos.webm" type="video/webm">
+        <source src="<?php echo VIDEOS_PATH?>cosmos.ogv" type="video/ogv">
+    </video>
   <h2>A Propos</h2>
   <section class="page">
     <p>Retrouvez sur cette page plus d'informations sur le projet <b>Enigma’TIC</b>, et sur l'équipe qui se cache derrière la réalisation et la conception de ce projet ! Vous pourrez également retrouver sur cette page un <b>formulaire de contact</b>.</p>
