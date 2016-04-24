@@ -2,6 +2,7 @@
 <html>
 <?php include_once(VIEWS_PATH."layout/head-jeu.php") ?>
 <body>
+	<?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
 	<!-- Fond noir en opacité pour l'affichage du menu-->
 	<div id="darker"></div>
 	<!-- Div de chargement -->

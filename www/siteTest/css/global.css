@@ -238,10 +238,20 @@
 	    word-spacing: 2px;
 	    position: relative;
 	    bottom: 2px;
+    	margin-right: 15px;
 	}
 
 	#userconnect b {
 		font-weight: 500;
+	}
+
+	#userconnect a {
+		color: white;
+	}
+
+	#userconnect a:hover {
+		color: white;
+		text-decoration: underline;
 	}
 
 	/* MENU FIXE DU SITE */

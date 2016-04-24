@@ -59,8 +59,13 @@ class c_accueil extends Controller{
         $this->render('v_inscription');
     }
 
-     public function reinitialiser(){
+    public function reinitialiser(){
         $this->render('v_reinitialiser');
+    }
+
+    public function deconnexion(){
+        session_destroy();
+        header('Location: '.WEBROOT); 
     }
 }
 ?>

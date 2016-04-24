@@ -6,7 +6,7 @@
 </div>
 <div id="options">
 	<span id="userconnect">
-		<?php if(!empty($_SESSION['user'])) echo "Bonjour <b>".$_SESSION['user']->login."</b>&nbsp;&nbsp;•&nbsp;&nbsp;Se déconnecter" ?>
+		<?php if(!empty($_SESSION['user'])) echo "Bonjour <b>".$_SESSION['user']->login."</b>&nbsp;&nbsp;•&nbsp;&nbsp;<a href='".WEBROOT."/accueil/deconnexion'>Se déconnecter</a>"?>
 	</span>
 	<i class="fa fa-user"></i>
 	<i class="fa fa-question-circle"></i>
