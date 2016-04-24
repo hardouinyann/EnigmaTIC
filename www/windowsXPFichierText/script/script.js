@@ -76,7 +76,8 @@ function ajouterClickEventSurDossier(){
 		var id = $(ev.target).parent().attr('id');
 		var titre = id;
 		$enfants = $xml.find('dossier[name='+id+']').children();
-		var f = new Fenetre(titre, $enfants, numFenetre);
+		var icone = $xml.find('dossier[name='+id+']').attr('url');
+		var f = new Fenetre(titre, $enfants, numFenetre, icone);
 		$fenetres[numFenetre++] = f;
 		f.draw();	
 	});
@@ -116,6 +117,15 @@ function ajouterClickEventSurDossier(){
 		$fichier = $xml.find('fichier[name='+id+']');
 		var f = new FichierText($fichier.text(),id);
 		f.draw();
+
+	});
+
+	$(document).on('click','.shortcut',function(ev){
+		var id = $(ev.currentTarget).find('span').text().replace(' ','-').replace(' ','-');
+		console.log($('.fenetre#'+id));
+		$('.selectedFenetre').removeClass('selectedFenetre');
+		$('.selectedHeader').removeClass('selectedHeader');
+		$('.fenetre#'+id).addClass('selectedFenetre').find('.header').addClass('selectedHeader');
 
 	});
 		
@@ -177,13 +187,14 @@ class FichierText{
 
 class Fenetre{
 
-	constructor(titre, enfants, numFenetre){
+	constructor(titre, enfants, numFenetre, icon){
 		this.titre = titre;
 		this.enfants = enfants;
 		this.num = numFenetre;
 		this.previous = [];
 		this.previous.push(titre);
 		this.next = [];
+		this.icon = icon;
 	}
 
 	draw(){
@@ -216,7 +227,11 @@ class Fenetre{
 							divEnfants+
 						'</div>'
 						);
-
+		$('.barre').append('<div id="menu-demarrer" class="shortcut">'+
+								'<img src="images/'+this.icon+'" style="width:25px;margin:-2px  0 0 -8px;">'+
+								'<span>'+this.titre.replace('-',' ').replace('-',' ')+'</span>'+
+							'</div> '
+							);
 		$('.fenetre').addClass('ui-draggable').draggable({handle:'.header'});
 	}
 

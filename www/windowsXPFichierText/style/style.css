@@ -16,7 +16,9 @@ body{
 	z-index:3;
 	overflow: hidden;
 }
-
+.shortcut{
+	width:auto!important;
+}
 .close{
 	cursor: pointer;
 	background-color : rgb(200,50,20);
