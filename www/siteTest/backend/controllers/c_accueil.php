@@ -40,6 +40,7 @@ class c_accueil extends Controller{
                     $this->datasFromPost['date_inscription'] = 'now';
                     if($this->getModel('user')->createUser($this->datasFromPost)!=null){
                         $this->dataForView->created = true;
+                        $_SESSION['user'] = $this->datasFromPost;
                     }
                 }
                 else{
