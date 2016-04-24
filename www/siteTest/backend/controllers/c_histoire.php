@@ -25,7 +25,6 @@ class c_histoire extends Controller{
         }else{
             header('Location: histoire/bureau');
         }                
-        
     }
 
     public function bureau(){

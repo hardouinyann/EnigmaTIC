@@ -2,18 +2,26 @@
 	var tabRepliquesScene1 = ["Tiens... Cela fait longtemps que je n’ai pas eu de nouvelles de grand-père...","Il doit encore avoir la tête plongée dans l’une de ses nouvelles inventions farfelues... Il n’arrêtera jamais décidément !", "Je vais essayer de l’appeler pour voir s’il va bien quand même. <br/>(<i>Thomas compose le numéro et l’appelle...</i>).", "<i>Vous êtes bien sur le répondeur de Léopold ! Laissez un message après le bip sonore ! Je vous répondrais, si jamais je ne me perd pas dans les couloirs du temps hahaha ! (Biiip).</i>", "Bon, il ne répond pas... Je vais essayer de l’appeler plus tard...<br/>Aller, je vais rentrer à la maison en attendant. "];
 	var tabRepliquesScene2 = ["Me voilà à la maison ! Je vais essayer de rappeler grand-père.","(<i>Thomas essaye de l'appeler à nouveau).</i> Toujours aucune réponse, je tombe à nouveau sur sa messagerie ! ", "J’espère qu’il va vite me rappeler, je n’aime pas quand il ne me donne pas de nouvelles aussi longtemps... ", "Il devrait vraiment prendre des vacances et laisser un peu tomber ses expériences scientifiques !"];
 	var tabRepliquesScene3 = ["<i>(Deux jours plus tard...</i>). Voilà, j’ai réservé mon billet de train. Je vais aller voir grand-père !","Je préfère aller vérifier s’il va bien, vu qu’il ne me donne plus de nouvelles depuis plusieurs jours ! Et puis, ça lui fera plaisir de me voir !"];
-	var tabRepliquesScene4 = ["<i>(Le lendemain...</i>). Me voilà chez lui ! Allons voir s'il est là !", "Tiens j’ai sonné... mais il ne répond-pas. Il n'est peut-être pas là... Je vais essayer d'ouvrir la porte quand même. ","La porte s'ouvre. Je lui ai pourtant dis plusieurs fois de faire attention et de verrouiller sa porte d'entrée ! Quel tête de mule! ", "Aller, je rentre ! De toute façon je parie qu'il doit encore être occupé dans son bureau, et qu'il n’a pas entendu la sonnette."];
+	var tabRepliquesScene4 = ["<i>(Le lendemain...</i>). Me voilà chez lui ! Allons voir s'il est là !", "Tiens j’ai sonné... mais il ne répond-pas. Il n'est peut-être pas là... Je vais essayer d'ouvrir la porte quand même. ","Elle s'ouvre ! Je lui ai pourtant dis plusieurs fois de faire attention et de verrouiller sa porte d'entrée ! Quel tête de mule! ", "Aller, je rentre ! De toute façon je parie qu'il doit encore être occupé dans son bureau, et qu'il n’a pas entendu la sonnette."];
 	var messageAide = "Vous voilà lancé dans l'aventure <b>Enigma'TIC</b> ! Dans le jeu, vous retrouverez régulièremet des cinématiques comme celle-ci. Pour faire <b>défiler les dialogues des personnages</b>, cliquez sur la flèche à droite de la bulle de dialogue. Vous pouvez cliquer à tout moment sur cette flèche si vous voulez faire défiler les dialogues rapidement. Si vous souhaitez passer cette cinématique, cliquez sur le bouton prévu à cet effet, en bas à droite de l'écran.<br/><br/>Vous retrouverez en haut de l'écran des éléments de navigation fixe. Ils vous permettront de mettre le jeu en plein écran, de couper le son si vous le souhaitez, ou encore d'ouvrir le menu de navigation du site par exemple. A vous de jouer!";
 
 /* REPLIQUES BUREAU DE LEOPOLD */
 	var tabRepliquesBureau = ["Tiens c'est bizarre... J'ai fouillé toute la maison, mais grand-père n'est toujours pas là !", "Je commence vraiment à m'inquiéter ! Ca fait déjà quasiment une semaine que je suis sans nouvelles de lui !", "Je vais chercher dans son bureau pour voir s'il n'a pas laissé un message. Il est peut-être sorti en ville...", "Je suis sûr que je trouverais des indices ici. Il y passe tout son temps, à travailler sur ses sujets de recherches."," Aller, au boulot ! Voyons voir ce qu'on a dans ce bureau !"];
-	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! On dirait que j'ai été... téléporté ! ","Ce bureau a l'air très ancien ! Oh, mais je reconnais cet ordinateur sur le bureau ! C'est un Xerox Alto !", "Grand-père m'en avait parlé, et il m'avait montré une photo de cet ordinateur ! Je crois même qu'il avait écrit un article sur son blog à propos de celui-ci.", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a été révélé au grand public en 1973. Bon, voyons voir si cet ordinateur fonctionne !"];
-	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'écran de l'ordinateur ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.","Je vais essayer de fouiller dans cet ordinateur pour voir s'il contient des fichiers intéressants !", "Peut-être que je trouverais un message de grand-père dans l'oridnateur. Je le connais, il ne laisse rien au hasard !", "Je suis sûr que je suis là parcequ'il le voulait ! Voyons voir ce que je peux trouver !"];
 	var tabRepliqueCadrePhoto = ["C'est un cadre avec une photo de grand-père et moi ! Je me souviens, nous l'avons prise quand nous sommes allés en vacances dans le sud de la France !", "On avait loué un gîte très atypique, et on avait fait de la randonnée ! C'était vraiment sympa !"];
 	var tabRepliqueBibliotheque = ["C'est la bibliothèque de grand-père. Il y a beaucoup de livres sur les interfaces graphiques et l'informatique. Ce sont des domaines qui nous passione tous les deux !"];
 	var tabRepliqueTravaux = ["Ce sont des livres et documents qui servent à grand-père pour ses travaux de recherche. Il y a des livres sur la physique quantique, et je crois qu'il y a aussi des plans de construction ! "];
 	var tabRepliqueTableau = ["C'est un tableau en liège, avec des post-it vierges dessus. Je pourrais m'en servir si j'en ai besoin."];
 	var tabRepliqueBureau = ["Voyons voir de plus près ce qu'il y a sur le bureau. Un ordinateur portable éteint, des documents, un téléphone fixe...","Tiens... Il semblerait qu'il y ait un espèce de carnet de bord ! Regardons-ça de plus près."];
+
+/* REPLIQUES 1973 */
+	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! On dirait que j'ai été... téléporté ! ","Ce bureau a l'air très ancien ! Oh, mais je reconnais cet ordinateur sur le bureau ! C'est un Xerox Alto !", "Grand-père m'en avait parlé, et il m'avait montré une photo de cet ordinateur ! Je crois même qu'il avait écrit un article sur son blog à propos de celui-ci.", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a été révélé au grand public en 1973. Bon, voyons voir si cet ordinateur fonctionne !"];
+	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'écran de l'ordinateur ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.","Je vais essayer de fouiller dans cet ordinateur pour voir s'il contient des fichiers intéressants !", "Peut-être que je trouverais un message de grand-père dans l'oridnateur. Je le connais, il ne laisse rien au hasard !", "Je suis sûr que je suis là parcequ'il le voulait ! Voyons voir ce que je peux trouver !"];
+
+/* REPLIQUES 1982 */
+	var tabRepliquesScene1982 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
+
+/* REPLIQUES 1995 */
+	var tabRepliquesScene1995 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
 
 /* VARIABLES GLOBALES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
@@ -26,6 +34,7 @@
 
 /* QUEL SCENE EN COURS */
 	if ($('#chapitre-1').length == 1) {
+		$('.fa-user').hide();
 		$('.objets').hide();
 		$('#passer-cinematique').fadeIn(1000);
 		$('#passer-cinematique').click(passerCinematique);
@@ -35,7 +44,6 @@
 		etatDuJeu = "chapitre1scene1";
 		textesAAfficher = tabRepliquesScene1;
 	}else if($('#bureau-leopold').length == 1) {
-		console.log("onnnk");
 		etatDuJeu = "bureau-leopold";
 		textesAAfficher = tabRepliquesBureau;
 		$('.dialogue').fadeIn(3500);
@@ -54,6 +62,20 @@
 		textesAAfficher = tabRepliquesScene1973;
 		messageAide = messageAide1973;
 		curseurClignotant();
+	}else if ($('#scene-1982').length == 1) {
+		$('.objets').hide();
+		$('.dialogue').css('top', '55%');
+		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
+		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
+		etatDuJeu = "scene1982";
+		textesAAfficher = tabRepliquesScene1982;
+	}else if ($('#scene-1995').length == 1) {
+		$('.objets').hide();
+		$('.dialogue').css('top', '55%');
+		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
+		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
+		etatDuJeu = "scene1995";
+		textesAAfficher = tabRepliquesScene1995;
 	}
 
 	/* AFFICHER / CACHER LE BLOC NOTE */
@@ -65,10 +87,10 @@
 	afficherTexte(textesAAfficher, nom);
 
 	function passerCinematique (){
-		$(location).attr('href',"http://www.enigma-tic.fr/siteTest/histoire/bureau");
+		$(location).attr('href',"http://www.enigma-tic.fr/siteTest/accueil/inscription");
 	}
 
-	/* FONCTION POUR AFFICHER / CACHER LE BLOC NOTE */
+/* FONCTION POUR AFFICHER / CACHER LE BLOC NOTE */
 	function afficherBlocNote () {
 		$('#darker').fadeIn(500);
 		$('.bloc-note').animate({ 'top' : '0' }, 500);
@@ -268,6 +290,20 @@
 			$('.dialogue').css('z-index', '3');
 			$('#photo-cadre').fadeOut(250);
 			setTimeout(function () { j=0; }, 500);
+		}else if(etatDuJeu == "scene1982" && j=="1") {
+			$('#top-bar').fadeOut(500);
+			$('#bottom-bar').fadeOut(500);
+			$('.menu').animate({ 'top' : '10%', 'left' : '5%', 'opacity' : '0.9'},1000);
+			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
+			$('.objets').fadeIn();
+			$('.dialogue').fadeOut(250);
+		}else if(etatDuJeu == "scene1995" && j=="1") {
+			$('#top-bar').fadeOut(500);
+			$('#bottom-bar').fadeOut(500);
+			$('.menu').animate({ 'top' : '10%', 'left' : '5%', 'opacity' : '0.9'},1000);
+			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
+			$('.objets').fadeIn();
+			$('.dialogue').fadeOut(250);
 		}else {
 			j++;
 			afficherTexte(textesAAfficher, nom);

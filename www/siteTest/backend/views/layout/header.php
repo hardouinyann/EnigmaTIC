@@ -5,9 +5,12 @@
 		<a href="https://twitter.com/ThomasEnigmaTIC" target="_blank"><i class="fa fa-twitter"></i></a>
 </div>
 <div id="options">
-	<i class="fa fa-arrows-alt" aria-hidden="true"></i>
-	<i class="fa fa-user"></i><?php if(!empty($_SESSION['user'])) echo $_SESSION['user']->login ?>
+	<span id="userconnect">
+		<?php if(!empty($_SESSION['user'])) echo "Bonjour <b>".$_SESSION['user']->login."</b>&nbsp;&nbsp;•&nbsp;&nbsp;Se déconnecter" ?>
+	</span>
+	<i class="fa fa-user"></i>
 	<i class="fa fa-question-circle"></i>
+	<i class="fa fa-arrows-alt" aria-hidden="true"></i>
 	<i class="fa fa-volume-up"></i>
 	<i class="fa fa-volume-off"></i>
 </div>

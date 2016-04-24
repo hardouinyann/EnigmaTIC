@@ -618,6 +618,23 @@
 	    position: relative;
 	}
 
+/* SCENE 1995 */
+
+	#scene-1995 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bureau-1995.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    z-index: 2;
+	    position: relative;
+	}
+
 	/* RESPONSIVE */
 
 	@media only screen and (min-width: 100px) and (max-width: 1100px)  {

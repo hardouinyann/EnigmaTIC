@@ -1,3 +1,4 @@
+<?php if(!empty($_SESSION['user'])) header('Location: '.WEBROOT.'histoire/bureau'); ?>
 <style>
     .fa-user {
         display: none;

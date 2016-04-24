@@ -118,6 +118,10 @@
 		float: right;
 	}
 
+	.fa {
+		text-align: initial;
+	}
+
 	/* MENU */ 
 
 	.menu {
@@ -176,14 +180,15 @@
 	#options {
 		position: absolute;
     	top: 10%;
-    	right: 3%;
+    	right: 5%;
     	font: normal normal normal 22px/1 'FontAwesome';
 		color: #ffffff;
 		opacity: 0.5;
 		cursor: pointer;
 		z-index: 6;
 		word-spacing: 12px;
-		width: 200px;
+		width: 500px;
+		text-align: right;
 	}
 
 	#options .fa-volume-off {
@@ -215,6 +220,30 @@
 	@-webkit-keyframes boutonAideClignote{ 0% { color: #ffffff; } 50% { color: #b140c4;} 100% { color: #ffffff; }} 
 	@-moz-keyframes boutonAideClignote{ 0% { color: #ffffff; } 50% { color: #b140c4;} 100% { color: #ffffff; }} 
 	@-o-keyframes boutonAideClignote{ 0% { color: #ffffff; } 50% { color: #b140c4;} 100% { color: #ffffff; }}  
+
+	/* UTILISATEUR CONNECTE */
+
+	#userconnect {
+		margin: auto;
+	    text-align: justify;
+	    font-size: 13px;
+	    line-height: 19px;
+	    font-weight: 300;
+	    font-family: 'Roboto', sans-serif;
+	    color: white;
+	    line-height: 18px;
+	    text-transform: uppercase;
+	    text-align: right;
+	    letter-spacing: 0px;
+	    word-spacing: 2px;
+	    position: relative;
+	    bottom: 2px;
+	}
+
+	#userconnect b {
+		font-weight: 500;
+	}
+
 	/* MENU FIXE DU SITE */
 
 	#darker {

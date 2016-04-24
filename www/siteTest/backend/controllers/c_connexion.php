@@ -16,14 +16,12 @@ class c_connexion extends Controller {
 
         $mail = $datas['mail'];
         $mdp = $this->crypt($datas['password']);
-
         return $this->getModel('user')->getUsers($mail, $mdp);
         
     }
 
     public function getCrypt($datas){   
-        return $this->crypt($datas);
-        
+        return $this->crypt($datas); 
     }
 
     // Permet de crypter les mot de passe

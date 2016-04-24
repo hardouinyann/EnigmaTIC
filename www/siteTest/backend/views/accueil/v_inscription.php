@@ -1,9 +1,9 @@
+<?php if(!empty($_SESSION['user'])) header('Location: '.WEBROOT.'histoire/bureau'); ?>
 <style>
     .fa-question-circle, .fa-arrows-alt {
         display: none;
-    }
-    
- </style>
+   	}   
+</style>
 	<script src="<?php echo JAVASCRIPT_PATH?>inscription.js"></script>
 <!-- Page d'inscription du site -->
 <div id="home">
@@ -19,7 +19,7 @@
 				<h2>Créer votre compte utilisateur</h2>
 			</div>
 			<div id="inscription">
-				<p>Il est nécessaire de créer un <b>compte utilisateur</b> pour que vous puissiez sauvegarder votre progression dans le jeu. Vous pourrez ainsi y jouer quand vous le voudrez, et où vous voulez, sans perdre votre progression, même si vous quittez le site à un certain moment.<br/><br/>L'<b>inscription est rapide</b>, et vous n'avez pas besoin d'entrer vos informations personnelles, sauf votre adresse email. Elle vous servira pour vous connecter au jeu, ou si vous avez perdu votre mot de passe. Vous ne recevrez aucun email de notre part, sauf si vous ne vous souvenez plus votre mot de passe, ou que vous nous avez autorisé à vous envoyer des emails dans le cadre du jeu. </p>
+				<p>Il est nécessaire de <b>créer un compte utilisateur</b> pour que vous puissiez continuer l'aventure. Vous avez besoin d'en créer un pour pouvoir sauvegarder votre progression dans le jeu, et ce dès le début de l'aventure ! Vous pourrez ainsi y jouer quand vous le voudrez, et où vous voulez, sans jamais perdre votre avancée dans le jeu.<br/><br/>L'<b>inscription est rapide</b>, et vous n'avez pas besoin d'entrer vos informations personnelles, sauf votre adresse email. Elle vous servira pour vous connecter au jeu, ou si vous avez perdu votre mot de passe. Vous ne recevrez aucun email de notre part, sauf si vous ne vous souvenez plus votre mot de passe, ou que vous nous avez autorisé à vous envoyer des emails dans le cadre du jeu. </p>
 				<?php
 					/* FORMULAIRE D'INSCRIPTION */
 					
