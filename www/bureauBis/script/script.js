@@ -81,14 +81,26 @@ function ajouterClickEventSurDossier(){
 		f.draw();	
 	});
 
-	$(document).on("click","#previous",function(ev){//next ?
+
+	//quand on click sur les fleche précedent ou suivant
+	$(document).on("click","#previous, #next",function(ev){
+
+		var what = $(ev.target).parent().attr('id');
 		$fenetre = $(ev.target).parent().parent().parent();
 		var uid = $($fenetre).data('id');
 		var id =  $($fenetre).attr('id');
-		$fenetres[uid].next = $fenetres[uid].previous.splice(-1,1);		
-		navigate($fenetre, $fenetres[uid].previous[$fenetres[uid].previous.length-1]);
+		var $target;
+		if(what=="previous"){
+			$fenetres[uid].next.push($fenetres[uid].previous.splice(-1,1));	
+		}
+		else if(what=="next"){
+			$fenetres[uid].previous.push($fenetres[uid].next.splice(-1,1)[0][0]);	
+		}
+		$target = $fenetres[uid].previous[$fenetres[uid].previous.length-1];	
+		if(typeof $target != "undefined") navigate($fenetre, $target);
 	});
 
+	//quand on double click sur les dossier dans une fenetre
 	$(document).on('dblclick','.ssdossier',function(ev){
 
 		$this = $(ev.target).parent().parent();
@@ -109,7 +121,7 @@ function ajouterClickEventSurDossier(){
 }
 
 function navigate(fenetre, id){
-
+		console.log("id"+id);
 		$fenetre.find('.ssdossier, .fichier').remove();//on supprime tous les dossiers qu'elle contient
 		$fenetre.find('.header b').html(id.replace('-',' ').replace('-',' '));
 		var elemNiveauParent = $xml.find('[name='+id+']').parent().find('>dossier, >sous-dossier');
