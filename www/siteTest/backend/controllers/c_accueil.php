@@ -18,11 +18,9 @@ class c_accueil extends Controller{
             if(count($connecte) == 1) {
                 $_SESSION['user'] = $connecte[0];
                 $this->dataForView->connected = true;
-                /*QUAND LE BUREAU FONCTIONNERA*/
-                //header('Location: accueil/bureau/'.$connecte[0]->id_utilisateur);
+                header('Location: histoire/bureau/'.$connecte[0]->id_utilisateur);
             }
         }
-
         $this->render('v_index');
     }
 
