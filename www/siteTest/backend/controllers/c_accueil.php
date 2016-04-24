@@ -38,9 +38,11 @@ class c_accueil extends Controller{
                     $c = new c_connexion();
                     $this->datasFromPost['password'] = $c->getCrypt($this->datasFromPost['password']);//on encode le  mdp
                     $this->datasFromPost['date_inscription'] = 'now';
-                    if($this->getModel('user')->createUser($this->datasFromPost)!=null){
+                    $res = $this->getModel('user')->createUser($this->datasFromPost);
+                    if( $res !=null){
                         $this->dataForView->created = true;
-                        $_SESSION['user'] = $this->datasFromPost;
+                        $_SESSION['user'] = (object) $this->datasFromPost;
+                        $_SESSION['user']->id_utilisateur = $res;
                     }
                 }
                 else{

@@ -27,7 +27,7 @@
     define('MYSQL_LOGIN','enigmatiqmbdd');
     define('MYSQL_PWD','eNigmatic1');
 
-   /* define('MYSQL_HOST','localhost');
+   /*define('MYSQL_HOST','localhost');
     define('MYSQL_DB','rhizome');
     define('MYSQL_LOGIN','root');
     define('MYSQL_PWD',''); */
