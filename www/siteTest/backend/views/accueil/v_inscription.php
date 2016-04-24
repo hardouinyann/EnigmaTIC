@@ -30,6 +30,10 @@
 					if(!empty($this->dataForView->created) && $this->dataForView->created){
 						echo "<p class='valid'>Félicitations, votre compte à été créé avec succès ! Vous pouvez dès à présent vous connecter sur le jeu, à l'aide du formulaire de connexion à l'<a href='".WEBROOT."'><b>accueil du site</b></a>.</p>";
 					}elseif(!empty( $this->dataForView->alreadyExist ) && $this->dataForView->alreadyExist){
+						if(!empty($this->dataForView->alreadyExist)) 
+
+							echo " Ce ".$this->dataForView->alreadyExist." est déjà pris".
+
 						echo "<p class='error'>Désolé, mais le pseudo ou l'email que vous avez rentré est déjà utilisé par un autre joueur ! Veuillez essayer avec un autre pseudo ou un autre email s'il vous plaît. Si vous êtes sûr d'être propriétaire de cet email, et que vous n'avez pas encore de compte, veuillez essayer un autre pseudo. </p>";
 						echo '<form id="form-inscription" action="" method="POST">
 							<div>
