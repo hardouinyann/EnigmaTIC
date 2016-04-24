@@ -7,10 +7,6 @@
 	<script src="<?php echo JAVASCRIPT_PATH?>inscription.js"></script>
 <!-- Page d'inscription du site -->
 <div id="home">
-	<!-- Son d'ambiance QUI EST PUTIN DE CASSE COUILLE QUND TU DEVELOPPE ALORS NIKEARASSE JLA MUTE-->
-	<audio loop>
-	  <!--<source src="<?php echo AUDIOS_PATH?>bensound-relaxing.mp3" type="audio/mpeg">-->
-	</audio>
 	<!-- Vidéo d'ambiance-->
 	<video id="bgvid" poster="<?php echo PICTURES_PATH?>bg-cosmos.jpg" loop>
 		<source src="<?php echo VIDEOS_PATH?>cosmos.mp4" type="video/mp4">
@@ -28,7 +24,8 @@
 					/* FORMULAIRE D'INSCRIPTION */
 					
 					if(!empty($this->dataForView->created) && $this->dataForView->created){
-						echo "<p class='valid'>Félicitations, votre compte à été créé avec succès ! Vous pouvez dès à présent vous connecter sur le jeu, à l'aide du formulaire de connexion à l'<a href='".WEBROOT."'><b>accueil du site</b></a>.</p>";
+						echo "<p class='valid'>Félicitations, votre compte à été créé avec succès ! Vous êtes maintenant connecté.<br/> Vous allez être redirigé vers la suite du jeu dans <b>5 secondes</b>. </p>";
+						echo '<meta http-equiv="refresh" content="5;'.WEBROOT.'histoire/bureau">';
 					}elseif(!empty($this->dataForView->alreadyExist)) {
 						echo "<p class='error'>Désolé, mais le ".$this->dataForView->alreadyExist." que vous avez rentré est déjà utilisé par un autre joueur !<br/>Veuillez saisir un autre ".$this->dataForView->alreadyExist." s'il vous plaît.</p>";
 						echo '<form id="form-inscription" action="" method="POST">

@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	var errorMessages = ["Veuillez spécifier votre pseudo. Ce dernier doit contenir au moins 4 caractères.",
-    "Votre adresse mail doit être au format monemail@fournisseur.domaine",
+    "Votre adresse mail doit être au format mail@domaine.com par exemple.",
     "Votre mot de passe doit être constitué d'au moins 6 caractères",
-    "Vos deux mots de passe sont différents !"
+    "Vous avez entrez deux mots de passe différents. Vérifiez votre saisie."
     ];
 
     var inputs = $('#form-inscription input');

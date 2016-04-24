@@ -52,8 +52,12 @@ class c_accueil extends Controller{
                 $this->dataForView->alreadyExist = "mail";
             }
         }
-        $this->debug($this->dataForView);
+        /* $this->debug($this->dataForView); */
         $this->render('v_inscription');
+    }
+
+     public function reinitialiser(){
+        $this->render('v_reinitialiser');
     }
 }
 ?>

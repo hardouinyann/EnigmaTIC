@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <?php include_once(VIEWS_PATH."layout/head-jeu.php") ?>
-
 <body>
 	<!-- Fond noir en opacité pour l'affichage du menu-->
 	<div id="darker"></div>

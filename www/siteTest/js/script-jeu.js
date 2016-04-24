@@ -225,7 +225,7 @@
 			afficherTexte(textesAAfficher, nom);
 		}else if(etatDuJeu == "chapitre1scene4" && j=="3") {
 			$('.dialogue').hide();
-			$(location).attr('href',"http://www.enigma-tic.fr/siteTest/histoire/bureau");
+			$(location).attr('href',"http://www.enigma-tic.fr/siteTest/accueil/inscription");
 		}else if(etatDuJeu == "scene1973" && j=="3") {
 			j=0;
 			etatDuJeu = "scene1973-zoom"; 
@@ -294,7 +294,7 @@
 			var txt = texte[i];
 		}
 		actual_texte = 0;
-		afficherLeMessage = setInterval("changerMessage()", 15);
+		afficherLeMessage = setInterval("changerMessage()", 20);
 	}
 
 	function changerMessage() {

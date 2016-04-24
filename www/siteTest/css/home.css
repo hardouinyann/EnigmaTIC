@@ -131,7 +131,7 @@
 		background: url('../images/input-mdp.jpg') center left no-repeat #ffffff;
 	}
 
-	#connexion input:focus, #form-inscription input:focus  {
+	#connexion input:focus, #form-inscription input:focus, #reinitialiser input:focus  {
 		border: 1px solid #ad1a9d;
 		outline-style: none;
 		outline: none;
@@ -157,7 +157,7 @@
 		background: transparent;
 	}
 
-	#connexion .bouton:hover, #form-inscription .bouton:hover {
+	#connexion .bouton:hover, #form-inscription .bouton:hover, #reinitialiser .bouton:hover {
 		color: white;
 		border: 2px solid #675866;
 		background-color: rgba(88, 75, 87, 0.3);
@@ -168,14 +168,14 @@
 		transition: all 300ms ease-out;
 	}
 
-	#form-inscription .bouton:focus, #connexion .bouton:focus  {
+	#form-inscription .bouton:focus, #connexion .bouton:focus, #reinitialiser .bouton:focus  {
 		outline-style: none;
 		outline: none;
 	}
 
 /* FORMULAIRE D'INSCRIPTION */
 
-	#home section.inscription-temp {
+	#home section.inscription-temp, #home section.reinitialiser {
 		position: absolute;
 		z-index: 2;
 	    margin: auto;
@@ -207,19 +207,23 @@
 		border-left: 1px solid #787178;
 		padding-left: 35px;
 		margin-left: 25px;
+		position: relative;
+		top: 1px;
 	}
 
-	#inscription {
+	#inscription, #reinitialiser {
 		display: block;
 		width: 90%;
 		margin: 30px auto;
 		padding-left: 10px;
 		text-align: center;
 	}
-
-	#inscription p {
+	
+	#inscription p, #reinitialiser p  {
 		margin: auto;
 		text-align: justify;
+		font-size: 13px;
+		line-height: 19px;
 	}
 
 	#inscription input {
@@ -231,6 +235,40 @@
 	    padding: 10px 0 10px 0;
 	    margin-bottom: 15px;
 	    text-indent: 50px;
+	}
+
+	#reinitialiser input {
+		border-radius: 5px;
+	    width: 80%;
+	    display: block;
+	    min-width: 280px;
+	    border: 1px solid #271926;
+	    padding: 15px 0;
+	    margin: 35px auto 40px;
+	    text-indent: 50px;
+	    background: url('../images/input-mail.jpg') center left no-repeat #ffffff;
+	}
+
+	 #reinitialiser .bouton {
+		text-transform: uppercase;
+	    font-family: 'Roboto', sans-serif;
+	    font-weight: 500;
+	    font-size: 14px;
+	    color: #807380;
+	    padding: 18px 30px;
+	    border: 2px solid #675866;
+	    border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    display: block;
+	    width: 50%;
+	    margin:0px auto;
+	    text-align: center;
+	    opacity: 0.9;
+	    background: transparent;
+	    position: relative;
+	    right: 15px;
+	    cursor: pointer;
+	    letter-spacing: 0.03em;
 	}
 
 	#form-inscription {

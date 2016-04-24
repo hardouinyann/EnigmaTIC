@@ -19,16 +19,16 @@
 		<div id="infos">
 			<img src="<?php echo PICTURES_PATH?>logo-enigmatic-blanc.svg" alt="logo Enigma'TIC blanc" />
 			<h2>Plongez-vous dans l’aventure et aidez thomas à retrouver son grand-père léopold !</h2>
-			<p>Grâce au projet Enigma’TIC découvrez de façon originale et interactive les <b>évolutions majeures que les interfaces graphiques</b> ont pu connaître au cours de ces dernières années. </p>
-			<p>Aidez Thomas à retrouver son grand-père, Léopold, qui a disparu, dans ce jeu en ligne exceptionnel qui vous plongera dans une fabuleuse aventure à travers les couloirs du temps ! </p>
-			<a class="startGame">Lancer le jeu</a>
+			<p>Enigma’TIC est un jeu en ligne interactif qui vous permettra de retracer les <b>évolutions majeures</b> des <b>interfaces graphiques</b>, à travers une histoire immersive et originale.</p>
+			<p>Ce jeu vous plongera dans une fabuleuse aventure à travers les couloirs du temps, où vous devrez aider Thomas à retrouver son grand-père, Léopold, qui a disparu depuis plusieurs jours...</p>
+			<a href="<?php echo WEBROOT ?>histoire/preambule">Lancer le jeu</a>
 		</div>
 		<div id="connexion">
 			<p>Si vous avez déjà un <b>compte utilisateur</b> sur le site, connectez-vous pour retrouver le jeu là où vous l’aviez arreté !</p>
 			<form action="" method="POST">
 				<input type="text" name="mail" class="pseudo" placeholder="Tapez votre email" id="pseudo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="Votre adresse email doit être valide (exemple : mail@domaine.com)." x-moz-errormessage="Votre adresse email doit être valide (exemple : mail@domaine.com)." />
 				<input type="password" name="password" class="password" placeholder="Tapez votre mot de passe" id="2"  pattern=".{6,}" onchange="form.password_verif.pattern = this.value;" required title="Tapez votre mot de passe (6 caractères au minimum)." x-moz-errormessage="Tapez votre mot de passe (6 caractères au minimum)."/>
-				<p class="right"><a href="<?php echo WEBROOT ?>accueil/reinitialisation">Vous avez oublié votre mot de passe ?</a></p>
+				<p class="right"><a href="<?php echo WEBROOT ?>accueil/reinitialiser">Vous avez oublié votre mot de passe ?</a></p>
 				<?php if(!empty($this->dataForView->connected)) header('Location: '.WEBROOT.'histoire/bureau');   ?>
 				<button class="bouton">Se connecter</button>
 			</form>
