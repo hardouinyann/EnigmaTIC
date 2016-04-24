@@ -81,7 +81,7 @@ function makePop(){
 	}
 	var t = new popUp(posX,posY,url);
 	t.draw();
-	if(cpt++<=0){
+	if(cpt++<=25){
 		setTimeout(makePop,150);
 	}
 }
