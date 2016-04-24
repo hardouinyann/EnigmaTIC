@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Rhizome</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css"  href="style/style.css">
+		<script type="text/javascript" src="script/jquery.js"></script>
+		<script type="text/javascript" src="script/script.js"></script>	
+		<script type="text/javascript" src="script/jquery-ui/jquery-ui.js"></script>
+	</head>
+
+	<body id='droppable'>
+
+		
+		<div class="fenetre selectedFenetre ui-draggable" id="corbeille" style="position: relative;">
+			<div class="header ui-draggable-handle selectedHeader">
+				<div class="close" style="display:inline;float:right;" onclick="removeWindow(this)">X</div>
+				<b style="color:white;margin-left:2%;margin-top:50%">corbeille</b>
+			</div>
+			<div class="sub-header">
+				<div ><i id="previous" class="fa fa-arrow-circle-left" aria-hidden="true"></i></div>
+				<div ><i id="next" class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+				<div>
+					<select style="width:70%">
+					  <option id="corbeille">corbeille</option>
+					</select>
+				</div>
+			</div>
+
+			<div id="ss-dossier-c1" class="dossier ss-dossier" style="outline: rgba(200, 200, 200, 0.4) dashed 1px; background-color: rgba(160, 160, 200, 0.498039);">
+				<div class="iconeWrapper"> 
+					<img src="images/dossier.png"><br>
+					<h8 style="margin-left:35px">ss-dossier-c1</h8>
+				</div>
+			</div>
+			<div id="ss-dossier-c2" class="dossier ss-dossier" style="outline: none; background-color: transparent;">
+				<div class="iconeWrapper"> 
+					<img src="images/dossier.png"><br>
+					<h8 style="margin-left:35px">ss-dossier-c2</h8>
+				</div>
+			</div>
+			<div id="ss-dossier-c3" class="dossier ss-dossier" style="outline: none; background-color: transparent;">
+				<div class="iconeWrapper"> 
+					<img src="images/dossier.png"><br>
+					<h8 style="margin-left:35px">ss-dossier-c3</h8>
+				</div>
+			</div>
+			<div id="ss-dossier-c4" class="dossier ss-dossier" style="outline: none; background-color: transparent;">
+				<div class="iconeWrapper">
+					<img src="images/dossier.png"><br>
+					<h8 style="margin-left:35px">ss-dossier-c4</h8>
+				</div>
+			</div>
+			<div id="test.txt" class="dossier fichier">
+				<div class="iconeWrapper"> 
+					<img src="images/dossier.png"><br>
+					<h8 style="margin-left:35px">test.txt</h8>
+				</div>
+			</div>
+		</div>
+
+        
+
+
+		<div class="barre">
+			<div id='menu-demarrer'>
+				<img src='images/start.png'/>
+				<span>Démarrer</span>
+			</div>
+
+		</div>
+
+
+		
+	</body>
+
+</html>
