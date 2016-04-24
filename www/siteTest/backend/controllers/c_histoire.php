@@ -32,6 +32,10 @@ class c_histoire extends Controller{
         $this->render('v_bureau');
     }
 
+    public function preambule(){
+        $this->render('v_preambule');
+    }
+
 
 }
 ?>

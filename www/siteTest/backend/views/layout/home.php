@@ -11,70 +11,11 @@
 		</div>
 		<img src="<?php echo PICTURES_PATH?>bg-home.jpg" class="background" alt="background" />
 	</div>
-	<!-- Bouton pour passer la cinématique -->
-	<a id="passer-cinematique">Passer la cinématique&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<header>
 		<?php include_once(VIEWS_PATH."layout/lateral.php") ?>
 		<?php include_once(VIEWS_PATH."layout/header.php") ?>
 	</header>
 	<?php echo $content_for_layout; ?>
-	<!-- Cinématique : Préambule du jeu -->
-	<div id="chapitre-1">
-		<div id="chap1scene1">
-			<div id="top-bar"></div>
-			<div id="bottom-bar"></div>
-			<div class="personnage">
-				<img class="personnage" id="thomaschap1scene1" src="<?php echo PICTURES_PATH?>thomas-manteau.svg" alt="Thomas" />
-				<img class="personnage" id="thomaschap1scene1phone" src="<?php echo PICTURES_PATH?>thomas-manteau-telephone.svg" alt="Thomas" />
-			</div>
-			<div class="dialogue diagThomas">
-				<img src="<?php echo PICTURES_PATH?>thomas-dialogue.png" alt="image dialogue" />
-				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
-					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
-			</div>
-			<div class="dialogue diagleopold">
-				<img src="<?php echo PICTURES_PATH?>leopold-dialogue.png" alt="image dialogue" />
-				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
-					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
-			</div>
-		</div>
-		<div id="chap1scene2">
-			<div id="top-bar"></div>
-			<div id="bottom-bar"></div>
-			<div class="personnage">
-				<img class="personnage" id="thomaschap1scene2" src="<?php echo PICTURES_PATH?>thomas.svg" alt="Thomas" />
-				<img class="personnage" id="thomaschap1scene2phone" src="<?php echo PICTURES_PATH?>thomas-telephone.svg" alt="Thomas" />
-			</div>
-			<div class="dialogue">
-				<img src="<?php echo PICTURES_PATH?>thomas-dialogue-2.png" alt="image dialogue" />
-				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
-					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
-		</div>
-		</div>
-		<div id="chap1scene3">
-			<div id="top-bar"></div>
-			<div id="bottom-bar"></div>
-			<img class="personnage" src="<?php echo PICTURES_PATH?>thomas-2.svg" alt="Thomas" />
-			<div class="dialogue">
-				<img src="<?php echo PICTURES_PATH?>thomas-dialogue-2.png" alt="image dialogue" />
-				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
-					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
-			</div>
-		</div>
-		<div id="chap1scene4">
-			<div id="top-bar"></div>
-			<div id="bottom-bar"></div>
-			<div class="personnage">
-				<img class="personnage" id="thomaschap1scene4" src="<?php echo PICTURES_PATH?>thomas-manteau-2.svg" alt="Thomas" />
-				<img class="personnage" id="thomaschap1scene4dos" src="<?php echo PICTURES_PATH?>thomas-manteau-dos.svg" alt="Thomas" />
-			</div>
-			<div class="dialogue">
-				<img src="<?php echo PICTURES_PATH?>thomas-dialogue.png" alt="image dialogue" />
-				<div><strong class="nom"></strong><p class="dialogue-txt"></p>
-					<a class="next"><i class="fa fa-chevron-right"></i></a></div>
-			</div>
-		</div>
-	</div>
 	<?php include_once(VIEWS_PATH."layout/scripts.php") ?>
 </body>
 </html>

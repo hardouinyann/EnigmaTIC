@@ -25,6 +25,206 @@
 		z-index: 3;
 	}
 
+/* JEU - PREAMBULE CINEMATIQUE */
+
+	#chapitre-1 {
+		background: black;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: block;
+	}
+
+	/* SCENE 1 PREAMBULE */
+
+	#chap1scene1 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bg-rue-jeu.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    display: block;
+	    z-index: 3;
+	    position: relative;
+	}
+
+	#chap1scene1 .diagleopold {
+		display: none;
+	}
+
+	#chap1scene1 .personnage #thomaschap1scene1 {
+		height: 65%;
+		position: absolute;
+		margin: auto;
+	    top: 35%;
+	    right: 0;
+	    bottom: 0;
+	    left: 5%;
+	    width: auto;
+	    animation: bougerThomas1 5s forwards;
+	}
+
+	#thomaschap1scene1phone {
+		display: none;
+		height: 65%;
+		position: absolute;
+		margin: auto;
+	    top: 35%;
+	    right: 0;
+	    bottom: 0;
+	    left: 5%;
+	    width: auto;
+	}
+
+	@keyframes bougerThomas1{ 0% { height: 40%; top: 25%; left: -10%;} 100% {top: 35%; height: 65%; left: 5%; } } 
+	@-webkit-keyframes bougerThomas1{ 0% { height: 45%; top: 25%; left: -5%;} 100% {top: 35%; height: 65%; left: 5%; } } 
+	@-moz-keyframes bougerThomas1{ 0% { height: 45%; top: 25%; left: -5%;} 100% {top: 35%; height: 65%; left: 5%; } } 
+	@-o-keyframes bougerThomas1{ 0% { height: 45%; top: 25%; left: -5%;} 100% {top: 35%; height: 65%; left: 5%; } }  
+
+	/* SCENE 2 PREAMBULE */
+
+	#chap1scene2 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bg-maison-jeu.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    display: none;
+	    z-index: 3;
+	    position: relative;
+	}
+
+	#chap1scene2 .personnage #thomaschap1scene2 {
+		height: 70%;
+		position: absolute;
+		margin: auto;
+		left: -18%;
+    	top: 32%;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
+	    animation: bougerThomas2 5s forwards;
+	}
+
+	#thomaschap1scene2phone {
+		display: none;
+		height: 70%;
+		position: absolute;
+		margin: auto;
+	    top: 32%;
+	    right: 0;
+	    bottom: 0;
+	    left: -18%;
+	    width: auto;
+	}
+
+	@keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } } 
+	@-webkit-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } } 
+	@-moz-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } } 
+	@-o-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } }   
+
+	/* SCENE 3 PREAMBULE */
+
+	#chap1scene3 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bg-chambre-jeu.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    display: none;
+	    z-index: 3;
+	    position: relative;
+	}
+
+	#chap1scene3 .personnage {
+		height: 75%;
+		position: absolute;
+		margin: auto;
+		left: 20%;
+    	top: 25%;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
+	    animation: bougerThomas3 4s forwards;
+	}
+
+	@keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
+	@-webkit-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
+	@-moz-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
+	@-o-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
+
+	/* SCENE 4 PREAMBULE */
+
+	#chap1scene4 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bg-maisonLeopold-jeu.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    display: none;
+	    z-index: 3;
+	    position: relative;
+	}
+
+	#chap1scene4 .personnage #thomaschap1scene4 {
+		height: 44%;
+	    position: absolute;
+	    margin: auto;
+	    left: -20%;
+	    top: 50%;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
+	    animation: bougerThomas4 3s forwards;
+	}
+
+	#thomaschap1scene4dos {
+		height: 44%;
+		top: 50%;
+		left: -20%;
+		display: none;
+		position: absolute;
+	    margin: auto;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
+		animation: bougerThomas4v2 3s forwards;
+	}
+
+	@keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} } 
+	@-webkit-keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} }
+	@-moz-keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} } 
+	@-o-keyframes bougerThomas4{ 0% { top: 55%; } 100% {top: 50%;} }
+
+	@keyframes bougerThomas4v2 { 0% { top: 50%; height: 44%; } 100% {top: 55%; height: 38%;} } 
+	@-webkit-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 55%; height: 38%;} } 
+	@-moz-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 55%; height: 38%;} } 
+	@-o-keyframes bougerThomas4v2{ 0% { top: 50%; height: 44%; } 100% {top: 55%; height: 38%;} } 
+
+
 /* OBJETS EN BAS DE PAGE */
 
 	.objets {
@@ -66,7 +266,6 @@
 
 	.bloc-note .close-note {
 		background-image: url("../images/close-white.png");
-		background-size: cover;
 	    background-repeat: no-repeat;
 	    background-position: 0% 0%;
 		padding: 15px;
@@ -92,6 +291,9 @@
 	#notes textarea:focus {
 		outline-style: none;
 	}
+
+	::selection { background: #d0d0d0; color: #444444; }
+	::-moz-selection { background: #d0d0d0; color: #444444; }
 
 /* BUREAU DE LEOPOLD */
 
@@ -285,7 +487,7 @@
 	}
 
 
-	/* SCENE 1973 */
+/* SCENE 1973 */
 
 	#scene-1973 {
 		margin: auto;
@@ -337,73 +539,97 @@
 
 	/* CONSOLE DE COMMANDE */
 
-	#shell-txt {
-		position: relative;
-	    top: 25%;
-	    right: 5%;
-	    color: white;
-	    font-family: monospace;
-	}
+		#shell-txt {
+			position: relative;
+		    top: 25%;
+		    right: 5%;
+		    color: white;
+		    font-family: monospace;
+		}
 
-	#shell-txt .cursor {
-		clear: both;
-		display: inline-block;
-		width: 10px;
-	    height: 15px;
-	    background: #aaa;
-	    position: relative;
-	    top: 4px;
-	} 
+		#shell-txt .cursor {
+			clear: both;
+			display: inline-block;
+			width: 10px;
+		    height: 15px;
+		    background: #aaa;
+		    position: relative;
+		    top: 4px;
+		} 
 
-	#console{
+		#console{
+			margin: auto;
+			width: 40%;
+			height: 50%;
+			padding:30px;
+			background-color: black;
+			font-family: monospace;
+			font-size: 14px;
+			font-weight: bold;
+			color:#aaa;
+			overflow-y: scroll;
+			position: absolute;
+			top: 10%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			text-align: left;
+			z-index: 5;
+		}
+
+		#console>div{
+			font-size: 14;
+			display:inline-block;
+		}
+
+		.cursor-console {
+			clear: both;
+			display: inline-block;
+			width: 10px;
+		    height: 15px;
+		    background: #aaa;
+		    position: relative;
+		    top: 4px;
+		} 
+
+		.close-console {
+			background: url("../images/close-white.png") 0% 0% no-repeat;
+			padding: 15px;
+			position: relative;
+			cursor: pointer;
+			bottom: 10px;
+			right: 15px;
+		}
+
+/* SCENE 1982 */
+
+	#scene-1982 {
 		margin: auto;
-		width: 40%;
-		height: 50%;
-		padding:30px;
-		background-color: black;
-		font-family: monospace;
-		font-size: 14px;
-		font-weight: bold;
-		color:#aaa;
-		overflow-y: scroll;
-		position: absolute;
-		top: 10%;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		text-align: left;
-		z-index: 5;
-	}
-
-	#console>div{
-		font-size: 14;
-		display:inline-block;
-	}
-
-	.cursor-console {
-		clear: both;
-		display: inline-block;
-		width: 10px;
-	    height: 15px;
-	    background: #aaa;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bureau-1982.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	    z-index: 2;
 	    position: relative;
-	    top: 4px;
-	} 
-
-	.close-console {
-		background: url("../images/close-white.png") 0% 0% no-repeat;
-		padding: 15px;
-		position: relative;
-		cursor: pointer;
-		bottom: 10px;
-		right: 15px;
 	}
-
 
 	/* RESPONSIVE */
+
+	@media only screen and (min-width: 100px) and (max-width: 1100px)  {
+	 	#passer-cinematique {   bottom: 45%; }
+	}
+
 	@media only screen and (min-width: 100px) and (max-width: 800px)  {
 	 	body{ overflow: auto; }
 	 	#jeu, #bureau-leopold { min-width: 800px; }
 	 	.scene-jeu .menu, .scene-jeu #options { position: fixed; top: 6%; }
 	 	.objets { position: fixed; }
+	}
+
+	@media only screen and (min-height: 100px) and (max-width: 800px)  {
 	}
