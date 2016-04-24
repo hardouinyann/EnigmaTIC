@@ -34,7 +34,7 @@
 			<sous-dossier name="ss-ss-dossier42" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
 			</sous-dossier>
 		</sous-dossier>
-		<fichier name="test.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
+		<fichier name="FichierText" url='txt.png' date="02/02/2016" heure="09:12" etage="1">
 			Ceci est le contenu de mon fichier test.<br />Deuxieme ligne de mon contenu. <br />Tellement intéressant que j'ai décidé de mettre une troisième ligne ultra-gia-téta-(téton mouahaha)-ment grande pour faire chier toi qui la lis en entière, et en même temps je peux tester si ca v aa la ligne solo ou non ! bisous bisous cordialement :D.
 		</fichier>		
 	</dossier>

@@ -111,13 +111,15 @@ function ajouterClickEventSurDossier(){
 
 	});
 
-	$('.fichier').on('click',function(){
-		//pop fichier text
+	$(document).on('dblclick','.fichier',function(ev){
+		var id = $(ev.target).parent().parent().attr('id');
+		$fichier = $xml.find('fichier[name='+id+']');
+		var f = new FichierText($fichier.text(),id);
+		f.draw();
+
 	});
 		
 	//on met le systeme navigation grace au select
-
-	//on met en place les next previous
 }
 
 function navigate(fenetre, id){
@@ -149,6 +151,27 @@ function getNiveau(id){
 		cpt++;
 	}
 	return cpt;
+}
+
+class FichierText{
+
+	constructor(text, nomFic){
+		this.text = text;
+		this.nom = nomFic;
+	}
+
+	draw(){
+		$('body').append(
+						'<div class="fenetre selectedFenetre ui-draggable" id="'+this.nom+'" style="position: relative;">'+
+							'<div class="header ui-draggable-handle selectedHeader">'+
+								'<div class="close" style="display:inline;float:right;" onclick="removeWindow(this)">X</div>'+
+								'<b style="color:white;margin-left:2%;margin-top:50%">'+this.nom.replace('-',' ').replace('-',' ')+'</b>'+
+							'</div>'+	
+							this.text+
+						'</div>'
+						);
+		$('.fenetre').addClass('ui-draggable').draggable({handle:'.header'});
+	}
 }
 
 
