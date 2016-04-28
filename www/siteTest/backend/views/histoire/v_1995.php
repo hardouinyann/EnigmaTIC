@@ -1,4 +1,4 @@
-  <div id="jeu">
+<div id="jeu">
     <div id="scene-1995">  
         <div id="top-bar"></div>
         <div id="bottom-bar"></div>

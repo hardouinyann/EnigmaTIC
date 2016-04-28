@@ -1,0 +1,39 @@
+{
+    "bureau":{
+        "dossier-bureau": {  
+            "nom" : "corbeille",
+            "icone" : "../images/corbeille.png",
+            "sous-dosssiers":[
+                        {"dossier-fenetre" : {
+                            "nom" : "ss-corbeille",
+                            "icone" : "ss-url",
+                            "sous-dosssiers":[
+                                {"dossier-fenetre" : {
+                                    "nom" : "ss-ss-corbeille",
+                                    "icone" : "ss-url",
+                                    "sous-dosssiers":[
+                                        {"dossier-fenetre" : {
+                                                "nom" : "coucou",
+                                                "icone" : "1url"
+                                        }}
+                                    ]}
+                                },
+                                {"dossier-fenetre" : {
+                                    "nom" : "ss2-corbeille",
+                                    "icone" : "ss2-url",
+                                    "sous-dosssiers":[
+                                        {"dossier-fenetre" : {
+                                                "nom" : "coucou",
+                                                "icone":"url"
+                                        }}
+                                    ]}
+                                }
+
+                            ]}
+                        }
+            ]
+
+        }
+    }
+
+}

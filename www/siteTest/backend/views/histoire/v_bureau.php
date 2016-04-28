@@ -1,7 +1,5 @@
-<!-- Son d'ambiance-->
-<audio loop>
-     <source src="<?php echo AUDIOS_PATH?>bensound-relaxing.mp3" type="audio/mpeg">
-</audio>
+<?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
+
 <div id="message-aide">
     <div class="container">
         <div class="close"></div>

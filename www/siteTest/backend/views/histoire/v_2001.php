@@ -1,5 +1,7 @@
-  <div id="jeu">
-    <div id="scene-1982">  
+<div id="jeu">
+    <div id="scene-2001">  
+        <div id="top-bar"></div>
+        <div id="bottom-bar"></div>
     </div> 
     <div class="dialogue">
         <img src="<?php echo PICTURES_PATH ?>thomas-dialogue-2.png" alt="image dialogue" />

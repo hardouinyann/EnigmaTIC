@@ -23,6 +23,9 @@
 /* REPLIQUES 1995 */
 	var tabRepliquesScene1995 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
 
+/* REPLIQUES 2001 */
+	var tabRepliquesScene2001 = ["Me voilà en 2001 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
+
 /* VARIABLES GLOBALES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
 	var messageAideBureau = '';
@@ -76,6 +79,13 @@
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
 		etatDuJeu = "scene1995";
 		textesAAfficher = tabRepliquesScene1995;
+	}else if($('#scene-2001').length == 1) {
+		$('.objets').hide();
+		$('.dialogue').css('top', '55%');
+		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
+		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
+		etatDuJeu = "scene2001";
+		textesAAfficher = tabRepliquesScene2001;
 	}
 
 	/* AFFICHER / CACHER LE BLOC NOTE */

@@ -1,6 +1,6 @@
 <!-- Son d'ambiance-->
 <audio loop>
-     <source src="<?php echo AUDIOS_PATH?>bensound-relaxing.mp3" type="audio/mpeg">
+    <!-- <source src="<?php echo AUDIOS_PATH?>bensound-relaxing.mp3" type="audio/mpeg">-->
 </audio>
 <!-- Bouton pour passer la cinématique -->
 <a id="passer-cinematique">Passer la cinématique&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>

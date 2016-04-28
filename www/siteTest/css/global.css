@@ -127,11 +127,11 @@
 	.menu {
 		font: normal normal normal 22px/1 'FontAwesome';
 		color: #ffffff;
-		opacity: 0.5;
+		opacity: 0.7;
 		text-rendering: auto;
     	-webkit-font-smoothing: antialiased;
     	position: absolute;
-    	top: 10%;
+    	top: 8%;
     	left: 5%;
     	word-spacing: 15px;
     	z-index: 6;
@@ -142,7 +142,7 @@
 	}
 
 	.menu a:hover, #home a:hover, #options i:hover {
-		opacity: 0.7;
+		opacity: 0.9;
 		color: white;
 		cursor: pointer;
 		-webkit-transition: all 300ms ease-out;
@@ -179,16 +179,20 @@
 
 	#options {
 		position: absolute;
-    	top: 10%;
+    	top: 8%;
     	right: 5%;
     	font: normal normal normal 22px/1 'FontAwesome';
 		color: #ffffff;
-		opacity: 0.5;
 		cursor: pointer;
 		z-index: 6;
 		word-spacing: 12px;
 		width: 500px;
 		text-align: right;
+		opacity: 1.0;
+	}
+
+	#options .fa {
+		opacity: 0.7;
 	}
 
 	#options .fa-volume-off {
@@ -238,10 +242,20 @@
 	    word-spacing: 2px;
 	    position: relative;
 	    bottom: 2px;
+    	margin-right: 15px;
 	}
 
 	#userconnect b {
 		font-weight: 500;
+	}
+
+	#userconnect a {
+		color: white;
+	}
+
+	#userconnect a:hover {
+		color: white;
+		text-decoration: underline;
 	}
 
 	/* MENU FIXE DU SITE */
