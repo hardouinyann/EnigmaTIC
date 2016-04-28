@@ -1,3 +1,4 @@
+<?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
 <!-- Son d'ambiance-->
 <audio loop>
      <source src="<?php echo AUDIOS_PATH?>bensound-relaxing.mp3" type="audio/mpeg">

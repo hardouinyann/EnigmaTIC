@@ -1,4 +1,4 @@
-  <div id="jeu">
+<div id="jeu">
     <div id="scene-1973-jeu">
       <div id='console'>
         <div class="close-console"></div>

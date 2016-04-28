@@ -14,8 +14,9 @@ class c_histoire extends Controller{
      *
      */
     public function jeu($id){
-
-        if(!empty($id)){
+        if(empty($_SESSION['user'])){
+            header('Location: '.WEBROOT);
+        }else if(!empty($id)){
             $res = $this->getModel('jeu')->getFic($id);
             if(!empty($res[0]->nom_fic)){
                 $this->render('v_'.$res[0]->nom_fic);
