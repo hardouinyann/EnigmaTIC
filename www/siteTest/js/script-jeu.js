@@ -345,17 +345,5 @@
 		}
 	}
 
-	function curseurClignotant(){
-		cursor = window.setInterval(function () {
-        if ($('.cursor').css('visibility') === 'visible') {
-            $('.cursor').css({
-                visibility: 'hidden'
-            });
-        } else {
-            $('.cursor').css({
-                visibility: 'visible'
-            });
-	        }
-	    }, 1000);
-}
+	
 		

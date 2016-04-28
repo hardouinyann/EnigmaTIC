@@ -27,7 +27,7 @@ La sauvegarde du nouveau texte que vous avez tapé sur ce bloc note s'enregistre
     <div id="scene-1973-zoom">
       <div id="top-bar"></div>
       <div id="bottom-bar"></div>
-      <p id="shell-txt">C:\Bureau > <span class="cursor"></span></p>
+      <p id="shell-txt">C:\Bureau > <span class="cursor-console"></span></p>
     </div>
     <div id="scene-1973">
       <div id="top-bar"></div>

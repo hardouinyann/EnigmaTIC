@@ -48,13 +48,15 @@
             $limit = isset($info["limit"]) ? 'LIMIT '. $info["limit"] : "";
             $order = isset($info["order"]) ?  $info["order"] : $this->table.".id_".$this->table." DESC";
             $group = isset($info["group"]) ?  " GROUP BY ".$info["group"] : "";
+            $jointure =  isset($info["jointure"]) ?  $info["jointure"] : "";
 
             //echo "<pre>";print_r(debug_backtrace());echo"</pre>";
-            //echo "<meta charset='UTF-8'><pre>";print_r("SELECT ".$infoToGet." FROM ".$this->table.$otherTable.$join." WHERE ".$condition.$group." ORDER BY ".$order." ".$limit);echo "</pre>";
-            return $this->request("SELECT ".$infoToGet." FROM ".$this->table." WHERE ".$condition.$group." ORDER BY ".$order." ".$limit);
+            //d$this->debug("SELECT ".$infoToGet." FROM ".$this->table." ".$jointure." WHERE ".$condition.$group." ORDER BY ".$order." ".$limit);
+
+            return $this->request("SELECT ".$infoToGet." FROM ".$this->table." ".$jointure." WHERE ".$condition.$group." ORDER BY ".$order." ".$limit);
         }
 
-        protected function insert($data = array()){
+        protected function insert($data = array(), $otherTable=false){
             $fields = '';
             $values = '';
             foreach($data as $field=>$value){
@@ -67,10 +69,11 @@
                 else{
                     $values .= '"'.addslashes($value).'",';
                 }
-
             }
 
-            $sql = "INSERT INTO ".$this->table."(".substr($fields,0,-1).") VALUES (".substr($values,0,-1).");";
+            $table = (empty($otherTable)) ? $this->table : $otherTable ;
+
+            $sql = "INSERT INTO ".$table."(".substr($fields,0,-1).") VALUES (".substr($values,0,-1).");";
             //echo $sql.'<br>';
             try{
                 $request = self::$connexion->prepare($sql);
@@ -94,8 +97,11 @@
             }
 
             $values = '';
+            foreach($data as $field=>$value){
+                (in_array($value,$exceptions))? $values .= $field."=".addslashes($value).",":$values .= $field."='".addslashes($value)."',";
+            }
            
-            $condition = (!empty($params['condition'])) ? $params['condition'] : 'id='.$params['id'];
+            $condition = (!empty($params['condition'])) ? $params['condition'] : '1=1';
 
             $sql = "UPDATE ".$this->table.$tables." SET ".substr($values,0,-1)." WHERE ".$condition;
             //echo "<meta charset='UTF-8'>UPDATE ".$this->table.$tables." SET ".substr($values,0,-1)." WHERE ".$condition.'<br>'.'<br>';
@@ -142,9 +148,14 @@
         }
 
         protected function debug($arrayToDebug = array(),$array_name= false){
+
             $title = (!empty($array_name)) ? $array_name:"" ;
             if(getType($arrayToDebug)=="array") ksort($arrayToDebug);
-            echo "<meta charset='UTF-8'><h1 style='margin-bottom:-35px;'>".$title."</h1><pre style='margin:50px;background-color:#AEAEAE;border:solid 2px red'>";print_r($arrayToDebug);echo"</pre><br>";
+            echo "<meta charset='UTF-8'>
+                  <h1 style='margin-bottom:-35px!important;position:relative;z-index:9999!important;'>".$title."</h1>
+                  <pre style='margin:50px!important;background-color:#AEAEAE!important;border:solid 2px red!important;z-index:9999!important;position:relative;'>";
+                    print_r($arrayToDebug);
+            echo"</pre><br>";
         }
     }
 

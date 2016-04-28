@@ -20,4 +20,19 @@
             return $this->insert($post);
         }
 
+        public function updateDejaVuBureau($id){
+            return $this->update(array(
+                'dial_bureau1_vu' => '1'
+            ),array(
+                'condition' => 'id_utilisateur=$id'
+            ));
+        }
+
+        public function getDejaVuBureau($id){
+            return $this->find(array(
+                'infoToGet' => 'dial_bureau1_vu',            
+                'condition' => "id_utilisateur=$id"
+            ));
+        }
+
     }

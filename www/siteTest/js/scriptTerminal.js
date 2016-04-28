@@ -43,8 +43,8 @@ function gestionTouches(){
 			}
 			$divActuelle = $('#contenu-'+ligneActuelle);
 			$divActuelle.append(entete);
-			$('.cursor').remove();
-			$divActuelle.append("<span class='cursor'></span>");		
+			$('.cursor-console').remove();
+			$divActuelle.append("<span class='cursor-console'></span>");		
 		}else{//si c'est une touche normale
 			$divActuelle.find("span").before(String.fromCharCode(e.which));	
 		}
@@ -56,8 +56,16 @@ function executeRequete(){
 
 	var fonctionToCall = requete[0];
 	requete.splice(0,1);
-	c('if(typeof '+fonctionToCall+' == "function")'+fonctionToCall+'()')
-	eval('if(typeof '+fonctionToCall+' == "function")'+fonctionToCall+'()');
+	var worked = false;
+	eval('if(typeof '+fonctionToCall+' == "function" && requete.length>=1){'+fonctionToCall+'();worked = true}else{worked = false}');
+	if(!worked){
+		c("mauvaise commande");
+		ligneActuelle++;
+		$('#contenu').append('<div id="contenu-'+ligneActuelle+'"> </div>');//on rajoute une ligne
+		$divActuelle = $('#contenu-'+ligneActuelle);
+		$('.cursor-console').remove();
+		$divActuelle.append("<span class='cursor-console'></span>");
+	}
 }
 
 function dir(){
@@ -145,7 +153,7 @@ function gestionToucheSuppr(){
 		if(e.which==8){
 			var tailleLimite = (ligneActuelle==1) ? (parseInt(entete.length)) :(parseInt(entete.length))+1 ;
 			if($divActuelle.before().text().length>tailleLimite ){//si c'est après, ne pas suppr le pseudo + >
-				$divActuelle.before().text($divActuelle.before().text().slice(0,-1)).append("<span class='cursor'></span>");
+				$divActuelle.before().text($divActuelle.before().text().slice(0,-1)).append("<span class='cursor-console'></span>");
 			}
 			e.preventDefault();
 		}
@@ -154,16 +162,16 @@ function gestionToucheSuppr(){
 
 function curseurClignotant(){
 	cursor = window.setInterval(function () {
-        if ($('.cursor').css('visibility') === 'visible') {
-            $('.cursor').css({
-                visibility: 'hidden'
-            });
-        } else {
-            $('.cursor').css({
-                visibility: 'visible'
-            });
+    if ($('.cursor-console').css('visibility') === 'visible') {
+        $('.cursor-console').css({
+            visibility: 'hidden'
+        });
+    } else {
+        $('.cursor-console').css({
+            visibility: 'visible'
+        });
         }
-    }, 500);
+    }, 1000);
 }
 
 function c(text){
@@ -183,7 +191,3 @@ function replaceAll(str, find, replace) {
 }
 
 
-//deplacer curseur
-//virer système de mdp
-//dir donne nombre de fichiers / repertoires
-//cd ..  quand one st sur le bureau

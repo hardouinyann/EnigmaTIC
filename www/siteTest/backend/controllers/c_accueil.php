@@ -21,6 +21,7 @@ class c_accueil extends Controller{
                 header('Location: histoire/bureau/'.$connecte[0]->id_utilisateur);
             }
         }
+        
         $this->render('v_index');
     }
 
@@ -59,8 +60,13 @@ class c_accueil extends Controller{
         $this->render('v_inscription');
     }
 
-     public function reinitialiser(){
+    public function reinitialiser(){
         $this->render('v_reinitialiser');
+    }
+
+    public function deconnexion(){
+        session_destroy();
+        header('Location: '.WEBROOT); 
     }
 }
 ?>
