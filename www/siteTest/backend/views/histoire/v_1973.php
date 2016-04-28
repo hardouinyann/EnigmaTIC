@@ -1,7 +1,6 @@
 <div id="jeu">
     <div id="scene-1973-jeu">
       <div id='console'>
-        <div class="close-console"></div>
         <div id='entete'>
         </div>
         <div id='contenu'>  

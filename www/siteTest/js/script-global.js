@@ -107,7 +107,7 @@
 			if($('#chapitre-1').css('display') == 'block') {
 				$('.menu').animate({ 'top' : '15%', 'left' : '5%'}, 600);
 			}else {
-				$('.menu').animate({ 'top' : '10%', 'left' : '5%'}, 600);
+				$('.menu').animate({ 'top' : '8%', 'left' : '5%'}, 600);
 			}
 			$('.menu').css('z-index', '6');
 			if($('body').hasClass('temp-page') == true) {

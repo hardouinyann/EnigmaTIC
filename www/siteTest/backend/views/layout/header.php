@@ -11,6 +11,4 @@
 	<i class="fa fa-user"></i>
 	<i class="fa fa-question-circle"></i>
 	<i class="fa fa-arrows-alt" aria-hidden="true"></i>
-	<i class="fa fa-volume-up"></i>
-	<i class="fa fa-volume-off"></i>
 </div>
