@@ -11,9 +11,6 @@
 		</div>
 		<img src="<?php echo PICTURES_PATH?>bg-home.jpg" class="background" alt="background" />
 	</div>
-	<div class="objets">
-      <a><img class="blocNote" src="<?php echo PICTURES_PATH?>bloc-note.png" alt="Bloc Note Jeu" /></a>
-    </div>
     <!-- Bloc Note de Thomas -->
     <div class="bloc-note">
       <div class="close-note"></div>
