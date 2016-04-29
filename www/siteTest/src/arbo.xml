@@ -1,81 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <bureau name="Bureau">
-	<dossier name="corbeille" url="corbeille.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier-c1" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-			<sous-dossier name="ss-ss-dossier11" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-			<sous-dossier name="ss-ss-dossier12" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>			
-			<sous-dossier name="ss-ss-dossier13" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-		</sous-dossier>
-		<sous-dossier name="ss-dossier-c2" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-			<sous-dossier name="ss-ss-dossier21" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-			<sous-dossier name="ss-ss-dossier22" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-		</sous-dossier>
-
-		<sous-dossier name="ss-dossier-c3" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-			<sous-dossier name="ss-ss-dossier31" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-			<sous-dossier name="ss-ss-dossier32" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-		</sous-dossier>
-
-		<sous-dossier name="ss-dossier-c4" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-			<sous-dossier name="ss-ss-dossier41" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-			<sous-dossier name="ss-ss-dossier42" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-		</sous-dossier>
-	<fichier name="test.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
-		Ceci est le contenu de mon fichier test.<br />Deuxieme ligne de mon contenu. <br />Tellement intéressant que j'ai décidé de mettre une troisième ligne ultra-gia-téta-(téton mouahaha)-ment grande pour faire chier toi qui la lis en entière, et en même temps je peux tester si ca v aa la ligne solo ou non ! bisous bisous cordialement :D.
-	</fichier>		
+	<dossier name="corbeille" url="corbeille.png" date="02/02/1973" heure="10:12" etage="0">
+		<fichier name="xerox.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
+			Xerox Alto : propriété de Xerox Parc - Palo Alto, Californie.
+		</fichier>	
 	</dossier>
-	<dossier name="panneau-de-configuration" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+	<dossier name="recherches" url="recherches.png" date="05/05/1973" heure="15:10" etage="0">
+		<sous-dossier name="interfaces" url="dossier.png" date="01/06/1973" heure="08:52" etage="1">
 		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		<sous-dossier name="informatique" url="dossier.png" date="21/06/1973" heure="16:20" etage="1">
+			<fichier name="hexa.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
+				1100 0011 0000 0001 1011
+			</fichier>
 		</sous-dossier>
 	</dossier>
-	<dossier name="games" url="dossier.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+	<dossier name="documents" url="dossier.png" date="14/02/1973" heure="20:05" etage="0">
+		<sous-dossier name="special" url="dossier.png" date="05/04/1973" heure="22:10" etage="1">
+			<fichier name="machine.txt" url='dossier.png' date="05/04/1973" heure="22:45" etage="1">
+				Ceci est votre bloc note. Vous pouvez l'utiliser pour noter tout ce dont vous avez besoin. Vous pouvez l'afficher à tout moment dans le jeu, le contenu sera toujours le même, et vous pouvez l'éditer comme bon vous semble. <br/><br/>La sauvegarde du texte de ce bloc note s'enregistre automatiquement quand vous le fermez (en cliquant sur la croix en haut à gauche du bloc note). Cliquez directement sur ce texte pour le modifier.
+			</fichier>	
 		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-	<dossier name="poste-de-travail" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-	<fichier name="fichierText.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
-	</fichier>
-	<fichier name="fichierText2.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
-	</fichier>
-	<fichier name="fichierText2.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
-	</fichier>
-	<dossier name="panneau" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		<sous-dossier name="autres" url="dossier.png" date="12/04/1973" heure="17:40" etage="1">
+			<fichier name="hello.txt" url='dossier.png' date="20/04/1973" heure="18:32" etage="1">
+				Hello World ! Ici votre savant préféré Léopold. Quelle joie de pouvoir utiliser un système datant du début de l’ère informatique. Je suis tellement excité que j’ai voulu rédiger un billet à ce sujet, en utilisant directement la machine en question.<br/><br/>C’est un plaisir de pouvoir utiliser ce Xerox Alto en vrai. J’espère d’ailleurs que laisser une trace de mon passage en 1973 ne perturbera pas le continuum espace temps... Nous verrons bien. Pour l’instant, mon âme de scientifique a pris le dessus. Il faut que j’absorbe un maximum de savoir durant mes voyages dans le temps. Et cela passe nécessairement par la pratique !
+			</fichier>	
 		</sous-dossier>
 	</dossier>
-	<dossier name="configuration" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+	<dossier name="config" url="pdt.png" date="10/01/1973" heure="09:12" etage="0">
+		<sous-dossier name="programmes" url="dossier.png" date="15/01/1973" heure="13:54" etage="1">
 		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-
-	<dossier name="configuration2" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		<sous-dossier name="logs" url="dossier.png" date="11/01/1973" heure="07:17" etage="1">
 		</sous-dossier>
 	</dossier>
-
 </bureau>

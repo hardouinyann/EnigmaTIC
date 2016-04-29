@@ -25,12 +25,14 @@
 			audio.volume = 0.2;
 		}
 		$(window).blur(function() { 
-			if(audio != null)
-				audio.pause(); });
+			if(audio != null) audio.pause(); 
+			clearInterval(testerActiviteUtilisateur);
+		});
 		$(window).focus(function() { 
 			if(volumeOn == true) { 
-				if(audio != null)
-					audio.play(); }
+				if(audio != null) audio.play(); 
+			}
+			testerActiviteUtilisateur = setInterval(utilisateurInactif, 20000);
 		 });
 
 		$('.open-menu').click(changerEtatMenu);
@@ -40,7 +42,7 @@
 		$('.close').click(afficherMessageAide);
 		$('.scrollTop').click(topPage);
 		$('#options .fa-arrows-alt').click(afficherGrandEcran);
-		testerActiviteUtilisateur = setInterval(utilisateurInactif, 20000);
+		testerActiviteUtilisateur = setInterval(utilisateurInactif, 10000);
 		$('body').keydown(activiteDetectee);
 		$(document).hover(activiteDetectee);
 		$(document).click(activiteDetectee);

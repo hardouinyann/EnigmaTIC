@@ -39,7 +39,7 @@ class c_histoire extends Controller{
             foreach($succes as $s){
                 if($s->id_jeu) array_push($this->dataForView->succes, array("date"=>$s->id_jeu, "nom"=>$s->nom)  );
             }
-            $this->debug($this->dataForView->succes);
+            
         }
 
         if(!empty($this->datasFromPost['justSawDesktop'])){

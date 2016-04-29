@@ -42,6 +42,10 @@
     }
 
   </style>
+  <!-- Son d'ambiance -->
+    <audio loop>
+      <source src="<?php echo AUDIOS_PATH?>bensound-relaxing.mp3" type="audio/mpeg">
+    </audio>
   <!-- Vidéo d'ambiance-->
     <video id="bgvid" poster="<?php echo PICTURES_PATH?>bg-cosmos.jpg" loop>
         <source src="<?php echo VIDEOS_PATH?>cosmos.mp4" type="video/mp4">
@@ -72,6 +76,7 @@
     <p>L'équipe d'Enigma'TIC est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logos, icônes, sons, logiciels.</p>
     <p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : l'équipe d'Enigma'TIC.</p>
     <p>Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+    <p><b>Crédits</b> : Freepik.com (personnages), bensound.com (son d'ambiance).</p>
     <h3>6. Limitations de responsabilité.</h3>
     <p>L'équipe d'Enigma'TIC ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site <a href="http://http://www.enigma-tic.fr">http://www.enigma-tic.fr/</a>, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.</p>
     <p>Des espaces interactifs (possibilité de contacter l'équipe grâce à un formulaire prévu pour cet effet) sont à la disposition des utilisateurs. L'équipe d'Enigma'TIC se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, l'équipe d'Enigma'TIC se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).</p>

@@ -1,10 +1,9 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
-
 <div id="message-aide">
     <div class="container">
         <div class="close"></div>
         <h2>Vous avez besoin d'aide ? </h2>
-        <p id="help-txt">Vous voilà dans le bureau de <strong>Léopold</strong>, le grand-père de Thomas. Fouillez dans son bureau pour trouver des <em>indices</em> sur sa localisation. Cliquez sur les (+) que vous pouvez voir dans le décor pour avoir plus d&apos;informations sur les différents objets qui sont présents dans ce bureau. Vous pourrez ainsi peut-être découvrir où se trouve Léopold...<br/><br/>En bas de la page, vous pouvez cliquer sur votre bloc note personnel, pour y écrire tout ce dont vous avez besoin, tout au long du jeu. Vous pouvez mettre le jeu en plein écran en cliquant sur le bouton avec les coins rectangulaires, en haut à droite. A côté, vous pouvez aussi cliquer sur l'icône "utilisateur" afin d'accéder à votre profil, si vous souhaitez modifier les informations de votre compte.</p>
+        <p id="help-txt">Vous voilà dans le bureau de <strong>Léopold</strong>, le grand-père de Thomas. Rechercher dans son bureau si vous pouvez trouver des choses intéressantes. Cliquez sur les (+) que vous pouvez voir dans le décor pour avoir plus d&apos;informations sur les différents objets qui sont présents dans ce bureau. Vous pourrez ainsi peut-être découvrir où se trouve Léopold...<br/><br/>En bas de la page, vous pouvez cliquer sur votre <strong>bloc note personnel</strong>, pour y écrire tout ce dont vous avez besoin, tout au long du jeu. Vous pouvez mettre le jeu en plein écran en cliquant sur le bouton avec les coins rectangulaires, en haut à droite. A côté, vous pouvez aussi cliquer sur l'icône "utilisateur" afin d'accéder à votre profil, si vous souhaitez modifier les informations de votre compte.</p>
     </div>
 </div>
 <div id="jeu">

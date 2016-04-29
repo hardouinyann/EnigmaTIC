@@ -489,35 +489,6 @@
 		font-family: sans-serif;
 	}
 
-	/* BOUTON POUR PASSER LES CINEMATIQUES */
-
-	#passer-cinematique {
-		position: absolute;
-	    bottom: 20%;
-	    right: 5%;
-	    background-color: rgba(0, 0, 0, 0.5);
-	    border: 1px solid #303030;
-	    color: white;
-	    text-align: center;
-	    text-transform: uppercase;
-	    font-family: 'Roboto', sans-serif;
-	    font-size: 11px;
-	    font-weight: 400;
-	    padding: 15px 20px;
-	    letter-spacing: 0.05em;
-	    display: none;
-	    z-index: 4;
-	    cursor: pointer;
-	}
-
-	#passer-cinematique:hover {
-		background-color: rgba(0, 0, 0, 0.8);
-		-webkit-transition: all 250ms linear;
-		-moz-transition: all 250ms linear;
-		-ms-transition: all 250ms linear;
-		-o-transition: all 250ms linear;
-		transition: all 250ms linear;
-	}
 
 	/* DIALOGUE DANS LE JEU */ 
 
@@ -530,7 +501,7 @@
 	    bottom: 0;
 	    left: 0;
 	    width: auto;
-	    z-index: 5;
+	    z-index: 6;
 	}
 
 	.dialogue img {
@@ -582,7 +553,7 @@
 		border: 1px solid #636363;
 		text-align: center;
 		color: #f7f7f7;
-		padding: 8px 10px;
+		padding: 10px;
    	 	font-size: 10px;
    	  	position: absolute;
     	top: 30px;
@@ -593,6 +564,7 @@
 	.dialogue .next .fa {
 		position: relative;
 		animation: bougerFleche 1s infinite;
+		top: 1px;
 	}
 
 	@keyframes bougerFleche{ 0% {left: 0px; } 50% {left: 2px;} 100% {left: 0px;} } 
