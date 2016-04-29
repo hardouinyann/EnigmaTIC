@@ -41,7 +41,6 @@ class c_histoire extends Controller{
             }
             $this->debug($this->dataForView->succes);
         }
-            
 
         if(!empty($this->datasFromPost['justSawDesktop'])){
 
@@ -49,19 +48,23 @@ class c_histoire extends Controller{
 
         }elseif(!empty($_POST['validation_jeu'])){//bouton de redirection a la fin des jeu sera un petit form en fait
 
-            $tableToCall = $this->getModel('jeu')->getGameName($_POST['id_jeu']);
-            if(!empty($tabletocall)){
+            $this->debug($_POST);
 
-                $datas = array( 'id_partie' =>'DEFAULT',
-                        'id_utilisateur' => $_SESSION['user']->id_utilisateur,
-                        'jeu_valide' => 1,
-                        'date_valid' =>'now'
-                    );
-                $tableToCall = "jeu_".$tableToCall[0]->nom;
+            $score = !empty($_POST['score']) ? $_POST['score'] : null;
 
-                $jeuValide = $this->getModel('jeu')->gameComplete($datas, $tableToCall);
-                $this->dataForView = $jeuValide;
-            }
+            $datas = array( 'id_partie' =>'DEFAULT',
+                    'id_utilisateur' => $_SESSION['user']->id_utilisateur,
+                    'jeu_valide' => 1,
+                    'date_valid' =>'now',
+                    'score' => $score,
+                    'id_jeu' => $_POST['id_jeu']
+                );
+            $tableToCall = "partie";
+
+            $jeuValide = $this->getModel('jeu')->gameComplete($datas, $tableToCall);
+            $this->dataForView = $jeuValide;
+            $this->debug($this->dataForView,"data for view");
+            
         }
 
         if(!empty($_SESSION['user'])){

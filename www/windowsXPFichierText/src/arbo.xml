@@ -35,7 +35,7 @@
 			</sous-dossier>
 		</sous-dossier>
 		<fichier name="FichierText" url='txt.png' date="02/02/2016" heure="09:12" etage="1">
-			Ceci est le contenu de mon fichier test.<br />Deuxieme ligne de mon contenu. <br />Tellement intéressant que j'ai décidé de mettre une troisième ligne ultra-gia-téta-(téton mouahaha)-ment grande pour faire chier toi qui la lis en entière, et en même temps je peux tester si ca v aa la ligne solo ou non ! bisous bisous cordialement :D.
+			<p>Ceci est le contenu de mon fichier test. </p><br /><p> Deuxieme ligne de mon contenu. </p><br /> Tellement intéressant que j'ai décidé de mettre une troisième ligne ultra-gia-téta-(téton mouahaha)-ment grande pour faire chier toi qui la lis en entière, et en même temps je peux tester si ca v aa la ligne solo ou non ! bisous bisous cordialement :D.
 		</fichier>		
 	</dossier>
 	<dossier name="panneau-de-configuration" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">

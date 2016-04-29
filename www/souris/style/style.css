@@ -4,8 +4,7 @@ html{
 	padding : 0;
 	margin : 0;
 	position: absolute;
-	overflow: hidden;	
-	cursor : none;
+	overflow: hidden;
 }
 body{
 	height : 100%;
@@ -23,6 +22,7 @@ body{
 	padding : 2px;
 	display:inline;
 	float:right;
+	cursor: pointer;
 
 }
 
@@ -133,4 +133,17 @@ body{
 	display:inline;
 	float: left;
 	padding-left: 5px;
+}
+
+#info{
+	width:auto;
+	position:absolute;
+	float: right;
+	margin-left: 90%;
+}
+#info>div{
+	clear: both;
+	margin-right: 2%;
+	margin-top: 5%;
+	white-space: nowrap;
 }

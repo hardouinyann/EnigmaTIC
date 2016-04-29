@@ -11,17 +11,65 @@
 	</head>
 
 	<body id='droppable'>
-		<div id='cursor'><img src='images/souris.png' /></div>
-		<div class="dossier">
-			<img src="images/internet.gif"><br>Secrets from the future
+	   
+		<div id="info">
+			<div id="temps">Temps restant : 30s</div>
+			<div id="score">Score : 0</div>			
+			<div id="score">Score à atteindre : 270</div>
 		</div>
+		<div class="fenetre selectedFenetre ui-draggable" style="left:630.5137988292114px;top:189.4315791587637px;max-width: 650px;">
+			<div class="header selectedHeader ui-draggable-handle">
+				<b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>
+				<div class="close" onclick="removeWindow(this)">X</div>
+				<div>
+					<h1>Bienvenu sur le jeu !</h1>
+					<div>	Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<div>
+						<button id="jouer">Jouer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="fenetre selectedFenetre ui-draggable" id="redirection" style="left:630.5137988292114px;top:189.4315791587637px;max-width: 650px;display:none;">
+			<div class="header selectedHeader ui-draggable-handle">
+				<b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>
+				<div class="close" onclick="removeWindow(this)">X</div>
+				<div>
+					<h1 id="titre"></h1>
+					<div id="commentaire">	Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<div>
+						<form id="form" action='histoire/bureau' method='post'>
+							<input type='text' style="display:none;" name="id_jeu" value="1973"/>
+							<input type="text" style="display: none;" name="score" value=""></input>
+							<input type='submit' name='validation_jeu' value='Enregistrer le score et retour sur le bureau'/>
+						</form>
+						<button id="jouer">Rejouer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<div class="barre">
 			<div id='menu-demarrer'>
 				<img src='images/start.png'/>
 				<span>Démarrer</span>
 			</div>
 		</div>	
-
+	
 	</body>
 
 </html>

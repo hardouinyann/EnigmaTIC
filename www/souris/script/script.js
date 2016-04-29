@@ -9,58 +9,41 @@ var mouseX, mouseY;
 var easingAmount = 0.035;
 var pics = [];
 var nbPics = 12;
+var score = 0;
+var temps = 30;
+var scoreABattre = 270;
+
+var ratioPhoneHauteur = 234/21;
+var ratioPhoneLargeur = 419/57;
 
 $(document).ready(function(){
+
+	$('.fenetre').addClass('ui-draggable').draggable({handle:'.header'});
 	cpt=0;
+
 	gestionClicks();	
 	$("body").droppable();
 
 
-
-	//gestion de la souris virtuelle et du ralentissement
-	cursorW = parseInt($('#cursor img').css('width'))/2;
-	cursorH = parseInt($('#cursor img').css('height'))/2;
-
-	$(document).mousemove(function(event){
-		mouseX = (event.pageX)-cursorW;
-		mouseY = (event.pageY)-cursorH;		
-
-		var xDistance = mouseX - parseInt($('#cursor').position().left);
-	   	var yDistance = mouseY - parseInt($('#cursor').position().top);
-	   	var distance = Math.sqrt(xDistance * xDistance + yDistance * yDistance);
-	    if (distance >= 1) {
-	        $('#cursor').css('left',parseInt($('#cursor').position().left) + xDistance * easingAmount);
-	        $('#cursor').css('top',parseInt($('#cursor').position().top) + yDistance * easingAmount);
-	    }	
-
-	});	
-
-	$(document).click(function(){
-		var sourisVirtuelleX = $('#cursor').position().left;
-		var sourisVirtuelleY = $('#cursor').position().top;
-		var cpt = 0;
-		//pour fermer les fenetres
-		$.each($('.close'),function(){
-			$this = $(this);
-			let height = parseInt($this.css('height'));
-			let width = parseInt($this.css('width'));
-			let x = $this.offset().left;
-			let y = $this.offset().top;
-			let xEnd = x+width;
-			let yEnd = y+height;
-			console.log($this)
-			console.log("cpt : "+cpt++);
-			console.log(x+":"+y+":"+xEnd+":"+yEnd+":"+sourisVirtuelleX+":"+sourisVirtuelleY);
-			if(sourisVirtuelleX>=x-20 && sourisVirtuelleX<=xEnd+20){
-				console.log("bon X")
-				if(sourisVirtuelleY>=y && sourisVirtuelleY<=yEnd){
-					$this.trigger('click');
-				}
-
-			} 
-		})
-		//pour cliquer sur l'icone
+	$(document).on('click','.close',function(){
+		score += 10;
+		$('#score').html('Score : '+score+' pts');
 	})
+
+	$(document).on('click','.fenetre,.header',function(){
+
+		$('.selectedHeader').removeClass('selectedHeader');
+		$('.selectedFenetre').removeClass('selectedFenetre');
+
+		if($(this).hasClass('fenetre')){
+			$(this).find('.header').addClass('selectedHeader');
+			$(this).addClass('selectedFenetre');
+		}else if($(this).hasClass('header')){
+			$(this).parent().addClass('selectedFenetre');
+			$(this).addClass('selectedHeader');
+		}
+
+	});
 
 
 	
@@ -68,6 +51,7 @@ $(document).ready(function(){
 
 
 function makePop(){
+	$('#temps').html('Temps restant : '+(temps--)+'s');
 	var posX = Math.random()*(screenW-popUpWidth);
 	var posY = Math.random()*(screenH-popUpHeight-165);
 	var url;
@@ -81,8 +65,23 @@ function makePop(){
 	}
 	var t = new popUp(posX,posY,url);
 	t.draw();
-	if(cpt++<=25){
-		setTimeout(makePop,150);
+	if(cpt==30){
+		if($('.fenetre').length > 1){
+			$('.fenetre:not(#redirection)').remove();
+			$('.shortcut').remove();
+			var succes = score >= scoreABattre ? "Félicitations vous avez réussi !" : " Dommage, vous avez échoué !";
+			if(score>=scoreABattre)
+				$('#redirection').find('input[type=submit]').show();
+			else
+				$('#redirection').find('input[type=submit]').hide();
+
+			$('#redirection').find('#titre').html(succes);
+			$('#redirection').find('#commentaire').html("Vous avez obtenu un score de "+score+" points en 30 secondes, soit "+(score/10)+" fenêtres fermées");
+			$('#redirection').fadeIn("slow");
+		}
+	}
+	if(cpt++<30){//30
+		setTimeout(makePop,1000);
 	}
 }
 
@@ -101,7 +100,12 @@ function gestionClicks(){
 	});
 
 	//lancement des virus
-	$('.dossier').dblclick(function(){
+	$(document).on('click','#jouer',function(ev){
+		$(ev.target).parent().parent().parent().parent().hide();
+		cpt = 0;
+		temps = 30;
+		score = 0;
+		$('#score').html('Score : '+score+' pts');
 		makePop(25, 150);
 	});
 
@@ -119,6 +123,12 @@ function removeWindow(t){
 		nb--;
 		 $('.shortcut').find('span').html(nb+" Fenêtres");
 	}
+}
+
+function toto(e){
+	e.preventDefault();
+	var id_jeu = $(e.target)[0][0];
+	var id_jeu = $(e.target)[0][1];
 }
 
 

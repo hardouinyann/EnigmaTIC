@@ -5,6 +5,7 @@ var cursor;
 $xml = null;
 $dossierActuel = null;
 var requete = [];
+var reqFailed = 0;
 
 
 $(document).ready(function(){
@@ -31,8 +32,9 @@ function gestionTouches(){
 		var touche = e.which;
 		var nbLignes = $('#entete').children().length;
 		$divActuelle = $('#contenu-'+ligneActuelle);
+		console.log();
 		//si on appuye sur entrer
-		if(touche==13){	
+		if(touche==13 && ($divActuelle.text().split('>')[1] != "" && $divActuelle.text().split('>')[1] != " ") ){	
 			ligneActuelle++;	
 			$('#contenu').append('<div id="contenu-'+ligneActuelle+'"> </div>');//on rajoute une ligne
 			//On route la requête a effectuer
@@ -57,7 +59,14 @@ function executeRequete(){
 	var fonctionToCall = requete[0];
 	requete.splice(0,1);
 	var worked = false;
-	eval('if(typeof '+fonctionToCall+' == "function" && requete.length>=1){'+fonctionToCall+'();worked = true}else{worked = false}');
+	var regex = new RegExp(/([^A-Za-z\-])/);
+	 
+	console.log('if((typeof '+fonctionToCall+' == "function" && requete.length>=1) || ( typeof '+fonctionToCall+' == "function" && requete.length==0 && '+fonctionToCall+'==dir)){'+fonctionToCall+'();worked = true}else{worked = false}')
+	
+	if(!regex.test (fonctionToCall))
+		eval('if((typeof '+fonctionToCall+' == "function" && requete.length>=1) ||'+ 
+			'( typeof '+fonctionToCall+' == "function" && requete.length==0 && '+fonctionToCall+'==dir) '+
+			'){'+fonctionToCall+'();worked = true;reqFailed=0;}else{worked = false;reqFailed=1;}');
 	if(!worked){
 		c("mauvaise commande");
 		ligneActuelle++;
@@ -118,8 +127,16 @@ function cd(){
 
 		$dossierActuel.children().each(function(){
 			if(replaceAll($(this).attr('name'),'-',' ').toLowerCase() == nomDossier.toLowerCase()){
-				$dossierActuel = $(this);
-				entete = entete.split(' ')[0]+'\\'+nomDossier.toLowerCase()+' > ';
+				if( $(this).prop('tagName').toLowerCase()!='fichier'){
+					$dossierActuel = $(this);
+					entete = entete.split(' ')[0]+'\\'+nomDossier.toLowerCase()+' > ';
+				}else{
+					ligneActuelle++;
+					$('#contenu').append('<div id="contenu-'+ligneActuelle+'"> </div>');//on rajoute une ligne
+					$divActuelle = $('#contenu-'+ligneActuelle);
+					$('.cursor-console').remove();
+					$divActuelle.append("<span class='cursor-console'></span>");
+				}
 			}
 		});
 	}
@@ -152,6 +169,7 @@ function gestionToucheSuppr(){
 	$(document).keydown(function(e){
 		if(e.which==8){
 			var tailleLimite = (ligneActuelle==1) ? (parseInt(entete.length)) :(parseInt(entete.length))+1 ;
+			console.log(tailleLimite + ":"+$divActuelle.before().text().length)
 			if($divActuelle.before().text().length>tailleLimite ){//si c'est après, ne pas suppr le pseudo + >
 				$divActuelle.before().text($divActuelle.before().text().slice(0,-1)).append("<span class='cursor-console'></span>");
 			}

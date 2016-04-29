@@ -175,7 +175,7 @@ class FichierText{
 						'<div class="fenetre selectedFenetre ui-draggable" id="'+this.nom+'" style="position: relative;">'+
 							'<div class="header ui-draggable-handle selectedHeader">'+
 								'<div class="close" style="display:inline;float:right;" onclick="removeWindow(this)">X</div>'+
-								'<b style="color:white;margin-left:2%;margin-top:50%">'+this.nom.replace('-',' ').replace('-',' ')+'</b>'+
+								'<b style="color:white;margin-left:2%;margin-top:50%">Bloc notes - '+this.nom.replace('-',' ').replace('-',' ')+'</b>'+
 							'</div>'+	
 							this.text+
 						'</div>'
