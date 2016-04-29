@@ -340,13 +340,7 @@ function gestionToucheSuppr(){
 		if(e.which==8){
 
 			var tailleLimite = (ligneActuelle==1) ? (parseInt(entete.length)) :(parseInt(entete.length))+1 ;
-<<<<<<< HEAD
-			console.log(tailleLimite + ":"+$divActuelle.before().text().length)
-=======
 
-			console.log(tailleLimite + ":"+$divActuelle.before().text().length)
-
->>>>>>> origin/master
 			if($divActuelle.before().text().length>tailleLimite ){//si c'est après, ne pas suppr le pseudo + >
 
 				$divActuelle.before().text($divActuelle.before().text().slice(0,-1)).append("<span class='cursor-console'></span>");
