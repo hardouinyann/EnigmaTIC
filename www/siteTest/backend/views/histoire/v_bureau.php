@@ -1,5 +1,4 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
-
 <div id="message-aide">
     <div class="container">
         <div class="close"></div>
