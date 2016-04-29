@@ -6,22 +6,23 @@
 	var messageAide = "Vous voilà lancé dans l'aventure <b>Enigma'TIC</b> ! Dans le jeu, vous retrouverez régulièremet des cinématiques comme celle-ci. Pour faire <b>défiler les dialogues des personnages</b>, cliquez sur la flèche à droite de la bulle de dialogue. Vous pouvez cliquer à tout moment sur cette flèche si vous voulez faire défiler les dialogues rapidement. Si vous souhaitez passer cette cinématique, cliquez sur le bouton prévu à cet effet, en bas à droite de l'écran.<br/><br/>Vous retrouverez en haut de l'écran des éléments de navigation fixe. Ils vous permettront de mettre le jeu en plein écran, de couper le son si vous le souhaitez, ou encore d'ouvrir le menu de navigation du site par exemple. A vous de jouer!";
 
 /* REPLIQUES BUREAU DE LEOPOLD */
-	var tabRepliquesBureau = ["Tiens c'est bizarre... J'ai fouillé toute la maison, mais grand-père n'est toujours pas là !", "Je commence vraiment à m'inquiéter ! Ca fait déjà quasiment une semaine que je suis sans nouvelles de lui !", "Je vais chercher dans son bureau pour voir s'il n'a pas laissé un message. Il est peut-être sorti en ville...", "Je suis sûr que je trouverais des indices ici. Il y passe tout son temps, à travailler sur ses sujets de recherches."," Aller, au boulot ! Voyons voir ce qu'on a dans ce bureau !"];
+	var tabRepliquesBureau = ["Tiens c'est bizarre... J'ai fouillé toute la maison, mais grand-père n'est toujours pas là !", "Je commence vraiment à m'inquiéter ! Je suis sans nouvelles de lui depuis quasiment une semaine !", "Je vais chercher dans son bureau pour voir s'il n'a pas laissé un message, ou quelque chose qui m'indiquerait où il pourrait se trouver. Il est peut-être simplement sorti en ville...", "Je suis sûr que je trouverais des indices ici. Il y passe tout son temps, à travailler sur ses sujets de recherches."," Aller, au boulot ! Voyons voir ce qu'on peut trouver dans ce bureau !"];
 	var tabRepliqueCadrePhoto = ["C'est un cadre avec une photo de grand-père et moi ! Je me souviens, nous l'avons prise quand nous sommes allés en vacances dans le sud de la France !", "On avait loué un gîte très atypique, et on avait fait de la randonnée ! C'était vraiment sympa !"];
-	var tabRepliqueBibliotheque = ["C'est la bibliothèque de grand-père. Il y a beaucoup de livres sur les interfaces graphiques et l'informatique. Ce sont des domaines qui nous passione tous les deux !"];
+	var tabRepliqueBibliotheque = ["C'est la bibliothèque de grand-père. Il y a beaucoup de livres sur les interfaces graphiques et l'informatique. Ce sont des domaines qui nous passionent tous les deux !"];
 	var tabRepliqueTravaux = ["Ce sont des livres et documents qui servent à grand-père pour ses travaux de recherche. Il y a des livres sur la physique quantique, et je crois qu'il y a aussi des plans de construction ! "];
 	var tabRepliqueTableau = ["C'est un tableau en liège, avec des post-it vierges dessus. Je pourrais m'en servir si j'en ai besoin."];
 	var tabRepliqueBureau = ["Voyons voir de plus près ce qu'il y a sur le bureau. Un ordinateur portable éteint, des documents, un téléphone fixe...","Tiens... Il semblerait qu'il y ait un espèce de carnet de bord ! Regardons-ça de plus près."];
 
 /* REPLIQUES 1973 */
-	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! On dirait que j'ai été... téléporté ! ","Ce bureau a l'air très ancien ! Oh, mais je reconnais cet ordinateur sur le bureau ! C'est un Xerox Alto !", "Grand-père m'en avait parlé, et il m'avait montré une photo de cet ordinateur ! Je crois même qu'il avait écrit un article sur son blog à propos de celui-ci.", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a été révélé au grand public en 1973. Bon, voyons voir si cet ordinateur fonctionne !"];
-	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'écran de l'ordinateur ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.","Je vais essayer de fouiller dans cet ordinateur pour voir s'il contient des fichiers intéressants !", "Peut-être que je trouverais un message de grand-père dans l'oridnateur. Je le connais, il ne laisse rien au hasard !", "Je suis sûr que je suis là parcequ'il le voulait ! Voyons voir ce que je peux trouver !"];
+	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! Je n'aurais peut-être pas du entrer dans cette espère de machine, et appuyer sur le bouton du cadran ! ","On dirait que j'ai été... téléporté ! Ce bureau a l'air très ancien ! Mais... Je reconnais cet ordinateur sur la table ! C'est un modèle appelé Xerox Alto !", "Grand-père m'en avait parlé, et il m'en avait montré une photo ! Il avait même écrit un article sur son blog à propos de celui-ci.", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a fait son apparition en 1973, et aujourd'hui il n'existe que très peu d'exemplaires de celui-ci. Voyons voir s'il fonctionne."];
+	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'ordinateur ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.", "Je vais essayer de regarder s'il contient des fichiers intéressants. Je n'ai que ça à faire de toute façon, puisque je ne sais pas comment retourner dans le bureau de grand-père...", "Peut-être que je trouverais quelque chose qui m'aidera à y retourner, ou bien même un message de grand-père... Je le connais, il ne laisse rien au hasard !", "Je suis sûr que si je suis arrivé là, c'est parcequ'il le voulait ! Voyons voir ce que je peux trouver !"];
+	var tabRepliquesScene31973 = ["Bon, cela fait longtemps que je n'ai pas utilisé une console d'invite de commandes comme celle-là, mais je me souviens toujours des commandes principales ! ","Je vais les noter sur un bout de papier. (<i>Thomas déchire une page de son bloc note, et écrit dessus</i>).", "Je ne les ai pas toutes notées, seulement celles qui me serviront pour parcourir les fichiers de l'ordinateur.", "Voilà, je vais poser mon bout de papier à côté de l'ordinateur, comme ça je me souviendrais quelles commandes utiliser."];
 
 /* REPLIQUES 1982 */
 	var tabRepliquesScene1982 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
 
 /* REPLIQUES 1995 */
-	var tabRepliquesScene1995 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
+	var tabRepliquesScene1995 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !", "Je vois qu'il y a un ordinateur sur le bureau. Je vais essayer de l'utiliser, et je vais regarder ce que je peux trouver dessus."];
 
 /* REPLIQUES 2001 */
 	var tabRepliquesScene2001 = ["Me voilà en 2001 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
@@ -29,7 +30,7 @@
 /* VARIABLES GLOBALES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
 	var messageAideBureau = '';
-	var messageAide1973 = "";
+	var messageAide1973 = "Il semblerait que vous avez été transporté dans un autre espace-temps... Utilisez la <strong>console de commande</strong> de l'ordinateur pour voir s'il contient des fichiers intéressants. Peut-être que vous trouverez quelque chose qui pourrait vous aider à revenir dans le bureau de Léopold. <br/><br/>Pour comprendre comment l'utiliser, lisez la <strong>note de Thomas</strong>. Vous y trouverez les commandes qui vous permettront de parcourir les fichiers et dossiers de l'ordinateur. Testez et utilisez ces commandes pour réussir à naviguer dans l'arborescence de l'ordinateur, jusqu'à ce que vous trouviez un fichier utile.";
 	var nom = "Thomas";
 	var j=0;
 	var etatDuJeu;
@@ -56,15 +57,14 @@
 		$('.travaux').click(actionTravaux);
 		$('.bureau').click(zoomBureau);
 	}else if($('#scene-1973-jeu').length == 1 && etatDuJeu != "scene1973") {
-		$('.objets').hide();
-		$('.dialogue').css('top', '55%');
-		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
-		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
-		$('#help-txt').html(messageAide);
 		etatDuJeu = "scene1973";
 		textesAAfficher = tabRepliquesScene1973;
 		messageAide = messageAide1973;
-		curseurClignotant();
+		$('.objets').hide();
+		$('.dialogue').css('top', '50%');
+		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
+		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
+		$('#help-txt').html(messageAide);
 	}else if ($('#scene-1982').length == 1) {
 		$('.objets').hide();
 		$('.dialogue').css('top', '55%');
@@ -266,17 +266,27 @@
 			$('.dialogue').hide();
 			$('.dialogue').fadeIn(3500);
 			afficherTexte(textesAAfficher, nom);
-		}else if(etatDuJeu == "scene1973-zoom" && j=="3") {
+		}else if(etatDuJeu == "scene1973-zoom" && j=="2") {
+			j=0;
+			etatDuJeu = "scene1973-jeu"; 
+			textesAAfficher = tabRepliquesScene31973;
 			$('#top-bar').fadeOut(500);
 			$('#bottom-bar').fadeOut(500);
 			$('#scene-1973-zoom').addClass('scene-flou');
 			$('.dialogue').hide();
+			$('.curs').hide();
 			$('#scene-1973-jeu').fadeIn(500);
 			$('.menu').animate({ 'top' : '10%', 'left' : '5%', 'opacity' : '0.9'},1000);
 			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
-			$('.objets').fadeIn();
+			$('.dialogue').css('z-index', '6');
+			$('.dialogue').fadeIn(500);
 			afficherTexte(textesAAfficher, nom);
-			clearInterval(cursor);
+		}else if(etatDuJeu == "scene1973-jeu" && j=="3") {
+			$('.dialogue').fadeOut();
+			$('#feuille').css('display','inline-block');
+		}else if(etatDuJeu == "scene1973-fin" && j=="4"){
+			$('.dialogue').fadeOut();
+			$('#end-1973').fadeIn();
 		}else if(etatDuJeu == "bureau-leopold" && j=="4"){
 			$('.dialogue').fadeOut(250);
 			$('#interactive').fadeIn(1000);
@@ -320,7 +330,7 @@
 		}
 	}
 
-	/* FONCTION QUI PERMETTENT DE CHANGER DE MESSAGE */
+/* FONCTION QUI PERMETTENT DE CHANGER DE MESSAGE */
 	function afficherTexte(tableau, nomParle){
 		$('.nom').text(nomParle);
 		var chaine;
@@ -340,7 +350,7 @@
 			var txt = texte[i];
 		}
 		actual_texte = 0;
-		afficherLeMessage = setInterval("changerMessage()", 20);
+		afficherLeMessage = setInterval("changerMessage()", 15);
 	}
 
 	function changerMessage() {

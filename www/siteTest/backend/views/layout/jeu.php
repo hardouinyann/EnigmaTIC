@@ -20,8 +20,6 @@
 La sauvegarde du texte de ce bloc note s'enregistre automatiquement quand vous le fermez (en cliquant sur la croix en haut à gauche du bloc note). Cliquez directement sur ce texte pour le modifier.</textarea>
       </form>
     </div>
-	<!-- Bouton pour passer la cinématique -->
-	<a id="passer-cinematique">Passer la cinématique&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 	<header>
 		<?php include_once(VIEWS_PATH."layout/lateral.php") ?>
 		<?php include_once(VIEWS_PATH."layout/header.php") ?>

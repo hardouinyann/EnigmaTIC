@@ -13,7 +13,7 @@
 	</div>
 	<header>
 		<?php include_once(VIEWS_PATH."layout/lateral.php") ?>
-		<?php include_once(VIEWS_PATH."layout/header.php") ?>
+		<?php include_once(VIEWS_PATH."layout/header-home.php") ?>
 	</header>
 	<?php echo $content_for_layout; ?>
 	<?php include_once(VIEWS_PATH."layout/scripts.php") ?>
