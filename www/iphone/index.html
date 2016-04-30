@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Interface tactile</title>
+	<link rel="stylesheet" type="text/css" href="tactile.css">
+</head>
+<body>
+	<div id="phone">
+		<img src="img/iphone.png" width="1200">
+		<div id="ecran">
+			<img src="img/nav.png" alt="" style="background-color: rgba(0,0,0,0.9); margin-bottom: -9px;">
+			<div id="saisisMdp">
+				<p>Saisissez le code</p>
+				<div id="mdp">
+					<div class="rond masquer"></div>
+					<div class="rond masquer"></div>
+					<div class="rond masquer"></div>
+					<div class="rond masquer"></div>
+					<div class="rond masquer"></div>
+				</div>
+				<p id="error"></p>
+				<div id="touches">
+					<p>1</p>
+					<p>2</p>
+					<p>3</p>
+					<p>4</p>
+					<p>5</p>
+					<p>6</p>
+					<p>7</p>
+					<p>8</p>
+					<p>9</p>
+					<p>0</p>
+				</div>
+				<p id="lancerJeu">Comment trouver le mot de passe ?</p>
+			</div>
+			
+			<div id="devinette" class="masquer">
+				<ul>
+					<li>1. David a 10 ans, son petit frère Franck a la moitié de son âge.
+Quand David aura 20 ans, quel âge aura Franck ?</li>
+					<li>2. 5 chats sont capables d'attraper 5 souris en 5 minutes. Sachant cela, combien de chats faut-il pour attraper 100 souris en 100 minutes ?</li>
+					<li>3. Combien y a-t-il de pères dans un jeu de sept familles ?</li>
+				</ul>
+				<p>Entrez les résultats à la suite pour trouver le mot de passe</p>
+				<p id="revenir">Revenir à la saisie du mot de passe</p>
+			</div>
+
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="tactile.js"></script>
+</body>
+</html>

@@ -17,7 +17,22 @@
 	<dossier name="documents" url="dossier.png" date="14/02/1973" heure="20:05" etage="0">
 		<sous-dossier name="special" url="dossier.png" date="05/04/1973" heure="22:10" etage="1">
 			<fichier name="machine.txt" url='dossier.png' date="05/04/1973" heure="22:45" etage="1">
-				Ceci est votre bloc note. Vous pouvez l'utiliser pour noter tout ce dont vous avez besoin. Vous pouvez l'afficher à tout moment dans le jeu, le contenu sera toujours le même, et vous pouvez l'éditer comme bon vous semble. <br/><br/>La sauvegarde du texte de ce bloc note s'enregistre automatiquement quand vous le fermez (en cliquant sur la croix en haut à gauche du bloc note). Cliquez directement sur ce texte pour le modifier.
+				[SAUVEGARDE] Instruction détaillé d’utilisation de la machine <br/><br/>
+
+				Retour automatique de la machine dans le présent<br/><br/>
+
+				-> Instruction du système de sécurité :<br/>
+
+				Lors de chaque voyage dans le temps effectué avec cette machine, un système de sécurité garantit le retour de l’engin dans l’espace temps initial, à savoir le présent, dans le bureau programmé pour cela. Un programme calcule ainsi la durée pendant laquelle la machine est immobilisée, à partir du moment où elle arrive dans un nouvel espace-temps. De cette manière, si la machine reste immobilisée et sans aucune interaction, alors elle sera automatiquement redigirée dans le présent, au bout de 10 heures, afin qu'elle ne tombe pas entre de mauvaises mains.<br/><br/>
+
+				-> Systèmes de contrôle des risques : <br/>
+				- Message automatique généré à chaque voyage par prévention<br/>
+				- Dans tous les cas le message est contenu dans la machine et peut être intercepté par quelqu'un.<br/> 
+				<br/>
+				Un message texte ou audio doit être enregistré à chaque arrivée dans une nouvelle date. Il est programmé pour être intercepté dans le présent, dans le cas où l'on resterai bloqué dans les couloirs du temps, lors d’un voyage temporel. Malheureusement les risques de l’informatique ne garantissent pas la bonne réception du message. Dans le cas où il subirait une distorsion temporelle, il sera alors nécessaire de mener sa propre enquête pour comprendre ce qui s’est passé.<br/><br/>
+				-> Dates configurées sur la machine, et visitables :<br/><br/>
+					1973 - 1982 - 1987 - 1995 - 2001 - 2007<br/>
+
 			</fichier>	
 		</sous-dossier>
 		<sous-dossier name="autres" url="dossier.png" date="12/04/1973" heure="17:40" etage="1">
@@ -32,4 +47,9 @@
 		<sous-dossier name="logs" url="dossier.png" date="11/01/1973" heure="07:17" etage="1">
 		</sous-dossier>
 	</dossier>
+	<fichier name="recette.txt" url='dossier.png' date="23/07/1973" heure="16:09" etage="0">
+		Dans un récipient mélangez deux cuillères à café de levure, 45 grammes de sucre, un sachet de sucre vanillé et 125 grammes de farine.<br/><br/>Dans un autre récipient, battez les jaunes d'œufs avec 20 centilitres de lait. Mélangez ensuite le contenu des deux récipients, jusqu’à obtenir une pâte épaisse. Faites fondre le beurre dans une casserole puis incorporer le à la pâte. <br/><br/>Montez les blancs en neige, puis incorporez les délicatement à la pâte. Ajoutez une lichette de rhum (point trop n’en faut !)<br/><br/>
+		Laissez reposer la pâte 45 minutes.<br/>
+		Dégustez jusqu’à ce que vous soyez repu ! 
+	</fichier>
 </bureau>

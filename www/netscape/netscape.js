@@ -11,7 +11,7 @@ jQuery(function($){
 			//on récupère le ul qui doit être affiché. $(this) == li cliqué 
 			var ul= $(this).children('ul');
 
-
+			
 			//si ce ul est déjà affiché
 			if(ul.attr('class') == 'afficher' ){
 				//le caché
@@ -24,14 +24,19 @@ jQuery(function($){
 				//Affiché ce ul
 				$(ul).addClass('afficher');
 			}
-			
+
 		});
 
+
+		$('div.menu ul li ul li').on('click', function(){
+			var ul2= $(this).parent('ul');
+			if(ul2.class == "afficher"){
+				ul2.removeClass('afficher');
+				console.log(ul2);
+			}
+			
+		});
 		
-
-
-
-
 
 	});
 
@@ -80,15 +85,14 @@ function chercherAdresse(){
 		return false;
 	}
 
-	afficherAdresse(idSite[1]);
-	console.log(idSite);
-	if(url.value == "www.google.com" || url.value== "www.invente.com"){
+
+	//condition pour voir si l'url est comprise dans une des url proposées
+	if(url.value == "www.edition.com" || url.value== "www.photoshop.com" || url.value== "www.welcome.com" || url.value== "www.interface.com" || url.value== "www.vlib.com" || url.value== "www.kli.com" || url.value== "www.washingtonpost.com" || url.value== "www.usatoday30.com" || url.value== "www.pmichaud.com"){
 		afficherAdresse(idSite[1]);
 	} else {
 		afficherAdresse('introuvable');
 	}
 
-	idNavigation++;
 	
 }
 
@@ -125,8 +129,22 @@ function afficherAdresse(nomSite){
 		//On récupère le site que l'on veut afficher et y ajoute la classe CSS pour l'afficher
 		var site= document.getElementById(nomSite)
 		site.className="siteAfficher";
+
+		
+		if(nomSite == "interface"){
+			finJeu();
+			return;
+		}
+		
 	}
+
+	idNavigation++;
 	
+}
+
+
+function finJeu(){
+	alert("on a trouvé papie");
 }
 
 
@@ -160,7 +178,10 @@ function addBookmarks(){
 	var li=  document.createElement("li");
 	var t=document.createTextNode(url.value);
 	
-	li.appendChild(t);
-	listeBookmarks.appendChild(li);
+	if(url.value != ""){
+		li.appendChild(t);
+		listeBookmarks.appendChild(li);
+	}
+	
 
 }

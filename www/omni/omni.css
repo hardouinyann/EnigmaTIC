@@ -129,8 +129,13 @@ div.controle div.liste ul li{
 	margin: 3px 0px;
 }
 
-div.controle span.enEcoute{
+div#controleMusique ul li span{
 	color: #0071bc;
+	display: none;
+}
+
+div#controleMusique ul li.enEcoute span{
+	display: initial;
 }
 
 div.controle{

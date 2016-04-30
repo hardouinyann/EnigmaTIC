@@ -48,9 +48,8 @@
 
 	a#end-1973-read {
 		position: absolute;
-	    bottom: 5%;
-	    right: 0;
-	    left: 0;
+	    bottom: 4%;
+	    right: 35%;
 	    background-color: rgba(0, 0, 0, 0.5);
 	    border: 1px solid #303030;
 	    color: white;
@@ -81,8 +80,12 @@
 	    display: block;
 	}
 
-	#form {
-		display: table;
+	#form1973 {
+		display: none;
+	    position: absolute;
+	    z-index: 15;
+	    bottom: 4%;
+	    right: 40%;
 	}
 
 	#passer-cinematique:hover, #end-1973-read:hover, #end-1973:hover {
@@ -777,7 +780,24 @@
 	    background-image: url('../images/bureau-2001.jpg');
 	    background-size: cover;
 	    background-repeat: no-repeat;
-	    background-position: top center;
+	    background-position: center center;
+	    z-index: 2;
+	    position: relative;
+	}
+
+/* SCENE 2001 */
+
+	#scene-2030 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bureau-robot.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: center center;
 	    z-index: 2;
 	    position: relative;
 	}

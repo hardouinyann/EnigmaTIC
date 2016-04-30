@@ -40,6 +40,8 @@ function prepare(){
     actualPoints = [];
     points = [];
 
+
+    /* ************ POUR DIRE QUAND IL GAGNE ***************** */
     if(lvl == 6){
         alert("gagné");
     }
@@ -73,7 +75,7 @@ function prepare(){
     gameEnabled = false;
     drawPoints(true);
     var timer= document.getElementById("timerMemory");
-    timer.innerHTML= "MEMORISER";
+    timer.innerHTML= "Mémorisation en cours...";
     setTimeout(function(){
       hidetext();
       timer.innerHTML="";
@@ -170,6 +172,11 @@ function MouseUp(e){
             }        
         }
     }
+}
+
+
+function refresh(param){
+    window.location.reload();
 }
 
 init();
