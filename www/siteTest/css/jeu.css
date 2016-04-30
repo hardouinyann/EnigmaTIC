@@ -46,7 +46,7 @@
 	    cursor: pointer;
 	}
 
-	a#end-1973-read, #end-1973 {
+	a#end-1973-read {
 		position: absolute;
 	    bottom: 5%;
 	    right: 0;
@@ -67,10 +67,6 @@
 	}
 
 	#end-1973 {
-		position: absolute;
-	    bottom: 5%;
-	    right: 0;
-	    left: 0;
 	    background-color: rgba(0, 0, 0, 0.5);
 	    border: 1px solid #303030;
 	    color: white;
@@ -81,10 +77,12 @@
 	    font-weight: 400;
 	    padding: 15px 20px;
 	    letter-spacing: 0.05em;
-	    display: none;
-	    z-index: 4;
 	    cursor: pointer;
 	    display: block;
+	}
+
+	#form {
+		display: table;
 	}
 
 	#passer-cinematique:hover, #end-1973-read:hover, #end-1973:hover {
