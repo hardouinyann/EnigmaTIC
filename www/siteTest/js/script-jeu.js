@@ -36,6 +36,7 @@
 	var etatDuJeu;
 	var messageAide, textesAAfficher;
 
+
 /* QUEL SCENE EN COURS */
 	if ($('#chapitre-1').length == 1) {
 		$('.fa-user').hide();
@@ -48,6 +49,18 @@
 		etatDuJeu = "chapitre1scene1";
 		textesAAfficher = tabRepliquesScene1;
 	}else if($('#bureau-leopold').length == 1) {
+		$('#dialogueBureau1').on('submit', function(ev){
+					ev.preventDefault();
+					//ca va envoyer la requete de mettre dejaVu a 1
+					$.post(
+				        '/histoire/bureau',
+				        'justSawDesktop=vrai',
+				        function(data){
+				        	console.log("done");
+				        },
+				        'json'
+				    );
+				});
 		etatDuJeu = "bureau-leopold";
 		textesAAfficher = tabRepliquesBureau;
 		$('.dialogue').fadeIn(3500);
