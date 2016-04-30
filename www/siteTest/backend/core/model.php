@@ -98,7 +98,7 @@
 
             $values = '';
             foreach($data as $field=>$value){
-                (in_array($value,$exceptions))? $values .= $field."=".addslashes($value).",":$values .= $field."='".addslashes($value)."',";
+                 $values .= $values .= $field."=".addslashes($value).",";
             }
            
             $condition = (!empty($params['condition'])) ? $params['condition'] : '1=1';

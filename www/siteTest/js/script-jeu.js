@@ -49,18 +49,19 @@
 		etatDuJeu = "chapitre1scene1";
 		textesAAfficher = tabRepliquesScene1;
 	}else if($('#bureau-leopold').length == 1) {
-		$('#dialogueBureau1').on('submit', function(ev){
-					ev.preventDefault();
-					//ca va envoyer la requete de mettre dejaVu a 1
-					$.post(
-				        '/histoire/bureau',
-				        'justSawDesktop=vrai',
-				        function(data){
-				        	console.log("done");
-				        },
-				        'json'
-				    );
-				});
+		$('.formDejaVu').on('submit', function(ev){
+			ev.preventDefault();
+			console.log("toto");
+			//ca va envoyer la requete de mettre dejaVu a 1
+			$.post(
+		        '/EnigmaTIC/www/siteTest/histoire/bureau',
+		        'justSawDesktop=ok',
+		        function(data){
+		        	console.log("done");
+		        },
+		        'html'
+		    );
+		});
 		etatDuJeu = "bureau-leopold";
 		textesAAfficher = tabRepliquesBureau;
 		$('.dialogue').fadeIn(3500);

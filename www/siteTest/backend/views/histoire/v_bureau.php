@@ -1,5 +1,5 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
-<form id="form" action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
+<form id="form" class='formDejaVu' action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
     <input type='submit' id='dialogueBureau1' name='validation_jeu' style='    z-index: 10;
     position: relative;' value='valider'/>
 </form>
