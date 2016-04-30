@@ -1,13 +1,15 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
 <!-- Bouton pour sauvegarder le jeu -->
 <a id="end-1973-read">J'ai fini de lire le fichier texte affiché dans la console.</a>
-<form id="form" action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
-    <input type='hidden' name="id_jeu" value="1973"/>
-    <input type="hidden" name="score" value=""></input>
-    <input type='submit' id="end-1973" name='validation_jeu' value='Retourner au bureau de Léopold'/>
-</form>
 <div id="jeu">
     <div id="scene-1973-jeu" style="display: block;">
+      <div id="valider-jeu">
+        <form id="form" class="formDejaVu" action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
+          <input type='hidden' name="id_jeu" value="1973"/>
+          <input type="hidden" name="score" value=""></input>
+          <input type='submit' id="end-1973" name='validation_jeu' value='Retourner au bureau de Léopold'/>
+      </form>
+      </div>
       <div id='console'>
         <div id='entete'>
         </div>
