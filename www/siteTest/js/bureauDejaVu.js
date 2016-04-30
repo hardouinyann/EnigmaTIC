@@ -4,7 +4,7 @@ $(document).ready(function(){
 		ev.preventDefault();
 		//ca va envoyer la requete de mettre dejaVu a 1
 		$.post(
-	        '/accueil/bureau',
+	        'histoire/bureau',
 	        'justSawDesktop=vrai',
 	        function(data){
 	        	console.log("done");
