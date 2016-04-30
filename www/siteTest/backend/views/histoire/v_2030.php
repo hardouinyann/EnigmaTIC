@@ -2,10 +2,16 @@
     <div id="scene-2030">  
         <div id="top-bar"></div>
         <div id="bottom-bar"></div>
+        <div id="robot"></div>
     </div> 
     <div class="dialogue">
         <img src="<?php echo PICTURES_PATH ?>thomas-dialogue-2.png" alt="image dialogue" />
         <div><strong class="nom">Thomas</strong><p class="dialogue-txt"></p>
+          <a class="next"><i class="fa fa-chevron-right"></i></a></div>
+    </div>
+    <div class="dialogueRobot">
+        <img src="<?php echo PICTURES_PATH ?>robot-dialogue.png" alt="image dialogue" />
+        <div><strong class="nom">Robot</strong><p class="dialogue-txt"></p>
           <a class="next"><i class="fa fa-chevron-right"></i></a></div>
     </div>
 </div>

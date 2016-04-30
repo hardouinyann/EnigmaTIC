@@ -29,7 +29,7 @@
 	var tabRepliquesScene2001 = ["Je suis arrivé en 2001 ! Cette date ne me semble pas si lointaine, et pourtant c'est un vieil ordinateur que je vois sur le bureau là.", "C'est fou comme les évolutions des nouveaux ordinateurs se sont faîtes de plus en plus rapidement au fil des années.","Je vais continuer sur ma lancée, et je vais regarder ce qu'il y a sur cet ordinateur."];
 
 /* REPLIQUES 2030 */
-	var tabRepliquesScene2030 = ["Me voilà dans le futur ! Je suis en 2030 ! Tiens il y a un robot. Bonjour !", "C'est fou comme les évolutions des nouveaux ordinateurs se sont faîtes de plus en plus rapidement au fil des années.","Je vais continuer sur ma lancée, et je vais regarder ce qu'il y a sur cet ordinateur."];
+	var tabRepliquesScene2030 = ["Me voilà dans le futur ! Je suis en 2030 ! Tiens il y a un robot. Bonjour !", "Bonjour Thomas ! Comment vas-tu ? J'attendais ta visite ! J'ai un message à  te délivrer, mais pour le récupérer tu devras réussir les jeux que je te propose, d'accord ?", "Vous êtes un robot farceur dis donc ! D'accord, très bien ! Je suis prêt pour les casses-têtes ! "];
 
 /* VARIABLES GLOBALES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
@@ -421,6 +421,21 @@
 			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
 			$('.objets').fadeIn();
 			$('.dialogue').fadeOut(250);
+		}else if(etatDuJeu == "scene2030" && j=="0") {
+			$('.dialogue').fadeOut(250);
+			nom = "Robot";
+			$('.dialogueRobot').fadeIn();
+			j++;
+			afficherTexte(textesAAfficher, nom);
+		}else if(etatDuJeu == "scene2030" && j=="1") {
+			$('.dialogue').fadeIn();
+			nom = "Thomas";
+			$('.dialogueRobot').fadeOut(250);
+			j++;
+			afficherTexte(textesAAfficher, nom);
+		}else if(etatDuJeu == "scene2030" && j=="2") {
+			$('.dialogue').fadeOut();
+			$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/robot");
 		}else {
 			j++;
 			afficherTexte(textesAAfficher, nom);

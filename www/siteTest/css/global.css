@@ -492,7 +492,7 @@
 
 	/* DIALOGUE DANS LE JEU */ 
 
-	.dialogue {
+	.dialogue, .dialogueRobot {
 		height: 100px;
 		position: absolute;
 		margin: auto;
@@ -504,20 +504,20 @@
 	    z-index: 6;
 	}
 
-	.dialogue img {
+	.dialogue img, .dialogueRobot img {
 		width: auto;
 		height: auto;
 		display: inline-block;
 	}
 
-	.dialogue strong {
+	.dialogue strong, .dialogueRobot strong {
 		font-weight: 600;
 		color: #41214c;
 		text-transform: uppercase;
 		font-size: 15px;
 	}
 
-	.dialogue div {
+	.dialogue div, .dialogueRobot div {
 		display: inline-block;
 		background: white;
 		text-align: left;
@@ -536,19 +536,19 @@
 	    line-height: 18px;
 	}
 
-	.dialogue div:after {
+	.dialogue div:after, .dialogueRobot div:after {
 		content: url('../images/bulle.png');
 		position: absolute;
 		top: -10px;
     	left: -15px;
 	}
 
-	.dialogue p {
+	.dialogue p, .dialogueRobot p {
 		display: block;
 		margin: 5px 5px 0px;
 	}
 
-	.dialogue .next {
+	.dialogue .next, .dialogueRobot .next {
 		background: #1e1e1e;
 		border: 1px solid #636363;
 		text-align: center;
@@ -561,7 +561,7 @@
     	cursor: pointer;
 	}
 
-	.dialogue .next .fa {
+	.dialogue .next .fa, .dialogueRobot .next .fa {
 		position: relative;
 		animation: bougerFleche 1s infinite;
 		top: 1px;
