@@ -28,6 +28,9 @@
 /* REPLIQUES 2001 */
 	var tabRepliquesScene2001 = ["Je suis arrivé en 2001 ! Cette date ne me semble pas si lointaine, et pourtant c'est un vieil ordinateur que je vois sur le bureau là.", "C'est fou comme les évolutions des nouveaux ordinateurs se sont faîtes de plus en plus rapidement au fil des années.","Je vais continuer sur ma lancée, et je vais regarder ce qu'il y a sur cet ordinateur."];
 
+/* REPLIQUES 2030 */
+	var tabRepliquesScene2030 = ["Me voilà dans le futur ! Je suis en 2030 ! Tiens il y a un robot. Bonjour !", "C'est fou comme les évolutions des nouveaux ordinateurs se sont faîtes de plus en plus rapidement au fil des années.","Je vais continuer sur ma lancée, et je vais regarder ce qu'il y a sur cet ordinateur."];
+
 /* VARIABLES GLOBALES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
 	var messageAideBureau = '';
@@ -121,6 +124,13 @@
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
 		etatDuJeu = "scene2001";
 		textesAAfficher = tabRepliquesScene2001;
+	}else if($('#scene-2030').length == 1) {
+		$('.objets').show();
+		$('.dialogue').css('top', '55%');
+		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
+		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
+		etatDuJeu = "scene2030";
+		textesAAfficher = tabRepliquesScene2030;
 	}
 
 /* GESTION EVENEMENTS BUREAU */
