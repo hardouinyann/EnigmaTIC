@@ -1,6 +1,7 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
 <?php if($_SESSION['bureauDejaVu']) echo('<span id="dial1-vu"></span>'); ?>
 <?php if($_SESSION['shellFinDialogue']) echo('<span id="shell-fini"></span>'); ?>
+<?php $this->debug($this->dataForView->succes); ?>
 <form id="form" class='formDejaVu' action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'></form>
 <div id="message-aide">
     <div class="container">
@@ -17,6 +18,9 @@
 	    <div id="tableau">
 	    	<div id="tableau-liege">
 	    		<div class="close-tableau">close</div>
+	    		<?php foreach ($this->dataForView->succes as $succes) {
+	    			echo($succes['date'].$succes['nom']);
+	    		}?>
 	    		<img src="<?php echo PICTURES_PATH?>tableau.jpg" alt="tableau-liege" />
 	    	</div>
 	    </div>

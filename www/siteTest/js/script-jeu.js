@@ -70,6 +70,7 @@
 		$('.bibliotheque').click(actionBibliotheque);
 		$('.travaux').click(actionTravaux);
 		$('.bureau').click(zoomBureau);
+		$('.rideau').click(zoomBureau);
 	}else if($('#scene-1973-jeu').length == 1 && etatDuJeu != "scene1973") {
 		etatDuJeu = "scene1973";
 		textesAAfficher = tabRepliquesScene1973;
@@ -162,7 +163,7 @@
 	afficherTexte(textesAAfficher, nom);
 
 	function passerCinematique (){
-		$(location).attr('href',"http://www.enigma-tic.fr/siteTest/accueil/inscription");
+		$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest/accueil/inscription");
 	}
 
 /* FONCTION POUR AFFICHER / CACHER LE BLOC NOTE */

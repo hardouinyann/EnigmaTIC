@@ -785,6 +785,23 @@
 	    position: relative;
 	}
 
+/* SCENE 2001 */
+
+	#scene-2030 {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bureau-robot.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    z-index: 2;
+	    position: relative;
+	}
+
 	/* RESPONSIVE */
 
 	@media only screen and (min-width: 100px) and (max-width: 1100px)  {
