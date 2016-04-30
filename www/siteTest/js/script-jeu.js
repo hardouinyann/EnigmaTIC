@@ -23,10 +23,10 @@
 	var tabRepliquesScene1982 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
 
 /* REPLIQUES 1995 */
-	var tabRepliquesScene1995 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !", "Je vois qu'il y a un ordinateur sur le bureau. Je vais essayer de l'utiliser, et je vais regarder ce que je peux trouver dessus."];
+	var tabRepliquesScene1995 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Alors, qu'est ce qu'on peut trouver ici ?", "Je vois qu'il y a un ordinateur sur le bureau. Je vais essayer de l'utiliser, et je vais regarder ce que je peux trouver dessus."];
 
 /* REPLIQUES 2001 */
-	var tabRepliquesScene2001 = ["Me voilà en 2001 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
+	var tabRepliquesScene2001 = ["Je suis arrivé en 2001 ! Cette date ne me semble pas si lointaine, et pourtant c'est un vieil ordinateur que je vois sur le bureau là.", "C'est fou comme les évolutions des nouveaux ordinateurs se sont faîtes de plus en plus rapidement au fil des années.","Je vais continuer sur ma lancée, et je vais regarder ce qu'il y a sur cet ordinateur."];
 
 /* VARIABLES GLOBALES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
@@ -138,6 +138,20 @@
 		afficherTexte(textesAAfficher, nom);
 		clearInterval(afficherLeMessage);
 	}
+
+	 /* $('#form1973').on('submit', function(ev){
+			ev.preventDefault();
+			console.log("toto");
+			//ca va envoyer la requete de mettre dejaVu a 1
+			$.post(
+		        '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
+		        'justSawDesktop=ok',
+		        function(data){
+		        	console.log("done");
+		        },
+		        'html'
+		    );
+		}); */
 
 	/* AFFICHER / CACHER LE BLOC NOTE */
 	$('.blocNote').click(afficherBlocNote);
@@ -389,7 +403,7 @@
 			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
 			$('.objets').fadeIn();
 			$('.dialogue').fadeOut(250);
-		}else if(etatDuJeu == "scene1995" && j=="1") {
+		}else if(etatDuJeu == "scene1995" && j=="2") {
 			$('#top-bar').fadeOut(500);
 			$('#bottom-bar').fadeOut(500);
 			$('.menu').animate({ 'top' : '10%', 'left' : '5%', 'opacity' : '0.9'},1000);

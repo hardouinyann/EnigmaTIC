@@ -780,7 +780,7 @@
 	    background-image: url('../images/bureau-2001.jpg');
 	    background-size: cover;
 	    background-repeat: no-repeat;
-	    background-position: top center;
+	    background-position: center center;
 	    z-index: 2;
 	    position: relative;
 	}

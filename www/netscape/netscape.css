@@ -102,3 +102,7 @@ div#index{
 div#wikipedia{
 	background-color: blue;
 }
+
+div.page>div{
+	text-align: center;
+}

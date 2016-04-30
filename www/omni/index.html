@@ -57,10 +57,11 @@
 
 				<div id="viewMusique">
 					<p>Musique</p>
+					<p id="titreMusique"></p>
 				</div>
 
 				<div id="viewGps">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.9124447445065!2d6.68414131583369!3d47.47213560525008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792136cec047ac5%3A0x4eeef71040429ef2!2sRue+du+Paradis%2C+25260+Lougres!5e0!3m2!1sfr!2sfr!4v1452631448171" width="440" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.9124447445065!2d6.68414131583369!3d47.47213560525008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792136cec047ac5%3A0x4eeef71040429ef2!2sRue+du+Paradis%2C+25260+Lougres!5e0!3m2!1sfr!2sfr!4v1452631448171" width="440" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 				
 			</div>
@@ -83,7 +84,6 @@
 						<li ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" id="Arriere"><i class="fa fa-eye"></i><br>Vue arrière</li>
 						<li ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" id="Telephone"><i class="fa fa-eye"></i><br>Téléphone</li>
 						<li ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" id="Etat"><i class="fa fa-eye"></i><br>État voiture</li>
-						<li ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" id="Params"><i class="fa fa-eye"></i><br>Paramètres</li>
 					</ul>
 				</div>
 				<div class="center">
@@ -148,15 +148,6 @@
 					</div>
 
 
-			
-					<!-- ++++++++++ PARAMETRES -->
-					<div id="controleParams">
-					
-						<div>
-							<p class="titreControle">Revenir à notre époque</p>
-							
-						</div>
-					</div>
 
 				<!-- ************************************ DROITE MENU ***************************** -->
 
@@ -216,12 +207,12 @@
 						<div class="liste">
 							<p class="titreControle">Vos Musiques</p>	
 							<ul>
-								<li>TF1 - The Voice <span class="enEcoute">En ecoute</span></li>
-								<li>France 2 - louis la Broquante</li>
-								<li>France 3 - Question pour un champion</li>
-								<li>M6 - NCIS</li>
+								<li href="arctic">Arctic Monkeys - Do I Wanna Know<span> En ecoute</span></li>
+								<li href="keenv">Keen V - Rien qu une fois<span> En ecoute</span></li>
+								<li href="linkinpark">Linkin Park - Bleed It Out<span> En ecoute</span></li>
 							</ul>
 						</div>
+						<audio id="audio"></audio>
 					</div>
 
 
@@ -233,13 +224,14 @@
 							</ul>
 						</div>
 						<div>
-							<input type="text" name="adresss"/>
-							<select>
-								<option>Toutes mes destinations</option>
-								<option>34 rue machin à</option>
-								<option>34 rue machin à</option>
-								<option>34 rue machin à</option>
+							<input type="text" name="address" id="address"/>
+							<select onchange="entrerAddresse()" id="selectAddress">
+								<option disabled selected="selected">Historique</option>
+								<option href="12">34 rue machin à 45 ruebe bjh kabjf </option>
+								<option label="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.711841121821!2d6.803079915834253!3d47.49552670363718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47921726ff84efa7%3A0x40e5fb1f6571d99d!2s4+Place+Tharradin%2C+25200+Montb%C3%A9liard!5e0!3m2!1sfr!2sfr!4v1461159380555">4 place tharradin montbéliard</option>
+								<option label="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.0496336625865!2d6.79523001583461!3d47.50842460274776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479216e42718cb73%3A0xdb9a2ddaeebc74b2!2s9+Rue+de+Belfort%2C+25200+Montb%C3%A9liard!5e0!3m2!1sfr!2sfr!4v1461160344746">9 rue de beflort MONTBELIARD</option>
 							</select>
+							<button onclick="rouler()">S'y rendre</button>
 						</div>
 					</div>
 

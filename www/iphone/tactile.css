@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('fonts/OpenSans-Light-webfont.eot');
+    src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	margin:0 auto;
+	 font-family: 'open_sanslight';
+}
+
+#ecran img{
+	width: 100%;
+}
+
+#saisisMdp ,#devinette{
+	background-color: rgba(0,0,0,0.9);
+	height: 97%;
+}
+
+
+#saisisMdp>p:first-child{
+	margin-top: 0;
+	padding-top: 60px;
+}
+
+div#ecran{
+	cursor: pointer;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1426px;
+    left: 214px;
+    top: 309px;
+    width: 794px;
+}
+
+div#ecran p{
+	font-size: 4em;
+	color: white;
+	text-align: center;
+}
+
+#touches{
+	padding: 75px 135px;
+}
+
+div#touches p{
+	border: 1px solid white;
+	border-radius: 80px;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 20px;
+	font-size: 5em;
+}
+
+#touches p:last-child{
+	margin-left: 188px;
+}
+
+div#mdp{
+	text-align: center;
+	height: 30px;
+}
+
+div.rond{
+	background-color: white;
+	border-radius: 60px;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	vertical-align: center;
+	margin: 0 20px;
+}
+
+div.masquer{
+	display: none;
+}
+
+p#lancerJeu, p#revenir{
+	font-size: 3em !important;
+}
+
+p#error{
+	font-size: 3em !important;
+	font-style: italic;
+	height: 70px;
+}
+
+ul li{
+	font-size: 3em;
+	color: white;
+	padding: 15px 0;
+}
+
+ul{
+	margin: 0;
+}

@@ -146,6 +146,30 @@ jQuery(function($){
 		});
 
 
+		$("div#controleMusique div.liste ul li").on("click", function(){
+			
+
+			var titreTop= $("#titreMusique");
+			var son= $(this).attr("href");
+			titreTop.html($(this).html());
+			son= "musiques/"+son+".mp3";
+			var audio= document.getElementById("audio");
+	
+			if($(this).hasClass("enEcoute")){
+				$(this).removeClass("enEcoute");
+				audio.pause();
+			} else {
+				audio.src= son;
+				audio.play();
+				$("div#controleMusique div.liste ul li.enEcoute").removeClass("enEcoute");
+				$(this).addClass("enEcoute");
+			}
+			
+
+
+		});
+
+
 	});
 
 
@@ -195,4 +219,38 @@ function appeler(){
 		alert("numéro incorrect");
 		document.getElementById("appeler").innerHTML= "Appeler";
 	}
+}
+
+
+function rouler(){
+	//Récupère les élements Nom de lieu, Lien pour l'iframe, Iframe
+	var valeurInput = document.getElementById("address").value;
+	var address= document.getElementById("address").href;
+	var map= document.getElementById("map");
+	//Charge la nouvelle adresse sur l'iframe
+	map.src= address;
+	//Véfirie si l'adresse n'est pas nul
+	if(valeurInput == undefined || valeurInput == ""){
+		alert("Veuillez entrer une destination");
+	}
+
+}
+
+
+function entrerAddresse(){
+	//L'adresse choisit dans le select est mise dans l'input 
+	document.getElementById("address").value= document.getElementById("selectAddress").value;
+
+	//récupère tous les options
+	var options= document.getElementById("selectAddress").getElementsByTagName("option");
+	//Boucle sur les options pour savoir laquelle est selectionnée
+	for(i=0; i<options.length; i++){
+		//si elle est selectionné
+		if(options[i].selected == true){
+			//Stocke le label qui contient le lien de l'iframe dans option
+			var option= options[i].label;
+		}
+	}
+	//on met sur l'input dans son href la valeur du lien pour la récupérer quand on va décider de déplacer la voiture
+	document.getElementById("address").href= option;
 }
