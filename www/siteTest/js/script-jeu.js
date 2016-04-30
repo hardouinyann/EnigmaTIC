@@ -54,7 +54,7 @@
 			console.log("toto");
 			//ca va envoyer la requete de mettre dejaVu a 1
 			$.post(
-		        '/EnigmaTIC/www/siteTest/histoire/bureau',
+		        'projects/EnigmaTIC/www/siteTest/histoire/bureau',
 		        'justSawDesktop=ok',
 		        function(data){
 		        	console.log("done");
