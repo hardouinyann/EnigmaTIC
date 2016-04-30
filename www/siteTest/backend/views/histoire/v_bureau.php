@@ -1,5 +1,11 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
+<<<<<<< HEAD
 <form id="form" class='formDejaVu' action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
+=======
+<?php if($_SESSION['bureauDejaVu']) echo('<span id="dial1-vu"></span>'); ?>
+
+<form id="form" action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
+>>>>>>> origin/master
     <input type='submit' id='dialogueBureau1' name='validation_jeu' style='    z-index: 10;
     position: relative;' value='valider'/>
 </form>
