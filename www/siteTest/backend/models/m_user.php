@@ -70,6 +70,46 @@
 
         }
 
+        public function getShellFini($id){
+
+            return $this->find(array(
+
+                'infoToGet' => 'dial_shell_fin',            
+
+                'condition' => "id_utilisateur=$id"
+
+            ));
+
+        }
+
+        public function updateShellCinematique($id){
+
+            return $this->update(array(
+
+                'dial_shell_fin' => '1'
+
+            ),array(
+
+                'condition' => "id_utilisateur=$id"
+
+            ));
+
+        }
+
+        public function updateShellFini($id){
+
+            return $this->update(array(
+
+                'dial_shell_fin' => '0'
+
+            ),array(
+
+                'condition' => "id_utilisateur=$id"
+
+            ));
+
+        }
+
 
 
     }

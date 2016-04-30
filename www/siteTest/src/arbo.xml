@@ -32,4 +32,9 @@
 		<sous-dossier name="logs" url="dossier.png" date="11/01/1973" heure="07:17" etage="1">
 		</sous-dossier>
 	</dossier>
+	<fichier name="recette.txt" url='dossier.png' date="23/07/1973" heure="16:09" etage="0">
+		Dans un récipient mélangez deux cuillères à café de levure, 45 grammes de sucre, un sachet de sucre vanillé et 125 grammes de farine.<br/><br/>Dans un autre récipient, battez les jaunes d'œufs avec 20 centilitres de lait. Mélangez ensuite le contenu des deux récipients, jusqu’à obtenir une pâte épaisse. Faites fondre le beurre dans une casserole puis incorporer le à la pâte. <br/><br/>Montez les blancs en neige, puis incorporez les délicatement à la pâte. Ajoutez une lichette de rhum (point trop n’en faut !)<br/><br/>
+		Laissez reposer la pâte 45 minutes.<br/>
+		Dégustez jusqu’à ce que vous soyez repu ! 
+	</fichier>
 </bureau>

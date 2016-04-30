@@ -48,9 +48,8 @@
 
 	a#end-1973-read {
 		position: absolute;
-	    bottom: 5%;
-	    right: 0;
-	    left: 0;
+	    bottom: 4%;
+	    right: 35%;
 	    background-color: rgba(0, 0, 0, 0.5);
 	    border: 1px solid #303030;
 	    color: white;
@@ -81,8 +80,12 @@
 	    display: block;
 	}
 
-	#form {
-		display: table;
+	#form1973 {
+		display: none;
+	    position: absolute;
+	    z-index: 15;
+	    bottom: 4%;
+	    right: 40%;
 	}
 
 	#passer-cinematique:hover, #end-1973-read:hover, #end-1973:hover {

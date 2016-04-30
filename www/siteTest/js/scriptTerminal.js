@@ -15,7 +15,7 @@ var reqFailed = 0;
 
 var reqFailed = 0;
 
-var repliqueMessageTrouve = ["Hum... Après avoir vu ce fichier texte, je crois que je sais comment retourner dans le bureau de Léopold !","La machine qui m'a ammenée ici doit sûrement être une machine à voyager dans le temps. Et ce fichier texte serait une sorte de manuel pour l'utiliser j'imagine...", "Tout cela semble complètement fou ! C'est sûrement grand-père qui a créer cette machine, puisqu'elle était dans son bureau !"," Je ne comprend pas pourquoi il ne m'en a jamais parlé... Il devait sûrement avoir ses raisons...", "Je vais essayer de configurer la machine... Ca y est ! Il semble que j'ai réussi à régler les dates. Je vais essayer de retourner dans le bureau de Léopold maintenant !"];
+var repliqueMessageTrouve = ["Hum... Après avoir lu ce fichier texte, je crois que je sais comment retourner dans le bureau de grand-père !","La machine qui m'a ammenée ici doit sûrement être une machine à voyager dans le temps. Et ce fichier texte serait une sorte de manuel pour l'utiliser j'imagine...", "Tout cela semble complètement fou ! C'est sûrement lui qui a créer cette machine, puisqu'elle était dans son bureau !"," Je ne comprend pas pourquoi il ne m'en a jamais parlé... Il devait sûrement avoir ses raisons...", "Je vais essayer de configurer la machine... Ca y est ! Il semble que j'ai réussi à régler les dates. Je vais essayer de retourner dans le bureau de Léopold maintenant !"];
 
 
 

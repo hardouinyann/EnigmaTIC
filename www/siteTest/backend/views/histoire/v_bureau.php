@@ -1,10 +1,7 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
-	
-<form id="form" class='formDejaVu' action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
 <?php if($_SESSION['bureauDejaVu']) echo('<span id="dial1-vu"></span>'); ?>
-    <input type='submit' id='dialogueBureau1' name='validation_jeu' style='    z-index: 10;
-    position: relative;' value='valider'/>
-</form>
+<?php if($_SESSION['shellFinDialogue']) echo('<span id="shell-fini"></span>'); ?>
+<form id="form" class='formDejaVu' action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'></form>
 <div id="message-aide">
     <div class="container">
         <div class="close"></div>

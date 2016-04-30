@@ -17,6 +17,7 @@
 	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! Je n'aurais peut-être pas du entrer dans cette espère de machine, et appuyer sur le bouton du cadran ! ","On dirait que j'ai été... téléporté ! Ce bureau a l'air très ancien ! Mais... Je reconnais cet ordinateur sur la table ! C'est un modèle appelé Xerox Alto !", "Grand-père m'en avait parlé, et il m'en avait montré une photo ! Il avait même écrit un article sur son blog à propos de celui-ci.", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a fait son apparition en 1973, et aujourd'hui il n'existe que très peu d'exemplaires de celui-ci. Voyons voir s'il fonctionne."];
 	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'ordinateur ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.", "Je vais essayer de regarder s'il contient des fichiers intéressants. Je n'ai que ça à faire de toute façon, puisque je ne sais pas comment retourner dans le bureau de grand-père...", "Peut-être que je trouverais quelque chose qui m'aidera à y retourner, ou bien même un message de grand-père... Je le connais, il ne laisse rien au hasard !", "Je suis sûr que si je suis arrivé là, c'est parcequ'il le voulait ! Voyons voir ce que je peux trouver !"];
 	var tabRepliquesScene31973 = ["Bon, cela fait longtemps que je n'ai pas utilisé une console d'invite de commandes comme celle-là, mais je me souviens toujours des commandes principales ! ","Je vais les noter sur un bout de papier. (<i>Thomas déchire une page de son bloc note, et écrit dessus</i>).", "Je ne les ai pas toutes notées, seulement celles qui me serviront pour parcourir les fichiers de l'ordinateur.", "Voilà, je vais poser mon bout de papier à côté de l'ordinateur, comme ça je me souviendrais quelles commandes utiliser."];
+	var tabRepliquesSceneFin1973 = ["Ouf ! J'ai réussi à revenir dans le bureau ! Il semblerait vraiment que ce soit une machine à remonter dans le temps...", "J'ai réussi à la configurer, et j'ai ajouté en mémoire les dates que j'ai trouvées sur le fichier texte du Xerox Alto.", "Je vais pouvoir faire d'autres voyages dans le passé. Je peux donc me rendre en 1982, en 1987, en 1995, ou bien en 2001.","Je devrais probablement visiter toutes ces dates, et voir si je peux en apprendre plus sur les travaux de grand-père. J'aimerais vraiment en savoir plus sur cette étrange machine !"];
 
 /* REPLIQUES 1982 */
 	var tabRepliquesScene1982 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
@@ -36,7 +37,6 @@
 	var etatDuJeu;
 	var messageAide, textesAAfficher;
 
-
 /* QUEL SCENE EN COURS */
 	if ($('#chapitre-1').length == 1) {
 		$('.fa-user').hide();
@@ -54,7 +54,7 @@
 			console.log("toto");
 			//ca va envoyer la requete de mettre dejaVu a 1
 			$.post(
-		        'projects/EnigmaTIC/www/siteTest/histoire/bureau',
+		        '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
 		        'justSawDesktop=ok',
 		        function(data){
 		        	console.log("done");
@@ -74,6 +74,26 @@
 		etatDuJeu = "scene1973";
 		textesAAfficher = tabRepliquesScene1973;
 		messageAide = messageAide1973;
+		$('#passer-cinematique').click(function() {
+			clearInterval(afficherLeMessage);
+			j=0;
+			etatDuJeu = "scene1973-jeu"; 
+			textesAAfficher = tabRepliquesScene31973;
+			$('#scene-1973-jeu').fadeIn(500);
+			$('#scene-1973').fadeOut(100);
+			$('#scene-1973-zoom').fadeIn(100);
+			$('#scene-1973-zoom').addClass('scene-flou');
+			$('#passer-cinematique').fadeOut(500);
+			$('#top-bar').fadeOut(500);
+			$('#bottom-bar').fadeOut(500);
+			$('.dialogue').hide();
+			$('.curs').hide();
+			$('.menu').animate({ 'top' : '10%', 'left' : '5%', 'opacity' : '0.9'},1000);
+			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
+			$('.dialogue').css('z-index', '6');
+			$('.dialogue').fadeIn(500);
+			afficherTexte(textesAAfficher, nom);
+		});
 		$('.objets').hide();
 		$('.dialogue').css('top', '50%');
 		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
@@ -100,6 +120,23 @@
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
 		etatDuJeu = "scene2001";
 		textesAAfficher = tabRepliquesScene2001;
+	}
+
+/* GESTION EVENEMENTS BUREAU */
+
+	if($('#dial1-vu').length == 1) {
+		$('.dialogue').hide();
+		$('#interactive').fadeIn(1000);
+	}
+
+	if($('#shell-fini').length == 1) {
+		$('.dialogue').fadeIn();
+		$('#interactive').hide();
+		j=0;
+		etatDuJeu = "finShell";
+		textesAAfficher = tabRepliquesSceneFin1973;
+		afficherTexte(textesAAfficher, nom);
+		clearInterval(afficherLeMessage);
 	}
 
 	/* AFFICHER / CACHER LE BLOC NOTE */
@@ -280,7 +317,7 @@
 			$('.dialogue').hide();
 			$('.dialogue').fadeIn(3500);
 			afficherTexte(textesAAfficher, nom);
-		}else if(etatDuJeu == "scene1973-zoom" && j=="2") {
+		}else if(etatDuJeu == "scene1973-zoom" && j=="3") {
 			j=0;
 			etatDuJeu = "scene1973-jeu"; 
 			textesAAfficher = tabRepliquesScene31973;
@@ -294,14 +331,35 @@
 			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
 			$('.dialogue').css('z-index', '6');
 			$('.dialogue').fadeIn(500);
+			$('#passer-cinematique').fadeOut();
 			afficherTexte(textesAAfficher, nom);
 		}else if(etatDuJeu == "scene1973-jeu" && j=="3") {
 			$('.dialogue').fadeOut();
 			$('#feuille').css('display','inline-block');
 		}else if(etatDuJeu == "scene1973-fin" && j=="4"){
+				$.post(
+			        '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
+			        'finShell=ok',
+			        function(data){
+			        },
+			        'html'
+			    );
+			$('#form1973').fadeIn();
 			$('.dialogue').fadeOut();
 			$('#end-1973').fadeIn();
+		}else if(etatDuJeu == "finShell" && j=="3") {
+			$.post(
+			    '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
+			    'finShellVu=ok',
+			    function(data){
+			       console.log("fin sheelllll");
+			     },
+			     'html'
+			   );
+			$('.dialogue').fadeOut();
+			$(".formDejaVu").submit();
 		}else if(etatDuJeu == "bureau-leopold" && j=="4"){
+			$( ".formDejaVu" ).submit();
 			$('.dialogue').fadeOut(250);
 			$('#interactive').fadeIn(1000);
 			setTimeout(function () { j=0; }, 500);
