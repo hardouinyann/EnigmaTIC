@@ -85,8 +85,6 @@ class c_histoire extends Controller{
         }
 
 
-
-<<<<<<< HEAD
         if(!empty($_POST['justSawDesktop'])){
 
             $this->debug("sdfsdfsdfkjsdhfkjsdhfkjsdhfkjshdfkjshdfjkhsdfkjhsdkjfhsdkjfhskd","sdfshdfksjdhfjks");
@@ -94,13 +92,6 @@ class c_histoire extends Controller{
             $var = $this->getModel('user')->updateDejaVuBureau($_SESSION['user']->id_utilisateur);
             $this->debug($var);
             die();
-=======
-        if(!empty($this->datasFromPost['justSawDesktop'])){
-
-
-
-            $this->getModel('user')->updateDejaVuBureau($_SESSION['user']->id_utilisateur);
->>>>>>> origin/master
 
 
 
@@ -160,14 +151,9 @@ class c_histoire extends Controller{
 
         }
 
-
-<<<<<<< HEAD
         if(empty($_POST['justSawDesktop']))
             $this->render('v_bureau');
-=======
 
-        $this->render('v_bureau');
->>>>>>> origin/master
 
        
 
