@@ -49,18 +49,19 @@
 		etatDuJeu = "chapitre1scene1";
 		textesAAfficher = tabRepliquesScene1;
 	}else if($('#bureau-leopold').length == 1) {
-		$('#dialogueBureau1').on('submit', function(ev){
-					ev.preventDefault();
-					//ca va envoyer la requete de mettre dejaVu a 1
-					$.post(
-				        '/histoire/bureau',
-				        'justSawDesktop=vrai',
-				        function(data){
-				        	console.log("done");
-				        },
-				        'json'
-				    );
-				});
+		$('.formDejaVu').on('submit', function(ev){
+			ev.preventDefault();
+			console.log("toto");
+			//ca va envoyer la requete de mettre dejaVu a 1
+			$.post(
+		        '/EnigmaTIC/www/siteTest/histoire/bureau',
+		        'justSawDesktop=ok',
+		        function(data){
+		        	console.log("done");
+		        },
+		        'html'
+		    );
+		});
 		etatDuJeu = "bureau-leopold";
 		textesAAfficher = tabRepliquesBureau;
 		$('.dialogue').fadeIn(3500);
@@ -99,11 +100,6 @@
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
 		etatDuJeu = "scene2001";
 		textesAAfficher = tabRepliquesScene2001;
-	}
-
-	if($('#dial1-vu').length == 1) {
-		$('.dialogue').hide();
-		$('#interactive').fadeIn(1000);
 	}
 
 	/* AFFICHER / CACHER LE BLOC NOTE */
@@ -335,7 +331,7 @@
 			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
 			$('.objets').fadeIn();
 			$('.dialogue').fadeOut(250);
-		}else if(etatDuJeu == "scene1995" && j=="2") {
+		}else if(etatDuJeu == "scene1995" && j=="1") {
 			$('#top-bar').fadeOut(500);
 			$('#bottom-bar').fadeOut(500);
 			$('.menu').animate({ 'top' : '10%', 'left' : '5%', 'opacity' : '0.9'},1000);
