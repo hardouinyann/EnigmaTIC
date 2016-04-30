@@ -101,6 +101,11 @@
 		textesAAfficher = tabRepliquesScene2001;
 	}
 
+	if($('#dial1-vu').length == 1) {
+		$('.dialogue').hide();
+		$('#interactive').fadeIn(1000);
+	}
+
 	/* AFFICHER / CACHER LE BLOC NOTE */
 	$('.blocNote').click(afficherBlocNote);
 	$('.close-note').click(cacherBlocNote);
@@ -330,7 +335,7 @@
 			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
 			$('.objets').fadeIn();
 			$('.dialogue').fadeOut(250);
-		}else if(etatDuJeu == "scene1995" && j=="1") {
+		}else if(etatDuJeu == "scene1995" && j=="2") {
 			$('#top-bar').fadeOut(500);
 			$('#bottom-bar').fadeOut(500);
 			$('.menu').animate({ 'top' : '10%', 'left' : '5%', 'opacity' : '0.9'},1000);
