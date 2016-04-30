@@ -111,7 +111,7 @@
 	afficherTexte(textesAAfficher, nom);
 
 	function passerCinematique (){
-		$(location).attr('href',"http://www.enigma-tic.fr/siteTest/accueil/inscription");
+		$(location).attr('href',"http://localhost/EnigmaTIC/www/siteTest/accueil/inscription");
 	}
 
 /* FONCTION POUR AFFICHER / CACHER LE BLOC NOTE */
