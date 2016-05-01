@@ -71,15 +71,45 @@
         }
 
         public function getShellFini($id){
-
             return $this->find(array(
-
                 'infoToGet' => 'dial_shell_fin',            
-
                 'condition' => "id_utilisateur=$id"
-
             ));
+        }
 
+        public function getNbMessageRecup($id){
+            return $this->find(array(
+                'infoToGet' => 'nb_message_recup',            
+                'condition' => "id_utilisateur=$id"
+            ));
+        }
+
+        public function updateNbMessageRecup($id){
+            $nbMessageRecupere = $this->find(array(
+                'infoToGet' => 'nb_message_recup',            
+                'condition' => "id_utilisateur=$id"
+            ));
+            if(!empty($nbMessageRecupere)) $nbMessage = ($nbMessageRecupere[0]->nb_message_recup);
+            $updateNbMessage = $nbMessage + 1;
+            return $this->update(array(
+                'nb_message_recup' => $updateNbMessage
+            ),array(
+                'condition' => "id_utilisateur=$id"
+            ));
+        }
+
+        public function updateProgression($id){
+            $progression = $this->find(array(
+                'infoToGet' => 'progression',            
+                'condition' => "id_utilisateur=$id"
+            ));
+            if(!empty($progression)) $progressionUser = ($progression[0]->progression);
+            $newProgression = $progressionUser + 1;
+            return $this->update(array(
+                'progression' => $newProgression
+            ),array(
+                'condition' => "id_utilisateur=$id"
+            ));
         }
 
         public function updateShellCinematique($id){

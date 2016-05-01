@@ -25,6 +25,97 @@
 		z-index: 3;
 	}
 
+	#date-bloquee {
+		position: absolute;
+		z-index: 2;
+	    margin: auto;
+	    top: 30%;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: 835px;
+	    height: auto;
+	    display: block;
+	    text-align: center;
+	}
+
+	.entete-form img {
+		text-align: left;
+		width: 50%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.entete-form h2 {
+		font-family: 'rawengulkregular';
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #dadada;
+		display: inline-block;
+		line-height: 22px;
+		letter-spacing: 0.03em;
+		vertical-align: middle;
+		border-left: 1px solid #787178;
+		padding-left: 35px;
+		margin-left: 25px;
+		position: relative;
+		top: 1px;
+	}
+
+	#infos-date {
+		display: block;
+		width: 75%;
+		margin: 50px auto;
+		padding-left: 10px;
+		text-align: center;
+	}
+
+	#infos-date p {
+		margin: auto;
+		text-align: justify;
+		font-size: 14px;
+		line-height: 22px;
+		font-weight: 300;
+	    font-family: 'Roboto', sans-serif;
+	    color: #dadada;
+	    margin: 0px 10px 15px 5px;
+	    text-align: left;
+	}
+
+	#date-bloquee .bouton {
+		text-transform: uppercase;
+	    font-family: 'Roboto', sans-serif;
+	    font-weight: 500;
+	    font-size: 14px;
+	    color: #807380;
+	    padding: 18px 30px;
+	    border: 2px solid #675866;
+	    border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    display: block;
+	    width: 50%;
+	    margin:0px auto;
+	    text-align: center;
+	    opacity: 0.9;
+	    background: transparent;
+	    position: relative;
+	    right: 15px;
+	    cursor: pointer;
+	    letter-spacing: 0.03em;
+	}
+
+	#date-bloquee .bouton:hover {
+		color: white;
+		border: 2px solid #675866;
+		background-color: rgba(88, 75, 87, 0.3);
+		-webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+	}
+
+
 	/* BOUTON POUR PASSER LES CINEMATIQUES */
 
 	#passer-cinematique {
@@ -78,6 +169,10 @@
 	    letter-spacing: 0.05em;
 	    cursor: pointer;
 	    display: block;
+	}
+
+	#end-1973:focus {
+		outline-color: #522a50;
 	}
 
 	#form1973 {
@@ -493,6 +588,25 @@
 		height: 100%;
 	}
 
+	#tableau-liege #succes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 65%;
+    	height: 70%;
+		margin: auto;
+		text-align: left;
+	}
+
+	#tableau-liege #succes img {
+		width: 20%;
+		max-width: 182px;
+		height: auto;
+
+	}
+
 	#zoom-objets-bureau #zoom-bureau {
 		margin: auto;
 		padding: 0;
@@ -825,9 +939,9 @@
 	    position: relative;
 	}
 
-/* SCENE 2001 */
+/* SCENE 2002 */
 
-	#scene-2001 {
+	#scene-2002 {
 		margin: auto;
 		padding: 0;
 		text-align: center;
@@ -842,7 +956,7 @@
 	    position: relative;
 	}
 
-/* SCENE 2001 */
+/* SCENE 2030 */
 
 	#scene-2030 {
 		margin: auto;

@@ -9,16 +9,17 @@
 	var tabRepliqueCadrePhoto = ["C'est un cadre avec une photo de grand-père et moi ! Je me souviens, nous l'avons prise quand nous sommes allés en vacances dans le sud de la France !", "On avait loué un gîte très atypique, et on avait fait de la randonnée ! C'était vraiment sympa !"];
 	var tabRepliqueBibliotheque = ["C'est la bibliothèque de grand-père. Il y a beaucoup de livres sur les interfaces graphiques et l'informatique. Ce sont des domaines qui nous passionent tous les deux !"];
 	var tabRepliqueTravaux = ["Ce sont des livres et documents qui servent à grand-père pour ses travaux de recherche. Il y a des livres sur la physique quantique, et je crois qu'il y a aussi des plans de construction ! "];
-	var tabRepliqueTableau = ["C'est un tableau en liège, pour punaiser des documents dessus. Je pourrais m'en servir si jamais j'en ai besoin."];
-	var tabRepliqueBureau = ["Voyons voir de plus près ce qu'il y a sur le bureau. Un ordinateur portable éteint, des documents, un téléphone fixe...", "Ce sont les documents personnels de Léopold. J'ai jetté un rapide coup d'oeil mais je n'ai rien trouvé de spécial." ];
+	var tabRepliqueTableau = ["C'est un tableau en liège, pour punaiser des documents dessus. Il y a déjà quelques post-it vierges dessus. Je pourrais m'en servir si jamais j'en ai besoin."];
+	var tabRepliqueTableau2 = ["C'est un tableau en liège. Je l'utilise pour me rappeler quelles dates j'ai visitées avec la machine à voyager dans le temps ! Je mettrais un post-it par date visitée."];
+	var tabRepliqueBureau = ["Voyons voir de plus près ce qu'il y a sur le bureau. Un ordinateur portable éteint, des documents, un téléphone fixe, un iphone...", "J'ai jetté un rapide coup d'oeil aux document qu'il y a ici, mais je n'ai rien trouvé qui pourrait m'indiquer où il est." ];
 	var tabRepliqueMachine = ["J'ai ouvert le rideau... Il y a une grande pièce vide derrière. On dirait qu'il y a un cadran au fond.","Je vais entrer dans la pièce et appuyer dessus. Je me demande ce que c'est... "];
 	var tabRepliqueMachineDebloquee = ["Pour effectuer un nouveau voyage dans le temps, je dois sélectionner une date sur le cadran, et appuyer sur le bouton à côté du choix de la date."];
 
 /* REPLIQUES 1973 */
-	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! Je n'aurais peut-être pas du entrer dans cette pièce, et appuyer sur le bouton du cadran ! ","On dirait que j'ai été... téléporté ! Ce bureau a l'air très ancien ! Mais... Je reconnais cet ordinateur sur la table ! C'est un modèle appelé Xerox Alto !", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a fait son apparition en 1973, et aujourd'hui il n'existe que très peu d'exemplaires de celui-ci. Voyons voir s'il fonctionne."];
+	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! Je n'aurais peut-être pas du entrer dans cette pièce, et appuyer sur le bouton du cadran ! ","On dirait que j'ai été... téléporté avec ce cadran ! Ce bureau a l'air très ancien ! Mais... Je reconnais cet ordinateur sur la table ! C'est un modèle appelé Xerox Alto !", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a fait son apparition en 1973, et aujourd'hui il n'existe que très peu d'exemplaires de celui-ci. Voyons voir s'il fonctionne."];
 	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'ordinateur ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.", "Je vais essayer de l'utiliser pour regarder s'il y a des fichiers intéressants sur l'ordinateur. Je n'ai que ça à faire de toute façon, puisque je ne sais pas comment retourner dans le bureau de grand-père...", "Peut-être que je trouverais quelque chose qui m'aidera à y retourner... On ne sait jamais. Voyons voir ce que je peux trouver !"];
 	var tabRepliquesScene31973 = ["&Ccedil;a fait longtemps que je n'ai pas utilisé une console d'invite de commandes comme celle-là, mais je me souviens toujours des commandes principales !", "Je vais les noter sur un bout de papier. (<i>Thomas déchire une page de son bloc note, et écrit dessus</i>). Voilà, je ne les ai pas toutes notées, seulement celles qui me serviront pour parcourir les fichiers de l'ordinateur."," Je vais poser mon bout de papier à côté de l'ordinateur, comme ça je me souviendrais quelles commandes utiliser."];
-	var tabRepliquesSceneFin1973 = ["Ouf ! J'ai réussi à revenir dans le bureau ! Il semblerait vraiment que ce soit une machine à remonter dans le temps...", "J'ai réussi à la configurer, et j'ai ajouté en mémoire les dates que j'ai trouvées sur le fichier texte du Xerox Alto.", "Je vais pouvoir faire d'autres voyages dans le passé. Je peux donc me rendre en 1982, en 1987, en 1995, ou bien en 2001.","Je devrais probablement visiter toutes ces dates, et voir si je peux en apprendre plus sur les travaux de grand-père. J'aimerais vraiment en savoir plus sur cette étrange machine !", "Pour réutiliser la machine, je devrais retourner dans la petite pièce derrière le rideau."];
+	var tabRepliquesSceneFin1973 = ["J'ai réussi à revenir dans le présent ! Il semblerait vraiment que ce soit une machine à voyager dans le temps...", "Je vais pouvoir faire d'autres voyages temporels avec la machine maintenant. Je peux donc me rendre en 1982, en 1987, en 1995, ou bien en 2001.", "Je devrais probablement visiter toutes ces dates, et voir si je peux en apprendre plus sur les travaux de grand-père. Cette machine m'intrigue vraiment !", "Pour réutiliser la machine, je dois retourner dans la petite pièce derrière le rideau, choisir une date sur le cadran, et appuyer sur le bouton pour effectuer le voyage temporel."];
 
 /* REPLIQUES 1982 */
 	var tabRepliquesScene1982 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
@@ -26,11 +27,15 @@
 /* REPLIQUES 1995 */
 	var tabRepliquesScene1995 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Alors, qu'est ce qu'on peut trouver ici ?", "Je vois qu'il y a un ordinateur sur le bureau. Je vais essayer de l'utiliser, et je vais regarder ce que je peux trouver dessus."];
 
-/* REPLIQUES 2001 */
-	var tabRepliquesScene2001 = ["Je suis arrivé en 2001 ! Cette date ne me semble pas si lointaine, et pourtant c'est un vieil ordinateur que je vois sur le bureau là.", "C'est fou comme les évolutions des nouveaux ordinateurs se sont faîtes de plus en plus rapidement au fil des années.","Je vais continuer sur ma lancée, et je vais regarder ce qu'il y a sur cet ordinateur."];
+/* REPLIQUES 2002 */
+	var tabRepliquesScene2002 = ["Je suis arrivé en 2002 ! Cette date ne me semble pas si lointaine, et pourtant c'est un vieil ordinateur que je vois sur le bureau là.", "C'est fou comme les évolutions des nouvelles technologies se sont faîtes de plus en plus rapidement au fil des années.","Il n'y a pas l'air d'y avoir grand chose d'intéressant dans cette pièce, à part cet ordinateur. Je vais l'allumer pour voir ce qu'il y a dessus."];
+	var tabRepliquesScene2002Ordi = ["Voilà j'ai allumé l'ordinateur ! Il fonctionne avec le système d'exploitation Windows XP.","Ce système, développé par Microsoft est sorti le 25 octobre 2001. Bien qu'il ait été très populaire pendant plusieurs années, aujourd'hui il est devenu obsolète.","Tiens, il y a un fichier message.txt sur le bureau.<br/>Je devrais peut-être l'ouvrir..."];
+	var tabRepliquesScene2002OrdiFin = ["J'ai ouvert le fichier texte, un message s'est affiché à l'écran ! "];
 
 /* REPLIQUES 2030 */
 	var tabRepliquesScene2030 = ["Me voilà dans le futur ! Je suis en 2030 ! Tiens il y a un robot. Bonjour !", "Bonjour Thomas ! Comment vas-tu ? J'attendais ta visite ! J'ai un message à  te délivrer, mais pour le récupérer tu devras réussir les jeux que je te propose, d'accord ?", "Vous êtes un robot farceur dis donc ! D'accord, très bien ! Je suis prêt pour les casses-têtes ! "];
+
+	var tabPremierMessageRecup = ["Tiens ! Mais... c'est un message de grand-père ! C'est bizarre, on dirait qu'il n'est pas complet. Et je me demande comment il a atterit là...","Eh ! Mais maintenant que j'y pense ! Dans le fichier que j'ai lu lors de mon voyage en 1973, il y avait quelque chose à propos d'un message d'alerte enregistré dans la machine.","Mais j'ai également lu quelque chose à propos du message qui aurait pu subir une distorsion temporelle, et qui ne serait donc pas bien réceptionné avec la machine dans le présent.","Mais alors... Grand-père doit être bloqué dans une époque ! Je dois faire tout mon possible pour le retrouver !","Je pense qu'il doit y avoir d'autres bouts de son message, répartis dans les dates que je peux visiter avec la machine.","Je dois donc faire en sorte de les récupérer, pour retrouver à quelle date il est bloqué, et le ramener dans le présent !"]
 
 /* VARIABLES GLOBALES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
@@ -118,13 +123,13 @@
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
 		etatDuJeu = "scene1995";
 		textesAAfficher = tabRepliquesScene1995;
-	}else if($('#scene-2001').length == 1) {
+	}else if($('#scene-2002').length == 1) {
 		$('.objets').hide();
 		$('.dialogue').css('top', '55%');
 		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
-		etatDuJeu = "scene2001";
-		textesAAfficher = tabRepliquesScene2001;
+		etatDuJeu = "scene2002";
+		textesAAfficher = tabRepliquesScene2002;
 	}else if($('#scene-2030').length == 1) {
 		$('.objets').show();
 		$('.dialogue').css('top', '55%');
@@ -204,7 +209,11 @@
 			$('.dialogue').css('z-index', '3');
 		});
 		clearInterval(afficherLeMessage);
-		textesAAfficher = tabRepliqueTableau;
+		if($('#succes').length == 1) {
+			textesAAfficher = tabRepliqueTableau2;
+		}else {
+			textesAAfficher = tabRepliqueTableau;
+		}
 		afficherTexte(textesAAfficher, nom);
 		$('.dialogue').fadeIn(500);
 	}
@@ -359,6 +368,14 @@
 			$('.dialogue').fadeOut();
 			$('#feuille').css('display','inline-block');
 		}else if(etatDuJeu == "scene1973-fin" && j=="3"){
+			// Update Progression
+			$.post(
+			    '/projects/EnigmaTIC/www/siteTest/histoire/jeu/1973',
+			    'progression=ok',
+			      function(data){
+			      },
+			     'html'
+			 );
 				$.post(
 			        '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
 			        'finShell=ok',
@@ -369,7 +386,7 @@
 			$('#form1973').fadeIn();
 			$('.dialogue').fadeOut();
 			$('#end-1973').fadeIn();
-		}else if(etatDuJeu == "finShell" && j=="4") {
+		}else if(etatDuJeu == "finShell" && j=="3") {
 			$.post(
 			    '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
 			    'finShellVu=ok',
@@ -380,6 +397,7 @@
 			   );
 			$('.dialogue').fadeOut();
 			$(".formDejaVu").submit();
+			$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest");
 		}else if(etatDuJeu == "bureau-leopold" && j=="3"){
 			$( ".formDejaVu" ).submit();
 			$('.dialogue').fadeOut(250);
@@ -429,6 +447,42 @@
 			$('#options').animate({ 'top' : '10%', 'opacity' : '0.9'},1000);
 			$('.objets').fadeIn();
 			$('.dialogue').fadeOut(250);
+		}else if(etatDuJeu == "scene2002" && j=="2") {
+			$('.dialogue').hide();
+			j=0;
+			etatDuJeu = "scene2002Ordi"; 
+			textesAAfficher = tabRepliquesScene2002Ordi;
+			afficherTexte(textesAAfficher, nom);
+			$('#top-bar').fadeOut(500);
+			$('#bottom-bar').fadeOut(500);
+			$('.menu').animate({ 'top' : '8%', 'left' : '5%', 'opacity' : '0.9'},1000);
+			$('#options').animate({ 'top' : '8%', 'opacity' : '0.9'},1000);
+			$('#jeu').addClass('scene-flou');
+			$('.miniJeu').fadeIn(500);
+			$('.dialogue').fadeIn(500);
+		}else if(etatDuJeu == "scene2002Ordi" && j=="2") {
+			$('.dialogue').fadeOut(250);
+		}else if(etatDuJeu == "scene2002OrdiFin" && j=="5") {
+			$('.dialogue').fadeOut(250);
+			$('#form').show();
+			//Update nb Message Recuperer
+			$.post(
+			    '/projects/EnigmaTIC/www/siteTest/histoire/jeu/2002',
+			    'nouveauMessage=ok',
+			      function(data){
+			       console.log(data);
+			      },
+			     'html'
+			 );
+			// Update Progression
+			$.post(
+			    '/projects/EnigmaTIC/www/siteTest/histoire/jeu/2002',
+			    'progression=ok',
+			      function(data){
+			       console.log(data);
+			      },
+			     'html'
+			 );
 		}else if(etatDuJeu == "scene2030" && j=="0") {
 			$('.dialogue').fadeOut(250);
 			nom = "Robot";

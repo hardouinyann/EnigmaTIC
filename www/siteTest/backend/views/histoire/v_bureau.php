@@ -14,7 +14,8 @@
 </div>
 <div id="jeu">
 	<?php if($_SESSION['shellFinDialogue']) { 
-		echo('<span id="shell-fini"></span>'); }else { 
+		echo('<span id="shell-fini"></span>'); }
+		if(!empty($_SESSION['succes'])) { 
 			echo('<span id="shell-valide"></span>');
 			echo('<div id="pastForm" class="form-machine">
 				<select id="dates">
@@ -22,7 +23,7 @@
 					<option value="1982">1982</option>
 					<option value="1987">1987</option>
 					<option value="1995">1995</option>
-					<option value="2001">2001</option>
+					<option value="2002">2002</option>
 				</select>
 				<button id="launchMachine">GO</button>
 				<div class="close-machine"><i class="fa fa-times" aria-hidden="true"></i> Fermer cette fenêtre</div>
@@ -37,6 +38,13 @@
 	    <div id="tableau">
 	    	<div id="tableau-liege">
 	    		<div class="close-tableau">close</div>
+	    		<?php if(!empty($_SESSION['succes'])) {
+	    			echo('<div id="succes">');
+					for($i=sizeof($_SESSION['succes']) - 1 ; $i >= 0 ; $i--){
+				        echo('<img src="'.PICTURES_PATH.'post-it-'.$_SESSION['succes'][$i].'.png" alt="succes" />'); 
+				    }
+				    echo('</div>');
+				}; ?>
 	    		<img src="<?php echo PICTURES_PATH?>tableau.jpg" alt="tableau-liege" />
 	    	</div>
 	    </div>
