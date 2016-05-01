@@ -1,4 +1,4 @@
-.<?php
+<?php
 
 
 
@@ -81,7 +81,7 @@ class c_histoire extends Controller{
         if(!empty($_POST['justSawDesktop'])){
 
             $var = $this->getModel('user')->updateDejaVuBureau($_SESSION['user']->id_utilisateur);
-            $this->debug($var);
+            // $this->debug($var);
             die();
 
 
@@ -109,7 +109,7 @@ class c_histoire extends Controller{
 
             $this->dataForView = $jeuValide;
 
-            $this->debug($this->dataForView,"data for view");
+            // $this->debug($this->dataForView,"data for view");
 
 
         }
@@ -129,6 +129,7 @@ class c_histoire extends Controller{
             $dejaVu = $this->getModel('user')->getDejaVuBureau($_SESSION['user']->id_utilisateur);
             $shellFinDialogue = $this->getModel('user')->getShellFini($_SESSION['user']->id_utilisateur);
 
+            $this->dataForView = new stdClass();
             if(!empty($dejaVu)){
                 $this->dataForView->dejaVu = ($dejaVu[0]->dial_bureau1_vu == 1) ? true : false;
                 $_SESSION['bureauDejaVu'] = $this->dataForView->dejaVu; 

@@ -8,7 +8,7 @@ var cursorW, cursorH;
 var mouseX, mouseY;
 var easingAmount = 0.035;
 var pics = [];
-var nbPics = 12;
+var nbPics = 11;
 var score = 0;
 var temps = 30;
 var scoreABattre = 270;
@@ -100,7 +100,7 @@ function gestionClicks(){
 	});
 
 	//lancement des virus
-	$(document).on('click','#jouer',function(ev){
+	$(document).on('click','#jouer, #rejouer',function(ev){
 		$(ev.target).parent().parent().parent().parent().hide();
 		cpt = 0;
 		temps = 30;
@@ -108,8 +108,6 @@ function gestionClicks(){
 		$('#score').html('Score : '+score+' pts');
 		makePop(25, 150);
 	});
-
-
 }
 
 
@@ -145,7 +143,7 @@ class popUp {
     draw() {
 
         $('body').append(
-	        $('<div class="fenetre selectedFenetre" id="fenetre-configuration2"'+
+	        $('<div class="fenetre selectedFenetre fenetregrise" id="fenetre-configuration2"'+
 	          'style="left:'+this.x+'px;top:'+this.y+'px">'+
 	        	'<div class="header ui-draggable-handle selectedHeader">'+
 	        		'<b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>'+

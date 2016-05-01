@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bureau name="Bureau">
-	<dossier name="corbeille" url="corbeille.png" date="02/02/1973" heure="10:12" etage="0">
-		<fichier name="xerox.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
-			Xerox Alto : propriété de Xerox Parc - Palo Alto, Californie.
-		</fichier>	
-	</dossier>
 	<dossier name="recherches" url="recherches.png" date="05/05/1973" heure="15:10" etage="0">
 		<sous-dossier name="interfaces" url="dossier.png" date="01/06/1973" heure="08:52" etage="1">
+			<fichier name="xerox.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
+				Xerox Alto : propriété de Xerox Parc - Palo Alto, Californie.
+			</fichier>	
 		</sous-dossier>
 		<sous-dossier name="informatique" url="dossier.png" date="21/06/1973" heure="16:20" etage="1">
 			<fichier name="hexa.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
@@ -46,9 +44,12 @@
 		</sous-dossier>
 		<sous-dossier name="logs" url="dossier.png" date="11/01/1973" heure="07:17" etage="1">
 		</sous-dossier>
+		<fichier name="admin.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
+				Il n'y a pas d'identifiants ici, si c'est que vous recherchez.
+		</fichier>
 	</dossier>
 	<fichier name="recette.txt" url='dossier.png' date="23/07/1973" heure="16:09" etage="0">
-		Dans un récipient mélangez deux cuillères à café de levure, 45 grammes de sucre, un sachet de sucre vanillé et 125 grammes de farine.<br/><br/>Dans un autre récipient, battez les jaunes d'œufs avec 20 centilitres de lait. Mélangez ensuite le contenu des deux récipients, jusqu’à obtenir une pâte épaisse. Faites fondre le beurre dans une casserole puis incorporer le à la pâte. <br/><br/>Montez les blancs en neige, puis incorporez les délicatement à la pâte. Ajoutez une lichette de rhum (point trop n’en faut !)<br/><br/>
+		Recette des gaufres<br/><br/>Dans un récipient mélangez deux cuillères à café de levure, 45 grammes de sucre, un sachet de sucre vanillé et 125 grammes de farine.<br/><br/>Dans un autre récipient, battez les jaunes d'œufs avec 20 centilitres de lait. Mélangez ensuite le contenu des deux récipients, jusqu’à obtenir une pâte épaisse. Faites fondre le beurre dans une casserole puis incorporer le à la pâte. <br/><br/>Montez les blancs en neige, puis incorporez les délicatement à la pâte. Ajoutez une lichette de rhum (point trop n’en faut !)<br/><br/>
 		Laissez reposer la pâte 45 minutes.<br/>
 		Dégustez jusqu’à ce que vous soyez repu ! 
 	</fichier>

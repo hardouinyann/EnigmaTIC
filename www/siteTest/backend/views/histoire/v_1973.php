@@ -18,21 +18,21 @@
         </div>  
       </div> 
       <div id="feuille">
-        <p><b>Liste des commandes à taper dans la console pour naviguer dans l'ordinateur</b> :<br/><br/>
-          - <b>dir</b> : (directory - répertoire). Affiche le contenu d'un dossier.
-          (<i>Exemple : Taper "dir" dans la console, et presser la touche entrée. </i>)<br/><br/>
-          - <b>cd</b> (chdir - change directory - changer de répertoire) : Pour naviguer à travers les dossiers.
-          (<i>Exemple :  Taper "cd corbeille" ouvrira le dossier qui s'appelle "corbeille"</i>).<br/><br/>
-          <b>Pour revenir au dossier précédent</b> : Il faut taper "<b>cd ..</b>" (<i>ne pas oublier l'espace entre "cd" et les deux points ".." !</i>)<br/><br/>
-          - <b>&lt;REP&gt;</b> : (répertoire). Signifie que que c'est un dossier, que l'on peut ouvrir avec la commande "cd".<br/><br/>
-          - <b>type</b> : permet d'afficher le contenu d'un fichier texte.
-         (<i>Exemple : Taper "<b>type test.txt</b>" affichera le contenu du fichier "test.txt"</i>).<br/><br/>
-         <b>Exemple de commandes à taper : </b><br/><br/>
-         1) Taper dir. Presser la touche entrée.<br/>
-         2) Taper cd "un nom de dossier" (<i>exemple : corbeille</i>). Presser la touche entrée.<br/>
-         3) Retaper dir et presser la touche entrée.<br/>
-         4) Taper type fichier.txt (remplacer "fichier" par le nom du fichier). Presser la touche entrée.<br/>
-         5) Taper "cd .." et presser entrer pour revenir au dossier précédent.
+        <p><b>Utilisez les commandes ci-dessous avec la console pour parcourir les fichiers de l'ordinateur</b> :<br/><br/>
+          - <b>dir</b> : Affiche le contenu d'un dossier.
+          (<i>Exemple : Tapez "dir" dans la console, et pressez la touche entrée. </i>)<br/><br/>
+          - <b>cd</b> : Pour changer de répertoire (de dossier). Permet de naviguer à travers les dossiers.
+          (<i>Exemple :  Tapez "cd recherches". Cette commande ouvrira le dossier qui s'appelle "recherches"</i>).<br/>
+          Pour revenir au dossier précédent : Il faut taper "<b>cd ..</b>" (<i>ne pas oublier l'espace entre "cd" et les deux points ".." !</i>)<br/><br/>
+          - <b>type</b> : permet d'afficher le contenu d'un fichier texte.(<i>Exemple : Tapez "<b>type recette.txt</b>". Cette commande affichera le contenu du fichier "Recette.txt"</i>).<br/><br/>
+           Si vous voyez afficher <b>&lt;REP&gt;</b> devant un mot, cela signifique que c'est un répertoire. Vous pouvez l'ouvrir avec la commande "cd". S'il n'y a pas ce mot devant un mot, c'est que vous devez l'ouvrir en utilisant la commande "type".<br/><br/>
+         <b>Par exemple, tapez les commandes ci-dessous à la suite dans la console : </b><br/><br/>
+         1) Tapez dir, puis pressez la touche entrée.<br/>
+         2) Tapez cd "un nom de dossier" (<i>exemple : cd config</i>). Pressez la touche entrée.<br/>
+         3) Retapez dir et pressez la touche entrée.<br/>
+         4) Tapez type "un nom de fichier".txt (<i>exemple : type admin.txt</i>). Pressez la touche entrée.<br/>
+         5) Tapez "cd .." et pressez la touche entrée pour revenir au dossier précédent.<br/><br/>
+         Utilisez les commandes que vous avez pu tester ci-dessus pour parcourir l'ordinateur et tous les dossiers qu'il contient, jusqu'à ce qu'un <b>événement intervienne</b>.
 </p>
         <img src="<?php echo PICTURES_PATH ?>feuille.png" alt="feuille de papier" />
       </div>

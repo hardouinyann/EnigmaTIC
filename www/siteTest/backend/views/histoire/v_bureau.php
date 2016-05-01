@@ -1,16 +1,35 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
 <?php if($_SESSION['bureauDejaVu']) echo('<span id="dial1-vu"></span>'); ?>
-<?php if($_SESSION['shellFinDialogue']) echo('<span id="shell-fini"></span>'); ?>
-<?php $this->debug($this->dataForView->succes); ?>
+<?php if($_SESSION['user']) {
+		echo('<img src="'.$this->dataForView->succes[0].'" alt="post-it" />');
+	} ?>
 <form id="form" class='formDejaVu' action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'></form>
 <div id="message-aide">
     <div class="container">
         <div class="close"></div>
         <h2>Vous avez besoin d'aide ? </h2>
-        <p id="help-txt">Vous voilà dans le bureau de <strong>Léopold</strong>, le grand-père de Thomas. Rechercher dans son bureau si vous pouvez trouver des choses intéressantes. Cliquez sur les (+) que vous pouvez voir dans le décor pour avoir plus d&apos;informations sur les différents objets qui sont présents dans ce bureau. Vous pourrez ainsi peut-être découvrir où se trouve Léopold...<br/><br/>En bas de la page, vous pouvez cliquer sur votre <strong>bloc note personnel</strong>, pour y écrire tout ce dont vous avez besoin, tout au long du jeu. Vous pouvez mettre le jeu en plein écran en cliquant sur le bouton avec les coins rectangulaires, en haut à droite. A côté, vous pouvez aussi cliquer sur l'icône "utilisateur" afin d'accéder à votre profil, si vous souhaitez modifier les informations de votre compte.</p>
+        <p id="help-txt">Vous voilà dans le bureau de <strong>Léopold</strong>, le grand-père de Thomas. Recherchez dans son bureau si vous pouvez trouver des choses intéressantes. Cliquez sur les (+) que vous pouvez voir dans le décor pour avoir plus d&apos;informations sur les différents objets qui sont présents dans ce bureau. Vous pourrez ainsi peut-être découvrir où se trouve Léopold...
+        	<!-- <br/><br/>En bas de la page, vous pouvez cliquer sur votre <strong>bloc note personnel</strong>, pour y écrire tout ce dont vous avez besoin, tout au long du jeu. Vous pouvez mettre le jeu en plein écran en cliquant sur le bouton avec les coins rectangulaires, en haut à droite. A côté, vous pouvez aussi cliquer sur l'icône "utilisateur" afin d'accéder à votre profil, si vous souhaitez modifier les informations de votre compte. --></p>
     </div>
 </div>
 <div id="jeu">
+	<?php if($_SESSION['shellFinDialogue']) { 
+		echo('<span id="shell-fini"></span>'); }else { 
+			echo('<span id="shell-valide"></span>');
+			echo('<div id="pastForm" class="form-machine">
+				<select id="dates">
+					<option value="-">Choisissez une date</option>
+					<option value="1982">1982</option>
+					<option value="1987">1987</option>
+					<option value="1995">1995</option>
+					<option value="2001">2001</option>
+				</select>
+				<button id="launchMachine">GO</button>
+				<div class="close-machine"><i class="fa fa-times" aria-hidden="true"></i> Fermer cette fenêtre</div>
+			</div>');
+	 }?>
+	<div id="machine">
+	</div>
 	 <div id="zoom-objets-bureau">
 	    <div id="photo-cadre">
 	    	<img src="<?php echo PICTURES_PATH?>cadre-photo-bureau.png" alt="photo de Léopold et Thomas" />
@@ -18,9 +37,6 @@
 	    <div id="tableau">
 	    	<div id="tableau-liege">
 	    		<div class="close-tableau">close</div>
-	    		<?php foreach ($this->dataForView->succes as $succes) {
-	    			echo($succes['date'].$succes['nom']);
-	    		}?>
 	    		<img src="<?php echo PICTURES_PATH?>tableau.jpg" alt="tableau-liege" />
 	    	</div>
 	    </div>

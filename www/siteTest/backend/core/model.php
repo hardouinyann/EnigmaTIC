@@ -11,7 +11,7 @@
             if(empty(self::$connexion)){
                 try{
                     self::$connexion = new PDO(
-                        "mysql:host=".MYSQL_HOST.";port=".MYSQL_PORT.";dbname=".MYSQL_DB,
+                        "mysql:host=".MYSQL_HOST.";dbname=".MYSQL_DB,
                         MYSQL_LOGIN,
                         MYSQL_PWD,
                         array(

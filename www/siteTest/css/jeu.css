@@ -218,41 +218,6 @@
 		height: 100%;
 		min-height: 100%;
 		width: 100%;
-	    background-image: url('../images/bg-chambre-jeu.jpg');
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    background-position: top center;
-	    display: none;
-	    z-index: 3;
-	    position: relative;
-	}
-
-	#chap1scene3 .personnage {
-		height: 75%;
-		position: absolute;
-		margin: auto;
-		left: 20%;
-    	top: 25%;
-	    right: 0;
-	    bottom: 0;
-	    width: auto;
-	    animation: bougerThomas3 4s forwards;
-	}
-
-	@keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
-	@-webkit-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
-	@-moz-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
-	@-o-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
-
-	/* SCENE 4 PREAMBULE */
-
-	#chap1scene4 {
-		margin: auto;
-		padding: 0;
-		text-align: center;
-		height: 100%;
-		min-height: 100%;
-		width: 100%;
 	    background-image: url('../images/bg-maisonLeopold-jeu.jpg');
 	    background-size: cover;
 	    background-repeat: no-repeat;
@@ -262,7 +227,7 @@
 	    position: relative;
 	}
 
-	#chap1scene4 .personnage #thomaschap1scene4 {
+	#chap1scene3 .personnage #thomaschap1scene3 {
 		height: 44%;
 	    position: absolute;
 	    margin: auto;
@@ -274,7 +239,7 @@
 	    animation: bougerThomas4 3s forwards;
 	}
 
-	#thomaschap1scene4dos {
+	#thomaschap1scene3dos {
 		height: 44%;
 		top: 50%;
 		left: -20%;
@@ -452,7 +417,7 @@
 	}
 
 	#interactive .travaux { 
-		top: 40%;
+		top: 50%;
     	left: 80%;
 	}
 
@@ -559,6 +524,98 @@
 		cursor: pointer;
 	}
 
+	#machine {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bg-machine.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    z-index: 5;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: auto;
+	    display: none;
+	}
+
+	.form-machine {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center;
+		width: auto;
+		height: 70px;
+		z-index: 7;
+		display: none;
+	}
+
+	.form-machine select {
+		background-color: rgba(240, 240, 240, 0.8);
+		border: 1px solid #d7d7d7;
+		padding: 20px 35px;
+		font-size: 16px;
+		font-family: 'Roboto', sans-serif;
+		color: #2d1e30;
+		font-weight: 400;
+		text-align: left;
+		width: 25%;
+	}
+
+	#launchMachine {
+		background-color: rgba(240, 240, 240, 0.8);
+		border: 1px solid #d7d7d7;
+		padding: 20px;
+		font-size: 16px;
+		font-family: 'Roboto', sans-serif;
+		color: #2d1e30;
+		font-weight: 500;
+		text-align: left;
+		width: auto;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+
+	#launchMachine:hover {
+		background-color: rgba(185, 165, 190, 0.8);
+		-webkit-transition: all 100ms ease-in-out;
+		-moz-transition: all 100ms ease-in-out;
+		-ms-transition: all 100ms ease-in-out;
+		-o-transition: all 100ms ease-in-out;
+		transition: all 100ms ease-in-out;
+	}
+
+	.close-machine {
+		font-weight: 400;
+		font-size: 15px;
+		text-transform: uppercase;
+		margin: 30px auto;
+		color: #cabdcd;
+		letter-spacing: 0.05em;
+		cursor: pointer;
+	}
+
+	.close-machine .fa {
+		margin-right: 5px;
+	}
+
+	.close-machine:hover {
+		color: #ffffff;
+		-webkit-transition: all 100ms ease-in-out;
+		-moz-transition: all 100ms ease-in-out;
+		-ms-transition: all 100ms ease-in-out;
+		-o-transition: all 100ms ease-in-out;
+		transition: all 100ms ease-in-out;
+	}
 
 /* SCENE 1973 */
 

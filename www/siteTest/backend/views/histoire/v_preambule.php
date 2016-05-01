@@ -44,19 +44,9 @@
     <div id="chap1scene3">
       <div id="top-bar"></div>
       <div id="bottom-bar"></div>
-      <img class="personnage" src="<?php echo PICTURES_PATH?>thomas-2.svg" alt="Thomas" />
-      <div class="dialogue">
-        <img src="<?php echo PICTURES_PATH?>thomas-dialogue-2.png" alt="image dialogue" />
-        <div><strong class="nom"></strong><p class="dialogue-txt"></p>
-          <a class="next"><i class="fa fa-chevron-right"></i></a></div>
-      </div>
-    </div>
-    <div id="chap1scene4">
-      <div id="top-bar"></div>
-      <div id="bottom-bar"></div>
       <div class="personnage">
-        <img class="personnage" id="thomaschap1scene4" src="<?php echo PICTURES_PATH?>thomas-manteau-2.svg" alt="Thomas" />
-        <img class="personnage" id="thomaschap1scene4dos" src="<?php echo PICTURES_PATH?>thomas-manteau-dos.svg" alt="Thomas" />
+        <img class="personnage" id="thomaschap1scene3" src="<?php echo PICTURES_PATH?>thomas-manteau-2.svg" alt="Thomas" />
+        <img class="personnage" id="thomaschap1scene3dos" src="<?php echo PICTURES_PATH?>thomas-manteau-dos.svg" alt="Thomas" />
       </div>
       <div class="dialogue">
         <img src="<?php echo PICTURES_PATH?>thomas-dialogue.png" alt="image dialogue" />

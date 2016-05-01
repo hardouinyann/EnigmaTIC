@@ -71,9 +71,11 @@
 		if(fullscreen == false){
 			screenfull.request();
 			fullscreen = true;
+			$('#interactive').css('top','-15%');
 		}else {
 			screenfull.exit();
 			fullscreen = false;
+			$('#interactive').css('top','0');
 		}
 	}
 
