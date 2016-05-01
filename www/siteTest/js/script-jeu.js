@@ -156,6 +156,18 @@
 		clearInterval(afficherLeMessage);
 	}
 
+	function finShellPost (){
+		// Update Shell Vu
+			$.post(
+			    '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
+			    'finShell=ok',
+			    function(data){
+			       console.log("fin sheelllll");
+			     },
+			     'html'
+			   );
+		}
+
 	/* AFFICHER / CACHER LE BLOC NOTE */
 	$('.blocNote').click(afficherBlocNote);
 	$('.close-note').click(cacherBlocNote);
@@ -365,6 +377,7 @@
 			$('#passer-cinematique').fadeOut();
 			afficherTexte(textesAAfficher, nom);
 		}else if(etatDuJeu == "scene1973-jeu" && j=="2") {
+			$('#scene-1973').fadeOut();
 			$('.dialogue').fadeOut();
 			$('#feuille').css('display','inline-block');
 		}else if(etatDuJeu == "scene1973-fin" && j=="3"){
@@ -376,13 +389,7 @@
 			      },
 			     'html'
 			 );
-				$.post(
-			        '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
-			        'finShell=ok',
-			        function(data){
-			        },
-			        'html'
-			    );
+			finShellPost();
 			$('#form1973').fadeIn();
 			$('.dialogue').fadeOut();
 			$('#end-1973').fadeIn();
@@ -391,13 +398,11 @@
 			    '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
 			    'finShellVu=ok',
 			    function(data){
-			       console.log("fin sheelllll");
+			       $(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest");
 			     },
 			     'html'
 			   );
-			$('.dialogue').fadeOut();
 			$(".formDejaVu").submit();
-			$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest");
 		}else if(etatDuJeu == "bureau-leopold" && j=="3"){
 			$( ".formDejaVu" ).submit();
 			$('.dialogue').fadeOut(250);

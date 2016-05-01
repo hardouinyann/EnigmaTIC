@@ -119,7 +119,7 @@ function makePop(){
 	}while(!$.inArray(url,pics));
 	pics.push(url);
 	if(cpt == 0){
-		let t = new popUp(screenW/2,screenH/2, "secret");//sur l'image, le secret a donner
+		t = new popUp(screenW/2,screenH/2, "secret");//sur l'image, le secret a donner
 		t.draw();
 	}
 	var t = new popUp(posX,posY,url);

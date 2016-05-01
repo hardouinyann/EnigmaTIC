@@ -1,8 +1,5 @@
 <?php if(empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
 <?php if($_SESSION['bureauDejaVu']) echo('<span id="dial1-vu"></span>'); ?>
-<?php if($_SESSION['user']) {
-		echo('<img src="'.$this->dataForView->succes[0].'" alt="post-it" />');
-	} ?>
 <form id="form" class='formDejaVu' action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'></form>
 <div id="message-aide">
     <div class="container">
