@@ -54,14 +54,14 @@ if($_SESSION['succes']) {
             <div id="info">
                 <div id="temps">Temps restant : 30s</div>
                 <div id="score">Score : 0</div>         
-                <div id="score">Score à atteindre : 250 points</div>
+                <div id="score">Score à atteindre : 220 points</div>
             </div>
             <div id="virus" class="fenetreintro selectedFenetre ui-draggable">
                 <div class="header selectedHeader ui-draggable-handle">
                     <b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>
                 </div>
                 <div class="content">
-                    <p>Attention, il semblerait que ce fichier est infecté. Fermez les fenêtres qui vont apparaître à l'écran, le plus vite possible, pour supprimer le virus, et pour pouvoir ouvrir le fichier.<br/><br/>Vous avez 30 secondes pour obtenir un score minimum de <b>250 points</b>. Si vous réussissez à atteindre le score minimum, vous aurez empêché le virus de se propager, et vous pourrez accéder au bureau de l'ordinateur. Sinon, vous devrez recommencer une partie, jusqu'à ce que vous réusissiez à atteindre le <b>score minimum de 250 points</b>. A vous de jouer !
+                    <p>Attention, il semblerait que ce fichier est infecté. Fermez les fenêtres qui vont apparaître à l'écran, le plus vite possible, pour supprimer le virus, et pour pouvoir ouvrir le fichier.<br/><br/>Vous avez 30 secondes pour obtenir un score minimum de <b>220 points</b>. Si vous réussissez à atteindre le score minimum, vous aurez empêché le virus de se propager, et vous pourrez accéder au bureau de l'ordinateur. Sinon, vous devrez recommencer une partie, jusqu'à ce que vous réusissiez à atteindre le <b>score minimum de 220 points</b>. A vous de jouer !
                     </p>
                     <div>
                         <button id="jouer">Jouer</button>

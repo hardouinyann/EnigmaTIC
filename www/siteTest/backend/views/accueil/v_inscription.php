@@ -18,7 +18,7 @@
 				<h2>Créer votre compte utilisateur</h2>
 			</div>
 			<div id="inscription">
-				<p>Pour <b>continuer le jeu</b>, vous avez besoin de <b>créer un compte utilisateur</b>. Il vous permettra ainsi d'enregistrer votre progression, et ce dès le début de l'aventure ! Vous pourrez ainsi y jouer quand vous le voudrez, et où vous voulez. Vous pourrez ensuite le quitter à n'importe quel moment, sans perde votre sauvegarde, reliée à votre compte utilisateur.<br/><br/>L'<b>inscription est rapide</b>, et vous n'avez pas besoin d'entrer vos informations personnelles, sauf votre adresse email. Elle vous servira pour vous connecter au jeu, ou si vous avez perdu votre mot de passe. Vous ne recevrez aucun email de notre part, sauf si vous ne vous souvenez plus votre mot de passe, ou que vous nous avez autorisé à vous envoyer des emails dans le cadre du jeu. </p>
+				<p>Pour <b>continuer le jeu</b>, vous avez besoin de <b>créer un compte utilisateur</b>. Il vous permettra ainsi d'enregistrer votre progression, et ce dès le début de l'aventure ! Vous pourrez ainsi y jouer quand vous le voudrez, et où vous voulez. Vous pourrez ensuite le quitter à n'importe quel moment, sans perdre votre sauvegarde, reliée à votre compte utilisateur.<br/><br/>L'<b>inscription est rapide</b>, et vous n'avez pas besoin d'entrer vos informations personnelles, sauf votre adresse email. Elle vous servira pour vous connecter au jeu, ou si vous avez perdu votre mot de passe. Vous pourrez recevoir des email de notre part, si vous ne vous souvenez plus de votre mot de passe, ou pour vous notifier de nouvelles dates débloquées dans le jeu. </p>
 				<?php
 					/* FORMULAIRE D'INSCRIPTION */
 					

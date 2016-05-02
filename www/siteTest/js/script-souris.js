@@ -9,7 +9,7 @@ var pics = [];
 var nbPics = 11;
 var score = 0;
 var temps = 30;
-var scoreABattre = 250;
+var scoreABattre = 220;
 var nbClick = 0;
 var jeuFini = false;
 var jeuLance = false;
@@ -52,7 +52,7 @@ $(document).ready(function(){
 				$('.header').addClass('selectedHeader');
 				$('#message-txt').show();
 			}
-			$(this).attr('src', 'http://www.enigma-tic.fr/siteTest/images/xp/raccourci-message.png');
+			$(this).attr('src', 'http://www.enigma-tic.fr/images/xp/raccourci-message.png');
 		}else {
 			e.preventDefault();
 		}
@@ -62,11 +62,11 @@ $(document).ready(function(){
 	$('#raccourci img').click(function (e) {
 		if(jeuLance == false) {
 			if(nbClick == 0){
-				$(this).attr('src', 'http://www.enigma-tic.fr/siteTest/images/xp/raccourci-message-hover.png');
+				$(this).attr('src', 'http://www.enigma-tic.fr/images/xp/raccourci-message-hover.png');
 				nbClick++;
 			}else {
 				nbClick = 0;
-				$(this).attr('src', 'http://www.enigma-tic.fr/siteTest/images/xp/raccourci-message.png');
+				$(this).attr('src', 'http://www.enigma-tic.fr/images/xp/raccourci-message.png');
 			}
 		}else {
 			e.preventDefault();
@@ -154,7 +154,7 @@ function makePop(){
 		}
 	}
 	if(cpt++<30){//30
-		setTimeout(makePop, 850);
+		setTimeout(makePop, 800);
 	}
 }
 
@@ -222,14 +222,14 @@ var popUp = function(x, y, url){
 	        		'<b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>'+
 	        		"<div class='close-window' onClick='removeWindow(this)'>X</div>"+
 	        	'</div>'+
-	        	'<img src="http://www.enigma-tic.fr/siteTest/images/xp/'+this.url+'.png">'+
+	        	'<img src="http://www.enigma-tic.fr/images/xp/'+this.url+'.png">'+
 			'</div>')
 			);
 		$('.fenetre').addClass('ui-draggable').draggable({handle:'.header'});
 
 		if($('.shortcut').length==0){
 			$('.barre').append('<div id="fenetre-tache" class="shortcut">'+
-								'<img src="http://www.enigma-tic.fr/siteTest/images/xp/internet.png" style="width:60px;margin:-8px -10px 0 -25px;">'+
+								'<img src="http://www.enigma-tic.fr/images/xp/internet.png" style="width:60px;margin:-8px -10px 0 -25px;">'+
 								'<span>1 Fenêtres</span>'+
 							'</div> '
 							);
