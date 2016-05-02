@@ -8,13 +8,10 @@ var cursorW, cursorH;
 var mouseX, mouseY;
 var easingAmount = 0.035;
 var pics = [];
-var nbPics = 12;
+var nbPics = 11;
 var score = 0;
 var temps = 30;
 var scoreABattre = 270;
-
-var ratioPhoneHauteur = 234/21;
-var ratioPhoneLargeur = 419/57;
 
 $(document).ready(function(){
 
@@ -134,15 +131,13 @@ function toto(e){
 
 
 
-class popUp {
+var popUp = function(x, y, url){
 
-    constructor(x, y, url) {
         this.x = x;
         this.y = y;
         this.url = url;
-    }
 
-    draw() {
+    this.draw = function() {
 
         $('body').append(
 	        $('<div class="fenetre selectedFenetre" id="fenetre-configuration2"'+

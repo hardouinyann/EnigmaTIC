@@ -11,7 +11,7 @@
             if(empty(self::$connexion)){
                 try{
                     self::$connexion = new PDO(
-                        "mysql:host=".MYSQL_HOST.";port=".MYSQL_PORT.";dbname=".MYSQL_DB,
+                        "mysql:host=".MYSQL_HOST.";dbname=".MYSQL_DB,
                         MYSQL_LOGIN,
                         MYSQL_PWD,
                         array(
@@ -148,14 +148,14 @@
         }
 
         protected function debug($arrayToDebug = array(),$array_name= false){
-            /*
+            
             $title = (!empty($array_name)) ? $array_name:"" ;
             if(getType($arrayToDebug)=="array") ksort($arrayToDebug);
             echo "<meta charset='UTF-8'>
                   <h1 style='margin-bottom:-35px!important;position:relative;z-index:9999!important;'>".$title."</h1>
                   <pre style='margin:50px!important;background-color:#AEAEAE!important;border:solid 2px red!important;z-index:9999!important;position:relative;'>";
                     print_r($arrayToDebug);
-            echo"</pre><br>";*/
+            echo"</pre><br>";
         }
     }
 

@@ -435,7 +435,7 @@
 			afficherTexte(textesAAfficher, nom);
 		}else if(etatDuJeu == "scene2030" && j=="2") {
 			$('.dialogue').fadeOut();
-			$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/robot");
+			$(location).attr('href',"http://127.0.0.1/EnigmaTIC/www/robot");
 		}else {
 			j++;
 			afficherTexte(textesAAfficher, nom);

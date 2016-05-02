@@ -44,14 +44,14 @@
 
         //permet de mettre en forme l'affichage d'une variable / d'un tableau
         protected function debug($arrayToDebug = array(),$array_name= false){
-            /* 
+            
             $title = (!empty($array_name)) ? $array_name:"" ;
             if(getType($arrayToDebug)=="array") ksort($arrayToDebug);
             echo "<meta charset='UTF-8'>
                   <h1 style='margin-bottom:-35px!important;position:relative;z-index:9999!important;'>".$title."</h1>
                   <pre style='margin:50px!important;background-color:#AEAEAE!important;border:solid 2px red!important;z-index:9999!important;position:relative;'>";
                     print_r($arrayToDebug);
-            echo"</pre><br>"; */
+            echo"</pre><br>"; 
         }
 
 
