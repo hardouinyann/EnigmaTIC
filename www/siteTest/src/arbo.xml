@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bureau name="Bureau">
 	<dossier name="recherches" url="recherches.png" date="05/05/1973" heure="15:10" etage="0">
-		<sous-dossier name="interfaces" url="dossier.png" date="01/06/1973" heure="08:52" etage="1">
 			<fichier name="xerox.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
 				Xerox Alto : propriété de Xerox Parc - Palo Alto, Californie.
 			</fichier>	
-		</sous-dossier>
-		<sous-dossier name="informatique" url="dossier.png" date="21/06/1973" heure="16:20" etage="1">
-			<fichier name="hexa.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
-				1100 0011 0000 0001 1011
-			</fichier>
-		</sous-dossier>
 	</dossier>
 	<dossier name="documents" url="dossier.png" date="14/02/1973" heure="20:05" etage="0">
 		<sous-dossier name="special" url="dossier.png" date="05/04/1973" heure="22:10" etage="1">
@@ -33,20 +26,9 @@
 
 			</fichier>	
 		</sous-dossier>
-		<sous-dossier name="autres" url="dossier.png" date="12/04/1973" heure="17:40" etage="1">
 			<fichier name="hello.txt" url='dossier.png' date="20/04/1973" heure="18:32" etage="1">
 				Hello World ! Ici votre savant préféré Léopold. Quelle joie de pouvoir utiliser un système datant du début de l’ère informatique. Je suis tellement excité que j’ai voulu rédiger un billet à ce sujet, en utilisant directement la machine en question.<br/><br/>C’est un plaisir de pouvoir utiliser ce Xerox Alto en vrai. J’espère d’ailleurs que laisser une trace de mon passage en 1973 ne perturbera pas le continuum espace temps... Nous verrons bien. Pour l’instant, mon âme de scientifique a pris le dessus. Il faut que j’absorbe un maximum de savoir durant mes voyages dans le temps. Et cela passe nécessairement par la pratique !
 			</fichier>	
-		</sous-dossier>
-	</dossier>
-	<dossier name="config" url="pdt.png" date="10/01/1973" heure="09:12" etage="0">
-		<sous-dossier name="programmes" url="dossier.png" date="15/01/1973" heure="13:54" etage="1">
-		</sous-dossier>
-		<sous-dossier name="logs" url="dossier.png" date="11/01/1973" heure="07:17" etage="1">
-		</sous-dossier>
-		<fichier name="admin.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
-				Il n'y a pas d'identifiants ici, si c'est que vous recherchez.
-		</fichier>
 	</dossier>
 	<fichier name="recette.txt" url='dossier.png' date="23/07/1973" heure="16:09" etage="0">
 		Recette des gaufres<br/><br/>Dans un récipient mélangez deux cuillères à café de levure, 45 grammes de sucre, un sachet de sucre vanillé et 125 grammes de farine.<br/><br/>Dans un autre récipient, battez les jaunes d'œufs avec 20 centilitres de lait. Mélangez ensuite le contenu des deux récipients, jusqu’à obtenir une pâte épaisse. Faites fondre le beurre dans une casserole puis incorporer le à la pâte. <br/><br/>Montez les blancs en neige, puis incorporez les délicatement à la pâte. Ajoutez une lichette de rhum (point trop n’en faut !)<br/><br/>

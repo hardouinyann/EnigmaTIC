@@ -45,6 +45,7 @@ $(document).ready(function(){
 					}else {
 						textesAAfficher = tabRepliquesScene2002OrdiFin;
 					}
+					clearInterval(afficherLeMessage);
 					afficherTexte(textesAAfficher, nom);
 					$('.dialogue').fadeIn();
 				}
@@ -153,7 +154,7 @@ function makePop(){
 		}
 	}
 	if(cpt++<30){//30
-		setTimeout(makePop,950);
+		setTimeout(makePop, 850);
 	}
 }
 
@@ -206,15 +207,14 @@ function toto(e){
 }
 
 
-class popUp {
+var popUp = function(x, y, url){
 
-    constructor(x, y, url) {
         this.x = x;
         this.y = y;
         this.url = url;
-    }
 
-    draw() {
+
+    this.draw = function() {
         $('.miniJeu').append(
 	        $('<div class="fenetre selectedFenetre fenetregrise" id="fenetre-configuration2"'+
 	          'style="left:'+this.x+'px;top:'+this.y+'px">'+

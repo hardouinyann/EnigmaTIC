@@ -70,22 +70,22 @@ class c_histoire extends Controller{
 
             switch($this->dataForView->nbMessageRecupere) {
                 case '0':
-                    $message = "Thomas, c'est Léopold, ton grand-père. Si tu lis ce message, c'est que j'ai des ennuis, et que je me suis perdu dans les couloirs du temps, lors de l'un de mes voyages temporels !";
+                    $message = "Thomas, c'est Léopold, ton grand-père. Si tu lis ce message, c'est que j'ai des ennuis, et que je me suis perdu dans les couloirs du temps, lors de l'un de mes...";
                 break;
                 case '1':
                     $message = "Il faut que tu viennes me chercher, pour me ramener en notre temps...";
                 break;
                 case '2':
-                    $message = "Je suis resté bloqué dans la dernière date que j'ai visité avec la machine...";
+                    $message = "...avec la machine à voyager dans le temps que j'ai construite, et que tu as du découvrir ! Je suis...";
                 break;
                 case '3':
-                    $message = "J'ai besoin de ton aide, et je sais que tu es le seul à pouvoir le faire.";
+                    $message = "...resté bloqué dans la dernière date que j'ai visité avec la machine, qui est...";
                 break;
                 case '4':
-                    $message = "...à l'aide de la machine à voyager dans le temps que j'ai construite et que tu as du découvrir !";
+                    $message = "...voyages temporels ! J'ai besoin de ton aide, et je sais que tu es le seul à pouvoir le faire...";
                 break; 
                 case '5':
-                    $message = "...en 2050 ! Viens me chercher, tu es mon seul espoir pour ne pas rester bloqué dans un autre espace-temps auquel je n'appartiens pas !";
+                    $message = "...en 2050 ! J'ai besoin de toi pour retourner en notre temps ! Viens me chercher!";
                 break; 
                 }
             $_SESSION['messageAAfficher'] = $message;
@@ -110,16 +110,11 @@ class c_histoire extends Controller{
 
 
         if(!empty($_POST['justSawDesktop'])){
-
             $var = $this->getModel('user')->updateDejaVuBureau($_SESSION['user']->id_utilisateur);
             // $this->debug($var);
             die();
-
-
-
         }elseif(!empty($_POST['validation_jeu'])){
         //bouton de redirection a la fin des jeu sera un petit form en fait
-
             $score = !empty($_POST['score']) ? $_POST['score'] : null;
             $datas = array( 'id_partie' =>'DEFAULT',
                     'id_utilisateur' => $_SESSION['user']->id_utilisateur,
@@ -132,7 +127,7 @@ class c_histoire extends Controller{
             $tableToCall = "partie";
             $jeuValide = $this->getModel('jeu')->gameComplete($datas, $tableToCall);
             $this->dataForView = $jeuValide;
-            echo('ok dude');
+            header('Location: http://www.enigma-tic.fr/siteTest/');
         }
 
         if(!empty($_POST['finShellVu'])){
@@ -174,11 +169,6 @@ class c_histoire extends Controller{
         $this->render('v_preambule');
 
     }
-
-
-
-
-
 }
 
 ?>
