@@ -23,8 +23,7 @@
 					/* FORMULAIRE D'INSCRIPTION */
 					
 					if(!empty($this->dataForView->created) && $this->dataForView->created){
-						echo "<p class='valid'>Félicitations, votre compte à été créé avec succès ! Vous êtes maintenant connecté.<br/> Vous allez être redirigé vers la suite du jeu dans <b>5 secondes</b>. </p>";
-						header("Refresh: 5; URL='".WEBROOT."histoire/bureau'");
+						header("Location:".WEBROOT."histoire/bureau'");
 					}elseif(!empty($this->dataForView->alreadyExist)) {
 						echo "<p class='error'>Désolé, mais le ".$this->dataForView->alreadyExist." que vous avez rentré est déjà utilisé par un autre joueur !<br/>Veuillez saisir un autre ".$this->dataForView->alreadyExist." s'il vous plaît.</p>";
 						echo '<form id="form-inscription" action="" method="POST">

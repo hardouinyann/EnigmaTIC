@@ -1,0 +1,395 @@
+.miniJeu {
+	height : 100%;
+	width:100%;
+	min-height : 100%;
+	min-width:100%;
+	padding : 0;
+	margin : 0;
+	position : absolute;
+	background-color: #008080;
+	background-image: url('../images/xp/bg-windows-xp.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	z-index: 1;
+	overflow: hidden;
+	display: none;
+	text-align: left;
+}
+
+h1 {
+	margin: 5px 0 20px;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: 'Tahoma';
+}
+
+#form {
+	display: none;
+	position: absolute;
+	margin: auto;
+	top: 50%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+}
+
+#form input {
+	background-color: rgba(0, 0, 0, 0.5);
+	    border: 1px solid #303030;
+	    color: white;
+	    text-align: center;
+	    text-transform: uppercase;
+	    font-family: 'Roboto', sans-serif;
+	    font-size: 11px;
+	    font-weight: 400;
+	    padding: 15px 20px;
+	    letter-spacing: 0.05em;
+	    cursor: pointer;
+}
+
+.close-window{
+	text-indent: -9999px;
+	padding : 2px;
+	display:inline;
+	float:right;
+	cursor: pointer;
+	background: url('../images/xp/close.png') 3px 4px no-repeat;
+	padding: 10px 15px;
+}
+
+
+#cursor img{
+	width : 100%;
+	height : 100%;
+}
+
+
+#cursor{
+	width: 30px;
+	height: 30px;
+	z-index:9;
+	position:absolute;
+}
+.dossier{
+	z-index: 15;
+	margin : 2px;
+	padding : 2px;
+	display:inline-block;
+	overflow: hidden;
+	z-index: 2;
+	text-align: center;
+}
+
+
+.dossierClicked{
+	outline: rgba(200, 200, 200, 0.4) dashed 1px;
+	background-color: rgba(160, 160, 200, 0.498039);
+}
+
+.dossier img{
+	width:75px;
+}
+
+.shortcut{
+	width:auto!important;
+}
+.icone{
+
+	display: inline-block;
+}
+.fenetre{
+	margin: auto;
+	position: absolute!important;
+	top : 20%;
+	left: 0;
+	right: 0;
+	display: block;
+	background: #e8e9d9;
+	width: auto;
+	height: auto;
+	border-right: solid 4px #0441d8;
+	border-left: solid 4px #0441d8;
+	border-bottom: solid 4px #0441d8;
+	border-top: solid 2px #0441d8;
+	box-shadow:  10px #888;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	padding: 0;
+	max-width: 35%;
+}
+
+.fenetreintro {
+	margin: auto;
+	position: absolute!important;
+	top : 20%;
+	left: 0;
+	right: 0;
+	display: inline-block;
+	background: #e8e9d9;
+	width: auto;
+	height: auto;
+	z-index : 1;
+	border-right: solid 4px #0058ee;
+	border-left: solid 4px #0058ee;
+	border-bottom: solid 4px #0058ee;
+	border-top: solid 2px #0058ee;
+	box-shadow:  10px #888;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	padding-bottom: 15px;
+	max-width: 500px;
+}
+
+#virus {
+	display: none;
+}
+
+#message-txt {
+	margin: auto;
+	position: absolute!important;
+	top : 20%;
+	left: 0;
+	right: 0;
+	display: none;
+	background: #e8e9d9;
+	width: auto;
+	height: auto;
+	z-index : 1;
+	border-right: solid 4px #0441d8;
+	border-left: solid 4px #0441d8;
+	border-bottom: solid 4px #0441d8;
+	border-top: solid 2px #0441d8;
+	box-shadow:  10px #888;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	padding: 0;
+	max-width: 35%;
+}
+
+.fenetre img {
+	width: 100%;
+}
+
+.content {
+	padding: 25px 20px 5px 70px;
+	font-family: 'Tahoma', sans-serif;
+	font-size: 11px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	text-align: justify;
+	background: url('../images/xp/warning.jpg') 2% 10% no-repeat;
+}
+
+.content-texte {
+	padding: 25px 20px;
+	font-family: 'Tahoma', sans-serif;
+	font-size: 12px;
+	letter-spacing: -0.02em;
+	line-height: 18px;
+	text-align: left;
+	background: white;
+}
+
+.content div {
+	text-align: center;
+	margin: auto;
+	padding: 0;
+}
+
+.miniJeu .menu-xp {
+	background: url('../images/xp/bg-menu.jpg') repeat-x #ece9d8;
+	height: 20px;
+	border-bottom: 1px solid #7f9db9;
+	z-index: 15;
+}
+
+p {
+	margin: auto;
+}
+
+.fenetregrise {
+	border-right: solid 4px #808080;
+	border-left: solid 4px #808080;
+	border-bottom: solid 4px #808080;
+	border-top: solid 2px #808080;
+}
+
+button#jouer {
+	background: url('../images/xp/bouton-jouer.jpg') repeat-x;
+	text-indent: -9999px;
+	border: 0px;
+	width: 78px;
+	height: 27px;
+	margin: 25px 0px 0px;
+	cursor: pointer;
+}
+
+button#rejouer {
+	background: url('../images/xp/bouton-rejouer.jpg') repeat-x;
+	text-indent: -9999px;
+	border: 0px;
+	width: 78px;
+	height: 27px;
+	margin: 15px 0px;
+	cursor: pointer;
+}
+
+#redirection {
+	display: none;
+	margin: auto;
+	position: absolute!important;
+	top : 20%;
+	left: 10%;
+	right: 0;
+	display: inline-block;
+	background: #e8e9d9;
+	width: auto;
+	height: auto;
+	z-index : 1;
+	border-right: solid 4px #0058ee;
+	border-left: solid 4px #0058ee;
+	border-bottom: solid 4px #0058ee;
+	border-top: solid 2px #0058ee;
+	box-shadow:  10px #888;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	padding-bottom: 15px;
+	max-width: 550px;
+	display: none;
+}
+
+.barre{
+	box-shadow:  25px 0 0 0 black;
+	height : 30px;
+	width : 100%;
+	position: absolute;
+	bottom : 0;
+	background-image: url('../images/xp/bg-barre.jpg');
+	margin: auto;
+	z-index: 20;
+	text-align: left;
+}
+
+.header{
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	background-image: url('../images/xp/bg-top-gris.jpg');
+	height: 30px;
+	font-family: 'Trebuchet ms', sans-serif;
+}
+
+.header img {
+	position: relative;
+	top: 6px;
+	left: 5px;
+}
+
+.selectedFenetre{
+	z-index : 2;
+	border-right: solid 4px #0441d8;
+	border-left: solid 4px #0441d8;
+	border-bottom: solid 4px #0441d8;
+	border-top: solid 2px #0441d8;
+}
+
+.selectedHeader{
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	background-image: url('../images/xp/bg-top.jpg');
+	height: 30px;
+	font-family: 'Trebuchet ms', sans-serif;
+}
+
+.selectedHeader b, .header b {
+	position: relative;
+	top: 5px;
+	font-weight: 600;
+	font-size: 14px;
+	text-shadow: 0px 1px 1px #0a1883;
+	margin-left: 3px;
+	color: white;
+	margin-top: 50%;
+}
+
+#menu-demarrer{
+	padding : 5px;
+	display: inline-block;
+	position:relative;
+    width: 130px;
+    height: 30px;
+    background-image: url('../images/xp/demarrer.jpg');
+    z-index: 8;
+    cursor: pointer;
+}
+
+#infos {
+	padding : 5px;
+	display: inline-block;
+	position:relative;
+    width: 145px;
+    height: 30px;
+    background-image: url('../images/xp/infos-barre.jpg');
+    float: right;
+}
+
+.menu-appuye{
+	border-top: 2px groove #808080 !important;
+    border-left: 2px groove #808080 !important;
+    border-bottom: 2px groove #FFFFFF !important;
+    border-right: 2px groove #FFFFFF !important;
+}
+
+#message {
+	z-index: 15;
+	display: none;
+}
+
+#raccourci {
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 25%;
+	left: 25%;
+}
+
+#afficher-demarrer {
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	display: none;
+	z-index: 21;
+	cursor: pointer;
+}
+
+#menu-demarrer img,
+#menu-demarrer span{
+	display:inline;
+	float: left;
+	padding-left: 5px;
+}
+
+#info{
+	width:auto;
+	position:absolute;
+    font-family: sans-serif;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    right: 2%;
+    font-size: 15px;
+    color: white;
+    top: 5%;
+    display: none;
+}
+
+#info>div{
+	clear: both;
+	margin-right: 2%;
+	margin-top: 5%;
+	white-space: nowrap;
+}

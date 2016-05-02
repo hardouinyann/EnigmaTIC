@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>Rhizome</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css"  href="style/style.css">
+		<link rel="stylesheet" type="text/css"  href="style/style-souris.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<script type="text/javascript" src="script/jquery.js"></script>
-		<script type="text/javascript" src="script/script.js"></script>	
+		<script type="text/javascript" src="script/script-souris.js"></script>	
 		<script type="text/javascript" src="script/jquery-ui/jquery-ui.js"></script>
 	</head>
-
-	<body id='droppable'>
-	   
+	<body>
+	<div id='droppable' class="container"> 
+		<div class="barre">
+			<div id='menu-demarrer'>
+			</div>
+			<div id='infos'>
+		</div>
+		</div>	
+		<div id="afficher-demarrer">
+			<img src="<?php echo PICTURES_PATH ?>xp/menu-demarrer.png" alt="demarrer" />
+		</div>
+		<div id="raccourci">
+			<img src="<?php echo PICTURES_PATH ?>xp/raccourci-message.png" alt="message" />
+		</div>
+		<div id="message" class="ui-draggable">
+			<div class="header selectedHeader ui-draggable-handle">
+				<img src="<?php echo PICTURES_PATH ?>xp/icone-message.png" />
+				<b>Message.txt - Bloc-notes</b>
+				<div class="close">X</div>
+			</div>
+			<div class="menu"><img src="<?php echo PICTURES_PATH ?>xp/menu-texte.jpg" /></div>
+			<div class="content-texte">
+				<p>Thomas, c'est Léopold, ton grand-père. Si tu lis ce message, c'est que j'ai des ennuis, et que je me suis...</p>
+			</div>
+		</div>
 		<div id="info">
 			<div id="temps">Temps restant : 30s</div>
 			<div id="score">Score : 0</div>			
-			<div id="score">Score à atteindre : 270</div>
+			<div id="score">Score à atteindre : 250 points</div>
 		</div>
-		<div class="fenetre selectedFenetre ui-draggable" style="left:630.5137988292114px;top:189.4315791587637px;max-width: 650px;">
+		<div id="virus" class="fenetreintro selectedFenetre ui-draggable">
 			<div class="header selectedHeader ui-draggable-handle">
 				<b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>
-				<div class="close" onclick="removeWindow(this)">X</div>
+			</div>
+			<div class="content">
+				<p>Attention, il semblerait que ce fichier est infecté. Fermez les fenêtres qui vont apparaître à l'écran, le plus vite possible, pour supprimer le virus, et pour pouvoir ouvrir le fichier.<br/><br/>Vous avez 30 secondes pour obtenir un score minimum de <b>250 points</b>. Si vous réussissez à atteindre le score minimum, vous aurez empêché le virus de se propager, et vous pourrez accéder au bureau de l'ordinateur. Sinon, vous devrez recommencer une partie, jusqu'à ce que vous réusissiez à atteindre le <b>score minimum de 250 points</b>. A vous de jouer !
+				</p>
 				<div>
-					<h1>Bienvenu sur le jeu !</h1>
-					<div>	Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</div>
-					<div>
-						<button id="jouer">Jouer</button>
-					</div>
+					<button id="jouer">Jouer</button>
 				</div>
 			</div>
 		</div>
-		
-		<div class="fenetre selectedFenetre ui-draggable" id="redirection" style="left:630.5137988292114px;top:189.4315791587637px;max-width: 650px;display:none;">
+		<div class="ui-draggable" id="redirection">
 			<div class="header selectedHeader ui-draggable-handle">
-				<b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>
-				<div class="close" onclick="removeWindow(this)">X</div>
-				<div>
+				<b style="color:white;margin-left:2%;margin-top:50%">Résultat du jeu</b>
+				<div class="close">X</div>
+			</div>
+			<div class="content">
 					<h1 id="titre"></h1>
-					<div id="commentaire">	Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					<p>	Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</div>
+					</p>
 					<div>
-						<form id="form" action='histoire/bureau' method='post'>
-							<input type='text' style="display:none;" name="id_jeu" value="1973"/>
-							<input type="text" style="display: none;" name="score" value=""></input>
-							<input type='submit' name='validation_jeu' value='Enregistrer le score et retour sur le bureau'/>
-						</form>
-						<button id="jouer">Rejouer</button>
+						<button id="rejouer">Rejouer</button>
 					</div>
 				</div>
-			</div>
 		</div>
-
-
-		<div class="barre">
-			<div id='menu-demarrer'>
-				<img src='images/start.png'/>
-				<span>Démarrer</span>
-			</div>
-		</div>	
-	
+		<form id="form" action='histoire/bureau' method='post'>
+			<input type='text' style="display:none;" name="id_jeu" value="2001"/>
+			<input type="text" style="display: none;" name="score" value=""></input>
+			<input type='submit' name='validation_jeu' value='Enregistrer le score et retourner en 2016 avec la machine'/>
+		</form>
+	</div>
 	</body>
-
 </html>

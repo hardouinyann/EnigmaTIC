@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bureau name="Bureau">
-	<dossier name="corbeille" url="corbeille.png" date="02/02/1973" heure="10:12" etage="0">
-		<fichier name="xerox.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
-			Xerox Alto : propriété de Xerox Parc - Palo Alto, Californie.
-		</fichier>	
-	</dossier>
 	<dossier name="recherches" url="recherches.png" date="05/05/1973" heure="15:10" etage="0">
 		<sous-dossier name="interfaces" url="dossier.png" date="01/06/1973" heure="08:52" etage="1">
+			<fichier name="xerox.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
+				Xerox Alto : propriété de Xerox Parc - Palo Alto, Californie.
+			</fichier>	
 		</sous-dossier>
 		<sous-dossier name="informatique" url="dossier.png" date="21/06/1973" heure="16:20" etage="1">
 			<fichier name="hexa.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
@@ -17,7 +15,7 @@
 	<dossier name="documents" url="dossier.png" date="14/02/1973" heure="20:05" etage="0">
 		<sous-dossier name="special" url="dossier.png" date="05/04/1973" heure="22:10" etage="1">
 			<fichier name="machine.txt" url='dossier.png' date="05/04/1973" heure="22:45" etage="1">
-				[SAUVEGARDE] Instruction détaillé d’utilisation de la machine <br/><br/>
+				[SAUVEGARDE] Instructions détaillées du fonctionnement de la machine à voyager dans le temps <br/><br/>
 
 				Retour automatique de la machine dans le présent<br/><br/>
 
@@ -29,9 +27,9 @@
 				- Message automatique généré à chaque voyage par prévention<br/>
 				- Dans tous les cas le message est contenu dans la machine et peut être intercepté par quelqu'un.<br/> 
 				<br/>
-				Un message texte ou audio doit être enregistré à chaque arrivée dans une nouvelle date. Il est programmé pour être intercepté dans le présent, dans le cas où l'on resterai bloqué dans les couloirs du temps, lors d’un voyage temporel. Malheureusement les risques de l’informatique ne garantissent pas la bonne réception du message. Dans le cas où il subirait une distorsion temporelle, il sera alors nécessaire de mener sa propre enquête pour comprendre ce qui s’est passé.<br/><br/>
-				-> Dates configurées sur la machine, et visitables :<br/><br/>
-					1973 - 1982 - 1987 - 1995 - 2001 - 2007<br/>
+				Un message audio doit être enregistré par l'utilisateur à chaque arrivée dans une nouvelle date. Celui-ci est ensuite enregistré sous la forme d'un fichier texte dans la machine. Il retournera ainsi dans le présent, avec la machine. Ceci est une prévention dans le cas où l'on resterai bloqué dans les couloirs du temps, lors d’un voyage temporel, et que la machine rentrerai automatiquement dans le présent. Malheureusement les risques de l’informatique ne garantissent pas la bonne réception du message à 100%. Dans le cas où il subirait une distorsion temporelle, il sera alors nécessaire que quelqu'un mène sa propre enquête pour comprendre ce qui s’est passé, dans le but de réussir à aller chercher le voyageur, pour le ramener dans le présent.<br/><br/>
+				-> Dates configurées sur la machine :<br/><br/>
+					1973 - 1982 - 1987 - 1995 - 2001 - 2007 - 2016<br/>
 
 			</fichier>	
 		</sous-dossier>
@@ -46,9 +44,12 @@
 		</sous-dossier>
 		<sous-dossier name="logs" url="dossier.png" date="11/01/1973" heure="07:17" etage="1">
 		</sous-dossier>
+		<fichier name="admin.txt" url='dossier.png' date="14/03/1973" heure="22:45" etage="1">
+				Il n'y a pas d'identifiants ici, si c'est que vous recherchez.
+		</fichier>
 	</dossier>
 	<fichier name="recette.txt" url='dossier.png' date="23/07/1973" heure="16:09" etage="0">
-		Dans un récipient mélangez deux cuillères à café de levure, 45 grammes de sucre, un sachet de sucre vanillé et 125 grammes de farine.<br/><br/>Dans un autre récipient, battez les jaunes d'œufs avec 20 centilitres de lait. Mélangez ensuite le contenu des deux récipients, jusqu’à obtenir une pâte épaisse. Faites fondre le beurre dans une casserole puis incorporer le à la pâte. <br/><br/>Montez les blancs en neige, puis incorporez les délicatement à la pâte. Ajoutez une lichette de rhum (point trop n’en faut !)<br/><br/>
+		Recette des gaufres<br/><br/>Dans un récipient mélangez deux cuillères à café de levure, 45 grammes de sucre, un sachet de sucre vanillé et 125 grammes de farine.<br/><br/>Dans un autre récipient, battez les jaunes d'œufs avec 20 centilitres de lait. Mélangez ensuite le contenu des deux récipients, jusqu’à obtenir une pâte épaisse. Faites fondre le beurre dans une casserole puis incorporer le à la pâte. <br/><br/>Montez les blancs en neige, puis incorporez les délicatement à la pâte. Ajoutez une lichette de rhum (point trop n’en faut !)<br/><br/>
 		Laissez reposer la pâte 45 minutes.<br/>
 		Dégustez jusqu’à ce que vous soyez repu ! 
 	</fichier>

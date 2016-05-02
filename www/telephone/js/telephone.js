@@ -103,6 +103,7 @@ const PAS= 5;
 		if(etat ==  "antennes"){
 			if(voiture.bounds.intersects(carte.children["antennes"].children["reseau3"].bounds)){
 				paper.view.detach('frame');
+				carte.children["enAppel"].visible= true;
 				alert("sur atenne");
 				changerEtape("ami");
 				return;
@@ -112,6 +113,7 @@ const PAS= 5;
 		if(etat == "ami"){
 			if(voiture.bounds.intersects(carte.children["ami"].bounds)){
 				paper.view.detach('frame');
+				carte.children["enAppel"].visible= false;
 				alert("sur amis");
 				changerEtape("collegue");
 				return;
@@ -165,6 +167,16 @@ const PAS= 5;
 			}
 		}
 
+
+		if(etat == "fin"){
+			if(voiture.bounds.intersects(carte.children["message"].bounds)){
+				paper.view.detach('frame');
+				alert("fin");
+				return;
+			}
+		}
+
+
 		
 		
 
@@ -214,6 +226,7 @@ const PAS= 5;
 				window.location.reload();
 			}
 		}
+
 				
 
 
@@ -234,6 +247,7 @@ const PAS= 5;
    		carte.children["eglise"].visible= false;
    		carte.children["chercheur"].visible= false;
    		carte.children["collegue"].visible= false;
+   		carte.children["enAppel"].visible= false;
 
 
 		

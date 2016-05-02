@@ -12,14 +12,6 @@
 
 body{
 	font-family: 'open_sanslight';
-	background-image: url('../img/bureau-robot.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top center;
-	height: 100%;
-	min-height: 100%;
-	width: 100%;
-	overflow: hidden;
 }
 
 *{

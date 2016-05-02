@@ -44,7 +44,7 @@
 
         //permet de mettre en forme l'affichage d'une variable / d'un tableau
         protected function debug($arrayToDebug = array(),$array_name= false){
-            
+
             $title = (!empty($array_name)) ? $array_name:"" ;
             if(getType($arrayToDebug)=="array") ksort($arrayToDebug);
             echo "<meta charset='UTF-8'>

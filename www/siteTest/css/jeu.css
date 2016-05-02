@@ -25,6 +25,97 @@
 		z-index: 3;
 	}
 
+	#date-bloquee {
+		position: absolute;
+		z-index: 2;
+	    margin: auto;
+	    top: 30%;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: 835px;
+	    height: auto;
+	    display: block;
+	    text-align: center;
+	}
+
+	.entete-form img {
+		text-align: left;
+		width: 50%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.entete-form h2 {
+		font-family: 'rawengulkregular';
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #dadada;
+		display: inline-block;
+		line-height: 22px;
+		letter-spacing: 0.03em;
+		vertical-align: middle;
+		border-left: 1px solid #787178;
+		padding-left: 35px;
+		margin-left: 25px;
+		position: relative;
+		top: 1px;
+	}
+
+	#infos-date {
+		display: block;
+		width: 75%;
+		margin: 50px auto;
+		padding-left: 10px;
+		text-align: center;
+	}
+
+	#infos-date p {
+		margin: auto;
+		text-align: justify;
+		font-size: 14px;
+		line-height: 22px;
+		font-weight: 300;
+	    font-family: 'Roboto', sans-serif;
+	    color: #dadada;
+	    margin: 0px 10px 15px 5px;
+	    text-align: left;
+	}
+
+	#date-bloquee .bouton {
+		text-transform: uppercase;
+	    font-family: 'Roboto', sans-serif;
+	    font-weight: 500;
+	    font-size: 14px;
+	    color: #807380;
+	    padding: 18px 30px;
+	    border: 2px solid #675866;
+	    border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    display: block;
+	    width: 50%;
+	    margin:0px auto;
+	    text-align: center;
+	    opacity: 0.9;
+	    background: transparent;
+	    position: relative;
+	    right: 15px;
+	    cursor: pointer;
+	    letter-spacing: 0.03em;
+	}
+
+	#date-bloquee .bouton:hover {
+		color: white;
+		border: 2px solid #675866;
+		background-color: rgba(88, 75, 87, 0.3);
+		-webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+	}
+
+
 	/* BOUTON POUR PASSER LES CINEMATIQUES */
 
 	#passer-cinematique {
@@ -78,6 +169,10 @@
 	    letter-spacing: 0.05em;
 	    cursor: pointer;
 	    display: block;
+	}
+
+	#end-1973:focus {
+		outline-color: #522a50;
 	}
 
 	#form1973 {
@@ -218,41 +313,6 @@
 		height: 100%;
 		min-height: 100%;
 		width: 100%;
-	    background-image: url('../images/bg-chambre-jeu.jpg');
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    background-position: top center;
-	    display: none;
-	    z-index: 3;
-	    position: relative;
-	}
-
-	#chap1scene3 .personnage {
-		height: 75%;
-		position: absolute;
-		margin: auto;
-		left: 20%;
-    	top: 25%;
-	    right: 0;
-	    bottom: 0;
-	    width: auto;
-	    animation: bougerThomas3 4s forwards;
-	}
-
-	@keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
-	@-webkit-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
-	@-moz-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
-	@-o-keyframes bougerThomas3{ 0% { left: -20%;} 100% {left: 20%;} } 
-
-	/* SCENE 4 PREAMBULE */
-
-	#chap1scene4 {
-		margin: auto;
-		padding: 0;
-		text-align: center;
-		height: 100%;
-		min-height: 100%;
-		width: 100%;
 	    background-image: url('../images/bg-maisonLeopold-jeu.jpg');
 	    background-size: cover;
 	    background-repeat: no-repeat;
@@ -262,7 +322,7 @@
 	    position: relative;
 	}
 
-	#chap1scene4 .personnage #thomaschap1scene4 {
+	#chap1scene3 .personnage #thomaschap1scene3 {
 		height: 44%;
 	    position: absolute;
 	    margin: auto;
@@ -274,7 +334,7 @@
 	    animation: bougerThomas4 3s forwards;
 	}
 
-	#thomaschap1scene4dos {
+	#thomaschap1scene3dos {
 		height: 44%;
 		top: 50%;
 		left: -20%;
@@ -452,7 +512,7 @@
 	}
 
 	#interactive .travaux { 
-		top: 40%;
+		top: 50%;
     	left: 80%;
 	}
 
@@ -528,6 +588,25 @@
 		height: 100%;
 	}
 
+	#tableau-liege #succes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 65%;
+    	height: 70%;
+		margin: auto;
+		text-align: left;
+	}
+
+	#tableau-liege #succes img {
+		width: 20%;
+		max-width: 182px;
+		height: auto;
+
+	}
+
 	#zoom-objets-bureau #zoom-bureau {
 		margin: auto;
 		padding: 0;
@@ -559,6 +638,98 @@
 		cursor: pointer;
 	}
 
+	#machine {
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		height: 100%;
+		min-height: 100%;
+		width: 100%;
+	    background-image: url('../images/bg-machine.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    z-index: 5;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: auto;
+	    display: none;
+	}
+
+	.form-machine {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-align: center;
+		width: auto;
+		height: 70px;
+		z-index: 7;
+		display: none;
+	}
+
+	.form-machine select {
+		background-color: rgba(240, 240, 240, 0.8);
+		border: 1px solid #d7d7d7;
+		padding: 20px 35px;
+		font-size: 16px;
+		font-family: 'Roboto', sans-serif;
+		color: #2d1e30;
+		font-weight: 400;
+		text-align: left;
+		width: 25%;
+	}
+
+	#launchMachine {
+		background-color: rgba(240, 240, 240, 0.8);
+		border: 1px solid #d7d7d7;
+		padding: 20px;
+		font-size: 16px;
+		font-family: 'Roboto', sans-serif;
+		color: #2d1e30;
+		font-weight: 500;
+		text-align: left;
+		width: auto;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+
+	#launchMachine:hover {
+		background-color: rgba(185, 165, 190, 0.8);
+		-webkit-transition: all 100ms ease-in-out;
+		-moz-transition: all 100ms ease-in-out;
+		-ms-transition: all 100ms ease-in-out;
+		-o-transition: all 100ms ease-in-out;
+		transition: all 100ms ease-in-out;
+	}
+
+	.close-machine {
+		font-weight: 400;
+		font-size: 15px;
+		text-transform: uppercase;
+		margin: 30px auto;
+		color: #cabdcd;
+		letter-spacing: 0.05em;
+		cursor: pointer;
+	}
+
+	.close-machine .fa {
+		margin-right: 5px;
+	}
+
+	.close-machine:hover {
+		color: #ffffff;
+		-webkit-transition: all 100ms ease-in-out;
+		-moz-transition: all 100ms ease-in-out;
+		-ms-transition: all 100ms ease-in-out;
+		-o-transition: all 100ms ease-in-out;
+		transition: all 100ms ease-in-out;
+	}
 
 /* SCENE 1973 */
 
@@ -768,9 +939,9 @@
 	    position: relative;
 	}
 
-/* SCENE 2001 */
+/* SCENE 2002 */
 
-	#scene-2001 {
+	#scene-2002 {
 		margin: auto;
 		padding: 0;
 		text-align: center;
@@ -785,7 +956,7 @@
 	    position: relative;
 	}
 
-/* SCENE 2001 */
+/* SCENE 2030 */
 
 	#scene-2030 {
 		margin: auto;

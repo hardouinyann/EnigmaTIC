@@ -19,6 +19,7 @@
 
 	/* FONCTION D'INITIATION DE LA PAGE */
 	function setup () {
+		alert("ok");
 		$('#load').fadeOut(800);
 		if(audio != null) {
 			audio.play();
@@ -71,9 +72,11 @@
 		if(fullscreen == false){
 			screenfull.request();
 			fullscreen = true;
+			$('#interactive').css('top','-15%');
 		}else {
 			screenfull.exit();
 			fullscreen = false;
+			$('#interactive').css('top','0');
 		}
 	}
 
@@ -106,7 +109,7 @@
 			$('#darker').fadeIn(200);
 			$('body').css('overflow', 'hidden');
 		}else {
-			if($('#chapitre-1').css('display') == 'block') {
+			if($('#top-bar').css('display') == 'block') {
 				$('.menu').animate({ 'top' : '15%', 'left' : '5%'}, 600);
 			}else {
 				$('.menu').animate({ 'top' : '8%', 'left' : '5%'}, 600);
