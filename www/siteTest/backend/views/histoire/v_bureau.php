@@ -17,10 +17,10 @@
 			echo('<div id="pastForm" class="form-machine">
 				<select id="dates">
 					<option value="-">Choisissez une date</option>
+					<option value="2002">2002 (débloquée)</option>
 					<option value="1982">1982 (bloquée pour le moment)</option>
 					<option value="1987">1987 (bloquée pour le moment)</option>
 					<option value="1995">1995 (bloquée pour le moment)</option>
-					<option value="2002">2002 (débloquée)</option>
 				</select>
 				<button id="launchMachine">GO</button>
 				<div class="close-machine"><i class="fa fa-times" aria-hidden="true"></i> Fermer cette fenêtre</div>
