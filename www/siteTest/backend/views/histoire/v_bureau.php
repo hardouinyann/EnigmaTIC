@@ -17,10 +17,10 @@
 			echo('<div id="pastForm" class="form-machine">
 				<select id="dates">
 					<option value="-">Choisissez une date</option>
-					<option value="1982">1982</option>
-					<option value="1987">1987</option>
-					<option value="1995">1995</option>
-					<option value="2002">2002</option>
+					<option value="1982">1982 (bloquée pour le moment)</option>
+					<option value="1987">1987 (bloquée pour le moment)</option>
+					<option value="1995">1995 (bloquée pour le moment)</option>
+					<option value="2002">2002 (débloquée)</option>
 				</select>
 				<button id="launchMachine">GO</button>
 				<div class="close-machine"><i class="fa fa-times" aria-hidden="true"></i> Fermer cette fenêtre</div>
@@ -40,7 +40,7 @@
 					for($i=sizeof($_SESSION['succes']) - 1 ; $i >= 0 ; $i--){
 				        echo('<img src="'.PICTURES_PATH.'post-it-'.$_SESSION['succes'][$i].'.png" alt="succes" />'); 
 				    }
-				    echo('<img src="'.PICTURES_PATH.'tableau.jpg" alt="tableau-liege" /></div>');
+				    echo('</div><img src="'.PICTURES_PATH.'tableau.jpg" alt="tableau-liege" />');
 				}else { 
 					echo('<img src="'.PICTURES_PATH.'tableau_post.jpg" alt="tableau-liege" />');
 				} ?>

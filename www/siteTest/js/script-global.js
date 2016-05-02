@@ -19,6 +19,7 @@
 
 	/* FONCTION D'INITIATION DE LA PAGE */
 	function setup () {
+		alert("ok");
 		$('#load').fadeOut(800);
 		if(audio != null) {
 			audio.play();

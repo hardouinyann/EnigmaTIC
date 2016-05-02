@@ -257,6 +257,7 @@ button#rejouer {
 	border-radius: 10px 10px 0 0;
 	padding-bottom: 15px;
 	max-width: 550px;
+	display: none;
 }
 
 .barre{

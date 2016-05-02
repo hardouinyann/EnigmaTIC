@@ -2,7 +2,6 @@
 	var tabRepliquesScene1 = ["Tiens... Cela fait longtemps que je n’ai pas eu de nouvelles de grand-père...","Il doit encore avoir la tête plongée dans l’une de ses nouvelles inventions farfelues... Il n’arrêtera jamais décidément !", "Je vais essayer de l’appeler pour voir s’il va bien quand même. <br/>(<i>Thomas compose le numéro et l’appelle...</i>).", "<i>Vous êtes bien sur le répondeur de Léopold ! Laissez un message après le bip sonore ! Je vous répondrais, si jamais je ne me perd pas dans les couloirs du temps hahaha ! (Biiip).</i>", "Bon, il ne répond pas... Je vais essayer de l’appeler plus tard...<br/>Aller, je vais rentrer à la maison en attendant. "];
 	var tabRepliquesScene2 = ["Hum... J'ai essayé de rappeler grand-père, mais il ne répond toujours pas.", "Je vais lui faire une visite surprise ! J'ai un ou deux jours à prendre, je vais en profiter pour passer le week-end avec lui!"];
 	var tabRepliquesScene3 = ["<i>(Deux jours plus tard...</i>). Me voilà chez lui ! Allons voir s'il est là !", "J’ai sonné... mais il ne répond-pas. Il n'est peut-être pas là... Mais ça m'étonnerait. Je vais essayer d'ouvrir la porte quand même. ","Elle s'ouvre ! Je lui ai pourtant dis plusieurs fois de faire attention et de verrouiller sa porte d'entrée ! Quel tête de mule! ", "Aller, je rentre ! De toute façon je parie qu'il doit encore être occupé dans son bureau, et qu'il n’a pas entendu la sonnette."];
-	var messageAide = "Vous voilà lancé dans l'aventure <b>Enigma'TIC</b> ! Dans le jeu, vous retrouverez régulièremet des cinématiques comme celle-ci. Pour faire <b>défiler les dialogues des personnages</b>, cliquez sur la flèche à droite de la bulle de dialogue. Vous pouvez cliquer à tout moment sur cette flèche si vous voulez faire défiler les dialogues rapidement. Si vous souhaitez passer cette cinématique, cliquez sur le bouton prévu à cet effet, en bas à droite de l'écran.<br/><br/>Vous retrouverez en haut de l'écran des éléments de navigation fixe. Ils vous permettront de mettre le jeu en plein écran, de couper le son si vous le souhaitez, ou encore d'ouvrir le menu de navigation du site par exemple. A vous de jouer!";
 
 /* REPLIQUES BUREAU DE LEOPOLD */
 	var tabRepliquesBureau = ["Tiens c'est bizarre... J'ai fouillé toute la maison, mais grand-père n'est pas là ! Il sort rarement de chez lui pourtant.", "Je commence un peu à m'inquiéter ! Je suis sans nouvelles de lui depuis plus d'une semaine !", "Je vais chercher dans son bureau pour voir s'il n'a pas laissé un message, ou quelque chose qui m'indiquerait où il pourrait se trouver. Il est peut-être simplement sorti en ville...", "Je suis sûr que je trouverais des indices ici. Il y passe tout son temps, à travailler sur ses sujets de recherches. "];
@@ -54,7 +53,6 @@
 		$('#passer-cinematique').click(passerCinematique);
 		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
-		$('#help-txt').html(messageAide);
 		etatDuJeu = "chapitre1scene1";
 		textesAAfficher = tabRepliquesScene1;
 	}else if($('#bureau-leopold').length == 1) {
@@ -63,7 +61,7 @@
 			console.log("toto");
 			//ca va envoyer la requete de mettre dejaVu a 1
 			$.post(
-		        '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
+		        'http://www.enigma-tic.fr/siteTest/histoire/bureau',
 		        'justSawDesktop=ok',
 		        function(data){
 		        	console.log("done");
@@ -159,7 +157,7 @@
 	function finShellPost (){
 		// Update Shell Vu
 			$.post(
-			    '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
+			    'http://www.enigma-tic.fr/siteTest/histoire/bureau',
 			    'finShell=ok',
 			    function(data){
 			       console.log("fin sheelllll");
@@ -177,7 +175,7 @@
 	afficherTexte(textesAAfficher, nom);
 
 	function passerCinematique (){
-		$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest/accueil/inscription");
+		$(location).attr('href',"http://www.enigma-tic.fr/siteTest/accueil/inscription");
 	}
 
 /* FONCTION POUR AFFICHER / CACHER LE BLOC NOTE */
@@ -276,7 +274,7 @@
 			});
 			$('#launchMachine').click(function () {
 				var laDate = $("#dates option:selected").val();
-				var url = "http://127.0.0.1/projects/EnigmaTIC/www/siteTest/histoire/jeu/" + laDate;
+				var url = "http://www.enigma-tic.fr/siteTest/histoire/jeu/" + laDate;
 				if(laDate != '-') $(location).attr('href',url);
 			});
 			$('#darker').fadeIn(500);
@@ -351,7 +349,7 @@
 			afficherTexte(textesAAfficher, nom);
 		}else if(etatDuJeu == "chapitre1scene3" && j=="3") {
 			$('.dialogue').hide();
-			$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest/accueil/inscription");
+			$(location).attr('href',"http://www.enigma-tic.fr/siteTest/accueil/inscription");
 		}else if(etatDuJeu == "scene1973" && j=="2") {
 			j=0;
 			etatDuJeu = "scene1973-zoom"; 
@@ -383,7 +381,7 @@
 		}else if(etatDuJeu == "scene1973-fin" && j=="3"){
 			// Update Progression
 			$.post(
-			    '/projects/EnigmaTIC/www/siteTest/histoire/jeu/1973',
+			    'http://www.enigma-tic.fr/siteTest/histoire/jeu/1973',
 			    'progression=ok',
 			      function(data){
 			      },
@@ -395,10 +393,10 @@
 			$('#end-1973').fadeIn();
 		}else if(etatDuJeu == "finShell" && j=="3") {
 			$.post(
-			    '/projects/EnigmaTIC/www/siteTest/histoire/bureau',
+			    'http://www.enigma-tic.fr/siteTest/histoire/bureau',
 			    'finShellVu=ok',
 			    function(data){
-			       $(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest");
+			       $(location).attr('href',"http://www.enigma-tic.fr/siteTest/");
 			     },
 			     'html'
 			   );
@@ -409,11 +407,7 @@
 			$('#interactive').fadeIn(1000);
 			setTimeout(function () { j=0; }, 500);
 		}else if(etatDuJeu == "bureau-leopold-tableau" && j=="0") {
-			$('#darker').fadeOut(500);
 			$('.dialogue').fadeOut(250);
-			$('.dialogue').css('z-index', '3');
-			$('#zoom-objets-bureau').fadeOut(250);
-			$('#tableau, #tableau-liege').fadeOut(500);
 			setTimeout(function () { j=0; }, 500);
 		}else if(etatDuJeu == "bureau-leopold-cadre" && j=="1"){
 			$('#darker').fadeOut(500);
@@ -435,7 +429,7 @@
 			$('#darker').fadeOut(500);
 			setTimeout(function () { j=0; }, 500);
 		}else if (etatDuJeu == "bureau-leopold-machine" && j=="1") {
-			$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest/histoire/jeu/1973");
+			$(location).attr('href',"http://www.enigma-tic.fr/siteTest/histoire/jeu/1973");
 		}else if(etatDuJeu == "scene1982" && j=="1") {
 			$('#top-bar').fadeOut(500);
 			$('#bottom-bar').fadeOut(500);
@@ -472,7 +466,7 @@
 			$('#form').show();
 			//Update nb Message Recuperer
 			$.post(
-			    '/projects/EnigmaTIC/www/siteTest/histoire/jeu/2002',
+			    'http://www.enigma-tic.fr/siteTest/histoire/jeu/2002',
 			    'nouveauMessage=ok',
 			      function(data){
 			       console.log(data);
@@ -481,7 +475,7 @@
 			 );
 			// Update Progression
 			$.post(
-			    '/projects/EnigmaTIC/www/siteTest/histoire/jeu/2002',
+			    'http://www.enigma-tic.fr/siteTest/histoire/jeu/2002',
 			    'progression=ok',
 			      function(data){
 			       console.log(data);

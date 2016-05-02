@@ -21,16 +21,16 @@
     define('DEFAULT_ACTION','index');
 
     //MYSQL ACCESS
-    /*define('MYSQL_HOST','enigmatiqmbdd.mysql.db');
+    define('MYSQL_HOST','enigmatiqmbdd.mysql.db');
     define('MYSQL_PORT',"3306");
     define('MYSQL_DB','enigmatiqmbdd');
     define('MYSQL_LOGIN','enigmatiqmbdd');
-    define('MYSQL_PWD','eNigmatic1');*/
+    define('MYSQL_PWD','eNigmatic1');
 
-   define('MYSQL_HOST','localhost');
+   /* define('MYSQL_HOST','localhost');
     define('MYSQL_DB','rhizome');
     define('MYSQL_LOGIN','root');
-    define('MYSQL_PWD',''); 
+    define('MYSQL_PWD',''); */
 
     //Clés
 	define('CLE_GESTIONNAIRE_FICHIERS', 'dsflFWR9u2xQa');

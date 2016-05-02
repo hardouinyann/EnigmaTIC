@@ -117,32 +117,22 @@ class c_histoire extends Controller{
 
 
 
-        }elseif(!empty($_POST['validation_jeu'])){//bouton de redirection a la fin des jeu sera un petit form en fait
+        }elseif(!empty($_POST['validation_jeu'])){
+        //bouton de redirection a la fin des jeu sera un petit form en fait
 
             $score = !empty($_POST['score']) ? $_POST['score'] : null;
             $datas = array( 'id_partie' =>'DEFAULT',
-
                     'id_utilisateur' => $_SESSION['user']->id_utilisateur,
-
                     'jeu_valide' => 1,
-
                     'date_valid' =>'now',
-
                     'score' => $score,
-
                     'id_jeu' => $_POST['id_jeu']
-
                 );
-
+            
             $tableToCall = "partie";
-
             $jeuValide = $this->getModel('jeu')->gameComplete($datas, $tableToCall);
-
             $this->dataForView = $jeuValide;
-
-            // $this->debug($this->dataForView,"data for view");
-
-
+            echo('ok dude');
         }
 
         if(!empty($_POST['finShellVu'])){
@@ -175,10 +165,6 @@ class c_histoire extends Controller{
 
         if(empty($_POST['justSawDesktop']))
             $this->render('v_bureau');
-
-
-       
-
     }
 
 

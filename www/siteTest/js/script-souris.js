@@ -9,7 +9,7 @@ var pics = [];
 var nbPics = 11;
 var score = 0;
 var temps = 30;
-var scoreABattre = 10;
+var scoreABattre = 250;
 var nbClick = 0;
 var jeuFini = false;
 var jeuLance = false;
@@ -37,19 +37,21 @@ $(document).ready(function(){
 				$('#redirection').hide();
 				$('#virus').show();
 			}else {
-				j=0;
-				etatDuJeu = "scene2002OrdiFin"; 
-				if($('.noMessage').length == 1) {
-					textesAAfficher = tabPremierMessageRecup;
-				}else {
-					textesAAfficher = tabRepliquesScene2002OrdiFin;
+				if(etatDuJeu != "scene2002OrdiFin") {
+					j=0;
+					etatDuJeu = "scene2002OrdiFin"; 
+					if($('.noMessage').length == 1) {
+						textesAAfficher = tabPremierMessageRecup;
+					}else {
+						textesAAfficher = tabRepliquesScene2002OrdiFin;
+					}
+					afficherTexte(textesAAfficher, nom);
+					$('.dialogue').fadeIn();
 				}
-				afficherTexte(textesAAfficher, nom);
 				$('.header').addClass('selectedHeader');
-				$('.dialogue').fadeIn();
 				$('#message-txt').show();
 			}
-			$(this).attr('src', 'http://127.0.0.1/projects/EnigmaTIC/www/siteTest/images/xp/raccourci-message.png');
+			$(this).attr('src', 'http://www.enigma-tic.fr/siteTest/images/xp/raccourci-message.png');
 		}else {
 			e.preventDefault();
 		}
@@ -59,11 +61,11 @@ $(document).ready(function(){
 	$('#raccourci img').click(function (e) {
 		if(jeuLance == false) {
 			if(nbClick == 0){
-				$(this).attr('src', 'http://127.0.0.1/projects/EnigmaTIC/www/siteTest/images/xp/raccourci-message-hover.png');
+				$(this).attr('src', 'http://www.enigma-tic.fr/siteTest/images/xp/raccourci-message-hover.png');
 				nbClick++;
 			}else {
 				nbClick = 0;
-				$(this).attr('src', 'http://127.0.0.1/projects/EnigmaTIC/www/siteTest/images/xp/raccourci-message.png');
+				$(this).attr('src', 'http://www.enigma-tic.fr/siteTest/images/xp/raccourci-message.png');
 			}
 		}else {
 			e.preventDefault();
@@ -220,14 +222,14 @@ class popUp {
 	        		'<b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>'+
 	        		"<div class='close-window' onClick='removeWindow(this)'>X</div>"+
 	        	'</div>'+
-	        	'<img src="http://127.0.0.1/projects/EnigmaTIC/www/siteTest/images/xp/'+this.url+'.png">'+
+	        	'<img src="http://www.enigma-tic.fr/siteTest/images/xp/'+this.url+'.png">'+
 			'</div>')
 			);
 		$('.fenetre').addClass('ui-draggable').draggable({handle:'.header'});
 
 		if($('.shortcut').length==0){
 			$('.barre').append('<div id="fenetre-tache" class="shortcut">'+
-								'<img src="http://127.0.0.1/projects/EnigmaTIC/www/siteTest/images/xp/internet.png" style="width:60px;margin:-8px -10px 0 -25px;">'+
+								'<img src="http://www.enigma-tic.fr/siteTest/images/xp/internet.png" style="width:60px;margin:-8px -10px 0 -25px;">'+
 								'<span>1 Fenêtres</span>'+
 							'</div> '
 							);
