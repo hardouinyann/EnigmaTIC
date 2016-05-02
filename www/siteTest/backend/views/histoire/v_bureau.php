@@ -40,9 +40,10 @@
 					for($i=sizeof($_SESSION['succes']) - 1 ; $i >= 0 ; $i--){
 				        echo('<img src="'.PICTURES_PATH.'post-it-'.$_SESSION['succes'][$i].'.png" alt="succes" />'); 
 				    }
-				    echo('</div>');
-				}; ?>
-	    		<img src="<?php echo PICTURES_PATH?>tableau.jpg" alt="tableau-liege" />
+				    echo('<img src="'.PICTURES_PATH.'tableau.jpg" alt="tableau-liege" /></div>');
+				}else { 
+					echo('<img src="'.PICTURES_PATH.'tableau_post.jpg" alt="tableau-liege" />');
+				} ?>
 	    	</div>
 	    </div>
 	    <div id="zoom-bureau">
