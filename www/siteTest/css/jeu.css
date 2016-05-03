@@ -257,7 +257,7 @@
 	@-moz-keyframes bougerThomas1{ 0% { height: 45%; top: 25%; left: -5%;} 100% {top: 35%; height: 65%; left: 5%; } } 
 	@-o-keyframes bougerThomas1{ 0% { height: 45%; top: 25%; left: -5%;} 100% {top: 35%; height: 65%; left: 5%; } }  
 
-	/* SCENE 2 PREAMBULE */
+/* SCENE 2 PREAMBULE */
 
 	#chap1scene2 {
 		margin: auto;
@@ -304,7 +304,7 @@
 	@-moz-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } } 
 	@-o-keyframes bougerThomas2{ 0% { height: 30%; top: 22%; left: -16%;} 100% {top: 32%; height: 70%; left: -18%; } }   
 
-	/* SCENE 3 PREAMBULE */
+/* SCENE 3 PREAMBULE */
 
 	#chap1scene3 {
 		margin: auto;
@@ -368,6 +368,7 @@
 	    width: 120px;
 	    height: 100px;
 	    text-align: left;
+	    display: none;
 	}
 
 	.objets .blocNote {
@@ -469,7 +470,7 @@
 		padding: 0;
 		cursor: pointer;
 		display: block;
-		opacity: 0.7;
+		opacity: 0.8;
 	}
 
 	#bureau-leopold .more:hover {
@@ -487,7 +488,7 @@
 	}
 
 	#interactive .bureau { 
-		top: 40%;
+		top: 35%;
     	left: 20%;
 	}
 
@@ -497,7 +498,7 @@
 	}
 
 	#interactive .tableau { 
-		bottom: 10%;
+		bottom: 15%;
     	left: 25%;
 	}
 
@@ -512,7 +513,12 @@
 	}
 
 	#interactive .travaux { 
-		top: 50%;
+		top: 40%;
+    	left: 80%;
+	}
+
+	.telephone { 
+		top: 40%;
     	left: 80%;
 	}
 
@@ -883,7 +889,7 @@
 
 		#console>div{
 			font-size: 14;
-			display:inline-block;
+			display: block;
 		}
 
 		.cursor-console {

@@ -145,6 +145,7 @@ function makePop(){
 			jeuLance = false;
 			$('#redirection').find('#titre').html(succes);
 			if(jeuFini == "true") {
+				$('#redirection .content').css("background", "url('http://www.enigma-tic.fr/images/xp/infos.jpg') 2% 10% no-repeat");
 				$('#redirection').find('p').html("Vous avez obtenu un score de "+score+" points en 30 secondes, soit "+(score/10)+" fenêtres fermées.<br/><br/>Bravo, vous avez réussi à éliminer le virus. Vous pouvez maintenant fermer cette fenêtre, et double cliquer sur le fichier message.txt pour l'ouvrir, et le lire, sans faire apparaître de virus.<br/><br/>Si vous avez envie de battre votre score vous pouvez cliquer sur le bouton rejouer ci-dessous.");
 			}else {
 				$('#redirection').find('p').html("Vous avez obtenu un score de "+score+" points en 30 secondes, soit "+(score/10)+" fenêtres fermées.<br/><br/>Désolé, vous n'avez pas réussi à fermer assez de fenêtres, et le virus a endommagé le fichier. Veuillez rejouer pour tenter d'atteindre le score minimum requis, et débloquer la lecture du fichier.");
@@ -154,7 +155,7 @@ function makePop(){
 		}
 	}
 	if(cpt++<30){//30
-		setTimeout(makePop, 800);
+		setTimeout(makePop, 1100);
 	}
 }
 
@@ -175,6 +176,7 @@ function gestionClicks(){
 	//lancement des virus
 	$(document).on('click','#jouer, #rejouer',function(ev){
 		jeuLance = true;
+		$('#redirection .content').css("background", "url('http://www.enigma-tic.fr/images/xp/warning.jpg') 2% 10% no-repeat");
 		$('#options').css('z-index', '0');
 		$('.dialogue').fadeOut();
 		$('#info').fadeIn();

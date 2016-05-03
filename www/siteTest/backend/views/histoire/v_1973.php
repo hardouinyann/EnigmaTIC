@@ -21,11 +21,7 @@ if($_SESSION['succes']) {
 <div id="jeu">
     <div id="scene-1973-jeu">
       <div id='console'>
-        <div id='entete'>
-        </div>
-        <div id='contenu'>  
           <div id='contenu-1'>C:\Bureau > <span class='cursor-console'></span></div>        
-        </div>  
       </div> 
       <div id="feuille">
         <p><b>Utilisez les commandes ci-dessous avec la console pour parcourir les fichiers de l'ordinateur.</b><br/><br/>Vous devez ouvrir tous les fichier textes (avec comme extension .txt), jusqu'à ce que vous trouviez un fichier intéressant.<br/><br/>
@@ -35,7 +31,7 @@ if($_SESSION['succes']) {
           (<i>Exemple :  Tapez "cd recherches". Cette commande ouvrira le dossier qui s'appelle "recherches"</i>).<br/><br/>
           - <b>Pour revenir au dossier précédent</b>: Il faut taper "<b>cd ..</b>" (<i>ne pas oublier l'espace entre "cd" et les deux points ".." !</i>)<br/><br/>
           - <b>type</b> : permet d'afficher le contenu d'un fichier texte.(<i>Exemple : Tapez "<b>type recette.txt</b>". Cette commande affichera le contenu du fichier "Recette.txt"</i>).<br/><br/>
-           Si vous voyez afficher <b>&lt;REP&gt;</b> devant un mot, cela signifique que c'est un répertoire. Vous pouvez l'ouvrir avec la commande "cd". S'il n'y a pas ce mot devant un mot, c'est que vous devez l'ouvrir en utilisant la commande "type".<br/><br/>
+           Si vous voyez affiché <b>&lt;REP&gt;</b> devant un mot, cela signifique que c'est <b>un répertoire</b>. Vous pouvez l'ouvrir avec la commande "cd". <b>S'il n'y a pas ce mot devant un mot, c'est que vous devez l'ouvrir en utilisant la commande "type"</b>.<br/><br/>
          <b>Par exemple, tapez les commandes ci-dessous à la suite dans la console : </b><br/><br/>
          1) Tapez dir, puis pressez la touche entrée.<br/>
          2) Tapez cd "un nom de dossier" (<i>exemple : cd documents</i>). Pressez la touche entrée.<br/>

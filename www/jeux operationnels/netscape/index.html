@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Netscape</title>
+	<link rel="stylesheet" type="text/css" href="netscape.css">
+	<link rel="stylesheet" type="text/css" href="../dialogue/dialogue.css">
+</head>
+<body>
+	<div class="blocMenu">
+		<div class="menu">
+			<ul>
+				<li>Fichier
+					<ul>
+						<li onClick="afficherTexte(['Il n\'y a pas de fichier sur cet ordinateur','Je pense que ce que je cherche ce trouve sur internet.'],'petitFils')">Ouvrir depuis...</li>
+						<li onClick="afficherTexte(['Il n\'y a pas de fichier sur cet ordinateur','Je pense que ce que je cherche ce trouve sur internet.'],'petitFils')">Ouvrir un fichier...</li>
+						<li onClick="afficherTexte(['Je ne peux pas enregistrer n\'importe quoi sur l\'ordinateur de mon grand-père'],'petitFils')">Sauvegarder sous...</li>
+						<hr>
+						<li>Informations</li>
+						<li onClick="afficherTexte(['Aucune imprimante n\'est connectée à cet ordinateur'],'petitFils')">Imprimer</li>
+						<hr>
+						<li onClick="afficherTexte(['Retourner au QG?'],'petitFils')">Sortir</li>
+					</ul>
+				</li>
+				<li>Edition
+					<ul>
+						<li>Couper</li>
+						<li>Copier</li>
+						<li>Coller</li>
+					</ul>
+				</li>
+				<li>Vue
+					<ul>
+						<li onClick="reload()">Recharger</li>
+						<li>Charger Image</li>
+						<li onClick="reload()">Rafraîchir</li>
+					</ul>
+				</li>
+				<li>Go
+					<ul>
+						<li onClick="back()">Retour</li>
+						<li onClick="home()">Accueil</li>
+					</ul>
+				</li>
+				<li>Favoris
+					<ul  id="listeBookmarks">
+						<li onclick="addBookmarks()">Ajouter favoris</li>
+						<hr>
+						<li onclick="afficherAdresse('vlib')">www.vlib.com</li>
+						<li onclick="afficherAdresse('kli')">www.kli.com</li>
+						<li onclick="afficherAdresse('washingtonpost')">www.washingtonpost.com</li>
+						<li onclick="afficherAdresse('interface')">www.avancementdesinterfaces.com</li>
+						<li onclick="afficherAdresse('usatoday30')">www.usatoday30.com</li>
+						<li onclick="afficherAdresse('welcome')">www.welcome.com</li>
+						<li onclick="afficherAdresse('edition')">www.edition.com</li>
+						<li onclick="afficherAdresse('pmichaud')">www.pmichaud.com</li>
+						
+						
+					</ul>
+				</li>
+				<li>Options
+					<ul>
+						<li>Preferences...</li>
+						<hr>
+						<li>Show Toolbar</li>
+						<li>Show location</li>
+						<li>Auto Load Images</li>
+						<li>Show FTP File Information</li>
+					</ul>
+				</li>
+				<li>Directory
+					<ul>
+						<li>Welcome !</li>
+						<li>About the internet</li>
+						<li>Netscape Communications Corporate</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<hr>
+		<div class="tools">
+			<ul>
+				<li><img src="img/back.jpg" onClick="back()"></li>
+				<li><img src="img/forward.jpg" onClick="forward()"></li>
+				<li><img src="img/home.jpg" onClick="home()"></li>
+				<li><img src="img/reload.jpg" onClick="reload()"></li>
+				<li><img src="img/images.jpg" onClick="afficherTexte(['Les images sont déjà chargées'],'petitFils')"></li>
+				<li><img src="img/open.jpg" onClick="afficherTexte(['Il n\'y a pas de fichier sur cet ordinateur','Je pense que ce que je cherche ce trouve sur internet.'],'petitFils')"></li>
+				<li><img src="img/print.jpg" onClick="afficherTexte(['Aucune imprmante n\'est connectée à cet ordinateur'],'petitFils')"></li>
+				<li><img src="img/find.jpg"></li>
+				<li><img src="img/stop.jpg"></li>
+			</ul>
+		</div>
+		<hr>
+		<div class="location">
+			<p>Location:</p>
+			<input type="text" id="url" onkeydown="keyPressed(event)"/>
+		</div>
+	</div>
+
+	<div class="page">
+		<p id="pAdresse"></p>
+		<div id="index" class="siteAfficher">
+			<h2>Netscape Navigator</h2>
+			<h3>Version 1.0</h3>
+			<p>Copyright 1994 Netscape Communications Corporation, all right reserved</p>
+			<p>This software is subject to the license agreement set forth in the Licence file.</p>
+		</div>
+		<div id="interface">
+			<h2>Avancement</h2>
+			<p>Aujourd’hui, j’ai décidé de me focaliser sur les prémices et les premiers balbutiements des interfaces graphiques. Tout d’abord, j’aimerais vous rappeler la définition de la notion d’interface graphique. Les interfaces graphiques sont des dispositifs de dialogue hommes-machines, où l’interaction est rendue possible grâce à la simplification et l’ergonomie des éléments à manipuler (pictogrammes, pointage, fenêtrage, souris etc). J’espère que vous réussirez à garder en tête cette définition ! Passons donc aux choses sérieuses !</p>
+			<p>Pour débuter mes recherches sur ce thème, je me suis d’abord tourné vers les travaux d’Ivan Sutherland, un ingénieur informatique diplômé du MIT qui est considéré comme un des pionniers de la modélisation 3D, de la simulation visuelle et de l’interface graphique. En effet, il est à l’origine du Sketchpad, la première interface graphique de l’histoire de l’informatique. Il est considéré comme le précurseur des logiciels de conception assistée par ordinateur (CAO) et a ouvert la voie aux interfaces homme-machine (IHM).</p>
+			<img src="img/photoPanique.jpg" alt="Grand père paniqué"/>
+			<p>En 1963, le Sketchpad était une petite révolution. En effet, j’ai eu la chance de le tester lors d’un séminaire sur l’IHM des années plus tard… C’était un réel bijou technologique à l’époque de son invention. La machine possédait un logiciel de dessin interactif. Ainsi, l’utilisateur pouvait agir directement sur le périphérique, et ce de manière graphique. Sutherland avait pensé à tout. Le zoom, ou même les actions copier / coller sont directement issus de cette invention. Elle permettait même aux utilisateurs de facilement contrôler les propriétés géométriques du dessin, ce qui était une réelle nouveauté à l’époque! Il était aussi possible, par exemple, de régler la longueur d’un segment ou l’angle entre deux lignes. Les interfaces tactiles que l’on utilise aujourd’hui sont aussi inspirées du Sketchpad. Sauf que dans les années 60, on utilisait des écrans cathodiques et un stylet optique pour interagir avec la machine. Je suis certain que Thomas, mon petit-fils, serait surpris de voir que le téléphone qu’il utilise aujourd’hui puise son inspiration dans une vieille machine d’après-guerre ! </p>
+			<p>L’arrivée du Sketchpad en a surpris plus d’un à l’époque. Je n’avais que 12 ans et pourtant… J’entends encore mon père me faire l’éloge de cette interface interactive, et de sa prise en main quasi intuitive. Il m’avait d’ailleurs confié qu’une telle invention donnerait naissance à l’informatique grand public… Il avait raison ! </p>
+			<p>J’ai réussi à retrouver une vidéo sur le web, dans laquelle Sutherland lui-même fait une démonstration du Sketchpad. Je vous invite à la regarder de plus près, je suis sûr que cela vous intéressera ! Vous pouvez la retrouver ci-dessous :</p>
+			<iframe width="550" height="315" src="https://www.youtube.com/embed/USyoT_Ha_bA" frameborder="0" allowfullscreen></iframe>
+			
+		</div>
+		<div id="photoshop">
+			<h2>Photoshop</h2>
+			<p>Bonjour à tous ! Aujourd’hui, je vais aborder le sujet de Photoshop 1.0, un logiciel de retouche d’image édité par l’entreprise Adobe. Vous connaissez peut-être ce logiciel très populaire ? Si non, il faut savoir que son usage principal se concentre sur le traitement de photographies numériques, mais qu’il sert également à créer des images « ex-nihilo » (c’est à dire, en partant de « rien »). La première version de Photoshop fut révélée au grand jour en Février 1990. Avant de devenir Photoshop ce logiciel fut d’abord appelé « Image Pro ».</p>
+			<p>Sa création fut le fruit d’une collaboration entre un fabricant de scanner “Barneyscan” et Thomas Knoll, étudiant à l’université du Michigan. D’un point de vue des fonctionnalités, Photoshop pouvait littéralement transformer et colorer une image. Quant à son code source, il était en langage « Pascal ». Il est aujourd’hui possible de découvrir cette première version du logiciel au musée de l’histoire de l’ordinateur, en Californie.</p>
+			<p>Voici ce que Photoshop 1.0 pouvait offrir comme fonctionnalités à l’époque : </p>
+			<ul>
+				<li>un système de tri et d’organisation des fichiers permettant l’application d’une opération sur plusieurs fichiers simultanément</li>
+				<li>des outils de dessin en mode bitmap : pinceau, crayon, formes géométriques…</li>
+				<li>un outil de dessin vectoriel de formes géométriques libres (courbes de Bézier) : l’outil Plume</li>
+				<li>des outils de sélection de zones de travail (ou zones d’intérêt) : lasso, rectangle de sélection, sélection par plage de couleur…</li>
+				<li>des outils de copie, collage et duplication de zones de travail</li>
+				<li>des outils de manipulation de calques : par l’empilement de zones graphiques et l’utilisation de transparence et autres effets, on peut construire des photomontages complexes</li>
+				<li>des outils de manipulation de la palette de couleurs : changement de palette, réglages colorimétriques, de la luminosité, du contraste, de la saturation…</li>
+				<li>des filtres pour appliquer divers effets à des zones d’intérêt : textures, ombres, renforcement des contours, estampage, flou, etc.</li>
+			</ul>
+			<p>Je me souviens encore de mon voyage à la Silicon Valley où Thomas Knoll présenta cet outil plein de promesse et d’avenir… C’était une présentation exceptionnelle ! D’autant plus que si vous connaissez Photoshop, vous pouvez vous rendre compte ici que les outils de base du logiciel étaient tous déjà présents dans cette première version. Photoshop 1.0 était déjà très performant, et finalement les fonctionnalités principales du logiciel ont été mises en place dès le début, puis ont seulement été améliorées avec les versions suivantes. </p>
+			<p>Si vous voulez en découvrir plus sur l’utilisation et l’interface de cette première version de Photoshop, vous pouvez regarder la vidéo ci-dessous. Vous pouvez vous rendre compte ici que l’interface de base du logiciel a peu changé au cours des versions qu’a connu le logiciel. Seul l’esthétique a été améliorée, mais l’idée de base et les outils les plus importants étaient déjà en place dans cette version ! Incroyable n’est ce pas ? Je vous laisse en juger par vous même, avec cette vidéo de démonstration d’utilisation du logiciel !</p>
+		</div>
+		
+		<div id="vlib">
+			<iframe 
+			 src="https://vlib.org"
+			 width="100%" height="1000"
+			 sandbox>
+			</iframe>
+		</div>
+
+		<div id="washingtonpost">
+			<iframe 
+			 src="http://www.washingtonpost.com/wp-srv/projects/yrreview/year.htm"
+			 width="100%" height="1000"
+			 sandbox>
+			</iframe>
+		</div>
+
+		<div id="kli">
+			<iframe 
+			 src="http://www.kli.org"
+			 width="100%" height="1000"
+			 sandbox>
+			</iframe>
+		</div>
+
+		<div id="usatoday30">
+			<iframe 
+			 src="http://usatoday30.usatoday.com/sports/baseball/sbfant.htm"
+			 width="100%" height="1000"
+			 sandbox>
+			</iframe>
+		</div>
+
+		<div id="welcome">
+			<iframe 
+			 src="http://home.mcom.com/home/welcome.html"
+			 width="100%" height="1000"
+			 sandbox>
+			</iframe>
+		</div>
+
+		<div id="edition">
+			<iframe 
+			 src="http://edition.cnn.com/US/OJ/"
+			 width="100%" height="1000"
+			 sandbox>
+			</iframe>
+		</div>
+
+		<div id="pmichaud">
+			<iframe 
+			 src="http://www.pmichaud.com/toast/"
+			 width="100%" height="1000"
+			 sandbox>
+			</iframe>
+		</div>
+
+		<div id="introuvable">
+			<h2>Erreur 404 not found</h2>
+			<p>Page introuvable, l'adresse ne doit pas exister</p>
+		</div>
+
+
+
+		
+	</div>
+
+	<footer>
+		
+		<div id="pense">
+			<img src="img/petit-fils.png">
+			<div id="bulle">
+				<h3></h3>
+				<p></p>
+			</div>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="netscape.js"></script>
+	<script type="text/javascript" src="../dialogue/dialogue.js"></script>
+
+	
+</body>
+
+
+
+</html>
