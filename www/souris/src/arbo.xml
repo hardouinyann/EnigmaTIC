@@ -1,81 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<bureau name="Bureau">
-	<dossier name="corbeille" url="corbeille.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier-c1" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-			<sous-dossier name="ss-ss-dossier11" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-			<sous-dossier name="ss-ss-dossier12" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>			
-			<sous-dossier name="ss-ss-dossier13" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-		</sous-dossier>
-		<sous-dossier name="ss-dossier-c2" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-			<sous-dossier name="ss-ss-dossier21" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-			<sous-dossier name="ss-ss-dossier22" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-		</sous-dossier>
-
-		<sous-dossier name="ss-dossier-c3" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-			<sous-dossier name="ss-ss-dossier31" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-			<sous-dossier name="ss-ss-dossier32" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-		</sous-dossier>
-
-		<sous-dossier name="ss-dossier-c4" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-			<sous-dossier name="ss-ss-dossier41" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-			<sous-dossier name="ss-ss-dossier42" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
-			</sous-dossier>
-		</sous-dossier>
-	<fichier name="test.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
-		Ceci est le contenu de mon fichier test.<br />Deuxieme ligne de mon contenu. <br />Tellement intéressant que j'ai décidé de mettre une troisième ligne ultra-gia-téta-(téton mouahaha)-ment grande pour faire chier toi qui la lis en entière, et en même temps je peux tester si ca v aa la ligne solo ou non ! bisous bisous cordialement :D.
-	</fichier>		
-	</dossier>
-	<dossier name="panneau-de-configuration" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-	<dossier name="games" url="dossier.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-	<dossier name="poste-de-travail" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-	<fichier name="fichierText.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
-	</fichier>
-	<fichier name="fichierText2.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
-	</fichier>
-	<fichier name="fichierText2.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
-	</fichier>
-	<dossier name="panneau" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-	<dossier name="configuration" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-
-	<dossier name="configuration2" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
-		</sous-dossier>
-	</dossier>
-
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bureau name="Bureau">
+	<dossier name="corbeille" url="corbeille.png" date="02/02/2016" heure="09:12" etage="0">
+		<sous-dossier name="ss-dossier-c1" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+			<sous-dossier name="ss-ss-dossier11" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>
+			<sous-dossier name="ss-ss-dossier12" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>			
+			<sous-dossier name="ss-ss-dossier13" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>
+		</sous-dossier>
+		<sous-dossier name="ss-dossier-c2" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+			<sous-dossier name="ss-ss-dossier21" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>
+			<sous-dossier name="ss-ss-dossier22" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>
+		</sous-dossier>
+
+		<sous-dossier name="ss-dossier-c3" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+			<sous-dossier name="ss-ss-dossier31" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>
+			<sous-dossier name="ss-ss-dossier32" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>
+		</sous-dossier>
+
+		<sous-dossier name="ss-dossier-c4" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+			<sous-dossier name="ss-ss-dossier41" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>
+			<sous-dossier name="ss-ss-dossier42" url="dossier.png" date="02/02/2016" heure="09:12" etage="2">				
+			</sous-dossier>
+		</sous-dossier>
+	<fichier name="test.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
+		Ceci est le contenu de mon fichier test.<br />Deuxieme ligne de mon contenu. <br />Tellement intéressant que j'ai décidé de mettre une troisième ligne ultra-gia-téta-(téton mouahaha)-ment grande pour faire chier toi qui la lis en entière, et en même temps je peux tester si ca v aa la ligne solo ou non ! bisous bisous cordialement :D.
+	</fichier>		
+	</dossier>
+	<dossier name="panneau-de-configuration" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+	</dossier>
+	<dossier name="games" url="dossier.png" date="02/02/2016" heure="09:12" etage="0">
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+	</dossier>
+	<dossier name="poste-de-travail" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+	</dossier>
+	<fichier name="fichierText.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
+	</fichier>
+	<fichier name="fichierText2.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
+	</fichier>
+	<fichier name="fichierText2.txt" url='dossier.png' date="02/02/2016" heure="09:12" etage="1">
+	</fichier>
+	<dossier name="panneau" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+	</dossier>
+	<dossier name="configuration" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+	</dossier>
+
+	<dossier name="configuration2" url="pdt.png" date="02/02/2016" heure="09:12" etage="0">
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+		<sous-dossier name="ss-dossier" url="dossier.png" date="02/02/2016" heure="09:12" etage="1">
+		</sous-dossier>
+	</dossier>
+
 </bureau>

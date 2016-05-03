@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-02-07 10:12:04+0000\n"
+"PO-Revision-Date: 2016-02-09 15:18:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1477,10 +1477,6 @@ msgstr "Standaard editor"
 msgid "example: www.wordpress.org"
 msgstr "Bijvoorbeeld: www.wordpress.org"
 
-#: wp-admin/theme-install.php:77
-msgid "You can Search for themes by keyword, author, or tag, or can get more specific and search by criteria listed in the feature filter."
-msgstr "Het is mogelijk om te zoeken naar thema's bij sleutelwoord, auteur of tags. Daarnaast kun je specifieker zoeken door de criteria te gebruiken in het filter."
-
 #: wp-admin/themes.php:78
 msgid "The search for installed themes will search for terms in their name, description, author, or tag."
 msgstr "Het zoeken naar geïnstalleerde thema's maakt gebruikt van termen in de naam, omschrijving, auteur of tags van de thema's."
@@ -1492,6 +1488,10 @@ msgstr "Aantal gevonden thema's: %d"
 #: wp-admin/theme-install.php:78
 msgid "Alternately, you can browse the themes that are Featured, Popular, or Latest. When you find a theme you like, you can preview it or install it."
 msgstr "Als alternatief kun je bladeren door de thema's via Uitgelicht, Populair of Laatste. Wanneer je een thema leuk vindt kun je het bekijken of installeren."
+
+#: wp-admin/theme-install.php:77
+msgid "You can Search for themes by keyword, author, or tag, or can get more specific and search by criteria listed in the feature filter."
+msgstr "Het is mogelijk om te zoeken naar thema's op trefwoord, auteur of tag. Daarnaast kun je specifieker zoeken door de criteria te gebruiken in het filter."
 
 #: wp-admin/options-general.php:245
 msgid "enter a custom date format in the following field"
@@ -4202,7 +4202,7 @@ msgstr "Thema zoeken op basis van specifieke kenmerken."
 
 #: wp-admin/includes/theme-install.php:60
 msgid "Search for themes by keyword."
-msgstr "Zoeken naar thema's met sleutelwoorden."
+msgstr "Op trefwoord zoeken naar thema's."
 
 #: wp-admin/setup-config.php:172
 msgid "In all likelihood, these items were supplied to you by your Web Host. If you don&#8217;t have this information, then you will need to contact them before you can continue. If you&#8217;re all ready&hellip;"
@@ -4376,7 +4376,7 @@ msgstr "Link-URL"
 #: wp-admin/includes/plugin-install.php:267
 #: wp-admin/includes/theme-install.php:67
 msgid "Keyword"
-msgstr "Sleutelwoord"
+msgstr "Trefwoord"
 
 #. translators: 1: theme name, 2: version
 #: wp-admin/includes/class-wp-upgrader.php:1289
@@ -5179,10 +5179,6 @@ msgstr "Deze sidebar is niet langer beschikbaar en wordt nergens getoond op je s
 msgid "Removing and Reusing"
 msgstr "Verwijderen en opnieuw gebruiken"
 
-#: wp-admin/edit-tags.php:230
-msgid "You can assign keywords to your posts using <strong>tags</strong>. Unlike categories, tags have no hierarchy, meaning there&#8217;s no relationship from one tag to another."
-msgstr "Je kunt sleutelwoorden aan je berichten meegeven met gebruik van <strong>tags</strong>. Anders dan in categorie&#235;n hebben tags geen hi&#235;rarchie, dit betekent dat er geen relatie hoeft te zijn tussen de ene tag en de andere."
-
 #: wp-admin/widgets.php:66
 msgid "Missing Widgets"
 msgstr "Ontbrekende widgets"
@@ -5198,6 +5194,10 @@ msgstr "Je kunt groepen van links maken door gebruik te maken van Linkcategorie&
 #: wp-admin/media-new.php:50
 msgid "Clicking <strong>Select Files</strong> opens a navigation window showing you files in your operating system. Selecting <strong>Open</strong> after clicking on the file you want activates a progress bar on the uploader screen."
 msgstr "Klikken op <strong>Bestanden selecteren</strong> opent een navigatiescherm wat je bestanden van je computer toont. <strong>Open</strong> selecteren nadat je op het bestand geklikt hebt wat je wilt activeren, vervolgens wordt een voortgangsbalk op het uploadscherm getoond."
+
+#: wp-admin/edit-tags.php:230
+msgid "You can assign keywords to your posts using <strong>tags</strong>. Unlike categories, tags have no hierarchy, meaning there&#8217;s no relationship from one tag to another."
+msgstr "Je kunt trefwoorden aan je berichten meegeven met gebruik van <strong>tags</strong>. Anders dan in categorie&#235;n hebben tags geen hi&#235;rarchie, dit betekent dat er geen relatie hoeft te zijn tussen de ene tag en de andere."
 
 #: wp-admin/link-manager.php:53
 msgid "Deleting Links"
