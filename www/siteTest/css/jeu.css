@@ -368,7 +368,7 @@
 	    width: 120px;
 	    height: 100px;
 	    text-align: left;
-	    display: none;
+	    display: block;
 	}
 
 	.objets .blocNote {

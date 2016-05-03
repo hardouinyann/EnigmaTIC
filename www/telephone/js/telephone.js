@@ -18,7 +18,6 @@ const PAS= 5;
 		paper.setup(canvas);
 		paper.install(window);
 		carte= paper.project.importSVG("map3.svg", finChargementCarte);
-
 	}
 
 	document.addEventListener("DOMContentLoaded", finChargementPage);
@@ -26,7 +25,7 @@ const PAS= 5;
 
 
 	function deplacer(ev){
-
+		event.preventDefault();
 		if(ev.keyCode == 39){
 			paper.view.onFrame= function(){
 				voiture.position.x += PAS;
@@ -77,6 +76,7 @@ const PAS= 5;
 	function keypressHandler(ev){
 		var initX= voiture.position.x;
 		var initY= voiture.position.y;
+		ev.preventDefault();
 
 		/*for(var i=0; i<carte.children["hors-piste"].children.length; i++){
 
@@ -104,7 +104,8 @@ const PAS= 5;
 			if(voiture.bounds.intersects(carte.children["antennes"].children["reseau3"].bounds)){
 				paper.view.detach('frame');
 				carte.children["enAppel"].visible= true;
-				alert("sur atenne");
+				alert("sur antenne");
+				ev.preventDefault();
 				changerEtape("ami");
 				return;
 			}
@@ -116,6 +117,7 @@ const PAS= 5;
 				carte.children["enAppel"].visible= false;
 				alert("sur amis");
 				changerEtape("collegue");
+				ev.preventDefault();
 				return;
 			}
 		}

@@ -155,7 +155,7 @@ function makePop(){
 		}
 	}
 	if(cpt++<30){//30
-		setTimeout(makePop, 1100);
+		setTimeout(makePop, 1000);
 	}
 }
 

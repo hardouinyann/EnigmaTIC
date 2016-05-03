@@ -1,8 +1,6 @@
 var carte;
 var canvas;
 
-
-
 	function finChargementPage(){
     	console.log("chargé");
     	

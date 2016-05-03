@@ -132,7 +132,7 @@ class c_accueil extends Controller{
 
         session_destroy();
 
-        header('Location: http://www.enigma-tic.fr'); 
+        header('Location: '.WEBROOT); 
 
     }
 

@@ -11,15 +11,6 @@
 		</div>
 		<img src="<?php echo PICTURES_PATH?>bg-home.jpg" class="background" alt="background" />
 	</div>
-    <!-- Bloc Note de Thomas -->
-    <div class="bloc-note">
-      <div class="close-note"></div>
-      <form id="notes" action="" method="POST">
-        <textarea autocomplete="off" autofocus rows="22">Ceci est votre bloc note. Vous pouvez l'utiliser pour noter tout ce dont vous avez besoin. Vous pouvez l'afficher à tout moment dans le jeu, le contenu sera toujours le même, et vous pouvez l'éditer comme bon vous semble. 
-
-La sauvegarde du texte de ce bloc note s'enregistre automatiquement quand vous le fermez (en cliquant sur la croix en haut à gauche du bloc note). Cliquez directement sur ce texte pour le modifier.</textarea>
-      </form>
-    </div>
 	<header>
 		<?php include_once(VIEWS_PATH."layout/lateral.php") ?>
 		<?php include_once(VIEWS_PATH."layout/header.php") ?>
