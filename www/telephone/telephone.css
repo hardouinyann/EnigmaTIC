@@ -1,0 +1,8 @@
+body{
+	margin:0;
+	overflow: scroll;
+}
+
+body>div{
+	max-height: 100%;
+}

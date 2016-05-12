@@ -1,3 +1,4 @@
+<?php if(!empty($_SESSION['user'])) header('Location: '.WEBROOT); ?>
 <style>
     .fa-question-circle, .fa-arrows-alt {
         display: none;

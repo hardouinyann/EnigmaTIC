@@ -3,6 +3,7 @@
 	var tabRepliquesScene2 = ["Hum... J'ai essayé de rappeler grand-père, mais il ne répond toujours pas.", "Je vais lui faire une visite surprise ! J'ai un ou deux jours à prendre, je vais en profiter pour passer le week-end avec lui!"];
 	var tabRepliquesScene3 = ["<i>(Deux jours plus tard...</i>). Me voilà chez lui ! Allons voir s'il est là !", "J’ai sonné... mais il ne répond-pas. Il n'est peut-être pas là... Mais ça m'étonnerait. Je vais essayer d'ouvrir la porte quand même. ","Elle s'ouvre ! Je lui ai pourtant dis plusieurs fois de faire attention et de verrouiller sa porte d'entrée ! Quel tête de mule! ", "Aller, je rentre ! De toute façon je parie qu'il doit encore être occupé dans son bureau, et qu'il n’a pas entendu la sonnette."];
 
+
 /* REPLIQUES BUREAU DE LEOPOLD */
 	var tabRepliquesBureau = ["Tiens c'est bizarre... J'ai fouillé toute la maison, mais grand-père n'est pas là ! Il sort rarement de chez lui pourtant.", "Je commence un peu à m'inquiéter ! Je suis sans nouvelles de lui depuis plus d'une semaine !", "Je vais chercher dans son bureau pour voir s'il n'a pas laissé un message, ou quelque chose qui m'indiquerait où il pourrait se trouver. Il est peut-être simplement sorti en ville...", "Je suis sûr que je trouverais des indices ici. Il y passe tout son temps, à travailler sur ses sujets de recherches. "];
 	var tabRepliqueCadrePhoto = ["C'est un cadre avec une photo de grand-père et moi ! Je me souviens, nous l'avons prise quand nous sommes allés en vacances dans le sud de la France !", "On avait loué un gîte très atypique, et on avait fait de la randonnée ! C'était vraiment sympa !"];
@@ -14,36 +15,48 @@
 	var tabRepliqueMachine = ["J'ai ouvert le rideau... Il y a une grande pièce vide derrière. On dirait qu'il y a un cadran au fond.","Je vais entrer dans la pièce et appuyer dessus. Je me demande ce que c'est... "];
 	var tabRepliqueMachineDebloquee = ["Pour effectuer un nouveau voyage dans le temps, je dois sélectionner une date sur le cadran, et appuyer sur le bouton à côté du choix de la date."];
 
+
 /* REPLIQUES 1973 */
 	var tabRepliquesScene1973 = ["Whooooh ! Mais... mais... que s'est-il passé ?!!! Où suis-je ! Je n'aurais peut-être pas du entrer dans cette pièce, et appuyer sur le bouton du cadran ! ","On dirait que j'ai été... téléporté avec ce cadran ! Ce bureau a l'air très ancien ! Mais... Je reconnais cet ordinateur sur la table ! C'est un modèle appelé Xerox Alto !", "On dirait que j'ai fait un voyage dans le temps ! Le Xerox Alto a fait son apparition en 1973, et aujourd'hui il n'existe que très peu d'exemplaires de celui-ci. Voyons voir s'il fonctionne."];
 	var tabRepliquesScene21973 = ["Voilà j'ai allumé l'ordinateur ! Je me retrouve sur un programme d'invite de commandes, ou Shell comme on dit en anglais.", "Je vais essayer de l'utiliser pour regarder s'il y a des fichiers intéressants sur l'ordinateur. Je n'ai que ça à faire de toute façon, puisque je ne sais pas comment retourner dans le bureau de grand-père...", "Peut-être que je trouverais quelque chose qui m'aidera à y retourner... On ne sait jamais. Voyons voir ce que je peux trouver !"];
 	var tabRepliquesScene31973 = ["&Ccedil;a fait longtemps que je n'ai pas utilisé une console d'invite de commandes comme celle-là, mais je me souviens toujours des commandes principales !", "Je vais les noter sur un bout de papier. (<i>Thomas déchire une page de son bloc note, et écrit dessus</i>). Voilà, je ne les ai pas toutes notées, seulement celles qui me serviront pour parcourir les fichiers de l'ordinateur."," Je vais poser mon bout de papier à côté de l'ordinateur, comme ça je me souviendrais quelles commandes utiliser."];
 	var tabRepliquesSceneFin1973 = ["J'ai réussi à revenir dans le présent ! Il semblerait vraiment que ce soit une machine à voyager dans le temps...", "Je vais pouvoir faire d'autres voyages temporels avec la machine maintenant. Je peux donc me rendre en 1982, en 1987, en 1995, ou bien en 2002.", "Je devrais probablement visiter toutes ces dates, et voir si je peux en apprendre plus sur les travaux de grand-père. Cette machine m'intrigue vraiment !", "Pour réutiliser la machine, je dois retourner dans la petite pièce derrière le rideau, choisir une date sur le cadran, et appuyer sur le bouton pour effectuer le voyage temporel."];
+<<<<<<< HEAD:www/js/script-jeu.js
+=======
+
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 
 /* REPLIQUES 1982 */
 	var tabRepliquesScene1982 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Voyons voir ce qu'on peut trouver ici !"];
 
+
 /* REPLIQUES 1995 */
 	var tabRepliquesScene1995 = ["Me voilà en 1995 ! J'ai encore un peu de mal à m'y faire à ces voyages dans le temps...", "Cette pièce semble un peu ancienne, mais le mobilier est très luxueux ! Alors, qu'est ce qu'on peut trouver ici ?", "Je vois qu'il y a un ordinateur sur le bureau. Je vais essayer de l'utiliser, et je vais regarder ce que je peux trouver dessus."];
+
 
 /* REPLIQUES 2002 */
 	var tabRepliquesScene2002 = ["Je suis arrivé en 2002 ! Cette date ne me semble pas si lointaine, et pourtant c'est un vieil ordinateur que je vois sur le bureau là.", "C'est fou comme les évolutions des nouvelles technologies se sont faîtes de plus en plus rapidement au fil des années.","Il n'y a pas l'air d'y avoir grand chose d'intéressant dans cette pièce, à part cet ordinateur. Je vais l'allumer pour voir ce qu'il y a dessus."];
 	var tabRepliquesScene2002Ordi = ["Voilà j'ai allumé l'ordinateur ! Il fonctionne avec le système d'exploitation Windows XP.","Ce système, développé par Microsoft est sorti le 25 octobre 2001. Bien qu'il ait été très populaire pendant plusieurs années, aujourd'hui il est devenu obsolète.","Tiens, il y a un fichier message.txt sur le bureau.<br/>Je devrais peut-être l'ouvrir..."];
 	var tabRepliquesScene2002OrdiFin = ["J'ai ouvert le fichier texte, un message s'est affiché à l'écran ! "];
 
+
 /* REPLIQUES 2030 */
 	var tabRepliquesScene2030 = ["Me voilà dans le futur ! Je suis en 2030 ! Tiens il y a un robot. Bonjour !", "Bonjour Thomas ! Comment vas-tu ? J'attendais ta visite ! J'ai un message à  te délivrer, mais pour le récupérer tu devras réussir les jeux que je te propose, d'accord ?", "Vous êtes un robot farceur dis donc ! D'accord, très bien ! Je suis prêt pour les casses-têtes ! "];
 
 	var tabPremierMessageRecup = ["Tiens ! Mais... c'est un message de grand-père ! C'est bizarre, on dirait qu'il n'est pas complet. Et je me demande comment il a atterit là...","Eh ! Mais maintenant que j'y pense ! Dans le fichier que j'ai lu lors de mon voyage en 1973, il y avait quelque chose à propos d'un message d'alerte enregistré dans la machine.","Mais j'ai également lu quelque chose à propos du message qui aurait pu subir une distorsion temporelle, et qui ne serait donc pas bien réceptionné avec la machine dans le présent.","Mais alors... Grand-père doit être bloqué dans une époque ! Je dois faire tout mon possible pour le retrouver !","Je pense qu'il doit y avoir d'autres bouts de son message, répartis dans les dates que je peux visiter avec la machine.","Je dois donc faire en sorte de les récupérer, pour retrouver à quelle date il est bloqué, et le ramener dans le présent !"]
 
+
 /* VARIABLES GLOBALES */
 	var texte, actual_texte, nb_msg, cursor, cursorCons;
 	var messageAideBureau = '';
+	var site = "http://127.0.0.1/projects/EnigmaTIC/www/siteTest/";
 	var messageAide1973 = "Il semblerait que vous avez été transporté dans un autre espace-temps... Utilisez la <strong>console de commande</strong> de l'ordinateur pour voir s'il contient des fichiers intéressants. Peut-être que vous trouverez quelque chose qui pourrait vous aider à revenir dans le bureau de Léopold. <br/><br/>Pour comprendre comment l'utiliser, lisez la <strong>note de Thomas</strong>. Vous y trouverez les commandes qui vous permettront de parcourir les fichiers et dossiers de l'ordinateur. Testez et utilisez ces commandes pour réussir à naviguer dans l'arborescence de l'ordinateur, jusqu'à ce que vous trouviez un fichier utile.";
 	var nom = "Thomas";
 	var j=0;
 	var etatDuJeu;
 	var messageAide, textesAAfficher;
+
+
 
 /* QUEL SCENE EN COURS */
 	if ($('#chapitre-1').length == 1) {
@@ -53,6 +66,7 @@
 		$('#passer-cinematique').click(passerCinematique);
 		$('.menu').animate({ 'top' : '15%', 'left' : '5%', 'opacity' : '0.9'},1000);
 		$('#options').animate({ 'top' : '15%', 'opacity' : '0.9'},1000);
+		$('#help-txt').html(messageAide);
 		etatDuJeu = "chapitre1scene1";
 		textesAAfficher = tabRepliquesScene1;
 	}else if($('#bureau-leopold').length == 1) {
@@ -61,7 +75,11 @@
 			console.log("toto");
 			//ca va envoyer la requete de mettre dejaVu a 1
 			$.post(
+<<<<<<< HEAD:www/js/script-jeu.js
 		        'http://www.enigma-tic.fr/histoire/bureau',
+=======
+		        site + 'histoire/bureau',
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 		        'justSawDesktop=ok',
 		        function(data){
 		        	console.log("done");
@@ -137,6 +155,8 @@
 		textesAAfficher = tabRepliquesScene2030;
 	}
 
+
+
 /* GESTION EVENEMENTS BUREAU */
 
 	if($('#dial1-vu').length == 1) {
@@ -157,7 +177,11 @@
 	function finShellPost (){
 		// Update Shell Vu
 			$.post(
+<<<<<<< HEAD:www/js/script-jeu.js
 			    'http://www.enigma-tic.fr/histoire/bureau',
+=======
+			    site + 'histoire/bureau',
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 			    'finShell=ok',
 			    function(data){
 			     },
@@ -174,7 +198,11 @@
 	afficherTexte(textesAAfficher, nom);
 
 	function passerCinematique (){
+<<<<<<< HEAD:www/js/script-jeu.js
 		$(location).attr('href',"http://www.enigma-tic.fr/accueil/inscription");
+=======
+		$(location).attr('href', site + "accueil/inscription");
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 	}
 
 /* FONCTION POUR AFFICHER / CACHER LE BLOC NOTE */
@@ -188,7 +216,17 @@
 		$('#darker').fadeOut(500);
 		$('.bloc-note').animate({ 'top' : '-200%' }, 500);
 		$('.bloc-note').removeClass('active');
+		console.log("ajax bloc note");
+		$.post(
+			site + 'histoire/updateBlocNote',
+			'text='+$('#notes textarea').val(),
+			function(data){
+				console.log(data);
+			 },
+			'json'
+		);
 	}
+
 
 /* ACTIONS UTILISATEUR DANS LE BUREAU */
 
@@ -273,7 +311,11 @@
 			});
 			$('#launchMachine').click(function () {
 				var laDate = $("#dates option:selected").val();
+<<<<<<< HEAD:www/js/script-jeu.js
 				var url = "http://www.enigma-tic.fr/histoire/jeu/" + laDate;
+=======
+				var url = site + "histoire/jeu/" + laDate;
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 				if(laDate != '-') $(location).attr('href',url);
 			});
 			$('#darker').fadeIn(500);
@@ -348,7 +390,11 @@
 			afficherTexte(textesAAfficher, nom);
 		}else if(etatDuJeu == "chapitre1scene3" && j=="3") {
 			$('.dialogue').hide();
+<<<<<<< HEAD:www/js/script-jeu.js
 			$(location).attr('href',"http://www.enigma-tic.fr/accueil/inscription");
+=======
+			$(location).attr('href', site + "accueil/inscription");
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 		}else if(etatDuJeu == "scene1973" && j=="2") {
 			j=0;
 			etatDuJeu = "scene1973-zoom"; 
@@ -380,7 +426,11 @@
 		}else if(etatDuJeu == "scene1973-fin" && j=="3"){
 			// Update Progression
 			$.post(
+<<<<<<< HEAD:www/js/script-jeu.js
 			    'http://www.enigma-tic.fr/histoire/jeu/1973',
+=======
+			    site + 'histoire/jeu/1973',
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 			    'progression=ok',
 			      function(data){
 			      },
@@ -392,10 +442,17 @@
 			$('#end-1973').fadeIn();
 		}else if(etatDuJeu == "finShell" && j=="3") {
 			$.post(
+<<<<<<< HEAD:www/js/script-jeu.js
 			    'http://www.enigma-tic.fr/histoire/bureau',
 			    'finShellVu=ok',
 			    function(data){
 			       $(location).attr('href',"http://www.enigma-tic.fr/");
+=======
+			    site + 'histoire/bureau',
+			    'finShellVu=ok',
+			    function(data){
+			       $(location).attr('href', site);
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 			     },
 			     'html'
 			   );
@@ -406,7 +463,11 @@
 			$('#interactive').fadeIn(1000);
 			setTimeout(function () { j=0; }, 500);
 		}else if(etatDuJeu == "bureau-leopold-tableau" && j=="0") {
+			$('#darker').fadeOut(500);
 			$('.dialogue').fadeOut(250);
+			$('.dialogue').css('z-index', '3');
+			$('#zoom-objets-bureau').fadeOut(250);
+			$('#tableau, #tableau-liege').fadeOut(500);
 			setTimeout(function () { j=0; }, 500);
 		}else if(etatDuJeu == "bureau-leopold-cadre" && j=="1"){
 			$('#darker').fadeOut(500);
@@ -428,7 +489,11 @@
 			$('#darker').fadeOut(500);
 			setTimeout(function () { j=0; }, 500);
 		}else if (etatDuJeu == "bureau-leopold-machine" && j=="1") {
+<<<<<<< HEAD:www/js/script-jeu.js
 			$(location).attr('href',"http://www.enigma-tic.fr/histoire/jeu/1973");
+=======
+			$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/siteTest/histoire/jeu/1973");
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 		}else if(etatDuJeu == "scene1982" && j=="1") {
 			$('#top-bar').fadeOut(500);
 			$('#bottom-bar').fadeOut(500);
@@ -465,7 +530,11 @@
 			$('#form').show();
 			//Update nb Message Recuperer
 			$.post(
+<<<<<<< HEAD:www/js/script-jeu.js
 			    'http://www.enigma-tic.fr/histoire/jeu/2002',
+=======
+			    site + 'histoire/jeu/2002',
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 			    'nouveauMessage=ok',
 			      function(data){
 			       console.log(data);
@@ -474,7 +543,11 @@
 			 );
 			// Update Progression
 			$.post(
+<<<<<<< HEAD:www/js/script-jeu.js
 			    'http://www.enigma-tic.fr/histoire/jeu/2002',
+=======
+			    site + 'histoire/jeu/2002',
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/js/script-jeu.js
 			    'progression=ok',
 			      function(data){
 			       console.log(data);
@@ -495,7 +568,7 @@
 			afficherTexte(textesAAfficher, nom);
 		}else if(etatDuJeu == "scene2020" && j=="2") {
 			$('.dialogue').fadeOut();
-			$(location).attr('href',"http://127.0.0.1/EnigmaTIC/www/robot");
+			$(location).attr('href',"http://127.0.0.1/projects/EnigmaTIC/www/robot");
 		}else {
 			j++;
 			afficherTexte(textesAAfficher, nom);
@@ -553,5 +626,8 @@ $(document).ready(function(){
 		});
 	}
 
+
+
 	
+
 		

@@ -11,6 +11,7 @@
 		</div>
 		<img src="<?php echo PICTURES_PATH?>bg-home.jpg" class="background" alt="background" />
 	</div>
+<<<<<<< HEAD:www/backend/views/layout/jeu.php
     <!-- Bloc Note de Thomas -->
     <div class="bloc-note">
       <div class="close-note" id="form_bloc_note"></div>
@@ -18,6 +19,8 @@
         <textarea autocomplete="off" autofocus rows="22"><?php  echo (!empty($_SESSION['bloc_note'])) ? $_SESSION['bloc_note'] :  $this->debug($_SESSION['bloc_note']); ?></textarea>
       </form>
     </div>
+=======
+>>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/backend/views/layout/jeu.php
 	<header>
 		<?php include_once(VIEWS_PATH."layout/lateral.php") ?>
 		<?php include_once(VIEWS_PATH."layout/header.php") ?>
