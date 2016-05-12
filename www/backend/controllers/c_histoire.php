@@ -1,14 +1,9 @@
 <?php
-
-
-
 /**
  * Class c_histoire
  */
 
 class c_histoire extends Controller{
-
-
 
     //variables à utiliser : categories, blocks, calendar, partners
 
@@ -25,49 +20,35 @@ class c_histoire extends Controller{
     public function jeu($id){
 
         if(empty($_SESSION['user'])){
+
             header('Location: '.WEBROOT);
+
         }else if(!empty($id)){
-            $blocNote = $this->getModel('user')->getUserBlocNote($_SESSION['user']->id_utilisateur);
-            $this->dataForView->blocNote = !empty($blocNote) ? $blocNote : "" ;
             $res = $this->getModel('jeu')->getFic($id);
+
             if(!empty($res[0]->nom_fic)){
                 $this->render('v_'.$res[0]->nom_fic);
-                if(!empty($_SESSION['user'])){ 
-
-                    if(!empty($_POST['nouveauMessage'])) {
-                        $var = $this->getModel('user')->updateNbMessageRecup($_SESSION['user']->id_utilisateur);
-                        die();
-                    }
-
-                    if(!empty($_POST['progression'])) {
-                        $var = $this->getModel('user')->updateProgression($_SESSION['user']->id_utilisateur);
-                        die();
-                    }
-
-                }
             }else{
-                 header('Location: histoire/bureau');
+                 header('Location: '.WEBROOT.'histoire/bureau');
             }
         }else{
-
-            header('Location: histoire/bureau');
-
+           header('Location: '.WEBROOT.'histoire/bureau');
         }                
-
     }
 
 
-
     public function bureau(){
-        
+
         if(!empty($_SESSION['user'])){
-            // LE NOMBRE DE MESSAGE RECUPERE
-            $nbMessageRecupere = $this->getModel('user')->getNbMessageRecup($_SESSION['user']->id_utilisateur);  
+            // Bloc Note Utilisateur
             $blocNote = $this->getModel('user')->getUserBlocNote($_SESSION['user']->id_utilisateur);
             $this->dataForView = new stdClass();
-            $_SESSION['bloc_note'] = !empty($blocNote) ? $blocNote[0]->bloc_note : "" ;
+            $this->dataForView->blocNote = $blocNote[0]->bloc_note; 
+            $_SESSION['blocNote'] = $this->dataForView->blocNote;
 
-            
+            // ON RECUPERE LE NOMBRE DE MESSAGE RECUPERE
+            $nbMessageRecupere = $this->getModel('user')->getNbMessageRecup($_SESSION['user']->id_utilisateur);
+
             if(!empty($nbMessageRecupere)){
                 $this->dataForView->nbMessageRecupere = ($nbMessageRecupere[0]->nb_message_recup);
                 $_SESSION['nbMessageRecupere'] = $this->dataForView->nbMessageRecupere;
@@ -93,17 +74,21 @@ class c_histoire extends Controller{
                     $message = "...en 2050 ! J'ai besoin de toi pour retourner en notre temps ! Viens me chercher!";
                 break; 
                 }
+
             $_SESSION['messageAAfficher'] = $message;
 
             $id_jeux = $this->getModel('jeu')->getIdJeux();
 
-            $succes = $this->getModel('jeu')->getSucces($_SESSION['user']->id_utilisateur);
+            $succes = $this->getModel('jeu')->getSucces($_SESSION['user']->id_utilisateur);  
+
+            $this->dataForView = new stdClass();
             $this->dataForView->succes = array();
-           
+
             foreach($succes as $s){
                 if($s->id_jeu) array_push($this->dataForView->succes, array("date"=>$s->id_jeu, "nom"=>$s->nom)  );
             }
 
+            // POUR AFFICHER LES SUCCES
             if(sizeof($this->dataForView->succes) != 0) {
                 for($i=0 ; $i <sizeof($this->dataForView->succes) ; $i++){
                     $_SESSION['succes'][$i] = $this->dataForView->succes[$i]['date']; 
@@ -117,7 +102,8 @@ class c_histoire extends Controller{
             // $this->debug($var);
             die();
         }elseif(!empty($_POST['validation_jeu'])){
-        //bouton de redirection a la fin des jeu sera un petit form en fait
+
+            //bouton de redirection a la fin des jeu sera un petit form en fait
             $score = !empty($_POST['score']) ? $_POST['score'] : null;
             $datas = array( 'id_partie' =>'DEFAULT',
                     'id_utilisateur' => $_SESSION['user']->id_utilisateur,
@@ -126,25 +112,35 @@ class c_histoire extends Controller{
                     'score' => $score,
                     'id_jeu' => $_POST['id_jeu']
                 );
-            
+
             $tableToCall = "partie";
             $jeuValide = $this->getModel('jeu')->gameComplete($datas, $tableToCall);
             $this->dataForView = $jeuValide;
-            header('Location: http://www.enigma-tic.fr/siteTest/');
+            if(!empty($_POST['nouveauMessage'])) {
+                $var = $this->getModel('user')->updateNbMessageRecup($_SESSION['user']->id_utilisateur);
+            }
+            
+            if(!empty($_POST['progression'])) {
+                $var = $this->getModel('user')->updateProgression($_SESSION['user']->id_utilisateur);
+            }
+            header('Location: '.WEBROOT);
         }
+
 
         if(!empty($_POST['finShellVu'])){
             $var = $this->getModel('user')->updateShellFini($_SESSION['user']->id_utilisateur);
             die();
         }
 
+
         if(!empty($_POST['finShell'])){
-                $var = $this->getModel('user')->updateShellCinematique($_SESSION['user']->id_utilisateur);
-                die();
-            }
+            $var = $this->getModel('user')->updateShellCinematique($_SESSION['user']->id_utilisateur);
+            die();
+        }
+
+
 
         if(!empty($_SESSION['user'])){
-
             $dejaVu = $this->getModel('user')->getDejaVuBureau($_SESSION['user']->id_utilisateur);
             $shellFinDialogue = $this->getModel('user')->getShellFini($_SESSION['user']->id_utilisateur);
 
@@ -154,28 +150,26 @@ class c_histoire extends Controller{
                 $_SESSION['bureauDejaVu'] = $this->dataForView->dejaVu; 
             }   
 
+
             if(!empty($shellFinDialogue)){
                 $this->dataForView->shellFinDialogue = ($shellFinDialogue[0]->dial_shell_fin == 1) ? true : false;
+
                 $_SESSION['shellFinDialogue'] = $this->dataForView->shellFinDialogue; 
             }       
-
         }
+
 
         if(empty($_POST['justSawDesktop']))
             $this->render('v_bureau');
     }
 
 
-
     public function preambule(){
-
-        $this->render('v_preambule');
-
+       $this->render('v_preambule');
     }
 
     public function updateBlocNote(){
         if(!empty($_POST) && !empty($_SESSION['user'])){
-            print_r($_POST)."<br>";
             $update = $this->getModel('user')->updateBlocNote($_SESSION['user']->id_utilisateur, $_POST['text']);
             echo json_decode($update);
         }
