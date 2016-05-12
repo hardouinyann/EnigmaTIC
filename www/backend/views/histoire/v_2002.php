@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="<?php echo STYLE_PATH?>style-souris.css" type="text/css" media="screen" />
 <?php 
 $dejaValide = "false";
-if($_SESSION['succes']) {
-    for($i=sizeof($_SESSION['succes']); $i >= 0 ; $i--) {
+if(!empty($_SESSION['succes'])) { 
+    for($i=sizeof($_SESSION['succes']) - 1; $i >= 0 ; $i--) {
         if($_SESSION['succes'][$i] == "2002") {
             $dejaValide = "true";
         }
@@ -54,14 +54,14 @@ if($_SESSION['succes']) {
             <div id="info">
                 <div id="temps">Temps restant : 30s</div>
                 <div id="score">Score : 0</div>         
-                <div id="score">Score à atteindre : 220 points</div>
+                <div id="score">Score à atteindre : 250 points</div>
             </div>
             <div id="virus" class="fenetreintro selectedFenetre ui-draggable">
                 <div class="header selectedHeader ui-draggable-handle">
                     <b style="color:white;margin-left:2%;margin-top:50%">Virus détecté !</b>
                 </div>
                 <div class="content">
-                    <p>Attention, il semblerait que ce fichier est infecté. Fermez les fenêtres qui vont apparaître à l'écran, le plus vite possible, pour supprimer le virus, et pour pouvoir ouvrir le fichier.<br/><br/>Vous avez 30 secondes pour obtenir un score minimum de <b>250 points</b>. Si vous réussissez à atteindre le score minimum, vous aurez empêché le virus de se propager, et vous pourrez accéder au bureau de l'ordinateur. Sinon, vous devrez recommencer une partie, jusqu'à ce que vous réusissiez à atteindre le <b>score minimum de 250 points</b>. A vous de jouer !
+                    <p>Attention, il semblerait que ce fichier soit infecté. Fermez les fenêtres qui vont apparaître à l'écran, le plus vite possible, pour supprimer le virus, et pour pouvoir ouvrir le fichier.<br/><br/>Vous avez 30 secondes pour obtenir un score minimum de <b>250 points</b>. Si vous réussissez à atteindre le score minimum, vous aurez empêché le virus de se propager, et vous pourrez accéder au bureau de l'ordinateur. Sinon, vous devrez recommencer une partie, jusqu'à ce que vous réusissiez à atteindre le <b>score minimum de 250 points</b>. A vous de jouer !
                     </p>
                     <div>
                         <button id="jouer">Jouer</button>
@@ -83,11 +83,13 @@ if($_SESSION['succes']) {
                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                         <div>
-                            <button id="rejouer">Rejouer</button>
+                            <button id="rejouer">Rejouer</button><button id="ouvrir">Ouvrir le fichier</button>
                         </div>
                     </div>
             </div>
                 <form id="form" class="formDejaVu" action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
+                    <input type='hidden' name="nouveauMessage" value="ok"/>
+                    <input type='hidden' name="progression" value="ok" />
                     <input type='hidden' name="id_jeu" value="2002"/>
                     <input type="hidden" name="score" id="scoreVal" value=""></input>
                     <input type='submit' name='validation_jeu' value='Enregistrer le score et retourner en 2016 avec la machine'/>

@@ -6,23 +6,19 @@
         <div class="close"></div>
         <h2>Vous avez besoin d'aide ? </h2>
         <p id="help-txt">Vous voilà dans le bureau de <strong>Léopold</strong>, le grand-père de Thomas. Recherchez dans son bureau si vous pouvez trouver des choses intéressantes. Cliquez sur les (+) que vous pouvez voir dans le décor pour avoir plus d&apos;informations sur les différents objets qui sont présents dans ce bureau. Vous pourrez ainsi peut-être découvrir où se trouve Léopold...
-        	<!-- <br/><br/>En bas de la page, vous pouvez cliquer sur votre <strong>bloc note personnel</strong>, pour y écrire tout ce dont vous avez besoin, tout au long du jeu. Vous pouvez mettre le jeu en plein écran en cliquant sur le bouton avec les coins rectangulaires, en haut à droite. A côté, vous pouvez aussi cliquer sur l'icône "utilisateur" afin d'accéder à votre profil, si vous souhaitez modifier les informations de votre compte. --></p>
+        <br/><br/>En bas de la page, vous pouvez cliquer sur votre <strong>bloc note personnel</strong>, pour y écrire tout ce dont vous avez besoin, tout au long du jeu. Vous pouvez mettre le jeu en plein écran en cliquant sur le bouton avec les coins rectangulaires, en haut à droite. <!-- A côté, vous pouvez aussi cliquer sur l'icône "utilisateur" afin d'accéder à votre profil, si vous souhaitez modifier les informations de votre compte. --></p>
     </div>
 </div>
-<<<<<<< HEAD:www/backend/views/histoire/v_bureau.php
-
-=======
-<div class="objets">
-    <a><img class="blocNote" src="<?php echo PICTURES_PATH?>bloc-note.png" alt="Bloc Note Jeu" /></a>
-</div>
-<div class="bloc-note">
+<div id="jeu">
+	<div class="objets">
+      <a><img class="blocNote" src="<?php echo PICTURES_PATH ?>bloc-note.png" alt="Bloc Note Jeu" /></a>
+    </div>
+    <div class="bloc-note">
       <div class="close-note" id="form_bloc_note"></div>
       <form id="notes" action="" method="POST">
-        <textarea autocomplete="off" autofocus rows="22"><?php echo($_SESSION['blocNote']); ?></textarea>
+        <textarea autocomplete="off" id="content-bloc" autofocus rows="22"><?php echo($_SESSION['blocNote']); ?></textarea>
       </form>
-</div>
->>>>>>> 39201451cbb8c72914c35a09182a89eb53ef7a26:www/siteTest/backend/views/histoire/v_bureau.php
-<div id="jeu">
+	</div>
 	<?php if($_SESSION['shellFinDialogue']) { 
 		echo('<span id="shell-fini"></span>'); }
 		if(!empty($_SESSION['succes'])) { 
@@ -39,9 +35,7 @@
 				<div class="close-machine"><i class="fa fa-times" aria-hidden="true"></i> Fermer cette fenêtre</div>
 			</div>');
 	 }?>
-
-	<div id="machine">
-	</div>
+	<div id="machine"></div>
 	 <div id="zoom-objets-bureau">
 	    <div id="photo-cadre">
 	    	<img src="<?php echo PICTURES_PATH?>cadre-photo-bureau.png" alt="photo de Léopold et Thomas" />
@@ -79,4 +73,4 @@
         <div><strong class="nom">Thomas</strong><p class="dialogue-txt"></p>
           <a class="next"><i class="fa fa-chevron-right"></i></a></div>
     </div>
-  </div>
+</div>

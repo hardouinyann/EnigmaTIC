@@ -13,9 +13,11 @@ if($_SESSION['succes']) {
 <a id="passer-cinematique" style="display: inline;">Passer la cinématique&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
 <a id="end-1973-read">J'ai fini de lire le fichier texte affiché dans la console.</a>
 <form id="form1973" class="formDejaVu" action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'>
+      <input type='hidden' name="progression" value="ok" />
+      <input type='hidden' name="finShell" value="ok" />
       <input type='hidden' name="id_jeu" value="1973"/>
-       <input type="hidden" name="score" value=""></input>
-       <input type='submit' id="end-1973" name='validation_jeu' value='Retourner dans le bureau de Léopold'/>
+      <input type="hidden" name="score" value=""></input>
+      <input type='submit' id="end-1973" name='validation_jeu' value='Retourner dans le bureau de Léopold'/>
 </form>
 <form id="form" class='formUpdateShell' action='<?php echo (WEBROOT); ?>histoire/bureau' method='post'></form>
 <div id="jeu">
@@ -24,12 +26,12 @@ if($_SESSION['succes']) {
           <div id='contenu-1'>C:\Bureau > <span class='cursor-console'></span></div>        
       </div> 
       <div id="feuille">
-        <p><b>Utilisez les commandes ci-dessous avec la console pour parcourir les fichiers de l'ordinateur.</b><br/><br/>Vous devez ouvrir tous les fichier textes (avec comme extension .txt), jusqu'à ce que vous trouviez un fichier intéressant.<br/><br/>
+        <p><b>Utilisez les commandes ci-dessous avec la console pour parcourir les fichiers de l'ordinateur.</b><br/><br/>Vous devez ouvrir tous les fichier textes (avec comme extension ".txt"), jusqu'à ce que vous trouviez un <b>fichier intéressant</b>.<br/><br/>
           - <b>dir</b> : Affiche le contenu d'un dossier.
           (<i>Exemple : Tapez "dir" dans la console, et pressez la touche entrée. </i>)<br/><br/>
-          - <b>cd</b> : Pour changer de répertoire (de dossier). Permet de naviguer à travers les dossiers.
+          - <b>cd</b> : Pour changer de répertoire. Permet de naviguer à travers les dossiers.
           (<i>Exemple :  Tapez "cd recherches". Cette commande ouvrira le dossier qui s'appelle "recherches"</i>).<br/><br/>
-          - <b>Pour revenir au dossier précédent</b>: Il faut taper "<b>cd ..</b>" (<i>ne pas oublier l'espace entre "cd" et les deux points ".." !</i>)<br/><br/>
+          - <b>Pour revenir au dossier précédent</b>: Il faut taper "<b>cd ..</b>". N'oubliez pas l'espace entre "cd" et les deux points ".." ! (<i>Exemple : Tapez "cd .." dans la console, et pressez la touche entrée. </i>)<br/><br/>
           - <b>type</b> : permet d'afficher le contenu d'un fichier texte.(<i>Exemple : Tapez "<b>type recette.txt</b>". Cette commande affichera le contenu du fichier "Recette.txt"</i>).<br/><br/>
            Si vous voyez affiché <b>&lt;REP&gt;</b> devant un mot, cela signifique que c'est <b>un répertoire</b>. Vous pouvez l'ouvrir avec la commande "cd". <b>S'il n'y a pas ce mot devant un mot, c'est que vous devez l'ouvrir en utilisant la commande "type"</b>.<br/><br/>
          <b>Par exemple, tapez les commandes ci-dessous à la suite dans la console : </b><br/><br/>
