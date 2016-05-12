@@ -149,7 +149,7 @@
 
         public function updateBlocNote($id, $text){
             return $this->update(array(
-                'bloc_note' => "'$text'"
+                'bloc_note' => '"'.$text.'"'
             ), array(
                 'condition' => "id_utilisateur=$id"
             ));

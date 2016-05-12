@@ -9,14 +9,7 @@
         	<!-- <br/><br/>En bas de la page, vous pouvez cliquer sur votre <strong>bloc note personnel</strong>, pour y écrire tout ce dont vous avez besoin, tout au long du jeu. Vous pouvez mettre le jeu en plein écran en cliquant sur le bouton avec les coins rectangulaires, en haut à droite. A côté, vous pouvez aussi cliquer sur l'icône "utilisateur" afin d'accéder à votre profil, si vous souhaitez modifier les informations de votre compte. --></p>
     </div>
 </div>
-<div class="bloc-note">
-      <div class="close-note" id="form_bloc_note"></div>
-      <form id="notes" action="" method="POST">
-        <textarea autocomplete="off" autofocus rows="22">Ceci est votre bloc note. Vous pouvez l'utiliser pour noter tout ce dont vous avez besoin. Vous pouvez l'afficher à tout moment dans le jeu, le contenu sera toujours le même, et vous pouvez l'éditer comme bon vous semble. 
 
-La sauvegarde du texte de ce bloc note s'enregistre automatiquement quand vous le fermez (en cliquant sur la croix en haut à gauche du bloc note). Cliquez directement sur ce texte pour le modifier.</textarea>
-      </form>
-    </div>
 <div id="jeu">
 	<?php if($_SESSION['shellFinDialogue']) { 
 		echo('<span id="shell-fini"></span>'); }

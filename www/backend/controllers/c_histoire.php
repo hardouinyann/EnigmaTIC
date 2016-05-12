@@ -59,13 +59,13 @@ class c_histoire extends Controller{
 
 
     public function bureau(){
-
+        
         if(!empty($_SESSION['user'])){
             // LE NOMBRE DE MESSAGE RECUPERE
             $nbMessageRecupere = $this->getModel('user')->getNbMessageRecup($_SESSION['user']->id_utilisateur);  
             $blocNote = $this->getModel('user')->getUserBlocNote($_SESSION['user']->id_utilisateur);
             $this->dataForView = new stdClass();
-            $this->dataForView->blocNote = !empty($blocNote) ? $blocNote : "" ;
+            $_SESSION['bloc_note'] = !empty($blocNote) ? $blocNote[0]->bloc_note : "" ;
 
             
             if(!empty($nbMessageRecupere)){
@@ -97,9 +97,7 @@ class c_histoire extends Controller{
 
             $id_jeux = $this->getModel('jeu')->getIdJeux();
 
-            $succes = $this->getModel('jeu')->getSucces($_SESSION['user']->id_utilisateur);  
-
-            $this->dataForView = new stdClass();
+            $succes = $this->getModel('jeu')->getSucces($_SESSION['user']->id_utilisateur);
             $this->dataForView->succes = array();
            
             foreach($succes as $s){
@@ -177,7 +175,8 @@ class c_histoire extends Controller{
 
     public function updateBlocNote(){
         if(!empty($_POST) && !empty($_SESSION['user'])){
-            $update = $this->getModel('user')->updateBlocNote($_SESSION['user']->id_utilisateur, $_POST['bloc_note']);
+            print_r($_POST)."<br>";
+            $update = $this->getModel('user')->updateBlocNote($_SESSION['user']->id_utilisateur, $_POST['text']);
             echo json_decode($update);
         }
     }

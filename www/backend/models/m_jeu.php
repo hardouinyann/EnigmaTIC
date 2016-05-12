@@ -29,7 +29,8 @@
 
         public function getSucces($id_user){
             return $this->find(array(
-                'jointure' =>"NATURAL JOIN partie",
+                'infoToGet' => 'DISTINCT *',
+                'jointure' => "NATURAL JOIN partie",
                 'condition' => "id_utilisateur=$id_user AND jeu_valide=1"
             ));
         }

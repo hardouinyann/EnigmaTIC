@@ -98,7 +98,10 @@
 
             $values = '';
             foreach($data as $field=>$value){
-                 $values .= $values .= $field."=".addslashes($value).",";
+                if(getType($value) == 'integer')
+                    $values .= $field."=".addslashes($value).",";
+                else
+                    $values .= $field."='".addslashes($value)."',";
             }
            
             $condition = (!empty($params['condition'])) ? $params['condition'] : '1=1';

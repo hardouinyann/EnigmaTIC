@@ -15,7 +15,7 @@
     <div class="bloc-note">
       <div class="close-note" id="form_bloc_note"></div>
       <form id="notes" action="" method="POST">
-        <textarea autocomplete="off" autofocus rows="22"><?php echo (!empty($this->dataForView->blocNote)) ? $this->dataForView->blocNote :  ""; ?></textarea>
+        <textarea autocomplete="off" autofocus rows="22"><?php  echo (!empty($_SESSION['bloc_note'])) ? $_SESSION['bloc_note'] :  $this->debug($_SESSION['bloc_note']); ?></textarea>
       </form>
     </div>
 	<header>

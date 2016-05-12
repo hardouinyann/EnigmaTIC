@@ -183,7 +183,7 @@ function gestionClicks(){
 		temps = 30;
 		score = 0;
 		$('#score').html('Score : '+score+' pts');
-		makePop(25, 150);
+		makePop();
 	});
 }
 

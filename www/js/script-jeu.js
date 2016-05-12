@@ -536,13 +536,15 @@
 			actual_texte = nb_msg;
 		}
 	}
-$(document).ready(ajaxBlocNote);
+$(document).ready(function(){
+	ajaxBlocNote();
+});
 	function ajaxBlocNote(){
 		$(document).on('click','.close-note',function(){
 			console.log("ajax bloc note");
 			$.post(
 			    'http://www.enigma-tic.fr/histoire/updateBlocNote',
-			    'text='+$('#notes textarea').val(),
+			    'text='+$('#notes').children().val(),
 			    function(data){
 			    	console.log(data);
 			     },
